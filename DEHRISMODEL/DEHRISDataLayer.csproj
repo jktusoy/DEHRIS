@@ -49,79 +49,82 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ais_cdtransaction.cs">
-      <DependentUpon>DEHRISMODEL.tt</DependentUpon>
+      <DependentUpon>DEHRISDLMODEL.tt</DependentUpon>
     </Compile>
     <Compile Include="ais_cdtransactiondetails.cs">
-      <DependentUpon>DEHRISMODEL.tt</DependentUpon>
+      <DependentUpon>DEHRISDLMODEL.tt</DependentUpon>
     </Compile>
     <Compile Include="common_importtempate.cs">
-      <DependentUpon>DEHRISMODEL.tt</DependentUpon>
+      <DependentUpon>DEHRISDLMODEL.tt</DependentUpon>
     </Compile>
     <Compile Include="common_importtemplatedetail.cs">
-      <DependentUpon>DEHRISMODEL.tt</DependentUpon>
+      <DependentUpon>DEHRISDLMODEL.tt</DependentUpon>
     </Compile>
     <Compile Include="common_importtransaction.cs">
-      <DependentUpon>DEHRISMODEL.tt</DependentUpon>
+      <DependentUpon>DEHRISDLMODEL.tt</DependentUpon>
     </Compile>
     <Compile Include="common_importtransactiondetail.cs">
-      <DependentUpon>DEHRISMODEL.tt</DependentUpon>
+      <DependentUpon>DEHRISDLMODEL.tt</DependentUpon>
     </Compile>
-    <Compile Include="DEHRISMODEL.Context.cs">
+    <Compile Include="DEHRISDLMODEL.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DEHRISMODEL.Context.tt</DependentUpon>
+      <DependentUpon>DEHRISDLMODEL.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="DEHRISMODEL.cs">
+    <Compile Include="DEHRISDLMODEL.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DEHRISMODEL.tt</DependentUpon>
+      <DependentUpon>DEHRISDLMODEL.tt</DependentUpon>
     </Compile>
-    <Compile Include="DEHRISMODEL.Designer.cs">
+    <Compile Include="DEHRISDLMODEL.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DEHRISMODEL.edmx</DependentUpon>
+      <DependentUpon>DEHRISDLMODEL.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="hris_address.cs">
+      <DependentUpon>DEHRISDLMODEL.tt</DependentUpon>
     </Compile>
     <Compile Include="hris_birform2305.cs">
-      <DependentUpon>DEHRISMODEL.tt</DependentUpon>
+      <DependentUpon>DEHRISDLMODEL.tt</DependentUpon>
     </Compile>
     <Compile Include="hris_employment.cs">
-      <DependentUpon>DEHRISMODEL.tt</DependentUpon>
+      <DependentUpon>DEHRISDLMODEL.tt</DependentUpon>
     </Compile>
     <Compile Include="hris_personnel.cs">
-      <DependentUpon>DEHRISMODEL.tt</DependentUpon>
+      <DependentUpon>DEHRISDLMODEL.tt</DependentUpon>
     </Compile>
     <Compile Include="pm_project.cs">
-      <DependentUpon>DEHRISMODEL.tt</DependentUpon>
+      <DependentUpon>DEHRISDLMODEL.tt</DependentUpon>
     </Compile>
     <Compile Include="pm_projectaccess.cs">
-      <DependentUpon>DEHRISMODEL.tt</DependentUpon>
+      <DependentUpon>DEHRISDLMODEL.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="sis_school.cs">
-      <DependentUpon>DEHRISMODEL.tt</DependentUpon>
+      <DependentUpon>DEHRISDLMODEL.tt</DependentUpon>
     </Compile>
     <Compile Include="sis_schooldistrict.cs">
-      <DependentUpon>DEHRISMODEL.tt</DependentUpon>
+      <DependentUpon>DEHRISDLMODEL.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <EntityDeploy Include="DEHRISMODEL.edmx">
+    <EntityDeploy Include="DEHRISDLMODEL.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DEHRISMODEL.Designer.cs</LastGenOutput>
+      <LastGenOutput>DEHRISDLMODEL.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="DEHRISMODEL.Context.tt">
+    <None Include="DEHRISDLMODEL.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DEHRISMODEL.edmx</DependentUpon>
-      <LastGenOutput>DEHRISMODEL.Context.cs</LastGenOutput>
+      <DependentUpon>DEHRISDLMODEL.edmx</DependentUpon>
+      <LastGenOutput>DEHRISDLMODEL.Context.cs</LastGenOutput>
     </None>
-    <None Include="DEHRISMODEL.edmx.diagram">
-      <DependentUpon>DEHRISMODEL.edmx</DependentUpon>
+    <None Include="DEHRISDLMODEL.edmx.diagram">
+      <DependentUpon>DEHRISDLMODEL.edmx</DependentUpon>
     </None>
-    <None Include="DEHRISMODEL.tt">
+    <None Include="DEHRISDLMODEL.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DEHRISMODEL.edmx</DependentUpon>
-      <LastGenOutput>DEHRISMODEL.cs</LastGenOutput>
+      <DependentUpon>DEHRISDLMODEL.edmx</DependentUpon>
+      <LastGenOutput>DEHRISDLMODEL.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
   </ItemGroup>

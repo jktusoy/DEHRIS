@@ -50,6 +50,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DEHRISAPI\DEHRISModel.csproj">
+      <Project>{7eadd593-e824-4e16-8f6f-be8af2a68440}</Project>
+      <Name>DEHRISModel</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DEHRISMODEL\DEHRISDataLayer.csproj">
       <Project>{02ac9e70-7a5e-4ba7-8ead-178daaf459c5}</Project>
       <Name>DEHRISDataLayer</Name>

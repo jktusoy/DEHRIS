@@ -15,3 +15,13 @@ C:\Users\user\documents\visual studio 2013\Projects\DEHRIS\DEHRIS\obj\Debug\DEHR
 C:\Users\user\documents\visual studio 2013\Projects\DEHRIS\DEHRIS\obj\Debug\DEHRIS.csprojResolveAssemblyReference.cache
 C:\Users\user\documents\visual studio 2013\Projects\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Importer.ucImportPersonnel.resources
 C:\Users\user\documents\visual studio 2013\Projects\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Importer.ucPersonnelView.resources
+C:\Users\user\Source\DEHRIS\DEHRIS\obj\Debug\DEHRIS.csprojResolveAssemblyReference.cache
+C:\Users\user\Source\DEHRIS\DEHRIS\obj\Debug\DEHRIS.frmMain.resources
+C:\Users\user\Source\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Home.ucHomePanel.resources
+C:\Users\user\Source\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Importer.ucImportPersonnel.resources
+C:\Users\user\Source\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Importer.ucPersonnelView.resources
+C:\Users\user\Source\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Navigation.ucNavigation.resources
+C:\Users\user\Source\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Organization.ucOrganizationalChart.resources
+C:\Users\user\Source\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Organization.ucVMG.resources
+C:\Users\user\Source\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Properties.Resources.resources
+C:\Users\user\Source\DEHRIS\DEHRIS\obj\Debug\DEHRIS.csproj.GenerateResource.Cache

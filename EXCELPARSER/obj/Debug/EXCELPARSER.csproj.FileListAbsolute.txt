@@ -1,0 +1,10 @@
+C:\Users\user\Source\DEHRIS\EXCELPARSER\bin\Debug\EXCELPARSER.dll
+C:\Users\user\Source\DEHRIS\EXCELPARSER\bin\Debug\EXCELPARSER.pdb
+C:\Users\user\Source\DEHRIS\EXCELPARSER\bin\Debug\EPPlus.dll
+C:\Users\user\Source\DEHRIS\EXCELPARSER\bin\Debug\EPPlus.Extensions.dll
+C:\Users\user\Source\DEHRIS\EXCELPARSER\bin\Debug\EPPlus.TableAsEnumerable.dll
+C:\Users\user\Source\DEHRIS\EXCELPARSER\bin\Debug\EPPlus.xml
+C:\Users\user\Source\DEHRIS\EXCELPARSER\bin\Debug\EPPlus.TableAsEnumerable.xml
+C:\Users\user\Source\DEHRIS\EXCELPARSER\obj\Debug\EXCELPARSER.csprojResolveAssemblyReference.cache
+C:\Users\user\Source\DEHRIS\EXCELPARSER\obj\Debug\EXCELPARSER.dll
+C:\Users\user\Source\DEHRIS\EXCELPARSER\obj\Debug\EXCELPARSER.pdb

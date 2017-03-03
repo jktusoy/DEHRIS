@@ -41,6 +41,7 @@
             this.toolStripTabItem3 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
             this.toolStripEx5 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripTabItem4 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
             this.toolStripEx6 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
             this.toolStripTabItem5 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
@@ -52,6 +53,12 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.gpNavigation = new Syncfusion.Windows.Forms.Tools.GradientPanel();
             this.gradientPanel1 = new Syncfusion.Windows.Forms.Tools.GradientPanel();
+            this.tabControlAdv1 = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
+            this.tabPageAdv1 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
+            this.gpMain = new Syncfusion.Windows.Forms.Tools.GradientPanel();
+            this.tabPageAdv2 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
+            this.button1 = new System.Windows.Forms.Button();
+            this.scheduleControl1 = new Syncfusion.Windows.Forms.Schedule.ScheduleControl();
             this.toolStripEx1 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
             this.ribbonPanel1 = new Syncfusion.Windows.Forms.Tools.RibbonPanel();
             this.ribbonPanel2 = new Syncfusion.Windows.Forms.Tools.RibbonPanel();
@@ -60,13 +67,6 @@
             this.ribbonPanel5 = new Syncfusion.Windows.Forms.Tools.RibbonPanel();
             this.ribbonPanel6 = new Syncfusion.Windows.Forms.Tools.RibbonPanel();
             this.ribbonPanel7 = new Syncfusion.Windows.Forms.Tools.RibbonPanel();
-            this.tabControlAdv1 = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
-            this.tabPageAdv1 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
-            this.tabPageAdv2 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
-            this.gpMain = new Syncfusion.Windows.Forms.Tools.GradientPanel();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.scheduleControl1 = new Syncfusion.Windows.Forms.Schedule.ScheduleControl();
-            this.button1 = new System.Windows.Forms.Button();
             this.tblyMain.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControlAdv1)).BeginInit();
@@ -86,8 +86,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.tabControlAdv1)).BeginInit();
             this.tabControlAdv1.SuspendLayout();
             this.tabPageAdv1.SuspendLayout();
-            this.tabPageAdv2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gpMain)).BeginInit();
+            this.tabPageAdv2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tblyMain
@@ -280,6 +280,12 @@
             this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.toolStripButton1.Click += new System.EventHandler(this.tsBtnImporter_Click);
             // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(85, 13);
+            this.toolStripLabel1.Text = "toolStripLabel1";
+            // 
             // toolStripTabItem4
             // 
             this.toolStripTabItem4.Name = "toolStripTabItem4";
@@ -435,6 +441,101 @@
             this.gradientPanel1.Size = new System.Drawing.Size(874, 501);
             this.gradientPanel1.TabIndex = 0;
             // 
+            // tabControlAdv1
+            // 
+            this.tabControlAdv1.ActiveTabFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.tabControlAdv1.ActiveTabForeColor = System.Drawing.Color.Empty;
+            this.tabControlAdv1.AllowDrop = true;
+            this.tabControlAdv1.BeforeTouchSize = new System.Drawing.Size(872, 499);
+            this.tabControlAdv1.CloseButtonBackColor = System.Drawing.Color.Black;
+            this.tabControlAdv1.CloseButtonForeColor = System.Drawing.Color.Empty;
+            this.tabControlAdv1.CloseButtonHoverForeColor = System.Drawing.Color.Empty;
+            this.tabControlAdv1.CloseButtonPressedForeColor = System.Drawing.Color.Empty;
+            this.tabControlAdv1.Controls.Add(this.tabPageAdv1);
+            this.tabControlAdv1.Controls.Add(this.tabPageAdv2);
+            this.tabControlAdv1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlAdv1.HotTrack = true;
+            this.tabControlAdv1.InActiveTabForeColor = System.Drawing.Color.Empty;
+            this.tabControlAdv1.LabelEdit = true;
+            this.tabControlAdv1.Location = new System.Drawing.Point(0, 0);
+            this.tabControlAdv1.Multiline = true;
+            this.tabControlAdv1.Name = "tabControlAdv1";
+            this.tabControlAdv1.SeparatorColor = System.Drawing.SystemColors.ControlDark;
+            this.tabControlAdv1.ShowCloseButtonHighLightBackColor = true;
+            this.tabControlAdv1.ShowSeparator = true;
+            this.tabControlAdv1.ShowSuperToolTips = true;
+            this.tabControlAdv1.ShowToolTips = true;
+            this.tabControlAdv1.Size = new System.Drawing.Size(872, 499);
+            this.tabControlAdv1.TabGap = 10;
+            this.tabControlAdv1.TabIndex = 0;
+            this.tabControlAdv1.TabPanelBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(216)))), ((int)(((byte)(237)))));
+            this.tabControlAdv1.TabStyle = typeof(Syncfusion.Windows.Forms.Tools.TabRendererOffice2007);
+            // 
+            // tabPageAdv1
+            // 
+            this.tabPageAdv1.Controls.Add(this.gpMain);
+            this.tabPageAdv1.Image = null;
+            this.tabPageAdv1.ImageSize = new System.Drawing.Size(16, 16);
+            this.tabPageAdv1.Location = new System.Drawing.Point(1, 22);
+            this.tabPageAdv1.Name = "tabPageAdv1";
+            this.tabPageAdv1.ShowCloseButton = true;
+            this.tabPageAdv1.Size = new System.Drawing.Size(869, 475);
+            this.tabPageAdv1.TabIndex = 1;
+            this.tabPageAdv1.Text = "tabPageAdv1";
+            this.tabPageAdv1.ThemesEnabled = false;
+            // 
+            // gpMain
+            // 
+            this.gpMain.BackColor = System.Drawing.SystemColors.Control;
+            this.gpMain.BackgroundColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.Horizontal, System.Drawing.SystemColors.HighlightText, System.Drawing.Color.LightSteelBlue);
+            this.gpMain.BorderColor = System.Drawing.Color.SteelBlue;
+            this.gpMain.BorderSingle = System.Windows.Forms.ButtonBorderStyle.Dashed;
+            this.gpMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.gpMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gpMain.IgnoreThemeBackground = true;
+            this.gpMain.Location = new System.Drawing.Point(0, 0);
+            this.gpMain.Name = "gpMain";
+            this.gpMain.Size = new System.Drawing.Size(869, 475);
+            this.gpMain.TabIndex = 2;
+            // 
+            // tabPageAdv2
+            // 
+            this.tabPageAdv2.Controls.Add(this.button1);
+            this.tabPageAdv2.Controls.Add(this.scheduleControl1);
+            this.tabPageAdv2.Image = null;
+            this.tabPageAdv2.ImageSize = new System.Drawing.Size(16, 16);
+            this.tabPageAdv2.Location = new System.Drawing.Point(1, 22);
+            this.tabPageAdv2.Name = "tabPageAdv2";
+            this.tabPageAdv2.ShowCloseButton = true;
+            this.tabPageAdv2.Size = new System.Drawing.Size(869, 475);
+            this.tabPageAdv2.TabIndex = 2;
+            this.tabPageAdv2.Text = "tabPageAdv2";
+            this.tabPageAdv2.ThemesEnabled = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(260, 99);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // scheduleControl1
+            // 
+            this.scheduleControl1.Appearance.WeekHeaderFormat = "MMMM dd";
+            this.scheduleControl1.Appearance.WeekMonthFullFormat = "dddd, dd MMMM yyyy";
+            this.scheduleControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(201)))), ((int)(((byte)(219)))));
+            this.scheduleControl1.Culture = new System.Globalization.CultureInfo("");
+            this.scheduleControl1.DataSource = null;
+            this.scheduleControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.scheduleControl1.ISO8601CalenderFormat = false;
+            this.scheduleControl1.Location = new System.Drawing.Point(0, 0);
+            this.scheduleControl1.Name = "scheduleControl1";
+            this.scheduleControl1.Size = new System.Drawing.Size(869, 475);
+            this.scheduleControl1.TabIndex = 0;
+            // 
             // toolStripEx1
             // 
             this.toolStripEx1.AutoSize = false;
@@ -489,105 +590,6 @@
             this.ribbonPanel7.ScrollPosition = 0;
             this.ribbonPanel7.TabIndex = 8;
             // 
-            // tabControlAdv1
-            // 
-            this.tabControlAdv1.ActiveTabFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.tabControlAdv1.ActiveTabForeColor = System.Drawing.Color.Empty;
-            this.tabControlAdv1.AllowDrop = true;
-            this.tabControlAdv1.BeforeTouchSize = new System.Drawing.Size(872, 499);
-            this.tabControlAdv1.CloseButtonBackColor = System.Drawing.Color.Black;
-            this.tabControlAdv1.CloseButtonForeColor = System.Drawing.Color.Empty;
-            this.tabControlAdv1.CloseButtonHoverForeColor = System.Drawing.Color.Empty;
-            this.tabControlAdv1.CloseButtonPressedForeColor = System.Drawing.Color.Empty;
-            this.tabControlAdv1.Controls.Add(this.tabPageAdv1);
-            this.tabControlAdv1.Controls.Add(this.tabPageAdv2);
-            this.tabControlAdv1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlAdv1.HotTrack = true;
-            this.tabControlAdv1.InActiveTabForeColor = System.Drawing.Color.Empty;
-            this.tabControlAdv1.LabelEdit = true;
-            this.tabControlAdv1.Location = new System.Drawing.Point(0, 0);
-            this.tabControlAdv1.Multiline = true;
-            this.tabControlAdv1.Name = "tabControlAdv1";
-            this.tabControlAdv1.SeparatorColor = System.Drawing.SystemColors.ControlDark;
-            this.tabControlAdv1.ShowCloseButtonHighLightBackColor = true;
-            this.tabControlAdv1.ShowSeparator = true;
-            this.tabControlAdv1.ShowSuperToolTips = true;
-            this.tabControlAdv1.ShowToolTips = true;
-            this.tabControlAdv1.Size = new System.Drawing.Size(872, 499);
-            this.tabControlAdv1.TabGap = 10;
-            this.tabControlAdv1.TabIndex = 0;
-            this.tabControlAdv1.TabPanelBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(216)))), ((int)(((byte)(237)))));
-            this.tabControlAdv1.TabStyle = typeof(Syncfusion.Windows.Forms.Tools.TabRendererOffice2007);
-            // 
-            // tabPageAdv1
-            // 
-            this.tabPageAdv1.Controls.Add(this.gpMain);
-            this.tabPageAdv1.Image = null;
-            this.tabPageAdv1.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv1.Location = new System.Drawing.Point(1, 22);
-            this.tabPageAdv1.Name = "tabPageAdv1";
-            this.tabPageAdv1.ShowCloseButton = true;
-            this.tabPageAdv1.Size = new System.Drawing.Size(869, 475);
-            this.tabPageAdv1.TabIndex = 1;
-            this.tabPageAdv1.Text = "tabPageAdv1";
-            this.tabPageAdv1.ThemesEnabled = false;
-            // 
-            // tabPageAdv2
-            // 
-            this.tabPageAdv2.Controls.Add(this.button1);
-            this.tabPageAdv2.Controls.Add(this.scheduleControl1);
-            this.tabPageAdv2.Image = null;
-            this.tabPageAdv2.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv2.Location = new System.Drawing.Point(1, 22);
-            this.tabPageAdv2.Name = "tabPageAdv2";
-            this.tabPageAdv2.ShowCloseButton = true;
-            this.tabPageAdv2.Size = new System.Drawing.Size(869, 475);
-            this.tabPageAdv2.TabIndex = 2;
-            this.tabPageAdv2.Text = "tabPageAdv2";
-            this.tabPageAdv2.ThemesEnabled = false;
-            // 
-            // gpMain
-            // 
-            this.gpMain.BackColor = System.Drawing.SystemColors.Control;
-            this.gpMain.BackgroundColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.Horizontal, System.Drawing.SystemColors.HighlightText, System.Drawing.Color.LightSteelBlue);
-            this.gpMain.BorderColor = System.Drawing.Color.SteelBlue;
-            this.gpMain.BorderSingle = System.Windows.Forms.ButtonBorderStyle.Dashed;
-            this.gpMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.gpMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gpMain.IgnoreThemeBackground = true;
-            this.gpMain.Location = new System.Drawing.Point(0, 0);
-            this.gpMain.Name = "gpMain";
-            this.gpMain.Size = new System.Drawing.Size(869, 475);
-            this.gpMain.TabIndex = 2;
-            // 
-            // toolStripLabel1
-            // 
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(85, 13);
-            this.toolStripLabel1.Text = "toolStripLabel1";
-            // 
-            // scheduleControl1
-            // 
-            this.scheduleControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(201)))), ((int)(((byte)(219)))));
-            this.scheduleControl1.Culture = new System.Globalization.CultureInfo("");
-            this.scheduleControl1.DataSource = null;
-            this.scheduleControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.scheduleControl1.ISO8601CalenderFormat = false;
-            this.scheduleControl1.Location = new System.Drawing.Point(0, 0);
-            this.scheduleControl1.Name = "scheduleControl1";
-            this.scheduleControl1.Size = new System.Drawing.Size(869, 475);
-            this.scheduleControl1.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(260, 99);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -622,8 +624,8 @@
             this.tabControlAdv1.ResumeLayout(false);
             this.tabControlAdv1.PerformLayout();
             this.tabPageAdv1.ResumeLayout(false);
-            this.tabPageAdv2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gpMain)).EndInit();
+            this.tabPageAdv2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

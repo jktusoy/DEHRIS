@@ -1,0 +1,5 @@
+C:\Users\user\Source\DEHRIS\DEHRISAPI\bin\Debug\DEHRISAPI.dll
+C:\Users\user\Source\DEHRIS\DEHRISAPI\bin\Debug\DEHRISAPI.pdb
+C:\Users\user\Source\DEHRIS\DEHRISAPI\obj\Debug\DEHRISModel.csprojResolveAssemblyReference.cache
+C:\Users\user\Source\DEHRIS\DEHRISAPI\obj\Debug\DEHRISAPI.dll
+C:\Users\user\Source\DEHRIS\DEHRISAPI\obj\Debug\DEHRISAPI.pdb

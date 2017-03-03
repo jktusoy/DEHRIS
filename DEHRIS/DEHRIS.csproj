@@ -165,6 +165,16 @@
   <ItemGroup>
     <Folder Include="Dashboard\Reports\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DEHRISAPI\DEHRISModel.csproj">
+      <Project>{7eadd593-e824-4e16-8f6f-be8af2a68440}</Project>
+      <Name>DEHRISModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DEHRISDL\DEHRISAPI.csproj">
+      <Project>{93fdfe09-d8a3-40fb-ba05-1dcf10e818b1}</Project>
+      <Name>DEHRISAPI</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
