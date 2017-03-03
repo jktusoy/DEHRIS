@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DEHRISModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ais_cdtransactiondetails">
+    <Key>
+      <PropertyRef Name="ais_cdtransactiondetails_id" />
+    </Key>
+    <Property Name="ais_cdtransactiondetails_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="transaction_date" Type="DateTime" Precision="3" />
+    <Property Name="payee" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="hris_personnel_id" Type="Int64" />
+    <Property Name="control_no" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="ais_expensetype_id" Type="Int64" />
+    <Property Name="ais_account_id" Type="Int64" />
+    <Property Name="objectcode" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="amount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="common_importtempate">
+    <Key>
+      <PropertyRef Name="common_importtemplate_id" />
+    </Key>
+    <Property Name="common_importtemplate_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="maxiteration" Type="Int32" />
+    <Property Name="value2" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="common_importtemplatedetail">
+    <Key>
+      <PropertyRef Name="common_importtemplatedetail_id" />
+    </Key>
+    <Property Name="common_importtemplatedetail_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="common_importtemplate_id" Type="Int64" />
+    <Property Name="title" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="celladdress" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="value1" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="value2" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="iscellrange" Type="Boolean" />
+    <Property Name="isvoid" Type="Boolean" />
+    <Property Name="isvertical" Type="Boolean" />
+    <Property Name="maxstep" Type="Int32" />
+    <Property Name="worksheetno" Type="Int32" />
+    <Property Name="isusedefaultvalue" Type="Boolean" />
+    <Property Name="defaultvalue" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="common_importtransaction">
+    <Key>
+      <PropertyRef Name="common_importtransaction_id" />
+    </Key>
+    <Property Name="common_importtransaction_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="transactionname" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="transactiondate" Type="DateTime" Precision="3" />
+    <Property Name="user_id" Type="Int64" />
+    <Property Name="isactive" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="common_importtransactiondetail">
+    <Key>
+      <PropertyRef Name="common_importtransactiondetails_id" />
+    </Key>
+    <Property Name="common_importtransactiondetails_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="common_importtransaction_id" Type="Int64" Nullable="false" />
+    <Property Name="title" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="directory" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="filename" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="tablename" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="tableid" Type="Int64" />
+    <Property Name="description" Type="String" MaxLength="900" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="hris_birform2305">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="EXMPN_CERT_SEQ_NUM" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="EMP_VER" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="EMP_FORM_VER" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="FTYPE_CODE" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="DLN" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="EFFECTIVE_DATE" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="FILING_REASON" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="FILING_DATE" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="TIN" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="BRANCH_CODE" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="LAST_NAME" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="FIRST_NAME" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="MIDDLE_NAME" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="TYPE_FILER" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="SIGNATURE_YN" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="ATTACHMENT_YN" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="CIVIL_STATUS" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="claims_yn" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="AF" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="PROCESS_YN" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="CREATED_BY" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="DATE_CREATED" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="RDO_CODE" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="ADD_NUM_BLDG" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="ADD_STREET" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="ADD_BRGY" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="ADD_MUN_TOWN_CITY" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="ADD_PROV" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="ZIP_CODE" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="P5TIN" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="P5BCODE" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="P5RDOCODE" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="P5EMP_FNAME" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="P5EMP_LNAME" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="P5EMP_MNAME" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="P5EMPLOYER_NAME" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="P5ADD_num" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="P5ADD_SUBD" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="P5ADD_BRGY" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="P5ADD_MUN" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="P5ADD_PROV" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="P5ADD_ZCODE" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="WA_SIGNATURE_YN" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="WA_CERT_DATE" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="sps_empt_status" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="SPOUSE_TIN" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="SPOUSE_BCODE" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="SPOUSE_LAST_NAME" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="SPOUSE_FIRST_NAME" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="SPOUSE_MIDDLE_NAME" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="SPOUSE_EMPLOYER_TIN" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="SPOUSE_EMPLOYER_BRANCH" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="EMPLOYMENT_TYPE" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="MAIN_EMPR_YN" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="NUM_QUALIFIED_DEP" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="FORM_STATUS" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="Editor" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="DATE_MODIFIED" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="NUM_OF_DEPND_CALC" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="UPDATE_REASON" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="CIVIL_STATUS_CALC" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="DEPD_CERT_SEQ_NUM" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="DEP_VER" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="DEPENDENT1_LAST_NAME" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="DEPENDENT1_FIRST_NAME" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="DEPENDENT1_MIDDLE_NAME" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="DEP1BDate" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="DEPENDENT1_RELATIONSHIP_CODE" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="INCAPACITATED_FLAG1_YN" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="active_flag1" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="dep1ModifiedBy" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="Expr1071" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="dep1ErrorCode" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="DEPENDENT2_LAST_NAME" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="DEPENDENT2_FIRST_NAME" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="DEPENDENT2_MIDDLE_NAME" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="DEP2BDate" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="DEPENDENT2_RELATIONSHIP_CODE" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="INCAPACITATED_FLAG2_YN" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="active_flag2" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="dep2ModifiedBy" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="Expr1081" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="dep2ErrorCode" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="DEPENDENT3_LAST_NAME" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="DEPENDENT3_FIRST_NAME" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="DEPENDENT3_MIDDLE_NAME" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="DEP3BDate" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="DEPENDENT3_RELATIONSHIP_CODE" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="INCAPACITATED_FLAG3_YN" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="active_flag3" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="dep3ModifiedBy" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="Expr1091" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="dep3ErrorCode" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="DEPENDENT4_LAST_NAME" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="DEPENDENT4_FIRST_NAME" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="DEPENDENT4_MIDDLE_NAME" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="DEP4BDate" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="DEPENDENT4_RELATIONSHIP_CODE" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="INCAPACITATED_FLAG4_YN" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="active_flag4" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="dep4ModifiedBy" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="Expr1101" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="dep4ErrorCode" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="SEX" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="PLACE_OF_BIRTH" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="MOTHER_NAME" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="FATHER_NAME" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="CITIZENSHIP" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="OTHER_CITIZENSHIP" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="ID_TYPE" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="ID_NUMBER" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="ID_ISSUER" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="ID_EFFECTIVE_DATE" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="ID_EXPIRY_DATE" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="ID_PLACE_ISSUE" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="PHONE_NUMBER" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="MOBILE_NUMBER" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="FAX_NUMBER" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="EMAIL_ADDRESS" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="FOREIGN_ADDRESS" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="WA_CONTACT_NUMBER" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="RELATIONSHIP_START_DATE" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="COUNTRY" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="DATE_MODIFIED_REP" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="DATE_MODIFIED_REPORT" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BIRTH_DATE" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="hris_employment">
+    <Key>
+      <PropertyRef Name="hris_employment_id" />
+    </Key>
+    <Property Name="hris_employment_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="datefrom" Type="DateTime" Precision="0" />
+    <Property Name="dateto" Type="DateTime" Precision="0" />
+    <Property Name="positiontitle" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="departmentagency" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="monthlysalary" Type="Double" />
+    <Property Name="salarygrade" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="stepincrement" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="statusofappointment" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="isgovservice" Type="Boolean" />
+    <Property Name="hris_personnel_id" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="hris_personnel">
+    <Key>
+      <PropertyRef Name="hris_personnel_id" />
+    </Key>
+    <Property Name="hris_personnel_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="lastname" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="firstname" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="middlename" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="nameextension" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="dateofbirth" Type="DateTime" Precision="0" />
+    <Property Name="placeofbirth" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="sex" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="civilstatus" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="citizenship" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="height" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="weight" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="bloodtype" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="residentialaddress" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="residentialzipcode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="residentialtelephoneno" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="permanentaddress" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="permanentzipcode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="permanenttelephoneno" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="emailaddress" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="cellphoneno" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="agencyemployeeno" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="tin_no" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="gsis_no" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="sss_no" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="pagibig_no" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="pm_project">
+    <Key>
+      <PropertyRef Name="pm_projectid" />
+    </Key>
+    <Property Name="pm_projectid" Type="Int64" Nullable="false" />
+    <Property Name="agency" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="projects" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="location" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="totalcost" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="datestarted" Type="DateTime" Precision="0" />
+    <Property Name="noofextension" Type="Int32" />
+    <Property Name="datetargetcompletion" Type="DateTime" Precision="0" />
+    <Property Name="completion" Type="Int32" />
+    <Property Name="totalcostincurred" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="remarks" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="pm_projectaccess">
+    <Key>
+      <PropertyRef Name="pm_projectaccess_id" />
+    </Key>
+    <Property Name="pm_projectaccess_id" Type="Int64" Nullable="false" />
+    <Property Name="accessdatetime" Type="DateTime" Precision="3" />
+    <Property Name="accesstype" Type="Int32" />
+  </EntityType>
+  <EntityType Name="sis_school">
+    <Key>
+      <PropertyRef Name="sis_school_id" />
+    </Key>
+    <Property Name="sis_school_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sis_schoolname" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="sis_schoolpopulation" Type="Int32" />
+    <Property Name="sis_school_type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="division_id" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="district_id" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="sis_schooldistrict_id" Type="Int64" />
+    <Property Name="ispriv" Type="Boolean" />
+    <Property Name="sis_school_code" Type="Int64" />
+  </EntityType>
+  <EntityType Name="sis_schooldistrict">
+    <Key>
+      <PropertyRef Name="sis_schooldistrict_id" />
+    </Key>
+    <Property Name="sis_schooldistrict_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="schooldistrictname" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ais_cdtransaction">
+    <Key>
+      <PropertyRef Name="ais_cdtransaction_id" />
+    </Key>
+    <Property Name="ais_cdtransaction_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="dateofcheck" Type="DateTime" Precision="3" />
+    <Property Name="cashadvanceamount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="financialyear_id" Type="Int64" />
+    <Property Name="sourceoffunds" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="particulars" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="totalamount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="balanceunliquidated" Type="Decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityContainer Name="DEHRISEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ais_cdtransactiondetails" EntityType="Self.ais_cdtransactiondetails" />
+    <EntitySet Name="common_importtempate" EntityType="Self.common_importtempate" />
+    <EntitySet Name="common_importtemplatedetail" EntityType="Self.common_importtemplatedetail" />
+    <EntitySet Name="common_importtransaction" EntityType="Self.common_importtransaction" />
+    <EntitySet Name="common_importtransactiondetail" EntityType="Self.common_importtransactiondetail" />
+    <EntitySet Name="hris_birform2305" EntityType="Self.hris_birform2305" />
+    <EntitySet Name="hris_employment" EntityType="Self.hris_employment" />
+    <EntitySet Name="hris_personnel" EntityType="Self.hris_personnel" />
+    <EntitySet Name="pm_project" EntityType="Self.pm_project" />
+    <EntitySet Name="pm_projectaccess" EntityType="Self.pm_projectaccess" />
+    <EntitySet Name="sis_school" EntityType="Self.sis_school" />
+    <EntitySet Name="sis_schooldistrict" EntityType="Self.sis_schooldistrict" />
+    <EntitySet Name="ais_cdtransaction" EntityType="Self.ais_cdtransaction" />
+  </EntityContainer>
+</Schema>

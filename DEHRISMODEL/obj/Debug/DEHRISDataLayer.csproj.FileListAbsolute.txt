@@ -1,0 +1,10 @@
+C:\Users\user\documents\visual studio 2013\Projects\DEHRIS\DEHRISMODEL\bin\Debug\DEHRISMODEL.dll.config
+C:\Users\user\documents\visual studio 2013\Projects\DEHRIS\DEHRISMODEL\bin\Debug\DEHRISMODEL.dll
+C:\Users\user\documents\visual studio 2013\Projects\DEHRIS\DEHRISMODEL\bin\Debug\DEHRISMODEL.pdb
+C:\Users\user\documents\visual studio 2013\Projects\DEHRIS\DEHRISMODEL\bin\Debug\EntityFramework.dll
+C:\Users\user\documents\visual studio 2013\Projects\DEHRIS\DEHRISMODEL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\user\documents\visual studio 2013\Projects\DEHRIS\DEHRISMODEL\bin\Debug\EntityFramework.xml
+C:\Users\user\documents\visual studio 2013\Projects\DEHRIS\DEHRISMODEL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\user\documents\visual studio 2013\Projects\DEHRIS\DEHRISMODEL\obj\Debug\DEHRISDataLayer.csprojResolveAssemblyReference.cache
+C:\Users\user\documents\visual studio 2013\Projects\DEHRIS\DEHRISMODEL\obj\Debug\DEHRISMODEL.dll
+C:\Users\user\documents\visual studio 2013\Projects\DEHRIS\DEHRISMODEL\obj\Debug\DEHRISMODEL.pdb

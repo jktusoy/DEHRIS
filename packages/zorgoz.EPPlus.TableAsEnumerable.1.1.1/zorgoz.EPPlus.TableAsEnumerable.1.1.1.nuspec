@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>zorgoz.EPPlus.TableAsEnumerable</id>
+    <version>1.1.1</version>
+    <title>EPPlus.TableAsEnumerable</title>
+    <authors>Zoltán Zörgő</authors>
+    <owners>Zoltán Zörgő</owners>
+    <licenseUrl>https://github.com/zorgoz/EPPlus.TableAsEnumerable/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/zorgoz/EPPlus.TableAsEnumerable</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Generic extension method enabling retrival of ExcelTable rows as an enumeration of typed objects.</description>
+    <summary>This project adds an extension method to EPPlus ExcelTable objects that enables generic retrival of the data within. Solution supports numeric types, strings, datetime, nullables and enums of a POCO with help of decorating attributes that enable property-column mapping.</summary>
+    <releaseNotes>Bugfix: after step back to .NET 4.0 issued exception when there were unmapped properties in the generating class</releaseNotes>
+    <copyright>Copyright 2016</copyright>
+    <tags>library .net Excel EPPlus helper generic extension</tags>
+    <dependencies>
+      <dependency id="EPPlus" version="4.1.0" />
+    </dependencies>
+  </metadata>
+</package>

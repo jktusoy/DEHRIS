@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DEHRISModelStoreContainer" CdmEntityContainer="DEHRISEntities">
+    <EntitySetMapping Name="ais_cdtransactiondetails">
+      <EntityTypeMapping TypeName="DEHRISModel.ais_cdtransactiondetails">
+        <MappingFragment StoreEntitySet="ais_cdtransactiondetails">
+          <ScalarProperty Name="ais_cdtransactiondetails_id" ColumnName="ais_cdtransactiondetails_id" />
+          <ScalarProperty Name="transaction_date" ColumnName="transaction_date" />
+          <ScalarProperty Name="payee" ColumnName="payee" />
+          <ScalarProperty Name="hris_personnel_id" ColumnName="hris_personnel_id" />
+          <ScalarProperty Name="control_no" ColumnName="control_no" />
+          <ScalarProperty Name="ais_expensetype_id" ColumnName="ais_expensetype_id" />
+          <ScalarProperty Name="ais_account_id" ColumnName="ais_account_id" />
+          <ScalarProperty Name="objectcode" ColumnName="objectcode" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="common_importtempate">
+      <EntityTypeMapping TypeName="DEHRISModel.common_importtempate">
+        <MappingFragment StoreEntitySet="common_importtempate">
+          <ScalarProperty Name="common_importtemplate_id" ColumnName="common_importtemplate_id" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="maxiteration" ColumnName="maxiteration" />
+          <ScalarProperty Name="value2" ColumnName="value2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="common_importtemplatedetail">
+      <EntityTypeMapping TypeName="DEHRISModel.common_importtemplatedetail">
+        <MappingFragment StoreEntitySet="common_importtemplatedetail">
+          <ScalarProperty Name="common_importtemplatedetail_id" ColumnName="common_importtemplatedetail_id" />
+          <ScalarProperty Name="common_importtemplate_id" ColumnName="common_importtemplate_id" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="celladdress" ColumnName="celladdress" />
+          <ScalarProperty Name="value1" ColumnName="value1" />
+          <ScalarProperty Name="value2" ColumnName="value2" />
+          <ScalarProperty Name="iscellrange" ColumnName="iscellrange" />
+          <ScalarProperty Name="isvoid" ColumnName="isvoid" />
+          <ScalarProperty Name="isvertical" ColumnName="isvertical" />
+          <ScalarProperty Name="maxstep" ColumnName="maxstep" />
+          <ScalarProperty Name="worksheetno" ColumnName="worksheetno" />
+          <ScalarProperty Name="isusedefaultvalue" ColumnName="isusedefaultvalue" />
+          <ScalarProperty Name="defaultvalue" ColumnName="defaultvalue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="common_importtransaction">
+      <EntityTypeMapping TypeName="DEHRISModel.common_importtransaction">
+        <MappingFragment StoreEntitySet="common_importtransaction">
+          <ScalarProperty Name="common_importtransaction_id" ColumnName="common_importtransaction_id" />
+          <ScalarProperty Name="transactionname" ColumnName="transactionname" />
+          <ScalarProperty Name="transactiondate" ColumnName="transactiondate" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="isactive" ColumnName="isactive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="common_importtransactiondetail">
+      <EntityTypeMapping TypeName="DEHRISModel.common_importtransactiondetail">
+        <MappingFragment StoreEntitySet="common_importtransactiondetail">
+          <ScalarProperty Name="common_importtransactiondetails_id" ColumnName="common_importtransactiondetails_id" />
+          <ScalarProperty Name="common_importtransaction_id" ColumnName="common_importtransaction_id" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="directory" ColumnName="directory" />
+          <ScalarProperty Name="filename" ColumnName="filename" />
+          <ScalarProperty Name="tablename" ColumnName="tablename" />
+          <ScalarProperty Name="tableid" ColumnName="tableid" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hris_birform2305">
+      <EntityTypeMapping TypeName="DEHRISModel.hris_birform2305">
+        <MappingFragment StoreEntitySet="hris_birform2305">
+          <ScalarProperty Name="EXMPN_CERT_SEQ_NUM" ColumnName="EXMPN_CERT_SEQ_NUM" />
+          <ScalarProperty Name="EMP_VER" ColumnName="EMP_VER" />
+          <ScalarProperty Name="EMP_FORM_VER" ColumnName="EMP_FORM_VER" />
+          <ScalarProperty Name="FTYPE_CODE" ColumnName="FTYPE_CODE" />
+          <ScalarProperty Name="DLN" ColumnName="DLN" />
+          <ScalarProperty Name="EFFECTIVE_DATE" ColumnName="EFFECTIVE_DATE" />
+          <ScalarProperty Name="FILING_REASON" ColumnName="FILING_REASON" />
+          <ScalarProperty Name="FILING_DATE" ColumnName="FILING_DATE" />
+          <ScalarProperty Name="TIN" ColumnName="TIN" />
+          <ScalarProperty Name="BRANCH_CODE" ColumnName="BRANCH_CODE" />
+          <ScalarProperty Name="LAST_NAME" ColumnName="LAST_NAME" />
+          <ScalarProperty Name="FIRST_NAME" ColumnName="FIRST_NAME" />
+          <ScalarProperty Name="MIDDLE_NAME" ColumnName="MIDDLE_NAME" />
+          <ScalarProperty Name="TYPE_FILER" ColumnName="TYPE_FILER" />
+          <ScalarProperty Name="SIGNATURE_YN" ColumnName="SIGNATURE_YN" />
+          <ScalarProperty Name="ATTACHMENT_YN" ColumnName="ATTACHMENT_YN" />
+          <ScalarProperty Name="CIVIL_STATUS" ColumnName="CIVIL_STATUS" />
+          <ScalarProperty Name="claims_yn" ColumnName="claims_yn" />
+          <ScalarProperty Name="AF" ColumnName="AF" />
+          <ScalarProperty Name="PROCESS_YN" ColumnName="PROCESS_YN" />
+          <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+          <ScalarProperty Name="DATE_CREATED" ColumnName="DATE_CREATED" />
+          <ScalarProperty Name="RDO_CODE" ColumnName="RDO_CODE" />
+          <ScalarProperty Name="ADD_NUM_BLDG" ColumnName="ADD_NUM_BLDG" />
+          <ScalarProperty Name="ADD_STREET" ColumnName="ADD_STREET" />
+          <ScalarProperty Name="ADD_BRGY" ColumnName="ADD_BRGY" />
+          <ScalarProperty Name="ADD_MUN_TOWN_CITY" ColumnName="ADD_MUN_TOWN_CITY" />
+          <ScalarProperty Name="ADD_PROV" ColumnName="ADD_PROV" />
+          <ScalarProperty Name="ZIP_CODE" ColumnName="ZIP_CODE" />
+          <ScalarProperty Name="P5TIN" ColumnName="P5TIN" />
+          <ScalarProperty Name="P5BCODE" ColumnName="P5BCODE" />
+          <ScalarProperty Name="P5RDOCODE" ColumnName="P5RDOCODE" />
+          <ScalarProperty Name="P5EMP_FNAME" ColumnName="P5EMP_FNAME" />
+          <ScalarProperty Name="P5EMP_LNAME" ColumnName="P5EMP_LNAME" />
+          <ScalarProperty Name="P5EMP_MNAME" ColumnName="P5EMP_MNAME" />
+          <ScalarProperty Name="P5EMPLOYER_NAME" ColumnName="P5EMPLOYER_NAME" />
+          <ScalarProperty Name="P5ADD_num" ColumnName="P5ADD_num" />
+          <ScalarProperty Name="P5ADD_SUBD" ColumnName="P5ADD_SUBD" />
+          <ScalarProperty Name="P5ADD_BRGY" ColumnName="P5ADD_BRGY" />
+          <ScalarProperty Name="P5ADD_MUN" ColumnName="P5ADD_MUN" />
+          <ScalarProperty Name="P5ADD_PROV" ColumnName="P5ADD_PROV" />
+          <ScalarProperty Name="P5ADD_ZCODE" ColumnName="P5ADD_ZCODE" />
+          <ScalarProperty Name="WA_SIGNATURE_YN" ColumnName="WA_SIGNATURE_YN" />
+          <ScalarProperty Name="WA_CERT_DATE" ColumnName="WA_CERT_DATE" />
+          <ScalarProperty Name="sps_empt_status" ColumnName="sps_empt_status" />
+          <ScalarProperty Name="SPOUSE_TIN" ColumnName="SPOUSE_TIN" />
+          <ScalarProperty Name="SPOUSE_BCODE" ColumnName="SPOUSE_BCODE" />
+          <ScalarProperty Name="SPOUSE_LAST_NAME" ColumnName="SPOUSE_LAST_NAME" />
+          <ScalarProperty Name="SPOUSE_FIRST_NAME" ColumnName="SPOUSE_FIRST_NAME" />
+          <ScalarProperty Name="SPOUSE_MIDDLE_NAME" ColumnName="SPOUSE_MIDDLE_NAME" />
+          <ScalarProperty Name="SPOUSE_EMPLOYER_TIN" ColumnName="SPOUSE_EMPLOYER_TIN" />
+          <ScalarProperty Name="SPOUSE_EMPLOYER_BRANCH" ColumnName="SPOUSE_EMPLOYER_BRANCH" />
+          <ScalarProperty Name="EMPLOYMENT_TYPE" ColumnName="EMPLOYMENT_TYPE" />
+          <ScalarProperty Name="MAIN_EMPR_YN" ColumnName="MAIN_EMPR_YN" />
+          <ScalarProperty Name="NUM_QUALIFIED_DEP" ColumnName="NUM_QUALIFIED_DEP" />
+          <ScalarProperty Name="FORM_STATUS" ColumnName="FORM_STATUS" />
+          <ScalarProperty Name="Editor" ColumnName="Editor" />
+          <ScalarProperty Name="DATE_MODIFIED" ColumnName="DATE_MODIFIED" />
+          <ScalarProperty Name="NUM_OF_DEPND_CALC" ColumnName="NUM_OF_DEPND_CALC" />
+          <ScalarProperty Name="UPDATE_REASON" ColumnName="UPDATE_REASON" />
+          <ScalarProperty Name="CIVIL_STATUS_CALC" ColumnName="CIVIL_STATUS_CALC" />
+          <ScalarProperty Name="DEPD_CERT_SEQ_NUM" ColumnName="DEPD_CERT_SEQ_NUM" />
+          <ScalarProperty Name="DEP_VER" ColumnName="DEP_VER" />
+          <ScalarProperty Name="DEPENDENT1_LAST_NAME" ColumnName="DEPENDENT1_LAST_NAME" />
+          <ScalarProperty Name="DEPENDENT1_FIRST_NAME" ColumnName="DEPENDENT1_FIRST_NAME" />
+          <ScalarProperty Name="DEPENDENT1_MIDDLE_NAME" ColumnName="DEPENDENT1_MIDDLE_NAME" />
+          <ScalarProperty Name="DEP1BDate" ColumnName="DEP1BDate" />
+          <ScalarProperty Name="DEPENDENT1_RELATIONSHIP_CODE" ColumnName="DEPENDENT1_RELATIONSHIP_CODE" />
+          <ScalarProperty Name="INCAPACITATED_FLAG1_YN" ColumnName="INCAPACITATED_FLAG1_YN" />
+          <ScalarProperty Name="active_flag1" ColumnName="active_flag1" />
+          <ScalarProperty Name="dep1ModifiedBy" ColumnName="dep1ModifiedBy" />
+          <ScalarProperty Name="Expr1071" ColumnName="Expr1071" />
+          <ScalarProperty Name="dep1ErrorCode" ColumnName="dep1ErrorCode" />
+          <ScalarProperty Name="DEPENDENT2_LAST_NAME" ColumnName="DEPENDENT2_LAST_NAME" />
+          <ScalarProperty Name="DEPENDENT2_FIRST_NAME" ColumnName="DEPENDENT2_FIRST_NAME" />
+          <ScalarProperty Name="DEPENDENT2_MIDDLE_NAME" ColumnName="DEPENDENT2_MIDDLE_NAME" />
+          <ScalarProperty Name="DEP2BDate" ColumnName="DEP2BDate" />
+          <ScalarProperty Name="DEPENDENT2_RELATIONSHIP_CODE" ColumnName="DEPENDENT2_RELATIONSHIP_CODE" />
+          <ScalarProperty Name="INCAPACITATED_FLAG2_YN" ColumnName="INCAPACITATED_FLAG2_YN" />
+          <ScalarProperty Name="active_flag2" ColumnName="active_flag2" />
+          <ScalarProperty Name="dep2ModifiedBy" ColumnName="dep2ModifiedBy" />
+          <ScalarProperty Name="Expr1081" ColumnName="Expr1081" />
+          <ScalarProperty Name="dep2ErrorCode" ColumnName="dep2ErrorCode" />
+          <ScalarProperty Name="DEPENDENT3_LAST_NAME" ColumnName="DEPENDENT3_LAST_NAME" />
+          <ScalarProperty Name="DEPENDENT3_FIRST_NAME" ColumnName="DEPENDENT3_FIRST_NAME" />
+          <ScalarProperty Name="DEPENDENT3_MIDDLE_NAME" ColumnName="DEPENDENT3_MIDDLE_NAME" />
+          <ScalarProperty Name="DEP3BDate" ColumnName="DEP3BDate" />
+          <ScalarProperty Name="DEPENDENT3_RELATIONSHIP_CODE" ColumnName="DEPENDENT3_RELATIONSHIP_CODE" />
+          <ScalarProperty Name="INCAPACITATED_FLAG3_YN" ColumnName="INCAPACITATED_FLAG3_YN" />
+          <ScalarProperty Name="active_flag3" ColumnName="active_flag3" />
+          <ScalarProperty Name="dep3ModifiedBy" ColumnName="dep3ModifiedBy" />
+          <ScalarProperty Name="Expr1091" ColumnName="Expr1091" />
+          <ScalarProperty Name="dep3ErrorCode" ColumnName="dep3ErrorCode" />
+          <ScalarProperty Name="DEPENDENT4_LAST_NAME" ColumnName="DEPENDENT4_LAST_NAME" />
+          <ScalarProperty Name="DEPENDENT4_FIRST_NAME" ColumnName="DEPENDENT4_FIRST_NAME" />
+          <ScalarProperty Name="DEPENDENT4_MIDDLE_NAME" ColumnName="DEPENDENT4_MIDDLE_NAME" />
+          <ScalarProperty Name="DEP4BDate" ColumnName="DEP4BDate" />
+          <ScalarProperty Name="DEPENDENT4_RELATIONSHIP_CODE" ColumnName="DEPENDENT4_RELATIONSHIP_CODE" />
+          <ScalarProperty Name="INCAPACITATED_FLAG4_YN" ColumnName="INCAPACITATED_FLAG4_YN" />
+          <ScalarProperty Name="active_flag4" ColumnName="active_flag4" />
+          <ScalarProperty Name="dep4ModifiedBy" ColumnName="dep4ModifiedBy" />
+          <ScalarProperty Name="Expr1101" ColumnName="Expr1101" />
+          <ScalarProperty Name="dep4ErrorCode" ColumnName="dep4ErrorCode" />
+          <ScalarProperty Name="SEX" ColumnName="SEX" />
+          <ScalarProperty Name="PLACE_OF_BIRTH" ColumnName="PLACE_OF_BIRTH" />
+          <ScalarProperty Name="MOTHER_NAME" ColumnName="MOTHER_NAME" />
+          <ScalarProperty Name="FATHER_NAME" ColumnName="FATHER_NAME" />
+          <ScalarProperty Name="CITIZENSHIP" ColumnName="CITIZENSHIP" />
+          <ScalarProperty Name="OTHER_CITIZENSHIP" ColumnName="OTHER_CITIZENSHIP" />
+          <ScalarProperty Name="ID_TYPE" ColumnName="ID_TYPE" />
+          <ScalarProperty Name="ID_NUMBER" ColumnName="ID_NUMBER" />
+          <ScalarProperty Name="ID_ISSUER" ColumnName="ID_ISSUER" />
+          <ScalarProperty Name="ID_EFFECTIVE_DATE" ColumnName="ID_EFFECTIVE_DATE" />
+          <ScalarProperty Name="ID_EXPIRY_DATE" ColumnName="ID_EXPIRY_DATE" />
+          <ScalarProperty Name="ID_PLACE_ISSUE" ColumnName="ID_PLACE_ISSUE" />
+          <ScalarProperty Name="PHONE_NUMBER" ColumnName="PHONE_NUMBER" />
+          <ScalarProperty Name="MOBILE_NUMBER" ColumnName="MOBILE_NUMBER" />
+          <ScalarProperty Name="FAX_NUMBER" ColumnName="FAX_NUMBER" />
+          <ScalarProperty Name="EMAIL_ADDRESS" ColumnName="EMAIL_ADDRESS" />
+          <ScalarProperty Name="FOREIGN_ADDRESS" ColumnName="FOREIGN_ADDRESS" />
+          <ScalarProperty Name="WA_CONTACT_NUMBER" ColumnName="WA_CONTACT_NUMBER" />
+          <ScalarProperty Name="RELATIONSHIP_START_DATE" ColumnName="RELATIONSHIP_START_DATE" />
+          <ScalarProperty Name="COUNTRY" ColumnName="COUNTRY" />
+          <ScalarProperty Name="DATE_MODIFIED_REP" ColumnName="DATE_MODIFIED_REP" />
+          <ScalarProperty Name="DATE_MODIFIED_REPORT" ColumnName="DATE_MODIFIED_REPORT" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="BIRTH_DATE" ColumnName="BIRTH_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hris_employment">
+      <EntityTypeMapping TypeName="DEHRISModel.hris_employment">
+        <MappingFragment StoreEntitySet="hris_employment">
+          <ScalarProperty Name="hris_employment_id" ColumnName="hris_employment_id" />
+          <ScalarProperty Name="datefrom" ColumnName="datefrom" />
+          <ScalarProperty Name="dateto" ColumnName="dateto" />
+          <ScalarProperty Name="positiontitle" ColumnName="positiontitle" />
+          <ScalarProperty Name="departmentagency" ColumnName="departmentagency" />
+          <ScalarProperty Name="monthlysalary" ColumnName="monthlysalary" />
+          <ScalarProperty Name="salarygrade" ColumnName="salarygrade" />
+          <ScalarProperty Name="stepincrement" ColumnName="stepincrement" />
+          <ScalarProperty Name="statusofappointment" ColumnName="statusofappointment" />
+          <ScalarProperty Name="isgovservice" ColumnName="isgovservice" />
+          <ScalarProperty Name="hris_personnel_id" ColumnName="hris_personnel_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hris_personnel">
+      <EntityTypeMapping TypeName="DEHRISModel.hris_personnel">
+        <MappingFragment StoreEntitySet="hris_personnel">
+          <ScalarProperty Name="hris_personnel_id" ColumnName="hris_personnel_id" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="middlename" ColumnName="middlename" />
+          <ScalarProperty Name="nameextension" ColumnName="nameextension" />
+          <ScalarProperty Name="dateofbirth" ColumnName="dateofbirth" />
+          <ScalarProperty Name="placeofbirth" ColumnName="placeofbirth" />
+          <ScalarProperty Name="sex" ColumnName="sex" />
+          <ScalarProperty Name="civilstatus" ColumnName="civilstatus" />
+          <ScalarProperty Name="citizenship" ColumnName="citizenship" />
+          <ScalarProperty Name="height" ColumnName="height" />
+          <ScalarProperty Name="weight" ColumnName="weight" />
+          <ScalarProperty Name="bloodtype" ColumnName="bloodtype" />
+          <ScalarProperty Name="residentialaddress" ColumnName="residentialaddress" />
+          <ScalarProperty Name="residentialzipcode" ColumnName="residentialzipcode" />
+          <ScalarProperty Name="residentialtelephoneno" ColumnName="residentialtelephoneno" />
+          <ScalarProperty Name="permanentaddress" ColumnName="permanentaddress" />
+          <ScalarProperty Name="permanentzipcode" ColumnName="permanentzipcode" />
+          <ScalarProperty Name="permanenttelephoneno" ColumnName="permanenttelephoneno" />
+          <ScalarProperty Name="emailaddress" ColumnName="emailaddress" />
+          <ScalarProperty Name="cellphoneno" ColumnName="cellphoneno" />
+          <ScalarProperty Name="agencyemployeeno" ColumnName="agencyemployeeno" />
+          <ScalarProperty Name="tin_no" ColumnName="tin_no" />
+          <ScalarProperty Name="gsis_no" ColumnName="gsis_no" />
+          <ScalarProperty Name="sss_no" ColumnName="sss_no" />
+          <ScalarProperty Name="pagibig_no" ColumnName="pagibig_no" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pm_project">
+      <EntityTypeMapping TypeName="DEHRISModel.pm_project">
+        <MappingFragment StoreEntitySet="pm_project">
+          <ScalarProperty Name="pm_projectid" ColumnName="pm_projectid" />
+          <ScalarProperty Name="agency" ColumnName="agency" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="projects" ColumnName="projects" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="totalcost" ColumnName="totalcost" />
+          <ScalarProperty Name="datestarted" ColumnName="datestarted" />
+          <ScalarProperty Name="noofextension" ColumnName="noofextension" />
+          <ScalarProperty Name="datetargetcompletion" ColumnName="datetargetcompletion" />
+          <ScalarProperty Name="completion" ColumnName="completion" />
+          <ScalarProperty Name="totalcostincurred" ColumnName="totalcostincurred" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pm_projectaccess">
+      <EntityTypeMapping TypeName="DEHRISModel.pm_projectaccess">
+        <MappingFragment StoreEntitySet="pm_projectaccess">
+          <ScalarProperty Name="pm_projectaccess_id" ColumnName="pm_projectaccess_id" />
+          <ScalarProperty Name="accessdatetime" ColumnName="accessdatetime" />
+          <ScalarProperty Name="accesstype" ColumnName="accesstype" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sis_school">
+      <EntityTypeMapping TypeName="DEHRISModel.sis_school">
+        <MappingFragment StoreEntitySet="sis_school">
+          <ScalarProperty Name="sis_school_id" ColumnName="sis_school_id" />
+          <ScalarProperty Name="sis_schoolname" ColumnName="sis_schoolname" />
+          <ScalarProperty Name="sis_schoolpopulation" ColumnName="sis_schoolpopulation" />
+          <ScalarProperty Name="sis_school_type" ColumnName="sis_school_type" />
+          <ScalarProperty Name="division_id" ColumnName="division_id" />
+          <ScalarProperty Name="district_id" ColumnName="district_id" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="sis_schooldistrict_id" ColumnName="sis_schooldistrict_id" />
+          <ScalarProperty Name="ispriv" ColumnName="ispriv" />
+          <ScalarProperty Name="sis_school_code" ColumnName="sis_school_code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sis_schooldistrict">
+      <EntityTypeMapping TypeName="DEHRISModel.sis_schooldistrict">
+        <MappingFragment StoreEntitySet="sis_schooldistrict">
+          <ScalarProperty Name="sis_schooldistrict_id" ColumnName="sis_schooldistrict_id" />
+          <ScalarProperty Name="schooldistrictname" ColumnName="schooldistrictname" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ais_cdtransaction">
+      <EntityTypeMapping TypeName="DEHRISModel.ais_cdtransaction">
+        <MappingFragment StoreEntitySet="ais_cdtransaction">
+          <ScalarProperty Name="ais_cdtransaction_id" ColumnName="ais_cdtransaction_id" />
+          <ScalarProperty Name="dateofcheck" ColumnName="dateofcheck" />
+          <ScalarProperty Name="cashadvanceamount" ColumnName="cashadvanceamount" />
+          <ScalarProperty Name="financialyear_id" ColumnName="financialyear_id" />
+          <ScalarProperty Name="sourceoffunds" ColumnName="sourceoffunds" />
+          <ScalarProperty Name="particulars" ColumnName="particulars" />
+          <ScalarProperty Name="totalamount" ColumnName="totalamount" />
+          <ScalarProperty Name="balanceunliquidated" ColumnName="balanceunliquidated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

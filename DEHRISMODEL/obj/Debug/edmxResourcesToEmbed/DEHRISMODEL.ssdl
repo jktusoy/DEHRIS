@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DEHRISModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DEHRIS.dbo.ais_cdtransaction' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ais_cdtransaction">
+    <Key>
+      <PropertyRef Name="ais_cdtransaction_id" />
+    </Key>
+    <Property Name="ais_cdtransaction_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="dateofcheck" Type="datetime" />
+    <Property Name="cashadvanceamount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="financialyear_id" Type="bigint" />
+    <Property Name="sourceoffunds" Type="nvarchar" MaxLength="250" />
+    <Property Name="particulars" Type="nvarchar" MaxLength="250" />
+    <Property Name="totalamount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="balanceunliquidated" Type="decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="ais_cdtransactiondetails">
+    <Key>
+      <PropertyRef Name="ais_cdtransactiondetails_id" />
+    </Key>
+    <Property Name="ais_cdtransactiondetails_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="transaction_date" Type="datetime" />
+    <Property Name="payee" Type="nvarchar" MaxLength="150" />
+    <Property Name="hris_personnel_id" Type="bigint" />
+    <Property Name="control_no" Type="nvarchar" MaxLength="150" />
+    <Property Name="ais_expensetype_id" Type="bigint" />
+    <Property Name="ais_account_id" Type="bigint" />
+    <Property Name="objectcode" Type="nvarchar" MaxLength="150" />
+    <Property Name="amount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="description" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="common_importtempate">
+    <Key>
+      <PropertyRef Name="common_importtemplate_id" />
+    </Key>
+    <Property Name="common_importtemplate_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="title" Type="nvarchar" MaxLength="250" />
+    <Property Name="maxiteration" Type="int" />
+    <Property Name="value2" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="common_importtemplatedetail">
+    <Key>
+      <PropertyRef Name="common_importtemplatedetail_id" />
+    </Key>
+    <Property Name="common_importtemplatedetail_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="common_importtemplate_id" Type="bigint" />
+    <Property Name="title" Type="nvarchar" MaxLength="500" />
+    <Property Name="celladdress" Type="nchar" MaxLength="20" />
+    <Property Name="value1" Type="nvarchar" MaxLength="500" />
+    <Property Name="value2" Type="nvarchar" MaxLength="500" />
+    <Property Name="iscellrange" Type="bit" />
+    <Property Name="isvoid" Type="bit" />
+    <Property Name="isvertical" Type="bit" />
+    <Property Name="maxstep" Type="int" />
+    <Property Name="worksheetno" Type="int" />
+    <Property Name="isusedefaultvalue" Type="bit" />
+    <Property Name="defaultvalue" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="common_importtransaction">
+    <Key>
+      <PropertyRef Name="common_importtransaction_id" />
+    </Key>
+    <Property Name="common_importtransaction_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="transactionname" Type="nvarchar" MaxLength="200" />
+    <Property Name="transactiondate" Type="datetime" />
+    <Property Name="user_id" Type="bigint" />
+    <Property Name="isactive" Type="bit" />
+  </EntityType>
+  <EntityType Name="common_importtransactiondetail">
+    <Key>
+      <PropertyRef Name="common_importtransactiondetails_id" />
+    </Key>
+    <Property Name="common_importtransactiondetails_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="common_importtransaction_id" Type="bigint" Nullable="false" />
+    <Property Name="title" Type="nvarchar" MaxLength="500" />
+    <Property Name="directory" Type="nvarchar" MaxLength="500" />
+    <Property Name="filename" Type="nvarchar" MaxLength="500" />
+    <Property Name="tablename" Type="nvarchar" MaxLength="250" />
+    <Property Name="tableid" Type="bigint" />
+    <Property Name="description" Type="nvarchar" MaxLength="900" />
+  </EntityType>
+  <EntityType Name="hris_birform2305">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="EXMPN_CERT_SEQ_NUM" Type="nvarchar" MaxLength="350" />
+    <Property Name="EMP_VER" Type="nvarchar" MaxLength="350" />
+    <Property Name="EMP_FORM_VER" Type="nvarchar" MaxLength="350" />
+    <Property Name="FTYPE_CODE" Type="nvarchar" MaxLength="350" />
+    <Property Name="DLN" Type="nvarchar" MaxLength="350" />
+    <Property Name="EFFECTIVE_DATE" Type="nvarchar" MaxLength="350" />
+    <Property Name="FILING_REASON" Type="nvarchar" MaxLength="350" />
+    <Property Name="FILING_DATE" Type="nvarchar" MaxLength="350" />
+    <Property Name="TIN" Type="nvarchar" MaxLength="350" />
+    <Property Name="BRANCH_CODE" Type="nvarchar" MaxLength="350" />
+    <Property Name="LAST_NAME" Type="nvarchar" MaxLength="350" />
+    <Property Name="FIRST_NAME" Type="nvarchar" MaxLength="350" />
+    <Property Name="MIDDLE_NAME" Type="nvarchar" MaxLength="350" />
+    <Property Name="TYPE_FILER" Type="nvarchar" MaxLength="350" />
+    <Property Name="SIGNATURE_YN" Type="nvarchar" MaxLength="350" />
+    <Property Name="ATTACHMENT_YN" Type="nvarchar" MaxLength="350" />
+    <Property Name="CIVIL_STATUS" Type="nvarchar" MaxLength="350" />
+    <Property Name="claims_yn" Type="nvarchar" MaxLength="350" />
+    <Property Name="AF" Type="nvarchar" MaxLength="350" />
+    <Property Name="PROCESS_YN" Type="nvarchar" MaxLength="350" />
+    <Property Name="CREATED_BY" Type="nvarchar" MaxLength="350" />
+    <Property Name="DATE_CREATED" Type="nvarchar" MaxLength="350" />
+    <Property Name="RDO_CODE" Type="nvarchar" MaxLength="350" />
+    <Property Name="ADD_NUM_BLDG" Type="nvarchar" MaxLength="350" />
+    <Property Name="ADD_STREET" Type="nvarchar" MaxLength="350" />
+    <Property Name="ADD_BRGY" Type="nvarchar" MaxLength="350" />
+    <Property Name="ADD_MUN_TOWN_CITY" Type="nvarchar" MaxLength="350" />
+    <Property Name="ADD_PROV" Type="nvarchar" MaxLength="350" />
+    <Property Name="ZIP_CODE" Type="nvarchar" MaxLength="350" />
+    <Property Name="P5TIN" Type="nvarchar" MaxLength="350" />
+    <Property Name="P5BCODE" Type="nvarchar" MaxLength="350" />
+    <Property Name="P5RDOCODE" Type="nvarchar" MaxLength="350" />
+    <Property Name="P5EMP_FNAME" Type="nvarchar" MaxLength="350" />
+    <Property Name="P5EMP_LNAME" Type="nvarchar" MaxLength="350" />
+    <Property Name="P5EMP_MNAME" Type="nvarchar" MaxLength="350" />
+    <Property Name="P5EMPLOYER_NAME" Type="nvarchar" MaxLength="350" />
+    <Property Name="P5ADD_num" Type="nvarchar" MaxLength="350" />
+    <Property Name="P5ADD_SUBD" Type="nvarchar" MaxLength="350" />
+    <Property Name="P5ADD_BRGY" Type="nvarchar" MaxLength="350" />
+    <Property Name="P5ADD_MUN" Type="nvarchar" MaxLength="350" />
+    <Property Name="P5ADD_PROV" Type="nvarchar" MaxLength="350" />
+    <Property Name="P5ADD_ZCODE" Type="nvarchar" MaxLength="350" />
+    <Property Name="WA_SIGNATURE_YN" Type="nvarchar" MaxLength="350" />
+    <Property Name="WA_CERT_DATE" Type="nvarchar" MaxLength="350" />
+    <Property Name="sps_empt_status" Type="nvarchar" MaxLength="350" />
+    <Property Name="SPOUSE_TIN" Type="nvarchar" MaxLength="350" />
+    <Property Name="SPOUSE_BCODE" Type="nvarchar" MaxLength="350" />
+    <Property Name="SPOUSE_LAST_NAME" Type="nvarchar" MaxLength="350" />
+    <Property Name="SPOUSE_FIRST_NAME" Type="nvarchar" MaxLength="350" />
+    <Property Name="SPOUSE_MIDDLE_NAME" Type="nvarchar" MaxLength="350" />
+    <Property Name="SPOUSE_EMPLOYER_TIN" Type="nvarchar" MaxLength="350" />
+    <Property Name="SPOUSE_EMPLOYER_BRANCH" Type="nvarchar" MaxLength="350" />
+    <Property Name="EMPLOYMENT_TYPE" Type="nvarchar" MaxLength="350" />
+    <Property Name="MAIN_EMPR_YN" Type="nvarchar" MaxLength="350" />
+    <Property Name="NUM_QUALIFIED_DEP" Type="nvarchar" MaxLength="350" />
+    <Property Name="FORM_STATUS" Type="nvarchar" MaxLength="350" />
+    <Property Name="Editor" Type="nvarchar" MaxLength="350" />
+    <Property Name="DATE_MODIFIED" Type="nvarchar" MaxLength="350" />
+    <Property Name="NUM_OF_DEPND_CALC" Type="nvarchar" MaxLength="350" />
+    <Property Name="UPDATE_REASON" Type="nvarchar" MaxLength="350" />
+    <Property Name="CIVIL_STATUS_CALC" Type="nvarchar" MaxLength="350" />
+    <Property Name="DEPD_CERT_SEQ_NUM" Type="nvarchar" MaxLength="350" />
+    <Property Name="DEP_VER" Type="nvarchar" MaxLength="350" />
+    <Property Name="DEPENDENT1_LAST_NAME" Type="nvarchar" MaxLength="350" />
+    <Property Name="DEPENDENT1_FIRST_NAME" Type="nvarchar" MaxLength="350" />
+    <Property Name="DEPENDENT1_MIDDLE_NAME" Type="nvarchar" MaxLength="350" />
+    <Property Name="DEP1BDate" Type="nvarchar" MaxLength="350" />
+    <Property Name="DEPENDENT1_RELATIONSHIP_CODE" Type="nvarchar" MaxLength="350" />
+    <Property Name="INCAPACITATED_FLAG1_YN" Type="nvarchar" MaxLength="350" />
+    <Property Name="active_flag1" Type="nvarchar" MaxLength="350" />
+    <Property Name="dep1ModifiedBy" Type="nvarchar" MaxLength="350" />
+    <Property Name="Expr1071" Type="nvarchar" MaxLength="350" />
+    <Property Name="dep1ErrorCode" Type="nvarchar" MaxLength="350" />
+    <Property Name="DEPENDENT2_LAST_NAME" Type="nvarchar" MaxLength="350" />
+    <Property Name="DEPENDENT2_FIRST_NAME" Type="nvarchar" MaxLength="350" />
+    <Property Name="DEPENDENT2_MIDDLE_NAME" Type="nvarchar" MaxLength="350" />
+    <Property Name="DEP2BDate" Type="nvarchar" MaxLength="350" />
+    <Property Name="DEPENDENT2_RELATIONSHIP_CODE" Type="nvarchar" MaxLength="350" />
+    <Property Name="INCAPACITATED_FLAG2_YN" Type="nvarchar" MaxLength="350" />
+    <Property Name="active_flag2" Type="nvarchar" MaxLength="350" />
+    <Property Name="dep2ModifiedBy" Type="nvarchar" MaxLength="350" />
+    <Property Name="Expr1081" Type="nvarchar" MaxLength="350" />
+    <Property Name="dep2ErrorCode" Type="nvarchar" MaxLength="350" />
+    <Property Name="DEPENDENT3_LAST_NAME" Type="nvarchar" MaxLength="350" />
+    <Property Name="DEPENDENT3_FIRST_NAME" Type="nvarchar" MaxLength="350" />
+    <Property Name="DEPENDENT3_MIDDLE_NAME" Type="nvarchar" MaxLength="350" />
+    <Property Name="DEP3BDate" Type="nvarchar" MaxLength="350" />
+    <Property Name="DEPENDENT3_RELATIONSHIP_CODE" Type="nvarchar" MaxLength="350" />
+    <Property Name="INCAPACITATED_FLAG3_YN" Type="nvarchar" MaxLength="350" />
+    <Property Name="active_flag3" Type="nvarchar" MaxLength="350" />
+    <Property Name="dep3ModifiedBy" Type="nvarchar" MaxLength="350" />
+    <Property Name="Expr1091" Type="nvarchar" MaxLength="350" />
+    <Property Name="dep3ErrorCode" Type="nvarchar" MaxLength="350" />
+    <Property Name="DEPENDENT4_LAST_NAME" Type="nvarchar" MaxLength="350" />
+    <Property Name="DEPENDENT4_FIRST_NAME" Type="nvarchar" MaxLength="350" />
+    <Property Name="DEPENDENT4_MIDDLE_NAME" Type="nvarchar" MaxLength="350" />
+    <Property Name="DEP4BDate" Type="nvarchar" MaxLength="350" />
+    <Property Name="DEPENDENT4_RELATIONSHIP_CODE" Type="nvarchar" MaxLength="350" />
+    <Property Name="INCAPACITATED_FLAG4_YN" Type="nvarchar" MaxLength="350" />
+    <Property Name="active_flag4" Type="nvarchar" MaxLength="350" />
+    <Property Name="dep4ModifiedBy" Type="nvarchar" MaxLength="350" />
+    <Property Name="Expr1101" Type="nvarchar" MaxLength="350" />
+    <Property Name="dep4ErrorCode" Type="nvarchar" MaxLength="350" />
+    <Property Name="SEX" Type="nvarchar" MaxLength="350" />
+    <Property Name="PLACE_OF_BIRTH" Type="nvarchar" MaxLength="350" />
+    <Property Name="MOTHER_NAME" Type="nvarchar" MaxLength="350" />
+    <Property Name="FATHER_NAME" Type="nvarchar" MaxLength="350" />
+    <Property Name="CITIZENSHIP" Type="nvarchar" MaxLength="350" />
+    <Property Name="OTHER_CITIZENSHIP" Type="nvarchar" MaxLength="350" />
+    <Property Name="ID_TYPE" Type="nvarchar" MaxLength="350" />
+    <Property Name="ID_NUMBER" Type="nvarchar" MaxLength="350" />
+    <Property Name="ID_ISSUER" Type="nvarchar" MaxLength="350" />
+    <Property Name="ID_EFFECTIVE_DATE" Type="nvarchar" MaxLength="350" />
+    <Property Name="ID_EXPIRY_DATE" Type="nvarchar" MaxLength="350" />
+    <Property Name="ID_PLACE_ISSUE" Type="nvarchar" MaxLength="350" />
+    <Property Name="PHONE_NUMBER" Type="nvarchar" MaxLength="350" />
+    <Property Name="MOBILE_NUMBER" Type="nvarchar" MaxLength="350" />
+    <Property Name="FAX_NUMBER" Type="nvarchar" MaxLength="350" />
+    <Property Name="EMAIL_ADDRESS" Type="nvarchar" MaxLength="350" />
+    <Property Name="FOREIGN_ADDRESS" Type="nvarchar" MaxLength="350" />
+    <Property Name="WA_CONTACT_NUMBER" Type="nvarchar" MaxLength="350" />
+    <Property Name="RELATIONSHIP_START_DATE" Type="nvarchar" MaxLength="350" />
+    <Property Name="COUNTRY" Type="nvarchar" MaxLength="350" />
+    <Property Name="DATE_MODIFIED_REP" Type="nvarchar" MaxLength="350" />
+    <Property Name="DATE_MODIFIED_REPORT" Type="nvarchar" MaxLength="350" />
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BIRTH_DATE" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="hris_employment">
+    <Key>
+      <PropertyRef Name="hris_employment_id" />
+    </Key>
+    <Property Name="hris_employment_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="datefrom" Type="date" />
+    <Property Name="dateto" Type="date" />
+    <Property Name="positiontitle" Type="nvarchar" MaxLength="200" />
+    <Property Name="departmentagency" Type="nvarchar" MaxLength="200" />
+    <Property Name="monthlysalary" Type="float" />
+    <Property Name="salarygrade" Type="nvarchar" MaxLength="200" />
+    <Property Name="stepincrement" Type="nvarchar" MaxLength="200" />
+    <Property Name="statusofappointment" Type="nvarchar" MaxLength="200" />
+    <Property Name="isgovservice" Type="bit" />
+    <Property Name="hris_personnel_id" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="hris_personnel">
+    <Key>
+      <PropertyRef Name="hris_personnel_id" />
+    </Key>
+    <Property Name="hris_personnel_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="lastname" Type="nvarchar" MaxLength="200" />
+    <Property Name="firstname" Type="nvarchar" MaxLength="200" />
+    <Property Name="middlename" Type="nvarchar" MaxLength="200" />
+    <Property Name="nameextension" Type="nvarchar" MaxLength="20" />
+    <Property Name="dateofbirth" Type="date" />
+    <Property Name="placeofbirth" Type="nvarchar" MaxLength="200" />
+    <Property Name="sex" Type="nvarchar" MaxLength="20" />
+    <Property Name="civilstatus" Type="nvarchar" MaxLength="20" />
+    <Property Name="citizenship" Type="nvarchar" MaxLength="200" />
+    <Property Name="height" Type="nvarchar" MaxLength="20" />
+    <Property Name="weight" Type="nvarchar" MaxLength="20" />
+    <Property Name="bloodtype" Type="nvarchar" MaxLength="20" />
+    <Property Name="residentialaddress" Type="nvarchar" MaxLength="500" />
+    <Property Name="residentialzipcode" Type="nvarchar" MaxLength="20" />
+    <Property Name="residentialtelephoneno" Type="nvarchar" MaxLength="20" />
+    <Property Name="permanentaddress" Type="nvarchar" MaxLength="500" />
+    <Property Name="permanentzipcode" Type="nvarchar" MaxLength="20" />
+    <Property Name="permanenttelephoneno" Type="nvarchar" MaxLength="20" />
+    <Property Name="emailaddress" Type="nvarchar" MaxLength="200" />
+    <Property Name="cellphoneno" Type="nvarchar" MaxLength="200" />
+    <Property Name="agencyemployeeno" Type="nvarchar" MaxLength="20" />
+    <Property Name="tin_no" Type="nvarchar" MaxLength="20" />
+    <Property Name="gsis_no" Type="nvarchar" MaxLength="20" />
+    <Property Name="sss_no" Type="nvarchar" MaxLength="20" />
+    <Property Name="pagibig_no" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="pm_project">
+    <Key>
+      <PropertyRef Name="pm_projectid" />
+    </Key>
+    <Property Name="pm_projectid" Type="bigint" Nullable="false" />
+    <Property Name="agency" Type="nvarchar" MaxLength="200" />
+    <Property Name="address" Type="nvarchar" MaxLength="500" />
+    <Property Name="projects" Type="nvarchar" MaxLength="250" />
+    <Property Name="location" Type="nvarchar" MaxLength="500" />
+    <Property Name="totalcost" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="datestarted" Type="date" />
+    <Property Name="noofextension" Type="int" />
+    <Property Name="datetargetcompletion" Type="date" />
+    <Property Name="completion" Type="int" />
+    <Property Name="totalcostincurred" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="remarks" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="pm_projectaccess">
+    <Key>
+      <PropertyRef Name="pm_projectaccess_id" />
+    </Key>
+    <Property Name="pm_projectaccess_id" Type="bigint" Nullable="false" />
+    <Property Name="accessdatetime" Type="datetime" />
+    <Property Name="accesstype" Type="int" />
+  </EntityType>
+  <EntityType Name="sis_school">
+    <Key>
+      <PropertyRef Name="sis_school_id" />
+    </Key>
+    <Property Name="sis_school_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sis_schoolname" Type="nvarchar" MaxLength="500" />
+    <Property Name="sis_schoolpopulation" Type="int" />
+    <Property Name="sis_school_type" Type="nvarchar" MaxLength="50" />
+    <Property Name="division_id" Type="nchar" MaxLength="50" />
+    <Property Name="district_id" Type="nchar" MaxLength="50" />
+    <Property Name="address" Type="nvarchar" MaxLength="500" />
+    <Property Name="sis_schooldistrict_id" Type="bigint" />
+    <Property Name="ispriv" Type="bit" />
+    <Property Name="sis_school_code" Type="bigint" />
+  </EntityType>
+  <EntityType Name="sis_schooldistrict">
+    <Key>
+      <PropertyRef Name="sis_schooldistrict_id" />
+    </Key>
+    <Property Name="sis_schooldistrict_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="schooldistrictname" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'DEHRIS.dbo.sis_schoolhead' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="sis_schoolhead">
+          <Property Name="sis_schoolhead_id" Type="nchar" MaxLength="10" />
+          <Property Name="hris_personnel_id" Type="nchar" MaxLength="10" />
+          <Property Name="fullname" Type="nchar" MaxLength="10" />
+          <Property Name="sis_school_id" Type="nchar" MaxLength="10" />
+        </EntityType>-->
+  <EntityContainer Name="DEHRISModelStoreContainer">
+    <EntitySet Name="ais_cdtransactiondetails" EntityType="Self.ais_cdtransactiondetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="common_importtempate" EntityType="Self.common_importtempate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="common_importtemplatedetail" EntityType="Self.common_importtemplatedetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="common_importtransaction" EntityType="Self.common_importtransaction" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="common_importtransactiondetail" EntityType="Self.common_importtransactiondetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="hris_birform2305" EntityType="Self.hris_birform2305" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="hris_employment" EntityType="Self.hris_employment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="hris_personnel" EntityType="Self.hris_personnel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="pm_project" EntityType="Self.pm_project" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="pm_projectaccess" EntityType="Self.pm_projectaccess" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sis_school" EntityType="Self.sis_school" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sis_schooldistrict" EntityType="Self.sis_schooldistrict" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ais_cdtransaction" EntityType="Self.ais_cdtransaction" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ais_cdtransaction].[ais_cdtransaction_id] AS [ais_cdtransaction_id], 
+    [ais_cdtransaction].[dateofcheck] AS [dateofcheck], 
+    [ais_cdtransaction].[cashadvanceamount] AS [cashadvanceamount], 
+    [ais_cdtransaction].[financialyear_id] AS [financialyear_id], 
+    [ais_cdtransaction].[sourceoffunds] AS [sourceoffunds], 
+    [ais_cdtransaction].[particulars] AS [particulars], 
+    [ais_cdtransaction].[totalamount] AS [totalamount], 
+    [ais_cdtransaction].[balanceunliquidated] AS [balanceunliquidated]
+    FROM [dbo].[ais_cdtransaction] AS [ais_cdtransaction]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

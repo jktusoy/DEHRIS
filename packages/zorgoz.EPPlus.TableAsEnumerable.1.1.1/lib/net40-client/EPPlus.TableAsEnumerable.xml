@@ -1,0 +1,177 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EPPlus.TableAsEnumerable</name>
+    </assembly>
+    <members>
+        <member name="T:EPPlus.Extensions.EPPlusAsEnumerableExtension">
+            <summary>
+            Class holding extensien methods implemented
+            </summary>
+        </member>
+        <member name="M:EPPlus.Extensions.EPPlusAsEnumerableExtension.IsNullable(System.Type)">
+            <summary>
+            Helper extension method determining if a type is nullable
+            </summary>
+            <param name="type">Type to test</param>
+            <returns>True if type is nullable</returns>
+        </member>
+        <member name="M:EPPlus.Extensions.EPPlusAsEnumerableExtension.IsNumeric(System.Type)">
+            <summary>
+            Helper extension method to test if a type is numeric or not
+            </summary>
+            <param name="type">Type to test</param>
+            <returns>True if type is numeric</returns>
+        </member>
+        <member name="M:EPPlus.Extensions.EPPlusAsEnumerableExtension.GetDataBounds(OfficeOpenXml.Table.ExcelTable)">
+            <summary>
+            Method returns table data bounds with regards to header and totoals row visibility
+            </summary>
+            <param name="table">Extended object</param>
+            <returns>Address range</returns>
+        </member>
+        <member name="M:EPPlus.Extensions.EPPlusAsEnumerableExtension.Validate``1(OfficeOpenXml.Table.ExcelTable)">
+            <summary>
+            Method validates the excel table against the generating type. While AsEnumerable skips null cells, validation winn not.
+            </summary>
+            <typeparam name="T">Generating class type</typeparam>
+            <param name="table">Extended object</param>
+            <returns>An enumerable of <see cref="T:EPPlus.Extensions.ExcelTableConvertExceptionArgs"/> containing </returns>
+        </member>
+        <member name="M:EPPlus.Extensions.EPPlusAsEnumerableExtension.AsEnumerable``1(OfficeOpenXml.Table.ExcelTable,System.Boolean)">
+            <summary>
+            Generic extension method yielding objects of specified type from table.
+            </summary>
+            <remarks>Exceptions are not cathed. It works on all or nothing basis. 
+            Only primitives and enums are supported as property.
+            Currently supports only tables with header.</remarks>
+            <typeparam name="T">Type to map to. Type should be a class and should have parameterless constructor.</typeparam>
+            <param name="table">Table object to fetch</param>
+            <param name="skipCastErrors">Determines how the method should handle exceptions when casting cell value to property type. 
+            If this is true, invlaid casts are silently skipped, otherwise any error will cause method to fail with exception.</param>
+            <returns>An enumerable of the generating type</returns>
+        </member>
+        <member name="M:EPPlus.Extensions.EPPlusAsEnumerableExtension.PrepareMappings``1(OfficeOpenXml.Table.ExcelTable)">
+            <summary>
+            Method prepares mapping using the type and the attributes decorating its properties
+            </summary>
+            <typeparam name="T">Type to parse</typeparam>
+            <param name="table">Table to get columns from</param>
+            <returns>A list of mappings from column index to property</returns>
+        </member>
+        <member name="M:EPPlus.Extensions.EPPlusAsEnumerableExtension.TrySetProperty(System.Object,System.Reflection.PropertyInfo,System.Object)">
+            <summary>
+            Method tries to set property of item
+            </summary>
+            <param name="item">target object</param>
+            <param name="property">property to be set</param>
+            <param name="cell">cell value</param>
+        </member>
+        <member name="T:EPPlus.Extensions.ExcelPackageExtensions">
+            <summary>
+            Class holds extensions on ExcelPackage object
+            </summary>
+        </member>
+        <member name="M:EPPlus.Extensions.ExcelPackageExtensions.GetTables(OfficeOpenXml.ExcelPackage)">
+            <summary>
+            Method returns all table names in the opened worksheet
+            </summary>
+            <remarks>Excel is ensuring the uniqueness of table names</remarks>
+            <param name="excel">Extended ExcelPackage object</param>
+            <returns>Enumeration of ExcelTables</returns>
+        </member>
+        <member name="M:EPPlus.Extensions.ExcelPackageExtensions.GetTable(OfficeOpenXml.ExcelPackage,System.String)">
+            <summary>
+            Method returns concrete ExcelTable by it's name 
+            </summary>
+            <param name="excel">Extended ExcelPackage object</param>
+            <param name="name">Name of the table</param>
+            <returns>ExcelTable object if found, null inf not</returns>
+        </member>
+        <member name="M:EPPlus.Extensions.ExcelPackageExtensions.HasTable(OfficeOpenXml.ExcelPackage,System.String)">
+            <summary>
+            Method checks for table in the ExcelPackage
+            </summary>
+            <param name="excel">Extended ExcelPackage object</param>
+            <param name="name">Name of the table</param>
+            <returns>Result of search as bool</returns>
+        </member>
+        <member name="T:EPPlus.Extensions.ExcelTableColumnAttribute">
+            <summary>
+            Attribute used to map property to Excel table column
+            </summary>
+            <remarks>Can not map by both name and index. It will map to the property name if none is specified</remarks>
+        </member>
+        <member name="P:EPPlus.Extensions.ExcelTableColumnAttribute.ColumnName">
+            <summary>
+            Set this property to map by name
+            </summary>
+        </member>
+        <member name="P:EPPlus.Extensions.ExcelTableColumnAttribute.ColumnIndex">
+            <summary>
+            Use this property to map by 1-based index
+            </summary>
+        </member>
+        <member name="T:EPPlus.Extensions.ExcelTableConvertExceptionArgs">
+            <summary>
+            Class contains exception circumstances
+            </summary>
+        </member>
+        <member name="P:EPPlus.Extensions.ExcelTableConvertExceptionArgs.propertyName">
+            <summary>
+            Property that was tried to set
+            </summary>
+        </member>
+        <member name="P:EPPlus.Extensions.ExcelTableConvertExceptionArgs.columnName">
+            <summary>
+            Column that was mapped to this property
+            </summary>
+        </member>
+        <member name="P:EPPlus.Extensions.ExcelTableConvertExceptionArgs.expectedType">
+            <summary>
+            Type of the property
+            </summary>
+        </member>
+        <member name="P:EPPlus.Extensions.ExcelTableConvertExceptionArgs.cellValue">
+            <summary>
+            Cell value returned by EPPlus
+            </summary>
+        </member>
+        <member name="P:EPPlus.Extensions.ExcelTableConvertExceptionArgs.cellAddress">
+            <summary>
+            Absolute address of the cell, where the conversion error occured
+            </summary>
+        </member>
+        <member name="T:EPPlus.Extensions.ExcelTableConvertException">
+            <summary>
+            Class extends exception to hold casting exception circumstances
+            </summary>
+        </member>
+        <member name="M:EPPlus.Extensions.ExcelTableConvertException.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:EPPlus.Extensions.ExcelTableConvertException.#ctor(System.String)">
+            <summary>
+            Constructor with message
+            </summary>
+            <param name="message">Exception message</param>
+        </member>
+        <member name="M:EPPlus.Extensions.ExcelTableConvertException.#ctor(System.String,System.Exception)">
+            <summary>
+            Constructor with message and inner exception
+            </summary>
+            <param name="message">Exception message</param>
+            <param name="inner">Inner exception</param>
+        </member>
+        <member name="M:EPPlus.Extensions.ExcelTableConvertException.#ctor(System.String,System.Exception,EPPlus.Extensions.ExcelTableConvertExceptionArgs)">
+            <summary>
+            Custom constructor that takes message,, inner exception and conversion arguments
+            </summary>
+            <param name="message">Exception message</param>
+            <param name="inner">Actual conversion exception catched</param>
+            <param name="args">Information related to the circumstances of the exception</param>
+        </member>
+    </members>
+</doc>
