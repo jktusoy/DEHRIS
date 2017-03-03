@@ -54,6 +54,10 @@
       <Project>{7eadd593-e824-4e16-8f6f-be8af2a68440}</Project>
       <Name>DEHRISModel</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DEHRISDB\DEHRISDB.csproj">
+      <Project>{e59dd593-21a7-4270-be14-3a91edb93adb}</Project>
+      <Name>DEHRISDB</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

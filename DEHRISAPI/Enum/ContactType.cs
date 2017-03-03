@@ -11,6 +11,7 @@ namespace DEHRISModel.Enum
         EmailAddress,
         CellPhone,
         Home,
+        Secondary,
         Business
     }
 

@@ -15,24 +15,3 @@ C:\Users\user\documents\visual studio 2013\Projects\DEHRIS\DEHRIS\obj\Debug\DEHR
 C:\Users\user\documents\visual studio 2013\Projects\DEHRIS\DEHRIS\obj\Debug\DEHRIS.csprojResolveAssemblyReference.cache
 C:\Users\user\documents\visual studio 2013\Projects\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Importer.ucImportPersonnel.resources
 C:\Users\user\documents\visual studio 2013\Projects\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Importer.ucPersonnelView.resources
-C:\Users\user\Source\DEHRIS\DEHRIS\bin\Debug\DEHRIS.exe.config
-C:\Users\user\Source\DEHRIS\DEHRIS\bin\Debug\DEHRIS.exe
-C:\Users\user\Source\DEHRIS\DEHRIS\bin\Debug\DEHRIS.pdb
-C:\Users\user\Source\DEHRIS\DEHRIS\bin\Debug\DEHRISAPI.dll
-C:\Users\user\Source\DEHRIS\DEHRIS\bin\Debug\DEHRISDL.dll
-C:\Users\user\Source\DEHRIS\DEHRIS\bin\Debug\ObjectListView.dll
-C:\Users\user\Source\DEHRIS\DEHRIS\bin\Debug\DEHRISAPI.pdb
-C:\Users\user\Source\DEHRIS\DEHRIS\bin\Debug\DEHRISDL.pdb
-C:\Users\user\Source\DEHRIS\DEHRIS\bin\Debug\ObjectListView.xml
-C:\Users\user\Source\DEHRIS\DEHRIS\obj\Debug\DEHRIS.csprojResolveAssemblyReference.cache
-C:\Users\user\Source\DEHRIS\DEHRIS\obj\Debug\DEHRIS.frmMain.resources
-C:\Users\user\Source\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Home.ucHomePanel.resources
-C:\Users\user\Source\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Importer.ucImportPersonnel.resources
-C:\Users\user\Source\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Importer.ucPersonnelView.resources
-C:\Users\user\Source\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Navigation.ucNavigation.resources
-C:\Users\user\Source\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Organization.ucOrganizationalChart.resources
-C:\Users\user\Source\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Organization.ucVMG.resources
-C:\Users\user\Source\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Properties.Resources.resources
-C:\Users\user\Source\DEHRIS\DEHRIS\obj\Debug\DEHRIS.csproj.GenerateResource.Cache
-C:\Users\user\Source\DEHRIS\DEHRIS\obj\Debug\DEHRIS.exe
-C:\Users\user\Source\DEHRIS\DEHRIS\obj\Debug\DEHRIS.pdb

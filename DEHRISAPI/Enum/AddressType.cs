@@ -9,7 +9,7 @@ namespace DEHRISModel.Enum
     public enum AddressType
     {
         Residential,
-        Permanenent
+        Permanent
     }
 
  
