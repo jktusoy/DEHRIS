@@ -67,11 +67,13 @@
             this.ribbonPanel5 = new Syncfusion.Windows.Forms.Tools.RibbonPanel();
             this.ribbonPanel6 = new Syncfusion.Windows.Forms.Tools.RibbonPanel();
             this.ribbonPanel7 = new Syncfusion.Windows.Forms.Tools.RibbonPanel();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.tblyMain.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControlAdv1)).BeginInit();
             this.ribbonControlAdv1.SuspendLayout();
             this.toolStripTabItem1.Panel.SuspendLayout();
+            this.toolStripEx2.SuspendLayout();
             this.toolStripTabItem2.Panel.SuspendLayout();
             this.tseVMG.SuspendLayout();
             this.toolStripTabItem3.Panel.SuspendLayout();
@@ -148,7 +150,7 @@
             this.ribbonControlAdv1.OfficeMenu.Size = new System.Drawing.Size(12, 65);
             this.ribbonControlAdv1.QuickPanelImageLayout = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ribbonControlAdv1.RibbonHeaderImage = Syncfusion.Windows.Forms.Tools.RibbonHeaderImage.None;
-            this.ribbonControlAdv1.SelectedTab = this.toolStripTabItem3;
+            this.ribbonControlAdv1.SelectedTab = this.toolStripTabItem1;
             this.ribbonControlAdv1.ShowRibbonDisplayOptionButton = true;
             this.ribbonControlAdv1.Size = new System.Drawing.Size(1135, 120);
             this.ribbonControlAdv1.SystemText.QuickAccessDialogDropDownName = "Start menu";
@@ -180,6 +182,8 @@
             this.toolStripEx2.ForeColor = System.Drawing.Color.MidnightBlue;
             this.toolStripEx2.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStripEx2.Image = null;
+            this.toolStripEx2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton2});
             this.toolStripEx2.Location = new System.Drawing.Point(0, 1);
             this.toolStripEx2.Name = "toolStripEx2";
             this.toolStripEx2.Size = new System.Drawing.Size(100, 64);
@@ -590,6 +594,16 @@
             this.ribbonPanel7.ScrollPosition = 0;
             this.ribbonPanel7.TabIndex = 8;
             // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(23, 43);
+            this.toolStripButton2.Text = "toolStripButton2";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -606,6 +620,8 @@
             this.ribbonControlAdv1.ResumeLayout(false);
             this.ribbonControlAdv1.PerformLayout();
             this.toolStripTabItem1.Panel.ResumeLayout(false);
+            this.toolStripEx2.ResumeLayout(false);
+            this.toolStripEx2.PerformLayout();
             this.toolStripTabItem2.Panel.ResumeLayout(false);
             this.tseVMG.ResumeLayout(false);
             this.tseVMG.PerformLayout();
@@ -670,6 +686,7 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private Syncfusion.Windows.Forms.Schedule.ScheduleControl scheduleControl1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
     }
 }
 

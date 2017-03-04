@@ -77,6 +77,14 @@ namespace DEHRIS
 
         }
 
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            Dashboard.Reports.ucDashboard iucDashboard = new Dashboard.Reports.ucDashboard();
+            gpMain.Controls.Clear();
+            gpMain.Controls.Add(iucDashboard);
+            iucDashboard.Dock = DockStyle.Fill;
+        }
+
 
 
     }

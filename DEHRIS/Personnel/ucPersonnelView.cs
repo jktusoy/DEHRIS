@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Syncfusion.XlsIO;
-
+using DEHRISAPI;
 namespace DEHRIS.Importer
 {
     public partial class ucPersonnelView : UserControl
@@ -17,10 +17,9 @@ namespace DEHRIS.Importer
         {
             InitializeComponent();
 
-            ExcelEngine excelEngine = new ExcelEngine();
 
-
-
+            DEHRISAPI.PersonnelUtility prodUtil = new PersonnelUtility();
+            objlPersonnelView.SetObjects(prodUtil.GetPersonnel());
             //IApplication application = excelEngine.Excel;
 
             //application.DefaultVersion = ExcelVersion.Excel2013;
@@ -45,7 +44,7 @@ namespace DEHRIS.Importer
             //sourceWorkbook.Close();
 
             //destinationWorkbook.Close();
-            excelEngine.Dispose();
+            //excelEngine.Dispose();
             //this.spreadsheet1.AddSheet()
         }
 
@@ -62,6 +61,16 @@ namespace DEHRIS.Importer
         private void tabBarPage1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void objectListView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+         
         }
     }
 }
