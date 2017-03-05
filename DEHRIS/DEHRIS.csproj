@@ -167,6 +167,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -182,7 +183,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\DEHRISAPI\DEHRISModel.csproj">
       <Project>{7eadd593-e824-4e16-8f6f-be8af2a68440}</Project>
@@ -192,6 +192,42 @@
       <Project>{93fdfe09-d8a3-40fb-ba05-1dcf10e818b1}</Project>
       <Name>DEHRISAPI</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-user-default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\personnel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\personnel1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\org.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\personnel2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\holiday.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\applicant.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\requirement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

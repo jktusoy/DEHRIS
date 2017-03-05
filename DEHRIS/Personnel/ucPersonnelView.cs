@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Syncfusion.XlsIO;
 using DEHRISAPI;
+using DEHRISModel.Data;
 namespace DEHRIS.Importer
 {
     public partial class ucPersonnelView : UserControl
@@ -27,7 +28,7 @@ namespace DEHRIS.Importer
             //IWorkbook sourceWorkbook = application.Workbooks.Open();
             //sourceWorkbook.Activate();
             //int maxcount = sourceWorkbook.MaxColumnCount;
-            this.spreadsheet1.Open(@"C:\Users\user\Desktop\WORKSPACE\temptemp.xlsx");
+          //  this.spreadsheet1.Open(@"C:\Users\user\Desktop\WORKSPACE\temptemp.xlsx");
       
             //this.spreadsheet1.AddSheet(sourceWorkbook.ActiveSheet,0);
 
@@ -71,6 +72,68 @@ namespace DEHRIS.Importer
         private void button1_Click(object sender, EventArgs e)
         {
          
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void objlPersonnelView_SelectionChanged(object sender, EventArgs e)
+        {
+           Personnel selectePersonnel = (Personnel)objlPersonnelView.SelectedObject;
+           ShowViewData(selectePersonnel);
+        }
+
+        //public enum Status { Active = 0, Canceled = 3 }; 
+        //Setting the drop down values from it
+
+        //cbStatus.DataSource = Enum.GetValues(typeof(Status));
+        //Getting the enum from the selected item
+
+        //Status status; 
+        //Enum.TryParse<Status>(cbStatus.SelectedValue.ToString(), out status); 
+        //public void PopulateComboBox(Combo)
+        //{
+
+        //    ArrayList USStates = new ArrayList();
+        //    USStates.Add(new USState("Alaska", "AK", 1));
+        //    USStates.Add(new USState("Arizona", "AZ", 2));
+        //    USStates.Add(new USState("Arkansas", "AK", 3));
+        //}
+
+        private void ShowViewData(Personnel ppersonnel)
+        {
+          // txtPrBirthPlace
+            txtPrCitizenship.Text = ppersonnel.Citizenship;
+            txtPrFirstname.Text = ppersonnel.Firstname;
+            txtPrHeight.Text = ppersonnel.Height;
+            txtPrLastname.Text = ppersonnel.Lastname;
+            txtPrMiddlename.Text = ppersonnel.Middlename;
+            txtPrNameExt.Text = ppersonnel.NameExtension;
+            txtPrWeight.Text = ppersonnel.Weight;
+        }
+
+        private void ClearViewData()
+        {
+            // txtPrBirthPlace
+            txtPrCitizenship.Text ="";
+            txtPrFirstname.Text = "";
+            txtPrHeight.Text = "";
+            txtPrLastname.Text = "";
+            txtPrMiddlename.Text = "";
+            txtPrNameExt.Text = "";
+            txtPrWeight.Text = "";
+        }
+
+        private void xpPrAdd_Click(object sender, EventArgs e)
+        {
+            ClearViewData();
+        }
+
+        private void groupBar1_GroupBarItemSelected(object sender, EventArgs e)
+        {
+
         }
     }
 }

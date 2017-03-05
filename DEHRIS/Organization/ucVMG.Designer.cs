@@ -31,23 +31,23 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucVMG));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.gradientPanel1 = new Syncfusion.Windows.Forms.Tools.GradientPanel();
-            this.bannerTextProvider1 = new Syncfusion.Windows.Forms.BannerTextProvider(this.components);
-            this.gradientLabel1 = new Syncfusion.Windows.Forms.Tools.GradientLabel();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.gradientPanel2 = new Syncfusion.Windows.Forms.Tools.GradientPanel();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.gradientPanel3 = new Syncfusion.Windows.Forms.Tools.GradientPanel();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
-            this.gradientLabel2 = new Syncfusion.Windows.Forms.Tools.GradientLabel();
             this.gradientLabel3 = new Syncfusion.Windows.Forms.Tools.GradientLabel();
+            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
+            this.gradientPanel2 = new Syncfusion.Windows.Forms.Tools.GradientPanel();
+            this.gradientLabel2 = new Syncfusion.Windows.Forms.Tools.GradientLabel();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.gradientPanel1 = new Syncfusion.Windows.Forms.Tools.GradientPanel();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.gradientLabel1 = new Syncfusion.Windows.Forms.Tools.GradientLabel();
+            this.bannerTextProvider1 = new Syncfusion.Windows.Forms.BannerTextProvider(this.components);
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gradientPanel1)).BeginInit();
-            this.gradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gradientPanel2)).BeginInit();
-            this.gradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gradientPanel3)).BeginInit();
             this.gradientPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gradientPanel2)).BeginInit();
+            this.gradientPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gradientPanel1)).BeginInit();
+            this.gradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -66,90 +66,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(862, 449);
             this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // gradientPanel1
-            // 
-            this.gradientPanel1.BackgroundColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.PatternStyle.DiagonalCross, new System.Drawing.Color[] {
-            System.Drawing.SystemColors.Window,
-            System.Drawing.SystemColors.WindowText,
-            System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192))))),
-            System.Drawing.Color.Empty});
-            this.gradientPanel1.Border3DStyle = System.Windows.Forms.Border3DStyle.Flat;
-            this.gradientPanel1.BorderColor = System.Drawing.Color.Gainsboro;
-            this.gradientPanel1.BorderSingle = System.Windows.Forms.ButtonBorderStyle.Dashed;
-            this.gradientPanel1.Controls.Add(this.richTextBox1);
-            this.gradientPanel1.Controls.Add(this.gradientLabel1);
-            this.gradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gradientPanel1.IgnoreThemeBackground = true;
-            this.gradientPanel1.Location = new System.Drawing.Point(3, 3);
-            this.gradientPanel1.Name = "gradientPanel1";
-            this.gradientPanel1.Size = new System.Drawing.Size(279, 443);
-            this.gradientPanel1.TabIndex = 0;
-            // 
-            // gradientLabel1
-            // 
-            this.gradientLabel1.BackgroundColor = new Syncfusion.Drawing.BrushInfo(System.Drawing.Color.Transparent);
-            this.gradientLabel1.BeforeTouchSize = new System.Drawing.Size(221, 55);
-            this.gradientLabel1.BorderAppearance = System.Windows.Forms.BorderStyle.None;
-            this.gradientLabel1.BorderColor = System.Drawing.Color.Transparent;
-            this.gradientLabel1.BorderSides = ((System.Windows.Forms.Border3DSide)((((System.Windows.Forms.Border3DSide.Left | System.Windows.Forms.Border3DSide.Top) 
-            | System.Windows.Forms.Border3DSide.Right) 
-            | System.Windows.Forms.Border3DSide.Bottom)));
-            this.gradientLabel1.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gradientLabel1.Location = new System.Drawing.Point(12, 16);
-            this.gradientLabel1.Name = "gradientLabel1";
-            this.gradientLabel1.Size = new System.Drawing.Size(221, 55);
-            this.gradientLabel1.TabIndex = 0;
-            this.gradientLabel1.Text = "The DepEd Vision";
-            this.gradientLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.gradientLabel1.Click += new System.EventHandler(this.gradientLabel1_Click);
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(12, 85);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(247, 329);
-            this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
-            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
-            // 
-            // gradientPanel2
-            // 
-            this.gradientPanel2.BackgroundColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.PatternStyle.DiagonalCross, new System.Drawing.Color[] {
-            System.Drawing.SystemColors.Window,
-            System.Drawing.SystemColors.WindowText,
-            System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192))))),
-            System.Drawing.Color.Empty});
-            this.gradientPanel2.Border3DStyle = System.Windows.Forms.Border3DStyle.Flat;
-            this.gradientPanel2.BorderColor = System.Drawing.Color.Gainsboro;
-            this.gradientPanel2.BorderSingle = System.Windows.Forms.ButtonBorderStyle.Dashed;
-            this.gradientPanel2.Controls.Add(this.gradientLabel2);
-            this.gradientPanel2.Controls.Add(this.richTextBox2);
-            this.gradientPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gradientPanel2.IgnoreThemeBackground = true;
-            this.gradientPanel2.Location = new System.Drawing.Point(288, 3);
-            this.gradientPanel2.Name = "gradientPanel2";
-            this.gradientPanel2.Size = new System.Drawing.Size(279, 443);
-            this.gradientPanel2.TabIndex = 1;
-            // 
-            // richTextBox2
-            // 
-            this.richTextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox2.Location = new System.Drawing.Point(12, 85);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(247, 329);
-            this.richTextBox2.TabIndex = 1;
-            this.richTextBox2.Text = resources.GetString("richTextBox2.Text");
-            this.richTextBox2.TextChanged += new System.EventHandler(this.richTextBox2_TextChanged);
             // 
             // gradientPanel3
             // 
@@ -170,6 +86,23 @@
             this.gradientPanel3.Size = new System.Drawing.Size(286, 443);
             this.gradientPanel3.TabIndex = 2;
             // 
+            // gradientLabel3
+            // 
+            this.gradientLabel3.BackgroundColor = new Syncfusion.Drawing.BrushInfo(System.Drawing.Color.Transparent);
+            this.gradientLabel3.BeforeTouchSize = new System.Drawing.Size(221, 55);
+            this.gradientLabel3.BorderAppearance = System.Windows.Forms.BorderStyle.None;
+            this.gradientLabel3.BorderColor = System.Drawing.Color.Transparent;
+            this.gradientLabel3.BorderSides = ((System.Windows.Forms.Border3DSide)((((System.Windows.Forms.Border3DSide.Left | System.Windows.Forms.Border3DSide.Top) 
+            | System.Windows.Forms.Border3DSide.Right) 
+            | System.Windows.Forms.Border3DSide.Bottom)));
+            this.gradientLabel3.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gradientLabel3.Location = new System.Drawing.Point(12, 16);
+            this.gradientLabel3.Name = "gradientLabel3";
+            this.gradientLabel3.Size = new System.Drawing.Size(221, 55);
+            this.gradientLabel3.TabIndex = 2;
+            this.gradientLabel3.Text = "The DepEd Vision";
+            this.gradientLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // richTextBox3
             // 
             this.richTextBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -179,9 +112,29 @@
             this.richTextBox3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox3.Location = new System.Drawing.Point(12, 85);
             this.richTextBox3.Name = "richTextBox3";
+            this.richTextBox3.ReadOnly = true;
             this.richTextBox3.Size = new System.Drawing.Size(247, 329);
             this.richTextBox3.TabIndex = 1;
             this.richTextBox3.Text = "Maka-Diyos\nMaka-tao\nMakakalikasan\nMakabansa";
+            // 
+            // gradientPanel2
+            // 
+            this.gradientPanel2.BackgroundColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.PatternStyle.DiagonalCross, new System.Drawing.Color[] {
+            System.Drawing.SystemColors.Window,
+            System.Drawing.SystemColors.WindowText,
+            System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192))))),
+            System.Drawing.Color.Empty});
+            this.gradientPanel2.Border3DStyle = System.Windows.Forms.Border3DStyle.Flat;
+            this.gradientPanel2.BorderColor = System.Drawing.Color.Gainsboro;
+            this.gradientPanel2.BorderSingle = System.Windows.Forms.ButtonBorderStyle.Dashed;
+            this.gradientPanel2.Controls.Add(this.gradientLabel2);
+            this.gradientPanel2.Controls.Add(this.richTextBox2);
+            this.gradientPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gradientPanel2.IgnoreThemeBackground = true;
+            this.gradientPanel2.Location = new System.Drawing.Point(288, 3);
+            this.gradientPanel2.Name = "gradientPanel2";
+            this.gradientPanel2.Size = new System.Drawing.Size(279, 443);
+            this.gradientPanel2.TabIndex = 1;
             // 
             // gradientLabel2
             // 
@@ -200,22 +153,72 @@
             this.gradientLabel2.Text = "The DepEd Vision";
             this.gradientLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // gradientLabel3
+            // richTextBox2
             // 
-            this.gradientLabel3.BackgroundColor = new Syncfusion.Drawing.BrushInfo(System.Drawing.Color.Transparent);
-            this.gradientLabel3.BeforeTouchSize = new System.Drawing.Size(221, 55);
-            this.gradientLabel3.BorderAppearance = System.Windows.Forms.BorderStyle.None;
-            this.gradientLabel3.BorderColor = System.Drawing.Color.Transparent;
-            this.gradientLabel3.BorderSides = ((System.Windows.Forms.Border3DSide)((((System.Windows.Forms.Border3DSide.Left | System.Windows.Forms.Border3DSide.Top) 
+            this.richTextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox2.Location = new System.Drawing.Point(12, 85);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.ReadOnly = true;
+            this.richTextBox2.Size = new System.Drawing.Size(247, 329);
+            this.richTextBox2.TabIndex = 1;
+            this.richTextBox2.Text = resources.GetString("richTextBox2.Text");
+            this.richTextBox2.TextChanged += new System.EventHandler(this.richTextBox2_TextChanged);
+            // 
+            // gradientPanel1
+            // 
+            this.gradientPanel1.BackgroundColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.PatternStyle.DiagonalCross, new System.Drawing.Color[] {
+            System.Drawing.SystemColors.Window,
+            System.Drawing.SystemColors.WindowText,
+            System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192))))),
+            System.Drawing.Color.Empty});
+            this.gradientPanel1.Border3DStyle = System.Windows.Forms.Border3DStyle.Flat;
+            this.gradientPanel1.BorderColor = System.Drawing.Color.Gainsboro;
+            this.gradientPanel1.BorderSingle = System.Windows.Forms.ButtonBorderStyle.Dashed;
+            this.gradientPanel1.Controls.Add(this.richTextBox1);
+            this.gradientPanel1.Controls.Add(this.gradientLabel1);
+            this.gradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gradientPanel1.IgnoreThemeBackground = true;
+            this.gradientPanel1.Location = new System.Drawing.Point(3, 3);
+            this.gradientPanel1.Name = "gradientPanel1";
+            this.gradientPanel1.Size = new System.Drawing.Size(279, 443);
+            this.gradientPanel1.TabIndex = 0;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox1.Location = new System.Drawing.Point(12, 85);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
+            this.richTextBox1.Size = new System.Drawing.Size(247, 329);
+            this.richTextBox1.TabIndex = 1;
+            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
+            // 
+            // gradientLabel1
+            // 
+            this.gradientLabel1.BackgroundColor = new Syncfusion.Drawing.BrushInfo(System.Drawing.Color.Transparent);
+            this.gradientLabel1.BeforeTouchSize = new System.Drawing.Size(221, 55);
+            this.gradientLabel1.BorderAppearance = System.Windows.Forms.BorderStyle.None;
+            this.gradientLabel1.BorderColor = System.Drawing.Color.Transparent;
+            this.gradientLabel1.BorderSides = ((System.Windows.Forms.Border3DSide)((((System.Windows.Forms.Border3DSide.Left | System.Windows.Forms.Border3DSide.Top) 
             | System.Windows.Forms.Border3DSide.Right) 
             | System.Windows.Forms.Border3DSide.Bottom)));
-            this.gradientLabel3.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gradientLabel3.Location = new System.Drawing.Point(12, 16);
-            this.gradientLabel3.Name = "gradientLabel3";
-            this.gradientLabel3.Size = new System.Drawing.Size(221, 55);
-            this.gradientLabel3.TabIndex = 2;
-            this.gradientLabel3.Text = "The DepEd Vision";
-            this.gradientLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.gradientLabel1.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gradientLabel1.Location = new System.Drawing.Point(12, 16);
+            this.gradientLabel1.Name = "gradientLabel1";
+            this.gradientLabel1.Size = new System.Drawing.Size(221, 55);
+            this.gradientLabel1.TabIndex = 0;
+            this.gradientLabel1.Text = "The DepEd Vision";
+            this.gradientLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.gradientLabel1.Click += new System.EventHandler(this.gradientLabel1_Click);
             // 
             // ucVMG
             // 
@@ -225,12 +228,12 @@
             this.Name = "ucVMG";
             this.Size = new System.Drawing.Size(862, 449);
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gradientPanel1)).EndInit();
-            this.gradientPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gradientPanel2)).EndInit();
-            this.gradientPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gradientPanel3)).EndInit();
             this.gradientPanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gradientPanel2)).EndInit();
+            this.gradientPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gradientPanel1)).EndInit();
+            this.gradientPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
