@@ -79,6 +79,14 @@ namespace DEHRIS
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
+            Home.ucHomePanel iucHome = new Home.ucHomePanel();
+            gpMain.Controls.Clear();
+            gpMain.Controls.Add(iucHome);
+            iucHome.Dock = DockStyle.Fill;
+        }
+
+        private void tsbReport_Click(object sender, EventArgs e)
+        {
             Dashboard.Reports.ucDashboard iucDashboard = new Dashboard.Reports.ucDashboard();
             gpMain.Controls.Clear();
             gpMain.Controls.Add(iucDashboard);

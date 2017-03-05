@@ -18,10 +18,11 @@ namespace DEHRIS.Importer
         {
             InitializeComponent();
 
-
+           
             DEHRISAPI.PersonnelUtility prodUtil = new PersonnelUtility();
             objlPersonnelView.SetObjects(prodUtil.GetPersonnel());
             //IApplication application = excelEngine.Excel;
+
 
             //application.DefaultVersion = ExcelVersion.Excel2013;
 
@@ -81,7 +82,7 @@ namespace DEHRIS.Importer
 
         private void objlPersonnelView_SelectionChanged(object sender, EventArgs e)
         {
-           Personnel selectePersonnel = (Personnel)objlPersonnelView.SelectedObject;
+            DEHRISModel.Data.Personnel selectePersonnel = (DEHRISModel.Data.Personnel)objlPersonnelView.SelectedObject;
            ShowViewData(selectePersonnel);
         }
 
@@ -102,7 +103,7 @@ namespace DEHRIS.Importer
         //    USStates.Add(new USState("Arkansas", "AK", 3));
         //}
 
-        private void ShowViewData(Personnel ppersonnel)
+        private void ShowViewData(DEHRISModel.Data.Personnel ppersonnel)
         {
           // txtPrBirthPlace
             txtPrCitizenship.Text = ppersonnel.Citizenship;
@@ -132,6 +133,11 @@ namespace DEHRIS.Importer
         }
 
         private void groupBar1_GroupBarItemSelected(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bariAdd_Click(object sender, EventArgs e)
         {
 
         }

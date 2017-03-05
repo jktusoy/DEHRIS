@@ -69,8 +69,8 @@
             // 
             // gradientPanel3
             // 
-            this.gradientPanel3.BackgroundColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.PatternStyle.DiagonalCross, new System.Drawing.Color[] {
-            System.Drawing.SystemColors.Window,
+            this.gradientPanel3.BackgroundColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.PatternStyle.BackwardDiagonal, new System.Drawing.Color[] {
+            System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(231)))), ((int)(((byte)(235))))),
             System.Drawing.SystemColors.WindowText,
             System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192))))),
             System.Drawing.Color.Empty});
@@ -160,18 +160,19 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox2.Location = new System.Drawing.Point(12, 85);
+            this.richTextBox2.Location = new System.Drawing.Point(12, 74);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.ReadOnly = true;
-            this.richTextBox2.Size = new System.Drawing.Size(247, 329);
+            this.richTextBox2.Size = new System.Drawing.Size(260, 340);
             this.richTextBox2.TabIndex = 1;
             this.richTextBox2.Text = resources.GetString("richTextBox2.Text");
             this.richTextBox2.TextChanged += new System.EventHandler(this.richTextBox2_TextChanged);
             // 
             // gradientPanel1
             // 
-            this.gradientPanel1.BackgroundColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.PatternStyle.DiagonalCross, new System.Drawing.Color[] {
-            System.Drawing.SystemColors.Window,
+            this.gradientPanel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.gradientPanel1.BackgroundColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.PatternStyle.DarkVertical, new System.Drawing.Color[] {
+            System.Drawing.SystemColors.InactiveCaption,
             System.Drawing.SystemColors.WindowText,
             System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192))))),
             System.Drawing.Color.Empty});

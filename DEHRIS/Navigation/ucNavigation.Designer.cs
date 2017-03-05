@@ -55,7 +55,7 @@
             this.tabSplitterPage2});
             this.tabSplitterContainer1.Size = new System.Drawing.Size(262, 438);
             this.tabSplitterContainer1.SplitterBackColor = System.Drawing.SystemColors.Control;
-            this.tabSplitterContainer1.SplitterPosition = 261;
+            this.tabSplitterContainer1.SplitterPosition = 160;
             this.tabSplitterContainer1.Swapped = true;
             this.tabSplitterContainer1.TabIndex = 1;
             this.tabSplitterContainer1.Text = "tabSplitterContainer1";
@@ -65,9 +65,9 @@
             this.tabSplitterPage1.AutoScroll = true;
             this.tabSplitterPage1.Controls.Add(this.clock1);
             this.tabSplitterPage1.Hide = false;
-            this.tabSplitterPage1.Location = new System.Drawing.Point(0, 281);
+            this.tabSplitterPage1.Location = new System.Drawing.Point(0, 180);
             this.tabSplitterPage1.Name = "tabSplitterPage1";
-            this.tabSplitterPage1.Size = new System.Drawing.Size(262, 157);
+            this.tabSplitterPage1.Size = new System.Drawing.Size(262, 258);
             this.tabSplitterPage1.TabIndex = 1;
             this.tabSplitterPage1.Text = "tabSplitterPage1";
             // 
@@ -75,29 +75,31 @@
             // 
             this.clock1.BackColor = System.Drawing.Color.Transparent;
             this.clock1.BackgroundColor = System.Drawing.SystemColors.HighlightText;
-            this.clock1.BeforeTouchSize = new System.Drawing.Size(250, 125);
+            this.clock1.BeforeTouchSize = new System.Drawing.Size(193, 193);
             this.clock1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(111)))), ((int)(((byte)(119)))));
             this.clock1.ClockFormat = "HH:mm:ss";
-            this.clock1.ClockFrame = Syncfusion.Windows.Forms.Tools.ClockFrames.CircularFrame;
+            this.clock1.ClockFrame = Syncfusion.Windows.Forms.Tools.ClockFrames.RectangularFrame;
             this.clock1.ClockShape = Syncfusion.Windows.Forms.Tools.ClockShapes.Rectangle;
-            this.clock1.ClockType = Syncfusion.Windows.Forms.Tools.ClockTypes.Digital;
+            this.clock1.ClockType = Syncfusion.Windows.Forms.Tools.ClockTypes.Analog;
             this.clock1.CurrentDateTime = new System.DateTime(2017, 3, 2, 16, 0, 45, 896);
-            this.clock1.CustomTime = new System.DateTime(2017, 3, 4, 0, 37, 48, 662);
+            this.clock1.CustomTime = new System.DateTime(2017, 3, 5, 20, 54, 56, 590);
             this.clock1.DigitalRenderer = digitalClockRenderer1;
             this.clock1.DisplayDates = true;
+            this.clock1.EnableRemainder = true;
             this.clock1.EndGradientBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))), ((int)(((byte)(252)))));
             this.clock1.IsTransparent = true;
-            this.clock1.Location = new System.Drawing.Point(3, 15);
+            this.clock1.Location = new System.Drawing.Point(42, 39);
             this.clock1.MinimumSize = new System.Drawing.Size(75, 75);
             this.clock1.MinuteColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(111)))), ((int)(((byte)(119)))));
             this.clock1.Name = "clock1";
             this.clock1.Now = new System.DateTime(((long)(0)));
             this.clock1.Remainder = new System.DateTime(2017, 3, 2, 16, 0, 45, 896);
             this.clock1.Renderer = clockRenderer1;
-            this.clock1.ShowClockFrame = false;
-            this.clock1.ShowCustomTimeClock = false;
-            this.clock1.ShowHourDesignator = false;
-            this.clock1.Size = new System.Drawing.Size(250, 125);
+            this.clock1.ShowAMorPM = true;
+            this.clock1.ShowClockFrame = true;
+            this.clock1.ShowCustomTimeClock = true;
+            this.clock1.ShowHourDesignator = true;
+            this.clock1.Size = new System.Drawing.Size(193, 193);
             this.clock1.StartGradientBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(228)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.clock1.StopTimer = false;
             this.clock1.TabIndex = 1;
@@ -111,7 +113,7 @@
             this.tabSplitterPage2.Hide = false;
             this.tabSplitterPage2.Location = new System.Drawing.Point(0, 0);
             this.tabSplitterPage2.Name = "tabSplitterPage2";
-            this.tabSplitterPage2.Size = new System.Drawing.Size(262, 261);
+            this.tabSplitterPage2.Size = new System.Drawing.Size(262, 160);
             this.tabSplitterPage2.TabIndex = 2;
             this.tabSplitterPage2.Text = "tabSplitterPage2";
             // 
@@ -127,21 +129,20 @@
             this.gradientPanel2.IgnoreThemeBackground = true;
             this.gradientPanel2.Location = new System.Drawing.Point(0, 0);
             this.gradientPanel2.Name = "gradientPanel2";
-            this.gradientPanel2.Size = new System.Drawing.Size(262, 261);
+            this.gradientPanel2.Size = new System.Drawing.Size(262, 160);
             this.gradientPanel2.TabIndex = 2;
             // 
             // groupBar1
             // 
             this.groupBar1.AllowCollapse = true;
             this.groupBar1.AllowDrop = true;
-            this.groupBar1.BeforeTouchSize = new System.Drawing.Size(260, 259);
+            this.groupBar1.BeforeTouchSize = new System.Drawing.Size(260, 158);
             this.groupBar1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBar1.HeaderBackColor = System.Drawing.SystemColors.ControlDark;
             this.groupBar1.IndexOnVisibleItems = true;
             this.groupBar1.Location = new System.Drawing.Point(0, 0);
             this.groupBar1.Name = "groupBar1";
             this.groupBar1.PopupClientSize = new System.Drawing.Size(0, 0);
-            this.groupBar1.Size = new System.Drawing.Size(260, 259);
+            this.groupBar1.Size = new System.Drawing.Size(260, 158);
             this.groupBar1.Splittercolor = System.Drawing.SystemColors.ControlDark;
             this.groupBar1.TabIndex = 0;
             this.groupBar1.Text = "groupBar1";

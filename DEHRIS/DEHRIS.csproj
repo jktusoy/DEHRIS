@@ -42,6 +42,9 @@
     <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
+    <Reference Include="FarPoint.Localization, Version=7.20.20142.0, Culture=neutral, PublicKeyToken=327c3516b1b18457" />
+    <Reference Include="FarPoint.Win, Version=7.35.20142.0, Culture=neutral, PublicKeyToken=327c3516b1b18457" />
+    <Reference Include="FarPoint.Win.Chart, Version=7.35.20142.0, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Vsa, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
     <Reference Include="ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -109,6 +112,12 @@
     <Compile Include="Personnel\ucImportPersonnel.Designer.cs">
       <DependentUpon>ucImportPersonnel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Personnel\ucPerformance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Personnel\ucPerformance.Designer.cs">
+      <DependentUpon>ucPerformance.cs</DependentUpon>
+    </Compile>
     <Compile Include="Personnel\ucPersonnelView.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -147,6 +156,9 @@
     <EmbeddedResource Include="Personnel\ucImportPersonnel.resx">
       <DependentUpon>ucImportPersonnel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Personnel\ucPerformance.resx">
+      <DependentUpon>ucPerformance.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Personnel\ucPersonnelView.resx">
       <DependentUpon>ucPersonnelView.cs</DependentUpon>
     </EmbeddedResource>
@@ -159,6 +171,7 @@
     <EmbeddedResource Include="Organization\ucVMG.resx">
       <DependentUpon>ucVMG.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -228,6 +241,42 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qualification.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\attachment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\policy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\celebrate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diagram.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ipcr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\process.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\personnel3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

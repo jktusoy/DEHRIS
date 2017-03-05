@@ -34,19 +34,35 @@
             this.ribbonControlAdv1 = new Syncfusion.Windows.Forms.Tools.RibbonControlAdv();
             this.toolStripTabItem1 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
             this.toolStripEx2 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
+            this.tsbHome = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripEx3 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
+            this.tsbReport = new System.Windows.Forms.ToolStripButton();
             this.toolStripTabItem2 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
             this.tseVMG = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
+            this.tlsbtVMG = new System.Windows.Forms.ToolStripButton();
+            this.toolStripEx7 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
+            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton10 = new System.Windows.Forms.ToolStripButton();
             this.toolStripTabItem3 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
             this.toolStripEx5 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripTabItem4 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
             this.toolStripEx6 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
-            this.toolStripTabItem5 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
+            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton12 = new System.Windows.Forms.ToolStripButton();
             this.toolStripTabItem6 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
+            this.toolStripEx8 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
+            this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton11 = new System.Windows.Forms.ToolStripButton();
             this.toolStripTabItem7 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
             this.tsTabTools = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
             this.toolStripEx4 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
+            this.tsBtnImporter = new System.Windows.Forms.ToolStripButton();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.gpNavigation = new Syncfusion.Windows.Forms.Tools.GradientPanel();
             this.gradientPanel1 = new Syncfusion.Windows.Forms.Tools.GradientPanel();
@@ -64,18 +80,7 @@
             this.ribbonPanel5 = new Syncfusion.Windows.Forms.Tools.RibbonPanel();
             this.ribbonPanel6 = new Syncfusion.Windows.Forms.Tools.RibbonPanel();
             this.ribbonPanel7 = new Syncfusion.Windows.Forms.Tools.RibbonPanel();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripEx7 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.tlsbtVMG = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
-            this.tsBtnImporter = new System.Windows.Forms.ToolStripButton();
+            this.toolStripTabItem5 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
             this.tblyMain.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControlAdv1)).BeginInit();
@@ -85,10 +90,13 @@
             this.toolStripEx3.SuspendLayout();
             this.toolStripTabItem2.Panel.SuspendLayout();
             this.tseVMG.SuspendLayout();
+            this.toolStripEx7.SuspendLayout();
             this.toolStripTabItem3.Panel.SuspendLayout();
             this.toolStripEx5.SuspendLayout();
             this.toolStripTabItem4.Panel.SuspendLayout();
             this.toolStripEx6.SuspendLayout();
+            this.toolStripTabItem6.Panel.SuspendLayout();
+            this.toolStripEx8.SuspendLayout();
             this.tsTabTools.Panel.SuspendLayout();
             this.toolStripEx4.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -100,7 +108,6 @@
             this.tabPageAdv1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gpMain)).BeginInit();
             this.tabPageAdv2.SuspendLayout();
-            this.toolStripEx7.SuspendLayout();
             this.SuspendLayout();
             // 
             // tblyMain
@@ -143,7 +150,6 @@
             this.ribbonControlAdv1.Header.AddMainItem(toolStripTabItem2);
             this.ribbonControlAdv1.Header.AddMainItem(toolStripTabItem3);
             this.ribbonControlAdv1.Header.AddMainItem(toolStripTabItem4);
-            this.ribbonControlAdv1.Header.AddMainItem(toolStripTabItem5);
             this.ribbonControlAdv1.Header.AddMainItem(toolStripTabItem6);
             this.ribbonControlAdv1.Header.AddMainItem(toolStripTabItem7);
             this.ribbonControlAdv1.Header.AddMainItem(tsTabTools);
@@ -161,7 +167,7 @@
             this.ribbonControlAdv1.OfficeMenu.Size = new System.Drawing.Size(12, 65);
             this.ribbonControlAdv1.QuickPanelImageLayout = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ribbonControlAdv1.RibbonHeaderImage = Syncfusion.Windows.Forms.Tools.RibbonHeaderImage.None;
-            this.ribbonControlAdv1.SelectedTab = this.toolStripTabItem4;
+            this.ribbonControlAdv1.SelectedTab = this.toolStripTabItem1;
             this.ribbonControlAdv1.ShowRibbonDisplayOptionButton = true;
             this.ribbonControlAdv1.Size = new System.Drawing.Size(1135, 120);
             this.ribbonControlAdv1.SystemText.QuickAccessDialogDropDownName = "Start menu";
@@ -194,12 +200,28 @@
             this.toolStripEx2.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStripEx2.Image = null;
             this.toolStripEx2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton2,
+            this.tsbHome,
             this.toolStripSeparator1});
             this.toolStripEx2.Location = new System.Drawing.Point(0, 1);
             this.toolStripEx2.Name = "toolStripEx2";
             this.toolStripEx2.Size = new System.Drawing.Size(214, 64);
             this.toolStripEx2.TabIndex = 0;
+            // 
+            // tsbHome
+            // 
+            this.ribbonControlAdv1.SetDescription(this.tsbHome, "Home");
+            this.tsbHome.Image = global::DEHRIS.Properties.Resources.home1;
+            this.tsbHome.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsbHome.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbHome.Name = "tsbHome";
+            this.tsbHome.Size = new System.Drawing.Size(76, 43);
+            this.tsbHome.Text = "HOME";
+            this.tsbHome.Click += new System.EventHandler(this.toolStripButton2_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 46);
             // 
             // toolStripEx3
             // 
@@ -210,11 +232,21 @@
             this.toolStripEx3.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStripEx3.Image = null;
             this.toolStripEx3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton3});
+            this.tsbReport});
             this.toolStripEx3.Location = new System.Drawing.Point(216, 1);
             this.toolStripEx3.Name = "toolStripEx3";
             this.toolStripEx3.Size = new System.Drawing.Size(209, 64);
             this.toolStripEx3.TabIndex = 1;
+            // 
+            // tsbReport
+            // 
+            this.tsbReport.Image = global::DEHRIS.Properties.Resources.report;
+            this.tsbReport.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsbReport.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbReport.Name = "tsbReport";
+            this.tsbReport.Size = new System.Drawing.Size(83, 43);
+            this.tsbReport.Text = "Reports";
+            this.tsbReport.Click += new System.EventHandler(this.tsbReport_Click);
             // 
             // toolStripTabItem2
             // 
@@ -244,8 +276,71 @@
             this.tlsbtVMG});
             this.tseVMG.Location = new System.Drawing.Point(0, 1);
             this.tseVMG.Name = "tseVMG";
-            this.tseVMG.Size = new System.Drawing.Size(207, 64);
+            this.tseVMG.Size = new System.Drawing.Size(147, 64);
             this.tseVMG.TabIndex = 0;
+            // 
+            // tlsbtVMG
+            // 
+            this.tlsbtVMG.Image = global::DEHRIS.Properties.Resources.org;
+            this.tlsbtVMG.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tlsbtVMG.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tlsbtVMG.Name = "tlsbtVMG";
+            this.tlsbtVMG.Size = new System.Drawing.Size(122, 43);
+            this.tlsbtVMG.Text = "ORGANIZATION";
+            this.tlsbtVMG.Click += new System.EventHandler(this.tlsbtVMG_Click);
+            // 
+            // toolStripEx7
+            // 
+            this.toolStripEx7.AutoSize = false;
+            this.toolStripEx7.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStripEx7.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.toolStripEx7.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.toolStripEx7.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStripEx7.Image = null;
+            this.toolStripEx7.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton4,
+            this.toolStripButton5,
+            this.toolStripButton8,
+            this.toolStripButton10});
+            this.toolStripEx7.Location = new System.Drawing.Point(149, 1);
+            this.toolStripEx7.Name = "toolStripEx7";
+            this.toolStripEx7.Size = new System.Drawing.Size(434, 64);
+            this.toolStripEx7.TabIndex = 1;
+            // 
+            // toolStripButton4
+            // 
+            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
+            this.toolStripButton4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton4.Name = "toolStripButton4";
+            this.toolStripButton4.Size = new System.Drawing.Size(81, 43);
+            this.toolStripButton4.Text = "EVENTS";
+            // 
+            // toolStripButton5
+            // 
+            this.toolStripButton5.Image = global::DEHRIS.Properties.Resources.celebrate;
+            this.toolStripButton5.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton5.Name = "toolStripButton5";
+            this.toolStripButton5.Size = new System.Drawing.Size(93, 43);
+            this.toolStripButton5.Text = "HOLIDAYS";
+            // 
+            // toolStripButton8
+            // 
+            this.toolStripButton8.Image = global::DEHRIS.Properties.Resources.policy;
+            this.toolStripButton8.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton8.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton8.Name = "toolStripButton8";
+            this.toolStripButton8.Size = new System.Drawing.Size(78, 43);
+            this.toolStripButton8.Text = "POLICY";
+            // 
+            // toolStripButton10
+            // 
+            this.toolStripButton10.Image = global::DEHRIS.Properties.Resources.diagram;
+            this.toolStripButton10.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton10.Name = "toolStripButton10";
+            this.toolStripButton10.Size = new System.Drawing.Size(78, 43);
+            this.toolStripButton10.Text = "Org Chart";
             // 
             // toolStripTabItem3
             // 
@@ -275,13 +370,23 @@
             this.toolStripLabel1});
             this.toolStripEx5.Location = new System.Drawing.Point(0, 1);
             this.toolStripEx5.Name = "toolStripEx5";
-            this.toolStripEx5.Size = new System.Drawing.Size(129, 64);
+            this.toolStripEx5.Size = new System.Drawing.Size(210, 64);
             this.toolStripEx5.TabIndex = 0;
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Image = global::DEHRIS.Properties.Resources.personnel;
+            this.toolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(94, 43);
+            this.toolStripButton1.Text = "Personnel";
+            this.toolStripButton1.Click += new System.EventHandler(this.tsBtnImporter_Click);
             // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(86, 15);
+            this.toolStripLabel1.Size = new System.Drawing.Size(85, 43);
             this.toolStripLabel1.Text = "toolStripLabel1";
             // 
             // toolStripTabItem4
@@ -309,53 +414,101 @@
             this.toolStripEx6.Image = null;
             this.toolStripEx6.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton6,
-            this.toolStripButton7});
+            this.toolStripButton7,
+            this.toolStripButton12});
             this.toolStripEx6.Location = new System.Drawing.Point(0, 1);
             this.toolStripEx6.Name = "toolStripEx6";
-            this.toolStripEx6.Size = new System.Drawing.Size(282, 64);
+            this.toolStripEx6.Size = new System.Drawing.Size(364, 64);
             this.toolStripEx6.TabIndex = 0;
             // 
-            // toolStripTabItem5
+            // toolStripButton6
             // 
-            this.toolStripTabItem5.Name = "toolStripTabItem5";
+            this.toolStripButton6.Image = global::DEHRIS.Properties.Resources.applicant;
+            this.toolStripButton6.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton6.Name = "toolStripButton6";
+            this.toolStripButton6.Size = new System.Drawing.Size(92, 43);
+            this.toolStripButton6.Text = "Applicant";
             // 
-            // ribbonControlAdv1.ribbonPanel12
+            // toolStripButton7
             // 
-            this.toolStripTabItem5.Panel.Name = "ribbonPanel12";
-            this.toolStripTabItem5.Panel.ScrollPosition = 0;
-            this.toolStripTabItem5.Panel.TabIndex = 6;
-            this.toolStripTabItem5.Panel.Text = "Appointment";
-            this.toolStripTabItem5.Position = 4;
-            this.toolStripTabItem5.Size = new System.Drawing.Size(81, 19);
-            this.toolStripTabItem5.Tag = "5";
-            this.toolStripTabItem5.Text = "Appointment";
+            this.toolStripButton7.Image = global::DEHRIS.Properties.Resources.requirement;
+            this.toolStripButton7.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton7.Name = "toolStripButton7";
+            this.toolStripButton7.Size = new System.Drawing.Size(114, 43);
+            this.toolStripButton7.Text = "Requirements";
+            // 
+            // toolStripButton12
+            // 
+            this.toolStripButton12.Image = global::DEHRIS.Properties.Resources.process;
+            this.toolStripButton12.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton12.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton12.Name = "toolStripButton12";
+            this.toolStripButton12.Size = new System.Drawing.Size(131, 43);
+            this.toolStripButton12.Text = "Selection Process";
             // 
             // toolStripTabItem6
             // 
             this.toolStripTabItem6.Name = "toolStripTabItem6";
             // 
-            // ribbonControlAdv1.ribbonPanel13
+            // ribbonControlAdv1.ribbonPanel12
             // 
-            this.toolStripTabItem6.Panel.Name = "ribbonPanel13";
+            this.toolStripTabItem6.Panel.Controls.Add(this.toolStripEx8);
+            this.toolStripTabItem6.Panel.Name = "ribbonPanel12";
             this.toolStripTabItem6.Panel.ScrollPosition = 0;
             this.toolStripTabItem6.Panel.TabIndex = 7;
             this.toolStripTabItem6.Panel.Text = "Performance";
-            this.toolStripTabItem6.Position = 5;
+            this.toolStripTabItem6.Position = 4;
             this.toolStripTabItem6.Size = new System.Drawing.Size(77, 19);
             this.toolStripTabItem6.Tag = "6";
             this.toolStripTabItem6.Text = "Performance";
+            // 
+            // toolStripEx8
+            // 
+            this.toolStripEx8.AutoSize = false;
+            this.toolStripEx8.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStripEx8.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.toolStripEx8.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.toolStripEx8.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStripEx8.Image = null;
+            this.toolStripEx8.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton9,
+            this.toolStripButton11});
+            this.toolStripEx8.Location = new System.Drawing.Point(0, 1);
+            this.toolStripEx8.Name = "toolStripEx8";
+            this.toolStripEx8.Size = new System.Drawing.Size(217, 64);
+            this.toolStripEx8.TabIndex = 0;
+            // 
+            // toolStripButton9
+            // 
+            this.toolStripButton9.Image = global::DEHRIS.Properties.Resources.leave;
+            this.toolStripButton9.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton9.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton9.Name = "toolStripButton9";
+            this.toolStripButton9.Size = new System.Drawing.Size(73, 43);
+            this.toolStripButton9.Text = "LEAVE";
+            // 
+            // toolStripButton11
+            // 
+            this.toolStripButton11.Image = global::DEHRIS.Properties.Resources.ipcr;
+            this.toolStripButton11.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton11.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton11.Name = "toolStripButton11";
+            this.toolStripButton11.Size = new System.Drawing.Size(66, 43);
+            this.toolStripButton11.Text = "IPCR";
             // 
             // toolStripTabItem7
             // 
             this.toolStripTabItem7.Name = "toolStripTabItem7";
             // 
-            // ribbonControlAdv1.ribbonPanel14
+            // ribbonControlAdv1.ribbonPanel13
             // 
-            this.toolStripTabItem7.Panel.Name = "ribbonPanel14";
+            this.toolStripTabItem7.Panel.Name = "ribbonPanel13";
             this.toolStripTabItem7.Panel.ScrollPosition = 0;
             this.toolStripTabItem7.Panel.TabIndex = 8;
             this.toolStripTabItem7.Panel.Text = "Retirement";
-            this.toolStripTabItem7.Position = 6;
+            this.toolStripTabItem7.Position = 5;
             this.toolStripTabItem7.Size = new System.Drawing.Size(69, 19);
             this.toolStripTabItem7.Tag = "7";
             this.toolStripTabItem7.Text = "Retirement";
@@ -364,14 +517,14 @@
             // 
             this.tsTabTools.Name = "tsTabTools";
             // 
-            // ribbonControlAdv1.ribbonPanel15
+            // ribbonControlAdv1.ribbonPanel14
             // 
             this.tsTabTools.Panel.Controls.Add(this.toolStripEx4);
-            this.tsTabTools.Panel.Name = "ribbonPanel15";
+            this.tsTabTools.Panel.Name = "ribbonPanel14";
             this.tsTabTools.Panel.ScrollPosition = 0;
             this.tsTabTools.Panel.TabIndex = 9;
             this.tsTabTools.Panel.Text = "Tools";
-            this.tsTabTools.Position = 7;
+            this.tsTabTools.Position = 6;
             this.tsTabTools.Size = new System.Drawing.Size(39, 19);
             this.tsTabTools.Tag = "8";
             this.tsTabTools.Text = "Tools";
@@ -390,6 +543,16 @@
             this.toolStripEx4.Name = "toolStripEx4";
             this.toolStripEx4.Size = new System.Drawing.Size(100, 64);
             this.toolStripEx4.TabIndex = 0;
+            // 
+            // tsBtnImporter
+            // 
+            this.tsBtnImporter.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsBtnImporter.Image = ((System.Drawing.Image)(resources.GetObject("tsBtnImporter.Image")));
+            this.tsBtnImporter.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsBtnImporter.Name = "tsBtnImporter";
+            this.tsBtnImporter.Size = new System.Drawing.Size(23, 43);
+            this.tsBtnImporter.Text = "toolStripButton2";
+            this.tsBtnImporter.Click += new System.EventHandler(this.tsBtnImporter_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -581,118 +744,20 @@
             this.ribbonPanel7.ScrollPosition = 0;
             this.ribbonPanel7.TabIndex = 8;
             // 
-            // toolStripSeparator1
+            // toolStripTabItem5
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 46);
+            this.toolStripTabItem5.Name = "toolStripTabItem5";
             // 
-            // toolStripEx7
             // 
-            this.toolStripEx7.AutoSize = false;
-            this.toolStripEx7.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStripEx7.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.toolStripEx7.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.toolStripEx7.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.toolStripEx7.Image = null;
-            this.toolStripEx7.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton4,
-            this.toolStripSeparator2,
-            this.toolStripButton5});
-            this.toolStripEx7.Location = new System.Drawing.Point(209, 1);
-            this.toolStripEx7.Name = "toolStripEx7";
-            this.toolStripEx7.Size = new System.Drawing.Size(278, 64);
-            this.toolStripEx7.TabIndex = 1;
             // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 46);
-            // 
-            // toolStripButton2
-            // 
-            this.ribbonControlAdv1.SetDescription(this.toolStripButton2, "Home");
-            this.toolStripButton2.Image = global::DEHRIS.Properties.Resources.home1;
-            this.toolStripButton2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(76, 43);
-            this.toolStripButton2.Text = "HOME";
-            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
-            // 
-            // toolStripButton3
-            // 
-            this.toolStripButton3.Image = global::DEHRIS.Properties.Resources.report;
-            this.toolStripButton3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(83, 43);
-            this.toolStripButton3.Text = "Reports";
-            // 
-            // tlsbtVMG
-            // 
-            this.tlsbtVMG.Image = global::DEHRIS.Properties.Resources.org;
-            this.tlsbtVMG.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tlsbtVMG.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tlsbtVMG.Name = "tlsbtVMG";
-            this.tlsbtVMG.Size = new System.Drawing.Size(122, 43);
-            this.tlsbtVMG.Text = "ORGANIZATION";
-            this.tlsbtVMG.Click += new System.EventHandler(this.tlsbtVMG_Click);
-            // 
-            // toolStripButton4
-            // 
-            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
-            this.toolStripButton4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(81, 43);
-            this.toolStripButton4.Text = "EVENTS";
-            // 
-            // toolStripButton5
-            // 
-            this.toolStripButton5.Image = global::DEHRIS.Properties.Resources.holiday;
-            this.toolStripButton5.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(93, 43);
-            this.toolStripButton5.Text = "HOLIDAYS";
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.Image = global::DEHRIS.Properties.Resources.personnel;
-            this.toolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(94, 43);
-            this.toolStripButton1.Text = "Personnel";
-            this.toolStripButton1.Click += new System.EventHandler(this.tsBtnImporter_Click);
-            // 
-            // toolStripButton6
-            // 
-            this.toolStripButton6.Image = global::DEHRIS.Properties.Resources.applicant;
-            this.toolStripButton6.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton6.Name = "toolStripButton6";
-            this.toolStripButton6.Size = new System.Drawing.Size(92, 43);
-            this.toolStripButton6.Text = "Applicant";
-            // 
-            // toolStripButton7
-            // 
-            this.toolStripButton7.Image = global::DEHRIS.Properties.Resources.requirement;
-            this.toolStripButton7.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton7.Name = "toolStripButton7";
-            this.toolStripButton7.Size = new System.Drawing.Size(114, 43);
-            this.toolStripButton7.Text = "Requirements";
-            // 
-            // tsBtnImporter
-            // 
-            this.tsBtnImporter.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsBtnImporter.Image = ((System.Drawing.Image)(resources.GetObject("tsBtnImporter.Image")));
-            this.tsBtnImporter.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsBtnImporter.Name = "tsBtnImporter";
-            this.tsBtnImporter.Size = new System.Drawing.Size(23, 43);
-            this.tsBtnImporter.Text = "toolStripButton2";
-            this.tsBtnImporter.Click += new System.EventHandler(this.tsBtnImporter_Click);
+            this.toolStripTabItem5.Panel.Name = "";
+            this.toolStripTabItem5.Panel.ScrollPosition = 0;
+            this.toolStripTabItem5.Panel.TabIndex = 0;
+            this.toolStripTabItem5.Panel.Text = "Appointment";
+            this.toolStripTabItem5.Position = -1;
+            this.toolStripTabItem5.Size = new System.Drawing.Size(81, 19);
+            this.toolStripTabItem5.Tag = "5";
+            this.toolStripTabItem5.Text = "Appointment";
             // 
             // frmMain
             // 
@@ -717,12 +782,17 @@
             this.toolStripTabItem2.Panel.ResumeLayout(false);
             this.tseVMG.ResumeLayout(false);
             this.tseVMG.PerformLayout();
+            this.toolStripEx7.ResumeLayout(false);
+            this.toolStripEx7.PerformLayout();
             this.toolStripTabItem3.Panel.ResumeLayout(false);
             this.toolStripEx5.ResumeLayout(false);
             this.toolStripEx5.PerformLayout();
             this.toolStripTabItem4.Panel.ResumeLayout(false);
             this.toolStripEx6.ResumeLayout(false);
             this.toolStripEx6.PerformLayout();
+            this.toolStripTabItem6.Panel.ResumeLayout(false);
+            this.toolStripEx8.ResumeLayout(false);
+            this.toolStripEx8.PerformLayout();
             this.tsTabTools.Panel.ResumeLayout(false);
             this.toolStripEx4.ResumeLayout(false);
             this.toolStripEx4.PerformLayout();
@@ -736,8 +806,6 @@
             this.tabPageAdv1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gpMain)).EndInit();
             this.tabPageAdv2.ResumeLayout(false);
-            this.toolStripEx7.ResumeLayout(false);
-            this.toolStripEx7.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -761,7 +829,6 @@
         private Syncfusion.Windows.Forms.Tools.RibbonPanel ribbonPanel3;
         private Syncfusion.Windows.Forms.Tools.ToolStripTabItem toolStripTabItem4;
         private Syncfusion.Windows.Forms.Tools.RibbonPanel ribbonPanel4;
-        private Syncfusion.Windows.Forms.Tools.ToolStripTabItem toolStripTabItem5;
         private Syncfusion.Windows.Forms.Tools.RibbonPanel ribbonPanel5;
         private Syncfusion.Windows.Forms.Tools.ToolStripTabItem toolStripTabItem6;
         private Syncfusion.Windows.Forms.Tools.RibbonPanel ribbonPanel6;
@@ -782,15 +849,21 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private Syncfusion.Windows.Forms.Schedule.ScheduleControl scheduleControl1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripButton tsbHome;
+        private System.Windows.Forms.ToolStripButton tsbReport;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private Syncfusion.Windows.Forms.Tools.ToolStripEx toolStripEx7;
         private System.Windows.Forms.ToolStripButton toolStripButton4;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton toolStripButton5;
         private System.Windows.Forms.ToolStripButton toolStripButton6;
         private System.Windows.Forms.ToolStripButton toolStripButton7;
+        private System.Windows.Forms.ToolStripButton toolStripButton8;
+        private Syncfusion.Windows.Forms.Tools.ToolStripEx toolStripEx8;
+        private System.Windows.Forms.ToolStripButton toolStripButton9;
+        private System.Windows.Forms.ToolStripButton toolStripButton10;
+        private System.Windows.Forms.ToolStripButton toolStripButton11;
+        private Syncfusion.Windows.Forms.Tools.ToolStripTabItem toolStripTabItem5;
+        private System.Windows.Forms.ToolStripButton toolStripButton12;
     }
 }
 
