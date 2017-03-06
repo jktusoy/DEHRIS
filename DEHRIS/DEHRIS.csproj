@@ -118,6 +118,12 @@
     <Compile Include="Personnel\ucPerformance.Designer.cs">
       <DependentUpon>ucPerformance.cs</DependentUpon>
     </Compile>
+    <Compile Include="Personnel\ucApplicantView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Personnel\ucApplicantView.Designer.cs">
+      <DependentUpon>ucApplicantView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Personnel\ucPersonnelView.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -144,6 +150,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tool\ucSpreadsheet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tool\ucSpreadsheet.Designer.cs">
+      <DependentUpon>ucSpreadsheet.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Dashboard\Reports\ucDashboard.resx">
       <DependentUpon>ucDashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -158,6 +170,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Personnel\ucPerformance.resx">
       <DependentUpon>ucPerformance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personnel\ucApplicantView.resx">
+      <DependentUpon>ucApplicantView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Personnel\ucPersonnelView.resx">
       <DependentUpon>ucPersonnelView.cs</DependentUpon>
@@ -182,6 +197,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Tool\ucSpreadsheet.resx">
+      <DependentUpon>ucSpreadsheet.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -283,6 +301,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\family.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\work.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\presentation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\information.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dossier-vert-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\org1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\information1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\process1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\requirement1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

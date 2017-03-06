@@ -12,15 +12,15 @@ using DEHRISAPI;
 using DEHRISModel.Data;
 namespace DEHRIS.Importer
 {
-    public partial class ucPersonnelView : UserControl
+    public partial class ucApplicantView : UserControl
     {
-        public ucPersonnelView()
+        public ucApplicantView()
         {
             InitializeComponent();
 
 
             DEHRISAPI.PersonnelUtility prodUtil = new PersonnelUtility();
-            objlPersonnelView.SetObjects(prodUtil.GetPersonnel());
+          //  objlPersonnelView.SetObjects(prodUtil.GetPersonnel());
             //IApplication application = excelEngine.Excel;
 
 
@@ -162,10 +162,6 @@ namespace DEHRIS.Importer
             txtPrMiddlename.Text = "";
             txtPrNameExt.Text = "";
             txtPrWeight.Text = "";
-            cbBloodType.Text = "";
-            cbCivilStatus.Text = "";
-            cBirthDate.Text = "";
-            txtPrBirthPlace.Text = "";
         }
 
         private void xpPrAdd_Click(object sender, EventArgs e)

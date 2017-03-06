@@ -62,8 +62,8 @@ C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\bin\Debug\DEHRISDL.dll
 C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\bin\Debug\DEHRISDB.dll
 C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\bin\Debug\DEHRISAPI.pdb
 C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\bin\Debug\DEHRISDL.pdb
-C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\bin\Debug\EntityFramework.xml
-C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\bin\Debug\DEHRISDB.pdb
 C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Personnel.ucPerformance.resources
 C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.exe.licenses
+C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Importer.ucApplicantView.resources
+C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Tool.ucSpreadsheet.resources

@@ -15,6 +15,12 @@ namespace DEHRIS.Organization
         public ucVMG()
         {
             InitializeComponent();
+            richTextBox1.SelectAll();
+            richTextBox1.SelectionAlignment = HorizontalAlignment.Center;
+            richTextBox2.SelectAll();
+            richTextBox2.SelectionAlignment = HorizontalAlignment.Center;
+            richTextBox3.SelectAll();
+            richTextBox3.SelectionAlignment = HorizontalAlignment.Center;
         }
 
         private void gradientLabel1_Click(object sender, EventArgs e)

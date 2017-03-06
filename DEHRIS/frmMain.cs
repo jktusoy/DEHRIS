@@ -93,6 +93,16 @@ namespace DEHRIS
             iucDashboard.Dock = DockStyle.Fill;
         }
 
+        private void tsbIPCR_Click(object sender, EventArgs e)
+        {
+            Tool.ucSpreadsheet ucspreadsheet = new Tool.ucSpreadsheet();
+            ucspreadsheet.LoadSpreadsheet(@"C:\Users\Cocoypower\Source\Repo\DEHRIS\ExternalFiles\OPCR.xls");
+            gpMain.Controls.Clear();
+            gpMain.Controls.Add(ucspreadsheet);
+            ucspreadsheet.Dock = DockStyle.Fill;
+        }
+
+      
 
 
     }

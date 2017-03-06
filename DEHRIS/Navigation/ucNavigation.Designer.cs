@@ -32,7 +32,7 @@
             Syncfusion.Windows.Forms.Tools.ClockRenderer clockRenderer1 = new Syncfusion.Windows.Forms.Tools.ClockRenderer();
             this.tabSplitterContainer1 = new Syncfusion.Windows.Forms.Tools.TabSplitterContainer();
             this.tabSplitterPage1 = new Syncfusion.Windows.Forms.Tools.TabSplitterPage();
-            this.clock1 = new Syncfusion.Windows.Forms.Tools.Clock();
+            this.clock2 = new Syncfusion.Windows.Forms.Tools.Clock();
             this.tabSplitterPage2 = new Syncfusion.Windows.Forms.Tools.TabSplitterPage();
             this.gradientPanel2 = new Syncfusion.Windows.Forms.Tools.GradientPanel();
             this.groupBar1 = new Syncfusion.Windows.Forms.Tools.GroupBar();
@@ -55,7 +55,7 @@
             this.tabSplitterPage2});
             this.tabSplitterContainer1.Size = new System.Drawing.Size(262, 438);
             this.tabSplitterContainer1.SplitterBackColor = System.Drawing.SystemColors.Control;
-            this.tabSplitterContainer1.SplitterPosition = 160;
+            this.tabSplitterContainer1.SplitterPosition = 154;
             this.tabSplitterContainer1.Swapped = true;
             this.tabSplitterContainer1.TabIndex = 1;
             this.tabSplitterContainer1.Text = "tabSplitterContainer1";
@@ -63,48 +63,50 @@
             // tabSplitterPage1
             // 
             this.tabSplitterPage1.AutoScroll = true;
-            this.tabSplitterPage1.Controls.Add(this.clock1);
+            this.tabSplitterPage1.Controls.Add(this.clock2);
             this.tabSplitterPage1.Hide = false;
-            this.tabSplitterPage1.Location = new System.Drawing.Point(0, 180);
+            this.tabSplitterPage1.Location = new System.Drawing.Point(0, 174);
             this.tabSplitterPage1.Name = "tabSplitterPage1";
-            this.tabSplitterPage1.Size = new System.Drawing.Size(262, 258);
+            this.tabSplitterPage1.Size = new System.Drawing.Size(262, 264);
             this.tabSplitterPage1.TabIndex = 1;
             this.tabSplitterPage1.Text = "tabSplitterPage1";
             // 
-            // clock1
+            // clock2
             // 
-            this.clock1.BackColor = System.Drawing.Color.Transparent;
-            this.clock1.BackgroundColor = System.Drawing.SystemColors.HighlightText;
-            this.clock1.BeforeTouchSize = new System.Drawing.Size(193, 193);
-            this.clock1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(111)))), ((int)(((byte)(119)))));
-            this.clock1.ClockFormat = "HH:mm:ss";
-            this.clock1.ClockFrame = Syncfusion.Windows.Forms.Tools.ClockFrames.RectangularFrame;
-            this.clock1.ClockShape = Syncfusion.Windows.Forms.Tools.ClockShapes.Rectangle;
-            this.clock1.ClockType = Syncfusion.Windows.Forms.Tools.ClockTypes.Analog;
-            this.clock1.CurrentDateTime = new System.DateTime(2017, 3, 2, 16, 0, 45, 896);
-            this.clock1.CustomTime = new System.DateTime(2017, 3, 5, 20, 54, 56, 590);
-            this.clock1.DigitalRenderer = digitalClockRenderer1;
-            this.clock1.DisplayDates = true;
-            this.clock1.EnableRemainder = true;
-            this.clock1.EndGradientBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))), ((int)(((byte)(252)))));
-            this.clock1.IsTransparent = true;
-            this.clock1.Location = new System.Drawing.Point(42, 39);
-            this.clock1.MinimumSize = new System.Drawing.Size(75, 75);
-            this.clock1.MinuteColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(111)))), ((int)(((byte)(119)))));
-            this.clock1.Name = "clock1";
-            this.clock1.Now = new System.DateTime(((long)(0)));
-            this.clock1.Remainder = new System.DateTime(2017, 3, 2, 16, 0, 45, 896);
-            this.clock1.Renderer = clockRenderer1;
-            this.clock1.ShowAMorPM = true;
-            this.clock1.ShowClockFrame = true;
-            this.clock1.ShowCustomTimeClock = true;
-            this.clock1.ShowHourDesignator = true;
-            this.clock1.Size = new System.Drawing.Size(193, 193);
-            this.clock1.StartGradientBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(228)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
-            this.clock1.StopTimer = false;
-            this.clock1.TabIndex = 1;
-            this.clock1.Text = "clock1";
-            this.clock1.VisualStyle = Syncfusion.Windows.Forms.Tools.ClockVisualStyle.OfficeBlue;
+            this.clock2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.clock2.BackColor = System.Drawing.Color.Transparent;
+            this.clock2.BackgroundColor = System.Drawing.SystemColors.HighlightText;
+            this.clock2.BeforeTouchSize = new System.Drawing.Size(238, 119);
+            this.clock2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(111)))), ((int)(((byte)(119)))));
+            this.clock2.ClockFormat = "HH:mm:ss";
+            this.clock2.ClockFrame = Syncfusion.Windows.Forms.Tools.ClockFrames.RectangularFrame;
+            this.clock2.ClockShape = Syncfusion.Windows.Forms.Tools.ClockShapes.Rectangle;
+            this.clock2.ClockType = Syncfusion.Windows.Forms.Tools.ClockTypes.Digital;
+            this.clock2.CurrentDateTime = new System.DateTime(2017, 3, 2, 16, 0, 45, 896);
+            this.clock2.CustomTime = new System.DateTime(2017, 3, 6, 20, 28, 34, 633);
+            this.clock2.DigitalRenderer = digitalClockRenderer1;
+            this.clock2.DisplayDates = true;
+            this.clock2.EnableRemainder = true;
+            this.clock2.EndGradientBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))), ((int)(((byte)(252)))));
+            this.clock2.IsTransparent = true;
+            this.clock2.Location = new System.Drawing.Point(12, 82);
+            this.clock2.MinimumSize = new System.Drawing.Size(75, 75);
+            this.clock2.MinuteColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(111)))), ((int)(((byte)(119)))));
+            this.clock2.Name = "clock2";
+            this.clock2.Now = new System.DateTime(((long)(0)));
+            this.clock2.Remainder = new System.DateTime(2017, 3, 2, 16, 0, 45, 896);
+            this.clock2.Renderer = clockRenderer1;
+            this.clock2.ShowAMorPM = true;
+            this.clock2.ShowClockFrame = false;
+            this.clock2.ShowCustomTimeClock = true;
+            this.clock2.ShowHourDesignator = true;
+            this.clock2.Size = new System.Drawing.Size(238, 119);
+            this.clock2.StartGradientBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(228)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
+            this.clock2.StopTimer = false;
+            this.clock2.TabIndex = 2;
+            this.clock2.Text = "clock2";
+            this.clock2.VisualStyle = Syncfusion.Windows.Forms.Tools.ClockVisualStyle.OfficeBlue;
             // 
             // tabSplitterPage2
             // 
@@ -113,7 +115,7 @@
             this.tabSplitterPage2.Hide = false;
             this.tabSplitterPage2.Location = new System.Drawing.Point(0, 0);
             this.tabSplitterPage2.Name = "tabSplitterPage2";
-            this.tabSplitterPage2.Size = new System.Drawing.Size(262, 160);
+            this.tabSplitterPage2.Size = new System.Drawing.Size(262, 154);
             this.tabSplitterPage2.TabIndex = 2;
             this.tabSplitterPage2.Text = "tabSplitterPage2";
             // 
@@ -129,20 +131,21 @@
             this.gradientPanel2.IgnoreThemeBackground = true;
             this.gradientPanel2.Location = new System.Drawing.Point(0, 0);
             this.gradientPanel2.Name = "gradientPanel2";
-            this.gradientPanel2.Size = new System.Drawing.Size(262, 160);
+            this.gradientPanel2.Size = new System.Drawing.Size(262, 154);
             this.gradientPanel2.TabIndex = 2;
             // 
             // groupBar1
             // 
             this.groupBar1.AllowCollapse = true;
             this.groupBar1.AllowDrop = true;
-            this.groupBar1.BeforeTouchSize = new System.Drawing.Size(260, 158);
+            this.groupBar1.BeforeTouchSize = new System.Drawing.Size(260, 152);
             this.groupBar1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBar1.HeaderBackColor = System.Drawing.SystemColors.ControlDark;
             this.groupBar1.IndexOnVisibleItems = true;
             this.groupBar1.Location = new System.Drawing.Point(0, 0);
             this.groupBar1.Name = "groupBar1";
             this.groupBar1.PopupClientSize = new System.Drawing.Size(0, 0);
-            this.groupBar1.Size = new System.Drawing.Size(260, 158);
+            this.groupBar1.Size = new System.Drawing.Size(260, 152);
             this.groupBar1.Splittercolor = System.Drawing.SystemColors.ControlDark;
             this.groupBar1.TabIndex = 0;
             this.groupBar1.Text = "groupBar1";
@@ -168,10 +171,10 @@
 
         private Syncfusion.Windows.Forms.Tools.TabSplitterContainer tabSplitterContainer1;
         private Syncfusion.Windows.Forms.Tools.TabSplitterPage tabSplitterPage1;
-        private Syncfusion.Windows.Forms.Tools.Clock clock1;
         private Syncfusion.Windows.Forms.Tools.TabSplitterPage tabSplitterPage2;
         private Syncfusion.Windows.Forms.Tools.GradientPanel gradientPanel2;
         private Syncfusion.Windows.Forms.Tools.GroupBar groupBar1;
+        private Syncfusion.Windows.Forms.Tools.Clock clock2;
 
     }
 }
