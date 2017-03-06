@@ -18,7 +18,7 @@ namespace DEHRIS.Importer
         {
             InitializeComponent();
 
-           
+
             DEHRISAPI.PersonnelUtility prodUtil = new PersonnelUtility();
             objlPersonnelView.SetObjects(prodUtil.GetPersonnel());
             //IApplication application = excelEngine.Excel;
@@ -29,8 +29,8 @@ namespace DEHRIS.Importer
             //IWorkbook sourceWorkbook = application.Workbooks.Open();
             //sourceWorkbook.Activate();
             //int maxcount = sourceWorkbook.MaxColumnCount;
-          //  this.spreadsheet1.Open(@"C:\Users\user\Desktop\WORKSPACE\temptemp.xlsx");
-      
+            //  this.spreadsheet1.Open(@"C:\Users\user\Desktop\WORKSPACE\temptemp.xlsx");
+
             //this.spreadsheet1.AddSheet(sourceWorkbook.ActiveSheet,0);
 
             //   IWorkbook destinationWorkbook = application.Workbooks.Open("DestinationWorkbookTemplate.xlsx");
@@ -50,14 +50,14 @@ namespace DEHRIS.Importer
             //this.spreadsheet1.AddSheet()
         }
 
- 
+
 
 
 
 
         private void spreadsheet1_Click(object sender, EventArgs e)
         {
-        
+
         }
 
         private void tabBarPage1_Click(object sender, EventArgs e)
@@ -72,7 +72,7 @@ namespace DEHRIS.Importer
 
         private void button1_Click(object sender, EventArgs e)
         {
-         
+
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
@@ -82,8 +82,9 @@ namespace DEHRIS.Importer
 
         private void objlPersonnelView_SelectionChanged(object sender, EventArgs e)
         {
+            SetEditable(false);
             DEHRISModel.Data.Personnel selectePersonnel = (DEHRISModel.Data.Personnel)objlPersonnelView.SelectedObject;
-           ShowViewData(selectePersonnel);
+            ShowViewData(selectePersonnel);
         }
 
         //public enum Status { Active = 0, Canceled = 3 }; 
@@ -105,7 +106,7 @@ namespace DEHRIS.Importer
 
         private void ShowViewData(DEHRISModel.Data.Personnel ppersonnel)
         {
-          // txtPrBirthPlace
+            // txtPrBirthPlace
             txtPrCitizenship.Text = ppersonnel.Citizenship;
             txtPrFirstname.Text = ppersonnel.Firstname;
             txtPrHeight.Text = ppersonnel.Height;
@@ -113,12 +114,43 @@ namespace DEHRIS.Importer
             txtPrMiddlename.Text = ppersonnel.Middlename;
             txtPrNameExt.Text = ppersonnel.NameExtension;
             txtPrWeight.Text = ppersonnel.Weight;
+            cbBloodType.Text = ppersonnel.Bloodtype;
+            cbCivilStatus.Text = ppersonnel.Civilstatus;
+            cBirthDate.Text = ppersonnel.DateOfBirth.ToShortDateString();
         }
+
+
+        private void SetEditable(bool iseditable)
+        {
+            // txtPrBirthPlace
+            if (iseditable) {
+                txtPrCitizenship.ReadOnly = false;
+                txtPrFirstname.ReadOnly = false;
+                txtPrHeight.ReadOnly = false;
+                txtPrLastname.ReadOnly = false;
+                txtPrMiddlename.ReadOnly = false;
+                txtPrNameExt.ReadOnly = false;
+                txtPrWeight.ReadOnly = false;
+            }
+            else
+            {
+                txtPrCitizenship.ReadOnly = true;
+                txtPrFirstname.ReadOnly = true;
+                txtPrHeight.ReadOnly = true;
+                txtPrLastname.ReadOnly = true;
+                txtPrMiddlename.ReadOnly = true;
+                txtPrNameExt.ReadOnly = true;
+                txtPrWeight.ReadOnly = true;
+            }
+
+        }
+
+
 
         private void ClearViewData()
         {
             // txtPrBirthPlace
-            txtPrCitizenship.Text ="";
+            txtPrCitizenship.Text = "";
             txtPrFirstname.Text = "";
             txtPrHeight.Text = "";
             txtPrLastname.Text = "";
@@ -129,7 +161,7 @@ namespace DEHRIS.Importer
 
         private void xpPrAdd_Click(object sender, EventArgs e)
         {
-            ClearViewData();
+
         }
 
         private void groupBar1_GroupBarItemSelected(object sender, EventArgs e)
@@ -140,6 +172,23 @@ namespace DEHRIS.Importer
         private void bariAdd_Click(object sender, EventArgs e)
         {
 
+
+        }
+
+        private void biAdd_Click(object sender, EventArgs e)
+        {
+            ClearViewData();
+        }
+
+        private void briEdit_Click(object sender, EventArgs e)
+        {
+            SetEditable(true);
+        }
+
+        private void ucPersonnelView_Click(object sender, EventArgs e)
+        {
+            DEHRISAPI.PersonnelUtility prodUtil = new PersonnelUtility();
+            objlPersonnelView.SetObjects(prodUtil.GetPersonnel());
         }
     }
 }
