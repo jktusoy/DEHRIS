@@ -31,26 +31,35 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucPersonnelView));
             this.tabSplitterContainer1 = new Syncfusion.Windows.Forms.Tools.TabSplitterContainer();
+            this.tabSplitterPage1 = new Syncfusion.Windows.Forms.Tools.TabSplitterPage();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.xpPrAdd = new Syncfusion.Windows.Forms.Tools.XPMenus.XPToolBar();
             this.biAdd = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
             this.briEdit = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
             this.briDelete = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
             this.briRefresh = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
+            this.gradientPanel3 = new Syncfusion.Windows.Forms.Tools.GradientPanel();
+            this.objlPersonnelView = new BrightIdeasSoftware.ObjectListView();
+            this.cFullName = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.cSex = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.cBirthDate = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.cCivilStatus = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.cCitizenship = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.cBloodType = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.bariAdd = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
-            this.barItem2 = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
-            this.tabSplitterPage1 = new Syncfusion.Windows.Forms.Tools.TabSplitterPage();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.xpPrAdd = new Syncfusion.Windows.Forms.Tools.XPMenus.XPToolBar();
-            this.gradientPanel3 = new Syncfusion.Windows.Forms.Tools.GradientPanel();
-            this.objlPersonnelView = new BrightIdeasSoftware.ObjectListView();
-            this.cFullName = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.tspProfile = new Syncfusion.Windows.Forms.Tools.TabSplitterPage();
             this.gradientPanel1 = new Syncfusion.Windows.Forms.Tools.GradientPanel();
             this.groupBar1 = new Syncfusion.Windows.Forms.Tools.GroupBar();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.xpToolBar2 = new Syncfusion.Windows.Forms.Tools.XPMenus.XPToolBar();
+            this.objectListView5 = new BrightIdeasSoftware.ObjectListView();
+            this.olvcLevel = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvcSchool = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvcDegree = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvcYearGraduated = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvcHighestLevel = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvcDateFrom = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvcDateTo = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvcHonors = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.xpToolBar1 = new Syncfusion.Windows.Forms.Tools.XPMenus.XPToolBar();
             this.objectListView1 = new BrightIdeasSoftware.ObjectListView();
@@ -59,8 +68,6 @@
             this.olvcFamBgMiddleName = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.olvcFamBgBirthdate = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.olvcFamBgOccupation = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.xpToolBar2 = new Syncfusion.Windows.Forms.Tools.XPMenus.XPToolBar();
             this.gradientPanel2 = new Syncfusion.Windows.Forms.Tools.GradientPanel();
             this.buttonAdv3 = new Syncfusion.Windows.Forms.ButtonAdv();
             this.buttonAdv2 = new Syncfusion.Windows.Forms.ButtonAdv();
@@ -103,33 +110,26 @@
             this.gbQualification = new Syncfusion.Windows.Forms.Tools.GroupBar();
             this.splitContainer6 = new System.Windows.Forms.SplitContainer();
             this.xpToolBar3 = new Syncfusion.Windows.Forms.Tools.XPMenus.XPToolBar();
+            this.objectListView4 = new BrightIdeasSoftware.ObjectListView();
             this.splitContainer5 = new System.Windows.Forms.SplitContainer();
             this.xpToolBar4 = new Syncfusion.Windows.Forms.Tools.XPMenus.XPToolBar();
+            this.objectListView3 = new BrightIdeasSoftware.ObjectListView();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
             this.xpToolBar5 = new Syncfusion.Windows.Forms.Tools.XPMenus.XPToolBar();
+            this.objectListView2 = new BrightIdeasSoftware.ObjectListView();
             this.gbiAppointments = new Syncfusion.Windows.Forms.Tools.GroupBarItem();
             this.gbiTrainings = new Syncfusion.Windows.Forms.Tools.GroupBarItem();
             this.gbiOtherInfo = new Syncfusion.Windows.Forms.Tools.GroupBarItem();
             this.tspAttachment = new Syncfusion.Windows.Forms.Tools.TabSplitterPage();
             this.groupBar4 = new Syncfusion.Windows.Forms.Tools.GroupBar();
-            this.splitContainer9 = new System.Windows.Forms.SplitContainer();
             this.splitContainer8 = new System.Windows.Forms.SplitContainer();
+            this.splitContainer9 = new System.Windows.Forms.SplitContainer();
             this.splitContainer7 = new System.Windows.Forms.SplitContainer();
             this.groupBarItem3 = new Syncfusion.Windows.Forms.Tools.GroupBarItem();
             this.groupBarItem4 = new Syncfusion.Windows.Forms.Tools.GroupBarItem();
             this.groupBarItem6 = new Syncfusion.Windows.Forms.Tools.GroupBarItem();
-            this.objectListView2 = new BrightIdeasSoftware.ObjectListView();
-            this.objectListView3 = new BrightIdeasSoftware.ObjectListView();
-            this.objectListView4 = new BrightIdeasSoftware.ObjectListView();
-            this.objectListView5 = new BrightIdeasSoftware.ObjectListView();
-            this.olvcLevel = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvcSchool = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvcDegree = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvcYearGraduated = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvcHighestLevel = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvcDateFrom = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvcDateTo = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvcHonors = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.bariAdd = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
+            this.barItem2 = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
             this.tabSplitterContainer1.SuspendLayout();
             this.tabSplitterPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -144,15 +144,16 @@
             this.gradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupBar1)).BeginInit();
             this.groupBar1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
+            this.splitContainer2.Panel1.SuspendLayout();
+            this.splitContainer2.Panel2.SuspendLayout();
+            this.splitContainer2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.objectListView5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.Panel1.SuspendLayout();
             this.splitContainer3.Panel2.SuspendLayout();
             this.splitContainer3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.objectListView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
-            this.splitContainer2.Panel1.SuspendLayout();
-            this.splitContainer2.Panel2.SuspendLayout();
-            this.splitContainer2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gradientPanel2)).BeginInit();
             this.gradientPanel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -171,27 +172,26 @@
             this.splitContainer6.Panel1.SuspendLayout();
             this.splitContainer6.Panel2.SuspendLayout();
             this.splitContainer6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.objectListView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).BeginInit();
             this.splitContainer5.Panel1.SuspendLayout();
             this.splitContainer5.Panel2.SuspendLayout();
             this.splitContainer5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.objectListView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).BeginInit();
             this.splitContainer4.Panel1.SuspendLayout();
             this.splitContainer4.Panel2.SuspendLayout();
             this.splitContainer4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.objectListView2)).BeginInit();
             this.tspAttachment.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupBar4)).BeginInit();
             this.groupBar4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer9)).BeginInit();
-            this.splitContainer9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer8)).BeginInit();
             this.splitContainer8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer9)).BeginInit();
+            this.splitContainer9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).BeginInit();
             this.splitContainer7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.objectListView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.objectListView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.objectListView4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.objectListView5)).BeginInit();
             this.SuspendLayout();
             // 
             // tabSplitterContainer1
@@ -211,99 +211,6 @@
             this.tabSplitterContainer1.SplitterPosition = 428;
             this.tabSplitterContainer1.TabIndex = 2;
             this.tabSplitterContainer1.Text = "Attachments";
-            // 
-            // biAdd
-            // 
-            this.biAdd.BarName = "biAdd";
-            this.biAdd.CustomNormalTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.biAdd.CustomTextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World);
-            this.biAdd.ID = "ADD";
-            this.biAdd.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("biAdd.Image")));
-            this.biAdd.PaddingForThemesY = 15;
-            this.biAdd.ResizeGlyphToFit = true;
-            this.biAdd.ShortcutText = "Add";
-            this.biAdd.ShowToolTipInPopUp = true;
-            this.biAdd.SizeToFit = true;
-            this.biAdd.Text = "ADD";
-            this.biAdd.Tooltip = "ADD (F1)";
-            this.biAdd.Click += new System.EventHandler(this.biAdd_Click);
-            // 
-            // briEdit
-            // 
-            this.briEdit.BarName = "briEdit";
-            this.briEdit.CustomTextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World);
-            this.briEdit.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("briEdit.Image")));
-            this.briEdit.ShowToolTipInPopUp = false;
-            this.briEdit.SizeToFit = true;
-            this.briEdit.Tooltip = "EDIT";
-            this.briEdit.Click += new System.EventHandler(this.briEdit_Click);
-            // 
-            // briDelete
-            // 
-            this.briDelete.BarName = "briDelete";
-            this.briDelete.CustomTextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World);
-            this.briDelete.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("briDelete.Image")));
-            this.briDelete.ShowToolTipInPopUp = false;
-            this.briDelete.SizeToFit = true;
-            this.briDelete.Tooltip = "DELETE";
-            // 
-            // briRefresh
-            // 
-            this.briRefresh.BarName = "briRefresh";
-            this.briRefresh.CustomTextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World);
-            this.briRefresh.ID = "REFRESH (F5)";
-            this.briRefresh.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("briRefresh.Image")));
-            this.briRefresh.ShowToolTipInPopUp = false;
-            this.briRefresh.SizeToFit = true;
-            this.briRefresh.Text = "REFRESH (F5)";
-            // 
-            // cSex
-            // 
-            this.cSex.AspectName = "Sex";
-            this.cSex.DisplayIndex = 1;
-            this.cSex.IsVisible = false;
-            this.cSex.Text = "Sex";
-            // 
-            // cBirthDate
-            // 
-            this.cBirthDate.AspectName = "DateOfBirth";
-            this.cBirthDate.DisplayIndex = 2;
-            this.cBirthDate.IsVisible = false;
-            this.cBirthDate.Text = "Birth Date";
-            // 
-            // cCivilStatus
-            // 
-            this.cCivilStatus.AspectName = "Civilstatus";
-            this.cCivilStatus.DisplayIndex = 3;
-            this.cCivilStatus.IsVisible = false;
-            this.cCivilStatus.Text = "Civil Status";
-            // 
-            // cCitizenship
-            // 
-            this.cCitizenship.AspectName = "Citizenship";
-            this.cCitizenship.DisplayIndex = 4;
-            this.cCitizenship.IsVisible = false;
-            this.cCitizenship.Text = "Citizenship";
-            // 
-            // cBloodType
-            // 
-            this.cBloodType.AspectName = "Bloodtype";
-            this.cBloodType.DisplayIndex = 5;
-            this.cBloodType.IsVisible = false;
-            this.cBloodType.Text = "BloodType";
-            // 
-            // bariAdd
-            // 
-            this.bariAdd.BarName = "bariAdd";
-            this.bariAdd.ShowToolTipInPopUp = false;
-            this.bariAdd.SizeToFit = true;
-            this.bariAdd.Click += new System.EventHandler(this.bariAdd_Click);
-            // 
-            // barItem2
-            // 
-            this.barItem2.BarName = "barItem2";
-            this.barItem2.ShowToolTipInPopUp = false;
-            this.barItem2.SizeToFit = true;
             // 
             // tabSplitterPage1
             // 
@@ -361,6 +268,51 @@
             this.xpPrAdd.TabIndex = 0;
             this.xpPrAdd.Text = "Add";
             this.xpPrAdd.Click += new System.EventHandler(this.xpPrAdd_Click);
+            // 
+            // biAdd
+            // 
+            this.biAdd.BarName = "biAdd";
+            this.biAdd.CustomNormalTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.biAdd.CustomTextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World);
+            this.biAdd.ID = "ADD";
+            this.biAdd.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("biAdd.Image")));
+            this.biAdd.PaddingForThemesY = 15;
+            this.biAdd.ResizeGlyphToFit = true;
+            this.biAdd.ShortcutText = "Add";
+            this.biAdd.ShowToolTipInPopUp = true;
+            this.biAdd.SizeToFit = true;
+            this.biAdd.Text = "ADD";
+            this.biAdd.Tooltip = "ADD (F1)";
+            this.biAdd.Click += new System.EventHandler(this.biAdd_Click);
+            // 
+            // briEdit
+            // 
+            this.briEdit.BarName = "briEdit";
+            this.briEdit.CustomTextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World);
+            this.briEdit.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("briEdit.Image")));
+            this.briEdit.ShowToolTipInPopUp = false;
+            this.briEdit.SizeToFit = true;
+            this.briEdit.Tooltip = "EDIT";
+            this.briEdit.Click += new System.EventHandler(this.briEdit_Click);
+            // 
+            // briDelete
+            // 
+            this.briDelete.BarName = "briDelete";
+            this.briDelete.CustomTextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World);
+            this.briDelete.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("briDelete.Image")));
+            this.briDelete.ShowToolTipInPopUp = false;
+            this.briDelete.SizeToFit = true;
+            this.briDelete.Tooltip = "DELETE";
+            // 
+            // briRefresh
+            // 
+            this.briRefresh.BarName = "briRefresh";
+            this.briRefresh.CustomTextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World);
+            this.briRefresh.ID = "REFRESH (F5)";
+            this.briRefresh.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("briRefresh.Image")));
+            this.briRefresh.ShowToolTipInPopUp = false;
+            this.briRefresh.SizeToFit = true;
+            this.briRefresh.Text = "REFRESH (F5)";
             // 
             // gradientPanel3
             // 
@@ -424,6 +376,41 @@
             this.cFullName.Text = "FullName";
             this.cFullName.Width = 445;
             // 
+            // cSex
+            // 
+            this.cSex.AspectName = "Sex";
+            this.cSex.DisplayIndex = 1;
+            this.cSex.IsVisible = false;
+            this.cSex.Text = "Sex";
+            // 
+            // cBirthDate
+            // 
+            this.cBirthDate.AspectName = "DateOfBirth";
+            this.cBirthDate.DisplayIndex = 2;
+            this.cBirthDate.IsVisible = false;
+            this.cBirthDate.Text = "Birth Date";
+            // 
+            // cCivilStatus
+            // 
+            this.cCivilStatus.AspectName = "Civilstatus";
+            this.cCivilStatus.DisplayIndex = 3;
+            this.cCivilStatus.IsVisible = false;
+            this.cCivilStatus.Text = "Civil Status";
+            // 
+            // cCitizenship
+            // 
+            this.cCitizenship.AspectName = "Citizenship";
+            this.cCitizenship.DisplayIndex = 4;
+            this.cCitizenship.IsVisible = false;
+            this.cCitizenship.Text = "Citizenship";
+            // 
+            // cBloodType
+            // 
+            this.cBloodType.AspectName = "Bloodtype";
+            this.cBloodType.DisplayIndex = 5;
+            this.cBloodType.IsVisible = false;
+            this.cBloodType.Text = "BloodType";
+            // 
             // tspProfile
             // 
             this.tspProfile.AutoScroll = true;
@@ -484,98 +471,6 @@
             this.groupBar1.Text = "SALN";
             this.groupBar1.VisualStyle = Syncfusion.Windows.Forms.VisualStyle.Office2007;
             // 
-            // splitContainer3
-            // 
-            this.splitContainer3.Location = new System.Drawing.Point(1, 27);
-            this.splitContainer3.Name = "splitContainer3";
-            this.splitContainer3.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer3.Panel1
-            // 
-            this.splitContainer3.Panel1.Controls.Add(this.xpToolBar1);
-            // 
-            // splitContainer3.Panel2
-            // 
-            this.splitContainer3.Panel2.Controls.Add(this.objectListView1);
-            this.splitContainer3.Size = new System.Drawing.Size(446, 464);
-            this.splitContainer3.SplitterDistance = 196;
-            this.splitContainer3.TabIndex = 8;
-            // 
-            // xpToolBar1
-            // 
-            this.xpToolBar1.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.xpToolBar1.Bar.BarName = "Add";
-            this.xpToolBar1.Bar.Caption = "Add";
-            this.xpToolBar1.Bar.Items.AddRange(new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem[] {
-            this.biAdd,
-            this.briEdit,
-            this.briDelete,
-            this.briRefresh});
-            this.xpToolBar1.Bar.Manager = null;
-            this.xpToolBar1.Bar.SeparatorIndices.AddRange(new int[] {
-            1});
-            this.xpToolBar1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xpToolBar1.LargeIcons = true;
-            this.xpToolBar1.Location = new System.Drawing.Point(0, 0);
-            this.xpToolBar1.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.xpToolBar1.Name = "xpToolBar1";
-            this.xpToolBar1.ShowChevron = true;
-            this.xpToolBar1.Size = new System.Drawing.Size(446, 25);
-            this.xpToolBar1.Style = Syncfusion.Windows.Forms.VisualStyle.Office2007;
-            this.xpToolBar1.TabIndex = 1;
-            this.xpToolBar1.Text = "Add";
-            // 
-            // objectListView1
-            // 
-            this.objectListView1.AllColumns.Add(this.olvcFamBgLastName);
-            this.objectListView1.AllColumns.Add(this.olvcFamBgFirstName);
-            this.objectListView1.AllColumns.Add(this.olvcFamBgMiddleName);
-            this.objectListView1.AllColumns.Add(this.olvcFamBgBirthdate);
-            this.objectListView1.AllColumns.Add(this.olvcFamBgOccupation);
-            this.objectListView1.CellEditUseWholeCell = false;
-            this.objectListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.olvcFamBgLastName,
-            this.olvcFamBgFirstName,
-            this.olvcFamBgMiddleName,
-            this.olvcFamBgBirthdate,
-            this.olvcFamBgOccupation});
-            this.objectListView1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.objectListView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.objectListView1.Location = new System.Drawing.Point(0, 0);
-            this.objectListView1.Name = "objectListView1";
-            this.objectListView1.Size = new System.Drawing.Size(446, 264);
-            this.objectListView1.TabIndex = 0;
-            this.objectListView1.UseCompatibleStateImageBehavior = false;
-            this.objectListView1.View = System.Windows.Forms.View.Details;
-            // 
-            // olvcFamBgLastName
-            // 
-            this.olvcFamBgLastName.Text = "Lastname";
-            this.olvcFamBgLastName.Width = 96;
-            // 
-            // olvcFamBgFirstName
-            // 
-            this.olvcFamBgFirstName.Text = "Firstname";
-            this.olvcFamBgFirstName.Width = 98;
-            // 
-            // olvcFamBgMiddleName
-            // 
-            this.olvcFamBgMiddleName.Text = "Middlename";
-            this.olvcFamBgMiddleName.Width = 97;
-            // 
-            // olvcFamBgBirthdate
-            // 
-            this.olvcFamBgBirthdate.Text = "Birthdate";
-            this.olvcFamBgBirthdate.Width = 72;
-            // 
-            // olvcFamBgOccupation
-            // 
-            this.olvcFamBgOccupation.Text = "Occupation";
-            this.olvcFamBgOccupation.Width = 107;
-            // 
             // splitContainer2
             // 
             this.splitContainer2.Location = new System.Drawing.Point(1, 27);
@@ -619,6 +514,159 @@
             this.xpToolBar2.Style = Syncfusion.Windows.Forms.VisualStyle.Office2007;
             this.xpToolBar2.TabIndex = 2;
             this.xpToolBar2.Text = "Add";
+            // 
+            // objectListView5
+            // 
+            this.objectListView5.AllColumns.Add(this.olvcLevel);
+            this.objectListView5.AllColumns.Add(this.olvcSchool);
+            this.objectListView5.AllColumns.Add(this.olvcDegree);
+            this.objectListView5.AllColumns.Add(this.olvcYearGraduated);
+            this.objectListView5.AllColumns.Add(this.olvcHighestLevel);
+            this.objectListView5.AllColumns.Add(this.olvcDateFrom);
+            this.objectListView5.AllColumns.Add(this.olvcDateTo);
+            this.objectListView5.AllColumns.Add(this.olvcHonors);
+            this.objectListView5.CellEditUseWholeCell = false;
+            this.objectListView5.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.olvcLevel,
+            this.olvcSchool,
+            this.olvcDegree,
+            this.olvcYearGraduated,
+            this.olvcHighestLevel,
+            this.olvcDateFrom,
+            this.olvcDateTo,
+            this.olvcHonors});
+            this.objectListView5.Cursor = System.Windows.Forms.Cursors.Default;
+            this.objectListView5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.objectListView5.Location = new System.Drawing.Point(0, 0);
+            this.objectListView5.Name = "objectListView5";
+            this.objectListView5.Size = new System.Drawing.Size(446, 368);
+            this.objectListView5.TabIndex = 0;
+            this.objectListView5.UseCompatibleStateImageBehavior = false;
+            this.objectListView5.View = System.Windows.Forms.View.Details;
+            // 
+            // olvcLevel
+            // 
+            this.olvcLevel.Text = "Level";
+            // 
+            // olvcSchool
+            // 
+            this.olvcSchool.Text = "School Name";
+            // 
+            // olvcDegree
+            // 
+            this.olvcDegree.Text = "Degree/  Course";
+            // 
+            // olvcYearGraduated
+            // 
+            this.olvcYearGraduated.Text = "Year Graduated";
+            // 
+            // olvcHighestLevel
+            // 
+            this.olvcHighestLevel.Text = "Highest Level";
+            // 
+            // olvcDateFrom
+            // 
+            this.olvcDateFrom.Text = "Date From";
+            // 
+            // olvcDateTo
+            // 
+            this.olvcDateTo.Text = "Date To";
+            // 
+            // olvcHonors
+            // 
+            this.olvcHonors.Text = "Honors";
+            // 
+            // splitContainer3
+            // 
+            this.splitContainer3.Location = new System.Drawing.Point(1, 67);
+            this.splitContainer3.Name = "splitContainer3";
+            this.splitContainer3.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer3.Panel1
+            // 
+            this.splitContainer3.Panel1.Controls.Add(this.xpToolBar1);
+            // 
+            // splitContainer3.Panel2
+            // 
+            this.splitContainer3.Panel2.Controls.Add(this.objectListView1);
+            this.splitContainer3.Size = new System.Drawing.Size(218, 232);
+            this.splitContainer3.SplitterDistance = 98;
+            this.splitContainer3.TabIndex = 8;
+            // 
+            // xpToolBar1
+            // 
+            this.xpToolBar1.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.xpToolBar1.Bar.BarName = "Add";
+            this.xpToolBar1.Bar.Caption = "Add";
+            this.xpToolBar1.Bar.Items.AddRange(new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem[] {
+            this.biAdd,
+            this.briEdit,
+            this.briDelete,
+            this.briRefresh});
+            this.xpToolBar1.Bar.Manager = null;
+            this.xpToolBar1.Bar.SeparatorIndices.AddRange(new int[] {
+            1});
+            this.xpToolBar1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xpToolBar1.LargeIcons = true;
+            this.xpToolBar1.Location = new System.Drawing.Point(0, 0);
+            this.xpToolBar1.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
+            this.xpToolBar1.Name = "xpToolBar1";
+            this.xpToolBar1.ShowChevron = true;
+            this.xpToolBar1.Size = new System.Drawing.Size(218, 25);
+            this.xpToolBar1.Style = Syncfusion.Windows.Forms.VisualStyle.Office2007;
+            this.xpToolBar1.TabIndex = 1;
+            this.xpToolBar1.Text = "Add";
+            // 
+            // objectListView1
+            // 
+            this.objectListView1.AllColumns.Add(this.olvcFamBgLastName);
+            this.objectListView1.AllColumns.Add(this.olvcFamBgFirstName);
+            this.objectListView1.AllColumns.Add(this.olvcFamBgMiddleName);
+            this.objectListView1.AllColumns.Add(this.olvcFamBgBirthdate);
+            this.objectListView1.AllColumns.Add(this.olvcFamBgOccupation);
+            this.objectListView1.CellEditUseWholeCell = false;
+            this.objectListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.olvcFamBgLastName,
+            this.olvcFamBgFirstName,
+            this.olvcFamBgMiddleName,
+            this.olvcFamBgBirthdate,
+            this.olvcFamBgOccupation});
+            this.objectListView1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.objectListView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.objectListView1.Location = new System.Drawing.Point(0, 0);
+            this.objectListView1.Name = "objectListView1";
+            this.objectListView1.Size = new System.Drawing.Size(218, 130);
+            this.objectListView1.TabIndex = 0;
+            this.objectListView1.UseCompatibleStateImageBehavior = false;
+            this.objectListView1.View = System.Windows.Forms.View.Details;
+            // 
+            // olvcFamBgLastName
+            // 
+            this.olvcFamBgLastName.Text = "Lastname";
+            this.olvcFamBgLastName.Width = 96;
+            // 
+            // olvcFamBgFirstName
+            // 
+            this.olvcFamBgFirstName.Text = "Firstname";
+            this.olvcFamBgFirstName.Width = 98;
+            // 
+            // olvcFamBgMiddleName
+            // 
+            this.olvcFamBgMiddleName.Text = "Middlename";
+            this.olvcFamBgMiddleName.Width = 97;
+            // 
+            // olvcFamBgBirthdate
+            // 
+            this.olvcFamBgBirthdate.Text = "Birthdate";
+            this.olvcFamBgBirthdate.Width = 72;
+            // 
+            // olvcFamBgOccupation
+            // 
+            this.olvcFamBgOccupation.Text = "Occupation";
+            this.olvcFamBgOccupation.Width = 107;
             // 
             // gradientPanel2
             // 
@@ -1087,8 +1135,6 @@
             this.groupBar2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.groupBar2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(77)))), ((int)(((byte)(140)))));
             this.groupBar2.GroupBarDropDownToolTip = null;
-            this.groupBar2.HeaderBackColor = System.Drawing.SystemColors.ControlDark;
-            this.groupBar2.HeaderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(65)))), ((int)(((byte)(140)))));
             this.groupBar2.IndexOnVisibleItems = true;
             this.groupBar2.Location = new System.Drawing.Point(0, 0);
             this.groupBar2.MinimizeButtonToolTip = null;
@@ -1178,6 +1224,18 @@
             this.xpToolBar3.TabIndex = 3;
             this.xpToolBar3.Text = "Add";
             // 
+            // objectListView4
+            // 
+            this.objectListView4.CellEditUseWholeCell = false;
+            this.objectListView4.Cursor = System.Windows.Forms.Cursors.Default;
+            this.objectListView4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.objectListView4.Location = new System.Drawing.Point(0, 0);
+            this.objectListView4.Name = "objectListView4";
+            this.objectListView4.Size = new System.Drawing.Size(450, 314);
+            this.objectListView4.TabIndex = 0;
+            this.objectListView4.UseCompatibleStateImageBehavior = false;
+            this.objectListView4.View = System.Windows.Forms.View.Details;
+            // 
             // splitContainer5
             // 
             this.splitContainer5.Location = new System.Drawing.Point(1, 27);
@@ -1222,6 +1280,18 @@
             this.xpToolBar4.TabIndex = 3;
             this.xpToolBar4.Text = "Add";
             // 
+            // objectListView3
+            // 
+            this.objectListView3.CellEditUseWholeCell = false;
+            this.objectListView3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.objectListView3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.objectListView3.Location = new System.Drawing.Point(0, 0);
+            this.objectListView3.Name = "objectListView3";
+            this.objectListView3.Size = new System.Drawing.Size(450, 315);
+            this.objectListView3.TabIndex = 0;
+            this.objectListView3.UseCompatibleStateImageBehavior = false;
+            this.objectListView3.View = System.Windows.Forms.View.Details;
+            // 
             // splitContainer4
             // 
             this.splitContainer4.Location = new System.Drawing.Point(1, 27);
@@ -1265,6 +1335,18 @@
             this.xpToolBar5.Style = Syncfusion.Windows.Forms.VisualStyle.Office2007;
             this.xpToolBar5.TabIndex = 3;
             this.xpToolBar5.Text = "Add";
+            // 
+            // objectListView2
+            // 
+            this.objectListView2.CellEditUseWholeCell = false;
+            this.objectListView2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.objectListView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.objectListView2.Location = new System.Drawing.Point(0, 0);
+            this.objectListView2.Name = "objectListView2";
+            this.objectListView2.Size = new System.Drawing.Size(450, 315);
+            this.objectListView2.TabIndex = 0;
+            this.objectListView2.UseCompatibleStateImageBehavior = false;
+            this.objectListView2.View = System.Windows.Forms.View.Details;
             // 
             // gbiAppointments
             // 
@@ -1311,8 +1393,8 @@
             this.groupBar4.CollapsedWidth = 48;
             this.groupBar4.CollapseImage = ((System.Drawing.Image)(resources.GetObject("groupBar4.CollapseImage")));
             this.groupBar4.Controls.Add(this.splitContainer8);
-            this.groupBar4.Controls.Add(this.splitContainer7);
             this.groupBar4.Controls.Add(this.splitContainer9);
+            this.groupBar4.Controls.Add(this.splitContainer7);
             this.groupBar4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBar4.EnableTouchMode = true;
             this.groupBar4.ExpandImage = ((System.Drawing.Image)(resources.GetObject("groupBar4.ExpandImage")));
@@ -1340,15 +1422,6 @@
             this.groupBar4.TabIndex = 0;
             this.groupBar4.VisualStyle = Syncfusion.Windows.Forms.VisualStyle.Office2007;
             // 
-            // splitContainer9
-            // 
-            this.splitContainer9.Location = new System.Drawing.Point(1, 40);
-            this.splitContainer9.Name = "splitContainer9";
-            this.splitContainer9.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            this.splitContainer9.Size = new System.Drawing.Size(450, 422);
-            this.splitContainer9.SplitterDistance = 64;
-            this.splitContainer9.TabIndex = 2;
-            // 
             // splitContainer8
             // 
             this.splitContainer8.Location = new System.Drawing.Point(1, 40);
@@ -1356,6 +1429,15 @@
             this.splitContainer8.Size = new System.Drawing.Size(450, 422);
             this.splitContainer8.SplitterDistance = 150;
             this.splitContainer8.TabIndex = 1;
+            // 
+            // splitContainer9
+            // 
+            this.splitContainer9.Location = new System.Drawing.Point(1, 100);
+            this.splitContainer9.Name = "splitContainer9";
+            this.splitContainer9.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.splitContainer9.Size = new System.Drawing.Size(218, 199);
+            this.splitContainer9.SplitterDistance = 29;
+            this.splitContainer9.TabIndex = 2;
             // 
             // splitContainer7
             // 
@@ -1384,98 +1466,18 @@
             this.groupBarItem6.Client = this.splitContainer9;
             this.groupBarItem6.Text = "IPCR";
             // 
-            // objectListView2
+            // bariAdd
             // 
-            this.objectListView2.CellEditUseWholeCell = false;
-            this.objectListView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.objectListView2.Location = new System.Drawing.Point(0, 0);
-            this.objectListView2.Name = "objectListView2";
-            this.objectListView2.Size = new System.Drawing.Size(450, 315);
-            this.objectListView2.TabIndex = 0;
-            this.objectListView2.UseCompatibleStateImageBehavior = false;
-            this.objectListView2.View = System.Windows.Forms.View.Details;
+            this.bariAdd.BarName = "bariAdd";
+            this.bariAdd.ShowToolTipInPopUp = false;
+            this.bariAdd.SizeToFit = true;
+            this.bariAdd.Click += new System.EventHandler(this.bariAdd_Click);
             // 
-            // objectListView3
+            // barItem2
             // 
-            this.objectListView3.CellEditUseWholeCell = false;
-            this.objectListView3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.objectListView3.Location = new System.Drawing.Point(0, 0);
-            this.objectListView3.Name = "objectListView3";
-            this.objectListView3.Size = new System.Drawing.Size(450, 315);
-            this.objectListView3.TabIndex = 0;
-            this.objectListView3.UseCompatibleStateImageBehavior = false;
-            this.objectListView3.View = System.Windows.Forms.View.Details;
-            // 
-            // objectListView4
-            // 
-            this.objectListView4.CellEditUseWholeCell = false;
-            this.objectListView4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.objectListView4.Location = new System.Drawing.Point(0, 0);
-            this.objectListView4.Name = "objectListView4";
-            this.objectListView4.Size = new System.Drawing.Size(450, 314);
-            this.objectListView4.TabIndex = 0;
-            this.objectListView4.UseCompatibleStateImageBehavior = false;
-            this.objectListView4.View = System.Windows.Forms.View.Details;
-            // 
-            // objectListView5
-            // 
-            this.objectListView5.AllColumns.Add(this.olvcLevel);
-            this.objectListView5.AllColumns.Add(this.olvcSchool);
-            this.objectListView5.AllColumns.Add(this.olvcDegree);
-            this.objectListView5.AllColumns.Add(this.olvcYearGraduated);
-            this.objectListView5.AllColumns.Add(this.olvcHighestLevel);
-            this.objectListView5.AllColumns.Add(this.olvcDateFrom);
-            this.objectListView5.AllColumns.Add(this.olvcDateTo);
-            this.objectListView5.AllColumns.Add(this.olvcHonors);
-            this.objectListView5.CellEditUseWholeCell = false;
-            this.objectListView5.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.olvcLevel,
-            this.olvcSchool,
-            this.olvcDegree,
-            this.olvcYearGraduated,
-            this.olvcHighestLevel,
-            this.olvcDateFrom,
-            this.olvcDateTo,
-            this.olvcHonors});
-            this.objectListView5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.objectListView5.Location = new System.Drawing.Point(0, 0);
-            this.objectListView5.Name = "objectListView5";
-            this.objectListView5.Size = new System.Drawing.Size(446, 368);
-            this.objectListView5.TabIndex = 0;
-            this.objectListView5.UseCompatibleStateImageBehavior = false;
-            this.objectListView5.View = System.Windows.Forms.View.Details;
-            // 
-            // olvcLevel
-            // 
-            this.olvcLevel.Text = "Level";
-            // 
-            // olvcSchool
-            // 
-            this.olvcSchool.Text = "School Name";
-            // 
-            // olvcDegree
-            // 
-            this.olvcDegree.Text = "Degree/  Course";
-            // 
-            // olvcYearGraduated
-            // 
-            this.olvcYearGraduated.Text = "Year Graduated";
-            // 
-            // olvcHighestLevel
-            // 
-            this.olvcHighestLevel.Text = "Highest Level";
-            // 
-            // olvcDateFrom
-            // 
-            this.olvcDateFrom.Text = "Date From";
-            // 
-            // olvcDateTo
-            // 
-            this.olvcDateTo.Text = "Date To";
-            // 
-            // olvcHonors
-            // 
-            this.olvcHonors.Text = "Honors";
+            this.barItem2.BarName = "barItem2";
+            this.barItem2.ShowToolTipInPopUp = false;
+            this.barItem2.SizeToFit = true;
             // 
             // ucPersonnelView
             // 
@@ -1499,15 +1501,16 @@
             this.gradientPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupBar1)).EndInit();
             this.groupBar1.ResumeLayout(false);
+            this.splitContainer2.Panel1.ResumeLayout(false);
+            this.splitContainer2.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
+            this.splitContainer2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.objectListView5)).EndInit();
             this.splitContainer3.Panel1.ResumeLayout(false);
             this.splitContainer3.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
             this.splitContainer3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.objectListView1)).EndInit();
-            this.splitContainer2.Panel1.ResumeLayout(false);
-            this.splitContainer2.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
-            this.splitContainer2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gradientPanel2)).EndInit();
             this.gradientPanel2.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
@@ -1528,27 +1531,26 @@
             this.splitContainer6.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).EndInit();
             this.splitContainer6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.objectListView4)).EndInit();
             this.splitContainer5.Panel1.ResumeLayout(false);
             this.splitContainer5.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).EndInit();
             this.splitContainer5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.objectListView3)).EndInit();
             this.splitContainer4.Panel1.ResumeLayout(false);
             this.splitContainer4.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).EndInit();
             this.splitContainer4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.objectListView2)).EndInit();
             this.tspAttachment.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupBar4)).EndInit();
             this.groupBar4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer9)).EndInit();
-            this.splitContainer9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer8)).EndInit();
             this.splitContainer8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer9)).EndInit();
+            this.splitContainer9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).EndInit();
             this.splitContainer7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.objectListView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.objectListView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.objectListView4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.objectListView5)).EndInit();
             this.ResumeLayout(false);
 
         }

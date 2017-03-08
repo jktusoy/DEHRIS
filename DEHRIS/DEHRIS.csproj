@@ -106,6 +106,12 @@
     <Compile Include="Home\ucHomePanel.Designer.cs">
       <DependentUpon>ucHomePanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Organization\ucViewOrgChar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Organization\ucViewOrgChar.Designer.cs">
+      <DependentUpon>ucViewOrgChar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Personnel\ucImportPersonnel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -150,6 +156,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tool\ucBrowser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tool\ucBrowser.Designer.cs">
+      <DependentUpon>ucBrowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\ucScheduler.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tool\ucScheduler.Designer.cs">
+      <DependentUpon>ucScheduler.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tool\ucSpreadsheet.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -164,6 +182,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Home\ucHomePanel.resx">
       <DependentUpon>ucHomePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Organization\ucViewOrgChar.resx">
+      <DependentUpon>ucViewOrgChar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Personnel\ucImportPersonnel.resx">
       <DependentUpon>ucImportPersonnel.cs</DependentUpon>
@@ -197,6 +218,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Tool\ucBrowser.resx">
+      <DependentUpon>ucBrowser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tool\ucSpreadsheet.resx">
       <DependentUpon>ucSpreadsheet.cs</DependentUpon>
     </EmbeddedResource>
@@ -334,6 +358,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\deped-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\uploader.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scheduler.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\browser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\uploader1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scheduler1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

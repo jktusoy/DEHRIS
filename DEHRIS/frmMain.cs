@@ -102,6 +102,24 @@ namespace DEHRIS
             ucspreadsheet.Dock = DockStyle.Fill;
         }
 
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            Tool.ucBrowser ucBrowser = new Tool.ucBrowser();
+           
+            gpMain.Controls.Clear();
+            gpMain.Controls.Add(ucBrowser);
+            ucBrowser.Dock = DockStyle.Fill;
+        }
+
+        private void toolStripButton10_Click(object sender, EventArgs e)
+        {
+            Organization.ucViewOrgChar ucOrgChar = new Organization.ucViewOrgChar();
+
+            gpMain.Controls.Clear();
+            gpMain.Controls.Add(ucOrgChar);
+            ucOrgChar.Dock = DockStyle.Fill;
+        }
+
       
 
 

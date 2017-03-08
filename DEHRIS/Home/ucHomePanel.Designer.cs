@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Syncfusion.Windows.Forms.Tools.CarouselImage carouselImage6 = new Syncfusion.Windows.Forms.Tools.CarouselImage();
-            Syncfusion.Windows.Forms.Tools.CarouselImage carouselImage7 = new Syncfusion.Windows.Forms.Tools.CarouselImage();
-            Syncfusion.Windows.Forms.Tools.CarouselImage carouselImage8 = new Syncfusion.Windows.Forms.Tools.CarouselImage();
-            Syncfusion.Windows.Forms.Tools.CarouselImage carouselImage9 = new Syncfusion.Windows.Forms.Tools.CarouselImage();
-            Syncfusion.Windows.Forms.Tools.CarouselImage carouselImage10 = new Syncfusion.Windows.Forms.Tools.CarouselImage();
+            Syncfusion.Windows.Forms.Tools.CarouselImage carouselImage11 = new Syncfusion.Windows.Forms.Tools.CarouselImage();
+            Syncfusion.Windows.Forms.Tools.CarouselImage carouselImage12 = new Syncfusion.Windows.Forms.Tools.CarouselImage();
+            Syncfusion.Windows.Forms.Tools.CarouselImage carouselImage13 = new Syncfusion.Windows.Forms.Tools.CarouselImage();
+            Syncfusion.Windows.Forms.Tools.CarouselImage carouselImage14 = new Syncfusion.Windows.Forms.Tools.CarouselImage();
+            Syncfusion.Windows.Forms.Tools.CarouselImage carouselImage15 = new Syncfusion.Windows.Forms.Tools.CarouselImage();
             this.gradientPanel2 = new Syncfusion.Windows.Forms.Tools.GradientPanel();
             this.carousel1 = new Syncfusion.Windows.Forms.Tools.Carousel();
             this.bannerTextProvider1 = new Syncfusion.Windows.Forms.BannerTextProvider(this.components);
@@ -88,16 +88,16 @@
             this.carousel1.Controls.Add(this.buttonAdv7);
             this.carousel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.carousel1.HighlightColor = System.Drawing.Color.White;
-            carouselImage6.ItemImage = global::DEHRIS.Properties.Resources.report1;
-            carouselImage7.ItemImage = global::DEHRIS.Properties.Resources.applicant;
-            carouselImage8.ItemImage = global::DEHRIS.Properties.Resources.holiday;
-            carouselImage9.ItemImage = global::DEHRIS.Properties.Resources.org;
-            carouselImage10.ItemImage = global::DEHRIS.Properties.Resources.ipcr;
-            this.carousel1.ImageListCollection.Add(carouselImage6);
-            this.carousel1.ImageListCollection.Add(carouselImage7);
-            this.carousel1.ImageListCollection.Add(carouselImage8);
-            this.carousel1.ImageListCollection.Add(carouselImage9);
-            this.carousel1.ImageListCollection.Add(carouselImage10);
+            carouselImage11.ItemImage = global::DEHRIS.Properties.Resources.report1;
+            carouselImage12.ItemImage = global::DEHRIS.Properties.Resources.applicant;
+            carouselImage13.ItemImage = global::DEHRIS.Properties.Resources.holiday;
+            carouselImage14.ItemImage = global::DEHRIS.Properties.Resources.org;
+            carouselImage15.ItemImage = global::DEHRIS.Properties.Resources.ipcr;
+            this.carousel1.ImageListCollection.Add(carouselImage11);
+            this.carousel1.ImageListCollection.Add(carouselImage12);
+            this.carousel1.ImageListCollection.Add(carouselImage13);
+            this.carousel1.ImageListCollection.Add(carouselImage14);
+            this.carousel1.ImageListCollection.Add(carouselImage15);
             this.carousel1.ImageshadeColor = System.Drawing.Color.Black;
             this.carousel1.ImageSlides = false;
             this.carousel1.Items.Add(this.buttonAdv1);
@@ -153,28 +153,29 @@
             // 
             // gradientLabel1
             // 
+            this.gradientLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gradientLabel1.BackgroundColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.Vertical, System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(240)))), ((int)(((byte)(247))))), System.Drawing.Color.LightCyan);
-            this.gradientLabel1.BeforeTouchSize = new System.Drawing.Size(512, 107);
+            this.gradientLabel1.BeforeTouchSize = new System.Drawing.Size(548, 71);
             this.gradientLabel1.BorderSides = ((System.Windows.Forms.Border3DSide)((((System.Windows.Forms.Border3DSide.Left | System.Windows.Forms.Border3DSide.Top) 
             | System.Windows.Forms.Border3DSide.Right) 
             | System.Windows.Forms.Border3DSide.Bottom)));
-            this.gradientLabel1.Font = new System.Drawing.Font("Eras Light ITC", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gradientLabel1.Font = new System.Drawing.Font("Eras Light ITC", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gradientLabel1.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.gradientLabel1.Location = new System.Drawing.Point(32, 23);
+            this.gradientLabel1.Location = new System.Drawing.Point(0, 3);
             this.gradientLabel1.Name = "gradientLabel1";
-            this.gradientLabel1.Size = new System.Drawing.Size(512, 107);
+            this.gradientLabel1.Size = new System.Drawing.Size(548, 71);
             this.gradientLabel1.TabIndex = 1;
             this.gradientLabel1.Text = "Human Resource Information System";
             this.gradientLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.Image = global::DEHRIS.Properties.Resources.deped_logo1;
-            this.pictureBox2.Location = new System.Drawing.Point(77, 301);
+            this.pictureBox2.Location = new System.Drawing.Point(121, 429);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(245, 246);
+            this.pictureBox2.Size = new System.Drawing.Size(145, 136);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;

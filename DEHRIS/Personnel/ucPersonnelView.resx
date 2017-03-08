@@ -117,24 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="groupBar2.CollapseImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAAwAAAALCAYAAABLcGxfAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29m
-        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAABISURBVChTlYzBDgAgCEK99P+fTM4tNh1pHVjwAg3A
-        lyTspKEtf3QmJPDPVKj5mAhDORjNQzl4Cg8jGoJhlMqE9eo06CThXbANTbVbLE7w85IAAAAASUVORK5C
-        YII=
-</value>
-  </data>
-  <data name="gbQualification.CollapseImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAAwAAAALCAYAAABLcGxfAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29m
-        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAABISURBVChTlYzBDgAgCEK99P+fTM4tNh1pHVjwAg3A
-        lyTspKEtf3QmJPDPVKj5mAhDORjNQzl4Cg8jGoJhlMqE9eo06CThXbANTbVbLE7w85IAAAAASUVORK5C
-        YII=
-</value>
-  </data>
-  <metadata name="xpToolBar3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="xpPrAdd.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="biAdd.Image" mimetype="application/x-microsoft.net.object.binary.base64">
@@ -308,6 +291,48 @@
         7L9Mv36/AVJluRy+RAsZAAAAAElFTkSuQmCCCw==
 </value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="groupBar1.CollapseImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAALCAYAAABLcGxfAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAABISURBVChTlYzBDgAgCEK99P+fTM4tNh1pHVjwAg3A
+        lyTspKEtf3QmJPDPVKj5mAhDORjNQzl4Cg8jGoJhlMqE9eo06CThXbANTbVbLE7w85IAAAAASUVORK5C
+        YII=
+</value>
+  </data>
+  <metadata name="xpToolBar2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="xpToolBar1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="groupBar1.ExpandImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAALCAYAAABLcGxfAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAABKSURBVChTlYzREgAQCAR78f+ffGjGIZEedlzrSgCk
+        cOWLGaS0Z/kw82CGVlhLdqbfho8lBopgKVVWx/BRVs9gLznlziEiXHkHUgGv1lssES4LrgAAAABJRU5E
+        rkJggg==
+</value>
+  </data>
+  <data name="groupBar2.CollapseImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAALCAYAAABLcGxfAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAABISURBVChTlYzBDgAgCEK99P+fTM4tNh1pHVjwAg3A
+        lyTspKEtf3QmJPDPVKj5mAhDORjNQzl4Cg8jGoJhlMqE9eo06CThXbANTbVbLE7w85IAAAAASUVORK5C
+        YII=
+</value>
+  </data>
+  <data name="gbQualification.CollapseImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAALCAYAAABLcGxfAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAABISURBVChTlYzBDgAgCEK99P+fTM4tNh1pHVjwAg3A
+        lyTspKEtf3QmJPDPVKj5mAhDORjNQzl4Cg8jGoJhlMqE9eo06CThXbANTbVbLE7w85IAAAAASUVORK5C
+        YII=
+</value>
+  </data>
+  <metadata name="xpToolBar3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="xpToolBar4.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -330,31 +355,6 @@
         rkJggg==
 </value>
   </data>
-  <metadata name="xpPrAdd.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="groupBar1.CollapseImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAAwAAAALCAYAAABLcGxfAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29m
-        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAABISURBVChTlYzBDgAgCEK99P+fTM4tNh1pHVjwAg3A
-        lyTspKEtf3QmJPDPVKj5mAhDORjNQzl4Cg8jGoJhlMqE9eo06CThXbANTbVbLE7w85IAAAAASUVORK5C
-        YII=
-</value>
-  </data>
-  <data name="groupBar1.ExpandImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAAwAAAALCAYAAABLcGxfAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29m
-        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAABKSURBVChTlYzREgAQCAR78f+ffGjGIZEedlzrSgCk
-        cOWLGaS0Z/kw82CGVlhLdqbfho8lBopgKVVWx/BRVs9gLznlziEiXHkHUgGv1lssES4LrgAAAABJRU5E
-        rkJggg==
-</value>
-  </data>
-  <metadata name="xpToolBar1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="xpToolBar2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="groupBar4.CollapseImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAAwAAAALCAYAAABLcGxfAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29m

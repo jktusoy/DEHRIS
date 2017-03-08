@@ -34,41 +34,19 @@
             this.ribbonControlAdv1 = new Syncfusion.Windows.Forms.Tools.RibbonControlAdv();
             this.toolStripTabItem1 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
             this.toolStripEx2 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
-            this.tsbHome = new System.Windows.Forms.ToolStripButton();
             this.toolStripEx3 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
-            this.tsbReport = new System.Windows.Forms.ToolStripButton();
             this.toolStripTabItem2 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
             this.tseVMG = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
-            this.tlsbtVMG = new System.Windows.Forms.ToolStripButton();
             this.toolStripEx7 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton10 = new System.Windows.Forms.ToolStripButton();
             this.toolStripTabItem3 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
             this.toolStripEx5 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripTabItem4 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
             this.toolStripEx6 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
-            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton12 = new System.Windows.Forms.ToolStripButton();
             this.toolStripTabItem6 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
             this.toolStripEx8 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
-            this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
-            this.tsbIPCR = new System.Windows.Forms.ToolStripButton();
             this.toolStripTabItem7 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
             this.tsTabTools = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
             this.toolStripEx4 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
-            this.tsBtnImporter = new System.Windows.Forms.ToolStripButton();
-            this.officeDropDownButton1 = new Syncfusion.Windows.Forms.Tools.OfficeDropDownButton();
-            this.officeButton1 = new Syncfusion.Windows.Forms.Tools.OfficeButton();
-            this.officeButton2 = new Syncfusion.Windows.Forms.Tools.OfficeButton();
-            this.officeButton3 = new Syncfusion.Windows.Forms.Tools.OfficeButton();
-            this.officeButton4 = new Syncfusion.Windows.Forms.Tools.OfficeButton();
-            this.officeButton5 = new Syncfusion.Windows.Forms.Tools.OfficeButton();
-            this.officeButton6 = new Syncfusion.Windows.Forms.Tools.OfficeButton();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.gpNavigation = new Syncfusion.Windows.Forms.Tools.GradientPanel();
             this.gradientPanel1 = new Syncfusion.Windows.Forms.Tools.GradientPanel();
@@ -84,6 +62,30 @@
             this.ribbonPanel6 = new Syncfusion.Windows.Forms.Tools.RibbonPanel();
             this.ribbonPanel7 = new Syncfusion.Windows.Forms.Tools.RibbonPanel();
             this.toolStripTabItem5 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
+            this.tsbHome = new System.Windows.Forms.ToolStripButton();
+            this.tsbReport = new System.Windows.Forms.ToolStripButton();
+            this.tlsbtVMG = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton10 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton12 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
+            this.tsbIPCR = new System.Windows.Forms.ToolStripButton();
+            this.tsBtnImporter = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton11 = new System.Windows.Forms.ToolStripButton();
+            this.officeDropDownButton1 = new Syncfusion.Windows.Forms.Tools.OfficeDropDownButton();
+            this.officeButton1 = new Syncfusion.Windows.Forms.Tools.OfficeButton();
+            this.officeButton2 = new Syncfusion.Windows.Forms.Tools.OfficeButton();
+            this.officeButton3 = new Syncfusion.Windows.Forms.Tools.OfficeButton();
+            this.officeButton4 = new Syncfusion.Windows.Forms.Tools.OfficeButton();
+            this.officeButton5 = new Syncfusion.Windows.Forms.Tools.OfficeButton();
+            this.officeButton6 = new Syncfusion.Windows.Forms.Tools.OfficeButton();
             this.tblyMain.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControlAdv1)).BeginInit();
@@ -177,7 +179,7 @@
             this.ribbonControlAdv1.OfficeMenu.Size = new System.Drawing.Size(84, 224);
             this.ribbonControlAdv1.QuickPanelImageLayout = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ribbonControlAdv1.RibbonHeaderImage = Syncfusion.Windows.Forms.Tools.RibbonHeaderImage.None;
-            this.ribbonControlAdv1.SelectedTab = this.toolStripTabItem4;
+            this.ribbonControlAdv1.SelectedTab = this.toolStripTabItem2;
             this.ribbonControlAdv1.ShowRibbonDisplayOptionButton = true;
             this.ribbonControlAdv1.Size = new System.Drawing.Size(1135, 120);
             this.ribbonControlAdv1.SystemText.QuickAccessDialogDropDownName = "Start menu";
@@ -216,17 +218,6 @@
             this.toolStripEx2.Size = new System.Drawing.Size(106, 64);
             this.toolStripEx2.TabIndex = 0;
             // 
-            // tsbHome
-            // 
-            this.ribbonControlAdv1.SetDescription(this.tsbHome, "Home");
-            this.tsbHome.Image = global::DEHRIS.Properties.Resources.home1;
-            this.tsbHome.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsbHome.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbHome.Name = "tsbHome";
-            this.tsbHome.Size = new System.Drawing.Size(76, 43);
-            this.tsbHome.Text = "HOME";
-            this.tsbHome.Click += new System.EventHandler(this.toolStripButton2_Click);
-            // 
             // toolStripEx3
             // 
             this.toolStripEx3.AutoSize = false;
@@ -241,16 +232,6 @@
             this.toolStripEx3.Name = "toolStripEx3";
             this.toolStripEx3.Size = new System.Drawing.Size(209, 64);
             this.toolStripEx3.TabIndex = 1;
-            // 
-            // tsbReport
-            // 
-            this.tsbReport.Image = global::DEHRIS.Properties.Resources.report;
-            this.tsbReport.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsbReport.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbReport.Name = "tsbReport";
-            this.tsbReport.Size = new System.Drawing.Size(83, 43);
-            this.tsbReport.Text = "Reports";
-            this.tsbReport.Click += new System.EventHandler(this.tsbReport_Click);
             // 
             // toolStripTabItem2
             // 
@@ -283,16 +264,6 @@
             this.tseVMG.Size = new System.Drawing.Size(147, 64);
             this.tseVMG.TabIndex = 0;
             // 
-            // tlsbtVMG
-            // 
-            this.tlsbtVMG.Image = global::DEHRIS.Properties.Resources.org;
-            this.tlsbtVMG.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tlsbtVMG.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tlsbtVMG.Name = "tlsbtVMG";
-            this.tlsbtVMG.Size = new System.Drawing.Size(122, 43);
-            this.tlsbtVMG.Text = "ORGANIZATION";
-            this.tlsbtVMG.Click += new System.EventHandler(this.tlsbtVMG_Click);
-            // 
             // toolStripEx7
             // 
             this.toolStripEx7.AutoSize = false;
@@ -310,41 +281,6 @@
             this.toolStripEx7.Name = "toolStripEx7";
             this.toolStripEx7.Size = new System.Drawing.Size(434, 64);
             this.toolStripEx7.TabIndex = 1;
-            // 
-            // toolStripButton4
-            // 
-            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
-            this.toolStripButton4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(81, 43);
-            this.toolStripButton4.Text = "EVENTS";
-            // 
-            // toolStripButton5
-            // 
-            this.toolStripButton5.Image = global::DEHRIS.Properties.Resources.celebrate;
-            this.toolStripButton5.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(93, 43);
-            this.toolStripButton5.Text = "HOLIDAYS";
-            // 
-            // toolStripButton8
-            // 
-            this.toolStripButton8.Image = global::DEHRIS.Properties.Resources.policy;
-            this.toolStripButton8.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton8.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton8.Name = "toolStripButton8";
-            this.toolStripButton8.Size = new System.Drawing.Size(78, 43);
-            this.toolStripButton8.Text = "POLICY";
-            // 
-            // toolStripButton10
-            // 
-            this.toolStripButton10.Image = global::DEHRIS.Properties.Resources.diagram;
-            this.toolStripButton10.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton10.Name = "toolStripButton10";
-            this.toolStripButton10.Size = new System.Drawing.Size(78, 43);
-            this.toolStripButton10.Text = "Org Chart";
             // 
             // toolStripTabItem3
             // 
@@ -370,28 +306,11 @@
             this.toolStripEx5.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStripEx5.Image = null;
             this.toolStripEx5.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
-            this.toolStripLabel1});
+            this.toolStripButton1});
             this.toolStripEx5.Location = new System.Drawing.Point(0, 1);
             this.toolStripEx5.Name = "toolStripEx5";
             this.toolStripEx5.Size = new System.Drawing.Size(210, 64);
             this.toolStripEx5.TabIndex = 0;
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.Image = global::DEHRIS.Properties.Resources.personnel;
-            this.toolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(94, 43);
-            this.toolStripButton1.Text = "Personnel";
-            this.toolStripButton1.Click += new System.EventHandler(this.tsBtnImporter_Click);
-            // 
-            // toolStripLabel1
-            // 
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(85, 43);
-            this.toolStripLabel1.Text = "toolStripLabel1";
             // 
             // toolStripTabItem4
             // 
@@ -425,33 +344,6 @@
             this.toolStripEx6.Size = new System.Drawing.Size(364, 64);
             this.toolStripEx6.TabIndex = 0;
             // 
-            // toolStripButton6
-            // 
-            this.toolStripButton6.Image = global::DEHRIS.Properties.Resources.applicant;
-            this.toolStripButton6.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton6.Name = "toolStripButton6";
-            this.toolStripButton6.Size = new System.Drawing.Size(92, 43);
-            this.toolStripButton6.Text = "Applicant";
-            // 
-            // toolStripButton7
-            // 
-            this.toolStripButton7.Image = global::DEHRIS.Properties.Resources.requirement;
-            this.toolStripButton7.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton7.Name = "toolStripButton7";
-            this.toolStripButton7.Size = new System.Drawing.Size(114, 43);
-            this.toolStripButton7.Text = "Requirements";
-            // 
-            // toolStripButton12
-            // 
-            this.toolStripButton12.Image = global::DEHRIS.Properties.Resources.process;
-            this.toolStripButton12.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton12.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton12.Name = "toolStripButton12";
-            this.toolStripButton12.Size = new System.Drawing.Size(131, 43);
-            this.toolStripButton12.Text = "Selection Process";
-            // 
             // toolStripTabItem6
             // 
             this.toolStripTabItem6.Name = "toolStripTabItem6";
@@ -483,25 +375,6 @@
             this.toolStripEx8.Name = "toolStripEx8";
             this.toolStripEx8.Size = new System.Drawing.Size(217, 64);
             this.toolStripEx8.TabIndex = 0;
-            // 
-            // toolStripButton9
-            // 
-            this.toolStripButton9.Image = global::DEHRIS.Properties.Resources.leave;
-            this.toolStripButton9.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton9.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton9.Name = "toolStripButton9";
-            this.toolStripButton9.Size = new System.Drawing.Size(73, 43);
-            this.toolStripButton9.Text = "LEAVE";
-            // 
-            // tsbIPCR
-            // 
-            this.tsbIPCR.Image = global::DEHRIS.Properties.Resources.ipcr;
-            this.tsbIPCR.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsbIPCR.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbIPCR.Name = "tsbIPCR";
-            this.tsbIPCR.Size = new System.Drawing.Size(66, 43);
-            this.tsbIPCR.Text = "IPCR";
-            this.tsbIPCR.Click += new System.EventHandler(this.tsbIPCR_Click);
             // 
             // toolStripTabItem7
             // 
@@ -543,86 +416,14 @@
             this.toolStripEx4.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStripEx4.Image = null;
             this.toolStripEx4.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsBtnImporter});
+            this.tsBtnImporter,
+            this.toolStripButton2,
+            this.toolStripButton3,
+            this.toolStripButton11});
             this.toolStripEx4.Location = new System.Drawing.Point(0, 1);
             this.toolStripEx4.Name = "toolStripEx4";
-            this.toolStripEx4.Size = new System.Drawing.Size(100, 64);
+            this.toolStripEx4.Size = new System.Drawing.Size(423, 64);
             this.toolStripEx4.TabIndex = 0;
-            // 
-            // tsBtnImporter
-            // 
-            this.tsBtnImporter.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsBtnImporter.Image = ((System.Drawing.Image)(resources.GetObject("tsBtnImporter.Image")));
-            this.tsBtnImporter.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsBtnImporter.Name = "tsBtnImporter";
-            this.tsBtnImporter.Size = new System.Drawing.Size(23, 43);
-            this.tsBtnImporter.Text = "toolStripButton2";
-            this.tsBtnImporter.Click += new System.EventHandler(this.tsBtnImporter_Click);
-            // 
-            // officeDropDownButton1
-            // 
-            this.officeDropDownButton1.DropDownFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.officeDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("officeDropDownButton1.Image")));
-            this.officeDropDownButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.officeDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.officeDropDownButton1.Name = "officeDropDownButton1";
-            this.officeDropDownButton1.Size = new System.Drawing.Size(72, 20);
-            this.officeDropDownButton1.Text = "HOME";
-            this.ribbonControlAdv1.SetUseInQuickAccessMenu(this.officeDropDownButton1, true);
-            // 
-            // officeButton1
-            // 
-            this.officeButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.ImageAndText;
-            this.officeButton1.Image = ((System.Drawing.Image)(resources.GetObject("officeButton1.Image")));
-            this.officeButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.officeButton1.Name = "officeButton1";
-            this.officeButton1.Size = new System.Drawing.Size(72, 23);
-            this.officeButton1.Text = "officeButton1";
-            // 
-            // officeButton2
-            // 
-            this.officeButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.ImageAndText;
-            this.officeButton2.Image = ((System.Drawing.Image)(resources.GetObject("officeButton2.Image")));
-            this.officeButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.officeButton2.Name = "officeButton2";
-            this.officeButton2.Size = new System.Drawing.Size(72, 23);
-            this.officeButton2.Text = "officeButton2";
-            // 
-            // officeButton3
-            // 
-            this.officeButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.ImageAndText;
-            this.officeButton3.Image = ((System.Drawing.Image)(resources.GetObject("officeButton3.Image")));
-            this.officeButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.officeButton3.Name = "officeButton3";
-            this.officeButton3.Size = new System.Drawing.Size(72, 23);
-            this.officeButton3.Text = "officeButton3";
-            // 
-            // officeButton4
-            // 
-            this.officeButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.ImageAndText;
-            this.officeButton4.Image = ((System.Drawing.Image)(resources.GetObject("officeButton4.Image")));
-            this.officeButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.officeButton4.Name = "officeButton4";
-            this.officeButton4.Size = new System.Drawing.Size(72, 23);
-            this.officeButton4.Text = "officeButton4";
-            // 
-            // officeButton5
-            // 
-            this.officeButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.ImageAndText;
-            this.officeButton5.Image = ((System.Drawing.Image)(resources.GetObject("officeButton5.Image")));
-            this.officeButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.officeButton5.Name = "officeButton5";
-            this.officeButton5.Size = new System.Drawing.Size(72, 23);
-            this.officeButton5.Text = "officeButton5";
-            // 
-            // officeButton6
-            // 
-            this.officeButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.ImageAndText;
-            this.officeButton6.Image = ((System.Drawing.Image)(resources.GetObject("officeButton6.Image")));
-            this.officeButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.officeButton6.Name = "officeButton6";
-            this.officeButton6.Size = new System.Drawing.Size(72, 23);
-            this.officeButton6.Text = "officeButton6";
             // 
             // tableLayoutPanel1
             // 
@@ -790,6 +591,232 @@
             this.toolStripTabItem5.Tag = "5";
             this.toolStripTabItem5.Text = "Appointment";
             // 
+            // tsbHome
+            // 
+            this.ribbonControlAdv1.SetDescription(this.tsbHome, "Home");
+            this.tsbHome.Image = global::DEHRIS.Properties.Resources.home1;
+            this.tsbHome.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsbHome.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbHome.Name = "tsbHome";
+            this.tsbHome.Size = new System.Drawing.Size(76, 43);
+            this.tsbHome.Text = "HOME";
+            this.tsbHome.Click += new System.EventHandler(this.toolStripButton2_Click);
+            // 
+            // tsbReport
+            // 
+            this.tsbReport.Image = global::DEHRIS.Properties.Resources.report;
+            this.tsbReport.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsbReport.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbReport.Name = "tsbReport";
+            this.tsbReport.Size = new System.Drawing.Size(83, 43);
+            this.tsbReport.Text = "Reports";
+            this.tsbReport.Click += new System.EventHandler(this.tsbReport_Click);
+            // 
+            // tlsbtVMG
+            // 
+            this.tlsbtVMG.Image = global::DEHRIS.Properties.Resources.org;
+            this.tlsbtVMG.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tlsbtVMG.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tlsbtVMG.Name = "tlsbtVMG";
+            this.tlsbtVMG.Size = new System.Drawing.Size(122, 43);
+            this.tlsbtVMG.Text = "ORGANIZATION";
+            this.tlsbtVMG.Click += new System.EventHandler(this.tlsbtVMG_Click);
+            // 
+            // toolStripButton4
+            // 
+            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
+            this.toolStripButton4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton4.Name = "toolStripButton4";
+            this.toolStripButton4.Size = new System.Drawing.Size(81, 43);
+            this.toolStripButton4.Text = "EVENTS";
+            // 
+            // toolStripButton5
+            // 
+            this.toolStripButton5.Image = global::DEHRIS.Properties.Resources.celebrate;
+            this.toolStripButton5.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton5.Name = "toolStripButton5";
+            this.toolStripButton5.Size = new System.Drawing.Size(93, 43);
+            this.toolStripButton5.Text = "HOLIDAYS";
+            // 
+            // toolStripButton8
+            // 
+            this.toolStripButton8.Image = global::DEHRIS.Properties.Resources.policy;
+            this.toolStripButton8.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton8.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton8.Name = "toolStripButton8";
+            this.toolStripButton8.Size = new System.Drawing.Size(78, 43);
+            this.toolStripButton8.Text = "POLICY";
+            // 
+            // toolStripButton10
+            // 
+            this.toolStripButton10.Image = global::DEHRIS.Properties.Resources.diagram;
+            this.toolStripButton10.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton10.Name = "toolStripButton10";
+            this.toolStripButton10.Size = new System.Drawing.Size(78, 43);
+            this.toolStripButton10.Text = "Org Chart";
+            this.toolStripButton10.Click += new System.EventHandler(this.toolStripButton10_Click);
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Image = global::DEHRIS.Properties.Resources.personnel;
+            this.toolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(94, 43);
+            this.toolStripButton1.Text = "Personnel";
+            this.toolStripButton1.Click += new System.EventHandler(this.tsBtnImporter_Click);
+            // 
+            // toolStripButton6
+            // 
+            this.toolStripButton6.Image = global::DEHRIS.Properties.Resources.applicant;
+            this.toolStripButton6.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton6.Name = "toolStripButton6";
+            this.toolStripButton6.Size = new System.Drawing.Size(92, 43);
+            this.toolStripButton6.Text = "Applicant";
+            // 
+            // toolStripButton7
+            // 
+            this.toolStripButton7.Image = global::DEHRIS.Properties.Resources.requirement;
+            this.toolStripButton7.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton7.Name = "toolStripButton7";
+            this.toolStripButton7.Size = new System.Drawing.Size(114, 43);
+            this.toolStripButton7.Text = "Requirements";
+            // 
+            // toolStripButton12
+            // 
+            this.toolStripButton12.Image = global::DEHRIS.Properties.Resources.process;
+            this.toolStripButton12.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton12.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton12.Name = "toolStripButton12";
+            this.toolStripButton12.Size = new System.Drawing.Size(131, 43);
+            this.toolStripButton12.Text = "Selection Process";
+            // 
+            // toolStripButton9
+            // 
+            this.toolStripButton9.Image = global::DEHRIS.Properties.Resources.leave;
+            this.toolStripButton9.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton9.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton9.Name = "toolStripButton9";
+            this.toolStripButton9.Size = new System.Drawing.Size(73, 43);
+            this.toolStripButton9.Text = "LEAVE";
+            // 
+            // tsbIPCR
+            // 
+            this.tsbIPCR.Image = global::DEHRIS.Properties.Resources.ipcr;
+            this.tsbIPCR.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsbIPCR.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbIPCR.Name = "tsbIPCR";
+            this.tsbIPCR.Size = new System.Drawing.Size(66, 43);
+            this.tsbIPCR.Text = "IPCR";
+            this.tsbIPCR.Click += new System.EventHandler(this.tsbIPCR_Click);
+            // 
+            // tsBtnImporter
+            // 
+            this.tsBtnImporter.Image = global::DEHRIS.Properties.Resources.uploader1;
+            this.tsBtnImporter.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsBtnImporter.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsBtnImporter.Name = "tsBtnImporter";
+            this.tsBtnImporter.Size = new System.Drawing.Size(96, 43);
+            this.tsBtnImporter.Text = "IMPORTER";
+            this.tsBtnImporter.Click += new System.EventHandler(this.tsBtnImporter_Click);
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.Image = global::DEHRIS.Properties.Resources.scheduler1;
+            this.toolStripButton2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(104, 43);
+            this.toolStripButton2.Text = "SCHEDULER";
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.Image = global::DEHRIS.Properties.Resources.browser;
+            this.toolStripButton3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(96, 43);
+            this.toolStripButton3.Text = "BROWSER";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
+            // 
+            // toolStripButton11
+            // 
+            this.toolStripButton11.Image = global::DEHRIS.Properties.Resources.email;
+            this.toolStripButton11.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton11.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton11.Name = "toolStripButton11";
+            this.toolStripButton11.Size = new System.Drawing.Size(74, 43);
+            this.toolStripButton11.Text = "EMAIL";
+            // 
+            // officeDropDownButton1
+            // 
+            this.officeDropDownButton1.DropDownFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.officeDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("officeDropDownButton1.Image")));
+            this.officeDropDownButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.officeDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.officeDropDownButton1.Name = "officeDropDownButton1";
+            this.officeDropDownButton1.Size = new System.Drawing.Size(72, 20);
+            this.officeDropDownButton1.Text = "HOME";
+            this.ribbonControlAdv1.SetUseInQuickAccessMenu(this.officeDropDownButton1, true);
+            // 
+            // officeButton1
+            // 
+            this.officeButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.ImageAndText;
+            this.officeButton1.Image = ((System.Drawing.Image)(resources.GetObject("officeButton1.Image")));
+            this.officeButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.officeButton1.Name = "officeButton1";
+            this.officeButton1.Size = new System.Drawing.Size(72, 23);
+            this.officeButton1.Text = "officeButton1";
+            // 
+            // officeButton2
+            // 
+            this.officeButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.ImageAndText;
+            this.officeButton2.Image = ((System.Drawing.Image)(resources.GetObject("officeButton2.Image")));
+            this.officeButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.officeButton2.Name = "officeButton2";
+            this.officeButton2.Size = new System.Drawing.Size(72, 23);
+            this.officeButton2.Text = "officeButton2";
+            // 
+            // officeButton3
+            // 
+            this.officeButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.ImageAndText;
+            this.officeButton3.Image = ((System.Drawing.Image)(resources.GetObject("officeButton3.Image")));
+            this.officeButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.officeButton3.Name = "officeButton3";
+            this.officeButton3.Size = new System.Drawing.Size(72, 23);
+            this.officeButton3.Text = "officeButton3";
+            // 
+            // officeButton4
+            // 
+            this.officeButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.ImageAndText;
+            this.officeButton4.Image = ((System.Drawing.Image)(resources.GetObject("officeButton4.Image")));
+            this.officeButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.officeButton4.Name = "officeButton4";
+            this.officeButton4.Size = new System.Drawing.Size(72, 23);
+            this.officeButton4.Text = "officeButton4";
+            // 
+            // officeButton5
+            // 
+            this.officeButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.ImageAndText;
+            this.officeButton5.Image = ((System.Drawing.Image)(resources.GetObject("officeButton5.Image")));
+            this.officeButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.officeButton5.Name = "officeButton5";
+            this.officeButton5.Size = new System.Drawing.Size(72, 23);
+            this.officeButton5.Text = "officeButton5";
+            // 
+            // officeButton6
+            // 
+            this.officeButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.ImageAndText;
+            this.officeButton6.Image = ((System.Drawing.Image)(resources.GetObject("officeButton6.Image")));
+            this.officeButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.officeButton6.Name = "officeButton6";
+            this.officeButton6.Size = new System.Drawing.Size(72, 23);
+            this.officeButton6.Text = "officeButton6";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -875,7 +902,6 @@
         private Syncfusion.Windows.Forms.Tools.TabControlAdv tabControlAdv1;
         private Syncfusion.Windows.Forms.Tools.TabPageAdv tabPageAdv1;
         private Syncfusion.Windows.Forms.Tools.GradientPanel gpMain;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripButton tsbHome;
         private System.Windows.Forms.ToolStripButton tsbReport;
         private Syncfusion.Windows.Forms.Tools.ToolStripEx toolStripEx7;
@@ -897,6 +923,9 @@
         private Syncfusion.Windows.Forms.Tools.OfficeButton officeButton4;
         private Syncfusion.Windows.Forms.Tools.OfficeButton officeButton5;
         private Syncfusion.Windows.Forms.Tools.OfficeButton officeButton6;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripButton toolStripButton11;
     }
 }
 

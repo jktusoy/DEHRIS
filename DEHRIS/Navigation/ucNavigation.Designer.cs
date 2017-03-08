@@ -28,153 +28,169 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Syncfusion.Windows.Forms.Tools.DigitalClockRenderer digitalClockRenderer1 = new Syncfusion.Windows.Forms.Tools.DigitalClockRenderer();
-            Syncfusion.Windows.Forms.Tools.ClockRenderer clockRenderer1 = new Syncfusion.Windows.Forms.Tools.ClockRenderer();
-            this.tabSplitterContainer1 = new Syncfusion.Windows.Forms.Tools.TabSplitterContainer();
-            this.tabSplitterPage1 = new Syncfusion.Windows.Forms.Tools.TabSplitterPage();
-            this.clock2 = new Syncfusion.Windows.Forms.Tools.Clock();
-            this.tabSplitterPage2 = new Syncfusion.Windows.Forms.Tools.TabSplitterPage();
-            this.gradientPanel2 = new Syncfusion.Windows.Forms.Tools.GradientPanel();
-            this.groupBar1 = new Syncfusion.Windows.Forms.Tools.GroupBar();
-            this.tabSplitterContainer1.SuspendLayout();
-            this.tabSplitterPage1.SuspendLayout();
-            this.tabSplitterPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gradientPanel2)).BeginInit();
-            this.gradientPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupBar1)).BeginInit();
+            this.gradientLabel1 = new Syncfusion.Windows.Forms.Tools.GradientLabel();
+            this.layoutGroup1 = new Syncfusion.Windows.Forms.Tools.LayoutGroup();
+            this.imageStreamer4 = new Syncfusion.Windows.Forms.Tools.ImageStreamer();
+            this.layoutGroup2 = new Syncfusion.Windows.Forms.Tools.LayoutGroup();
+            this.imageStreamer1 = new Syncfusion.Windows.Forms.Tools.ImageStreamer();
+            this.imageStreamer2 = new Syncfusion.Windows.Forms.Tools.ImageStreamer();
+            this.imageStreamer3 = new Syncfusion.Windows.Forms.Tools.ImageStreamer();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.gradientLabel2 = new Syncfusion.Windows.Forms.Tools.GradientLabel();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutGroup1)).BeginInit();
+            this.layoutGroup1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutGroup2)).BeginInit();
+            this.layoutGroup2.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabSplitterContainer1
+            // gradientLabel1
             // 
-            this.tabSplitterContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabSplitterContainer1.Location = new System.Drawing.Point(0, 0);
-            this.tabSplitterContainer1.Name = "tabSplitterContainer1";
-            this.tabSplitterContainer1.PrimaryPages.AddRange(new Syncfusion.Windows.Forms.Tools.TabSplitterPage[] {
-            this.tabSplitterPage1});
-            this.tabSplitterContainer1.SecondaryPages.AddRange(new Syncfusion.Windows.Forms.Tools.TabSplitterPage[] {
-            this.tabSplitterPage2});
-            this.tabSplitterContainer1.Size = new System.Drawing.Size(262, 438);
-            this.tabSplitterContainer1.SplitterBackColor = System.Drawing.SystemColors.Control;
-            this.tabSplitterContainer1.SplitterPosition = 154;
-            this.tabSplitterContainer1.Swapped = true;
-            this.tabSplitterContainer1.TabIndex = 1;
-            this.tabSplitterContainer1.Text = "tabSplitterContainer1";
+            this.gradientLabel1.BackgroundColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.Vertical, System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(240)))), ((int)(((byte)(247))))), System.Drawing.Color.LightCyan);
+            this.gradientLabel1.BeforeTouchSize = new System.Drawing.Size(256, 30);
+            this.gradientLabel1.BorderSides = ((System.Windows.Forms.Border3DSide)((((System.Windows.Forms.Border3DSide.Left | System.Windows.Forms.Border3DSide.Top) 
+            | System.Windows.Forms.Border3DSide.Right) 
+            | System.Windows.Forms.Border3DSide.Bottom)));
+            this.gradientLabel1.Font = new System.Drawing.Font("Eras Light ITC", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gradientLabel1.Location = new System.Drawing.Point(3, 0);
+            this.gradientLabel1.Name = "gradientLabel1";
+            this.gradientLabel1.Size = new System.Drawing.Size(256, 30);
+            this.gradientLabel1.TabIndex = 4;
+            this.gradientLabel1.Text = "Login as: Administrator";
+            this.gradientLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // tabSplitterPage1
+            // layoutGroup1
             // 
-            this.tabSplitterPage1.AutoScroll = true;
-            this.tabSplitterPage1.Controls.Add(this.clock2);
-            this.tabSplitterPage1.Hide = false;
-            this.tabSplitterPage1.Location = new System.Drawing.Point(0, 174);
-            this.tabSplitterPage1.Name = "tabSplitterPage1";
-            this.tabSplitterPage1.Size = new System.Drawing.Size(262, 264);
-            this.tabSplitterPage1.TabIndex = 1;
-            this.tabSplitterPage1.Text = "tabSplitterPage1";
+            this.layoutGroup1.BackColor = System.Drawing.Color.Transparent;
+            this.layoutGroup1.BackgroundImage = global::DEHRIS.Properties.Resources.browser;
+            this.layoutGroup1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.layoutGroup1.Controls.Add(this.imageStreamer4);
+            this.layoutGroup1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutGroup1.Location = new System.Drawing.Point(0, 0);
+            this.layoutGroup1.Name = "layoutGroup1";
+            this.layoutGroup1.SetItem = true;
+            this.layoutGroup1.Size = new System.Drawing.Size(140, 80);
+            this.layoutGroup1.TabIndex = 0;
             // 
-            // clock2
+            // imageStreamer4
             // 
-            this.clock2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.clock2.BackColor = System.Drawing.Color.Transparent;
-            this.clock2.BackgroundColor = System.Drawing.SystemColors.HighlightText;
-            this.clock2.BeforeTouchSize = new System.Drawing.Size(238, 119);
-            this.clock2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(111)))), ((int)(((byte)(119)))));
-            this.clock2.ClockFormat = "HH:mm:ss";
-            this.clock2.ClockFrame = Syncfusion.Windows.Forms.Tools.ClockFrames.RectangularFrame;
-            this.clock2.ClockShape = Syncfusion.Windows.Forms.Tools.ClockShapes.Rectangle;
-            this.clock2.ClockType = Syncfusion.Windows.Forms.Tools.ClockTypes.Digital;
-            this.clock2.CurrentDateTime = new System.DateTime(2017, 3, 2, 16, 0, 45, 896);
-            this.clock2.CustomTime = new System.DateTime(2017, 3, 6, 20, 28, 34, 633);
-            this.clock2.DigitalRenderer = digitalClockRenderer1;
-            this.clock2.DisplayDates = true;
-            this.clock2.EnableRemainder = true;
-            this.clock2.EndGradientBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))), ((int)(((byte)(252)))));
-            this.clock2.IsTransparent = true;
-            this.clock2.Location = new System.Drawing.Point(12, 82);
-            this.clock2.MinimumSize = new System.Drawing.Size(75, 75);
-            this.clock2.MinuteColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(111)))), ((int)(((byte)(119)))));
-            this.clock2.Name = "clock2";
-            this.clock2.Now = new System.DateTime(((long)(0)));
-            this.clock2.Remainder = new System.DateTime(2017, 3, 2, 16, 0, 45, 896);
-            this.clock2.Renderer = clockRenderer1;
-            this.clock2.ShowAMorPM = true;
-            this.clock2.ShowClockFrame = false;
-            this.clock2.ShowCustomTimeClock = true;
-            this.clock2.ShowHourDesignator = true;
-            this.clock2.Size = new System.Drawing.Size(238, 119);
-            this.clock2.StartGradientBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(228)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
-            this.clock2.StopTimer = false;
-            this.clock2.TabIndex = 2;
-            this.clock2.Text = "clock2";
-            this.clock2.VisualStyle = Syncfusion.Windows.Forms.Tools.ClockVisualStyle.OfficeBlue;
+            this.imageStreamer4.AllowDragging = true;
+            this.imageStreamer4.BackgroundImage = global::DEHRIS.Properties.Resources.celebrate;
+            this.imageStreamer4.InternalBackColor = System.Drawing.Color.Transparent;
+            this.imageStreamer4.Location = new System.Drawing.Point(5, 0);
+            this.imageStreamer4.Name = "imageStreamer4";
+            this.imageStreamer4.Size = new System.Drawing.Size(120, 120);
+            this.imageStreamer4.TabIndex = 0;
+            this.imageStreamer4.Text = "imageStreamer4";
+            this.imageStreamer4.TextAnimationDirection = Syncfusion.Windows.Forms.Tools.ImageStreamer.TextStreamDirection.RightToLeft;
             // 
-            // tabSplitterPage2
+            // layoutGroup2
             // 
-            this.tabSplitterPage2.AutoScroll = true;
-            this.tabSplitterPage2.Controls.Add(this.gradientPanel2);
-            this.tabSplitterPage2.Hide = false;
-            this.tabSplitterPage2.Location = new System.Drawing.Point(0, 0);
-            this.tabSplitterPage2.Name = "tabSplitterPage2";
-            this.tabSplitterPage2.Size = new System.Drawing.Size(262, 154);
-            this.tabSplitterPage2.TabIndex = 2;
-            this.tabSplitterPage2.Text = "tabSplitterPage2";
+            this.layoutGroup2.BackColor = System.Drawing.Color.Transparent;
+            this.layoutGroup2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.layoutGroup2.Controls.Add(this.imageStreamer1);
+            this.layoutGroup2.Controls.Add(this.imageStreamer2);
+            this.layoutGroup2.Controls.Add(this.imageStreamer3);
+            this.layoutGroup2.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutGroup2.Location = new System.Drawing.Point(0, 0);
+            this.layoutGroup2.Name = "layoutGroup2";
+            this.layoutGroup2.SetItem = true;
+            this.layoutGroup2.Size = new System.Drawing.Size(515, 80);
+            this.layoutGroup2.TabIndex = 0;
             // 
-            // gradientPanel2
+            // imageStreamer1
             // 
-            this.gradientPanel2.BackColor = System.Drawing.SystemColors.Control;
-            this.gradientPanel2.BackgroundColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.Horizontal, System.Drawing.SystemColors.HighlightText, System.Drawing.Color.LightSteelBlue);
-            this.gradientPanel2.BorderColor = System.Drawing.Color.SteelBlue;
-            this.gradientPanel2.BorderSingle = System.Windows.Forms.ButtonBorderStyle.Dashed;
-            this.gradientPanel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.gradientPanel2.Controls.Add(this.groupBar1);
-            this.gradientPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gradientPanel2.IgnoreThemeBackground = true;
-            this.gradientPanel2.Location = new System.Drawing.Point(0, 0);
-            this.gradientPanel2.Name = "gradientPanel2";
-            this.gradientPanel2.Size = new System.Drawing.Size(262, 154);
-            this.gradientPanel2.TabIndex = 2;
+            this.imageStreamer1.AllowDragging = true;
+            this.imageStreamer1.InternalBackColor = System.Drawing.Color.Transparent;
+            this.imageStreamer1.Location = new System.Drawing.Point(5, 0);
+            this.imageStreamer1.Name = "imageStreamer1";
+            this.imageStreamer1.Size = new System.Drawing.Size(120, 120);
+            this.imageStreamer1.TabIndex = 0;
+            this.imageStreamer1.Text = "imageStreamer1";
+            this.imageStreamer1.TextAnimationDirection = Syncfusion.Windows.Forms.Tools.ImageStreamer.TextStreamDirection.RightToLeft;
             // 
-            // groupBar1
+            // imageStreamer2
             // 
-            this.groupBar1.AllowCollapse = true;
-            this.groupBar1.AllowDrop = true;
-            this.groupBar1.BeforeTouchSize = new System.Drawing.Size(260, 152);
-            this.groupBar1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBar1.HeaderBackColor = System.Drawing.SystemColors.ControlDark;
-            this.groupBar1.IndexOnVisibleItems = true;
-            this.groupBar1.Location = new System.Drawing.Point(0, 0);
-            this.groupBar1.Name = "groupBar1";
-            this.groupBar1.PopupClientSize = new System.Drawing.Size(0, 0);
-            this.groupBar1.Size = new System.Drawing.Size(260, 152);
-            this.groupBar1.Splittercolor = System.Drawing.SystemColors.ControlDark;
-            this.groupBar1.TabIndex = 0;
-            this.groupBar1.Text = "groupBar1";
+            this.imageStreamer2.AllowDragging = true;
+            this.imageStreamer2.InternalBackColor = System.Drawing.Color.Transparent;
+            this.imageStreamer2.Location = new System.Drawing.Point(130, 0);
+            this.imageStreamer2.Name = "imageStreamer2";
+            this.imageStreamer2.Size = new System.Drawing.Size(120, 120);
+            this.imageStreamer2.TabIndex = 1;
+            this.imageStreamer2.Text = "imageStreamer2";
+            this.imageStreamer2.TextAnimationDirection = Syncfusion.Windows.Forms.Tools.ImageStreamer.TextStreamDirection.RightToLeft;
+            // 
+            // imageStreamer3
+            // 
+            this.imageStreamer3.AllowDragging = true;
+            this.imageStreamer3.InternalBackColor = System.Drawing.Color.Transparent;
+            this.imageStreamer3.Location = new System.Drawing.Point(255, 0);
+            this.imageStreamer3.Name = "imageStreamer3";
+            this.imageStreamer3.Size = new System.Drawing.Size(120, 120);
+            this.imageStreamer3.TabIndex = 2;
+            this.imageStreamer3.Text = "imageStreamer3";
+            this.imageStreamer3.TextAnimationDirection = Syncfusion.Windows.Forms.Tools.ImageStreamer.TextStreamDirection.RightToLeft;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.gradientLabel1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.gradientLabel2, 0, 2);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.65414F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 88.34586F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 132F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(262, 438);
+            this.tableLayoutPanel1.TabIndex = 5;
+            // 
+            // gradientLabel2
+            // 
+            this.gradientLabel2.BackgroundColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.Vertical, System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(240)))), ((int)(((byte)(247))))), System.Drawing.Color.LightCyan);
+            this.gradientLabel2.BeforeTouchSize = new System.Drawing.Size(256, 35);
+            this.gradientLabel2.BorderSides = ((System.Windows.Forms.Border3DSide)((((System.Windows.Forms.Border3DSide.Left | System.Windows.Forms.Border3DSide.Top) 
+            | System.Windows.Forms.Border3DSide.Right) 
+            | System.Windows.Forms.Border3DSide.Bottom)));
+            this.gradientLabel2.Font = new System.Drawing.Font("Eras Light ITC", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gradientLabel2.Location = new System.Drawing.Point(3, 305);
+            this.gradientLabel2.Name = "gradientLabel2";
+            this.gradientLabel2.Size = new System.Drawing.Size(256, 35);
+            this.gradientLabel2.TabIndex = 6;
+            this.gradientLabel2.Text = "Login as: Administrator";
+            this.gradientLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ucNavigation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.tabSplitterContainer1);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "ucNavigation";
             this.Size = new System.Drawing.Size(262, 438);
-            this.tabSplitterContainer1.ResumeLayout(false);
-            this.tabSplitterPage1.ResumeLayout(false);
-            this.tabSplitterPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gradientPanel2)).EndInit();
-            this.gradientPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.groupBar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutGroup1)).EndInit();
+            this.layoutGroup1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.layoutGroup2)).EndInit();
+            this.layoutGroup2.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Syncfusion.Windows.Forms.Tools.TabSplitterContainer tabSplitterContainer1;
-        private Syncfusion.Windows.Forms.Tools.TabSplitterPage tabSplitterPage1;
-        private Syncfusion.Windows.Forms.Tools.TabSplitterPage tabSplitterPage2;
-        private Syncfusion.Windows.Forms.Tools.GradientPanel gradientPanel2;
-        private Syncfusion.Windows.Forms.Tools.GroupBar groupBar1;
-        private Syncfusion.Windows.Forms.Tools.Clock clock2;
+        private Syncfusion.Windows.Forms.Tools.GradientLabel gradientLabel1;
+        private Syncfusion.Windows.Forms.Tools.LayoutGroup layoutGroup1;
+        private Syncfusion.Windows.Forms.Tools.ImageStreamer imageStreamer4;
+        private Syncfusion.Windows.Forms.Tools.LayoutGroup layoutGroup2;
+        private Syncfusion.Windows.Forms.Tools.ImageStreamer imageStreamer1;
+        private Syncfusion.Windows.Forms.Tools.ImageStreamer imageStreamer2;
+        private Syncfusion.Windows.Forms.Tools.ImageStreamer imageStreamer3;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private Syncfusion.Windows.Forms.Tools.GradientLabel gradientLabel2;
+
 
     }
 }
