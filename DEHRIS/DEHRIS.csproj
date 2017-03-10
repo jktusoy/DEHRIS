@@ -112,6 +112,10 @@
     <Compile Include="Organization\ucViewOrgChar.Designer.cs">
       <DependentUpon>ucViewOrgChar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Others\FlipPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Others\FlipPanel.Designer.cs" />
     <Compile Include="Personnel\ucImportPersonnel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -186,6 +190,7 @@
     <EmbeddedResource Include="Organization\ucViewOrgChar.resx">
       <DependentUpon>ucViewOrgChar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Others\FlipPanel.resx" />
     <EmbeddedResource Include="Personnel\ucImportPersonnel.resx">
       <DependentUpon>ucImportPersonnel.cs</DependentUpon>
     </EmbeddedResource>

@@ -50,6 +50,6 @@ namespace DEHRISModel.Data
         public Contact TelePhone { get; set; }
 
         public ProfessionalProfile ProfessionalProfile { get; set; }
-
+        public long PersonnelID { get; set; }
     }
 }

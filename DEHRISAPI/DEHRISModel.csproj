@@ -39,10 +39,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\CivilService.cs" />
+    <Compile Include="Data\EducationalBackground.cs" />
     <Compile Include="Data\Personnel.cs" />
     <Compile Include="Data\Address.cs" />
     <Compile Include="Data\Contact.cs" />
     <Compile Include="Data\ProfessionalProfile.cs" />
+    <Compile Include="Data\ProfilePicture.cs" />
+    <Compile Include="Data\SpecialSkills.cs" />
     <Compile Include="Enum\ContactType.cs" />
     <Compile Include="Enum\AddressType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

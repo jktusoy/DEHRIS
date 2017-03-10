@@ -10,17 +10,23 @@ using System.Windows.Forms;
 using Syncfusion.XlsIO;
 using DEHRISAPI;
 using DEHRISModel.Data;
+using System.IO;
 namespace DEHRIS.Importer
 {
     public partial class ucPersonnelView : UserControl
     {
+        DEHRISAPI.PersonnelUtility prodUtil = new PersonnelUtility();
+           
         public ucPersonnelView()
         {
             InitializeComponent();
 
 
-            DEHRISAPI.PersonnelUtility prodUtil = new PersonnelUtility();
             objlPersonnelView.SetObjects(prodUtil.GetPersonnel());
+
+            biAdd.Enabled = false;
+            briEdit.Enabled = false;
+            //LoadProfilePicture()
             //IApplication application = excelEngine.Excel;
 
 
@@ -85,6 +91,7 @@ namespace DEHRIS.Importer
             SetEditable(false);
             DEHRISModel.Data.Personnel selectePersonnel = (DEHRISModel.Data.Personnel)objlPersonnelView.SelectedObject;
             ShowViewData(selectePersonnel);
+          
         }
 
         //public enum Status { Active = 0, Canceled = 3 }; 
@@ -118,7 +125,46 @@ namespace DEHRIS.Importer
             cbBloodType.Text = ppersonnel.Bloodtype;
             cbCivilStatus.Text = ppersonnel.Civilstatus;
             cBirthDate.Text = ppersonnel.DateOfBirth.ToShortDateString();
+            int _personnelID = int.Parse(ppersonnel.PersonnelID.ToString());
+            byte[] byter = prodUtil.GetPersonnelProfilePic(_personnelID).BinaryImage;
+            LoadProfilePicture(byter);
+            LoadCivilService(_personnelID);
         }
+
+        public void LoadProfilePicture(byte[] bytearray)
+        {
+            pictureProfile.Image = DEHRIS.Properties.Resources.icon_user_default;
+            if (bytearray == null)
+                return;
+
+            using (var ms = new MemoryStream(bytearray))
+            {
+                pictureProfile.Image = Image.FromStream(ms);
+                pictureProfile.SizeMode = PictureBoxSizeMode.StretchImage;
+                pictureProfile.Show();
+            }
+        }
+
+
+
+        public void LoadCivilService(int ppersonnelID)
+        {
+           objCivilService.SetObjects(prodUtil.GetCivilService(ppersonnelID));
+        }
+
+
+        public void LoadEducationalBackground(int ppersonnelID)
+        {
+            objEducBack.SetObjects(prodUtil.GetEducationalBackground(ppersonnelID));
+        }
+
+
+        public void LoadESpecialSkills(int ppersonnelID)
+        {
+            objCivilService.SetObjects(prodUtil.GetSpecialSkills(ppersonnelID));
+        }
+
+
 
 
         private void SetEditable(bool iseditable)
@@ -199,5 +245,9 @@ namespace DEHRIS.Importer
             DEHRISAPI.PersonnelUtility prodUtil = new PersonnelUtility();
             objlPersonnelView.SetObjects(prodUtil.GetPersonnel());
         }
+
+        private void splitContainer4_Panel1_Paint(object sender, PaintEventArgs e)
+        {
+                    }
     }
 }
