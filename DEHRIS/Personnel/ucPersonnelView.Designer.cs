@@ -28,24 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucPersonnelView));
             this.tabSplitterContainer1 = new Syncfusion.Windows.Forms.Tools.TabSplitterContainer();
-            this.tabSplitterPage1 = new Syncfusion.Windows.Forms.Tools.TabSplitterPage();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.xpPrAdd = new Syncfusion.Windows.Forms.Tools.XPMenus.XPToolBar();
             this.biAdd = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
             this.briEdit = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
             this.briDelete = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
             this.briRefresh = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
-            this.gradientPanel3 = new Syncfusion.Windows.Forms.Tools.GradientPanel();
-            this.objlPersonnelView = new BrightIdeasSoftware.ObjectListView();
-            this.cFullName = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.cSex = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.cBirthDate = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.cCivilStatus = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.cCitizenship = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.cBloodType = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.bariAdd = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
+            this.barItem2 = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
+            this.tabSplitterPage1 = new Syncfusion.Windows.Forms.Tools.TabSplitterPage();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.xpPrAdd = new Syncfusion.Windows.Forms.Tools.XPMenus.XPToolBar();
+            this.gradientPanel3 = new Syncfusion.Windows.Forms.Tools.GradientPanel();
+            this.objlPersonnelView = new BrightIdeasSoftware.ObjectListView();
+            this.cFullName = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.tspProfile = new Syncfusion.Windows.Forms.Tools.TabSplitterPage();
             this.gradientPanel1 = new Syncfusion.Windows.Forms.Tools.GradientPanel();
             this.groupBar1 = new Syncfusion.Windows.Forms.Tools.GroupBar();
@@ -69,9 +70,6 @@
             this.olvcFamBgBirthdate = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.olvcFamBgOccupation = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.gradientPanel2 = new Syncfusion.Windows.Forms.Tools.GradientPanel();
-            this.buttonAdv3 = new Syncfusion.Windows.Forms.ButtonAdv();
-            this.buttonAdv2 = new Syncfusion.Windows.Forms.ButtonAdv();
-            this.buttonAdv1 = new Syncfusion.Windows.Forms.ButtonAdv();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtPrNameExt = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -128,8 +126,7 @@
             this.groupBarItem3 = new Syncfusion.Windows.Forms.Tools.GroupBarItem();
             this.groupBarItem4 = new Syncfusion.Windows.Forms.Tools.GroupBarItem();
             this.groupBarItem6 = new Syncfusion.Windows.Forms.Tools.GroupBarItem();
-            this.bariAdd = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
-            this.barItem2 = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
+            this.xpToolBar6 = new Syncfusion.Windows.Forms.Tools.XPMenus.XPToolBar();
             this.tabSplitterContainer1.SuspendLayout();
             this.tabSplitterPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -212,6 +209,99 @@
             this.tabSplitterContainer1.TabIndex = 2;
             this.tabSplitterContainer1.Text = "Attachments";
             // 
+            // biAdd
+            // 
+            this.biAdd.BarName = "biAdd";
+            this.biAdd.CustomNormalTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.biAdd.CustomTextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World);
+            this.biAdd.ID = "ADD";
+            this.biAdd.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("biAdd.Image")));
+            this.biAdd.PaddingForThemesY = 15;
+            this.biAdd.ResizeGlyphToFit = true;
+            this.biAdd.ShortcutText = "Add";
+            this.biAdd.ShowToolTipInPopUp = true;
+            this.biAdd.SizeToFit = true;
+            this.biAdd.Text = "ADD";
+            this.biAdd.Tooltip = "ADD (F1)";
+            this.biAdd.Click += new System.EventHandler(this.biAdd_Click);
+            // 
+            // briEdit
+            // 
+            this.briEdit.BarName = "briEdit";
+            this.briEdit.CustomTextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World);
+            this.briEdit.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("briEdit.Image")));
+            this.briEdit.ShowToolTipInPopUp = false;
+            this.briEdit.SizeToFit = true;
+            this.briEdit.Tooltip = "EDIT";
+            this.briEdit.Click += new System.EventHandler(this.briEdit_Click);
+            // 
+            // briDelete
+            // 
+            this.briDelete.BarName = "briDelete";
+            this.briDelete.CustomTextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World);
+            this.briDelete.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("briDelete.Image")));
+            this.briDelete.ShowToolTipInPopUp = false;
+            this.briDelete.SizeToFit = true;
+            this.briDelete.Tooltip = "DELETE";
+            // 
+            // briRefresh
+            // 
+            this.briRefresh.BarName = "briRefresh";
+            this.briRefresh.CustomTextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World);
+            this.briRefresh.ID = "REFRESH (F5)";
+            this.briRefresh.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("briRefresh.Image")));
+            this.briRefresh.ShowToolTipInPopUp = false;
+            this.briRefresh.SizeToFit = true;
+            this.briRefresh.Text = "REFRESH (F5)";
+            // 
+            // cSex
+            // 
+            this.cSex.AspectName = "Sex";
+            this.cSex.DisplayIndex = 1;
+            this.cSex.IsVisible = false;
+            this.cSex.Text = "Sex";
+            // 
+            // cBirthDate
+            // 
+            this.cBirthDate.AspectName = "DateOfBirth";
+            this.cBirthDate.DisplayIndex = 2;
+            this.cBirthDate.IsVisible = false;
+            this.cBirthDate.Text = "Birth Date";
+            // 
+            // cCivilStatus
+            // 
+            this.cCivilStatus.AspectName = "Civilstatus";
+            this.cCivilStatus.DisplayIndex = 3;
+            this.cCivilStatus.IsVisible = false;
+            this.cCivilStatus.Text = "Civil Status";
+            // 
+            // cCitizenship
+            // 
+            this.cCitizenship.AspectName = "Citizenship";
+            this.cCitizenship.DisplayIndex = 4;
+            this.cCitizenship.IsVisible = false;
+            this.cCitizenship.Text = "Citizenship";
+            // 
+            // cBloodType
+            // 
+            this.cBloodType.AspectName = "Bloodtype";
+            this.cBloodType.DisplayIndex = 5;
+            this.cBloodType.IsVisible = false;
+            this.cBloodType.Text = "BloodType";
+            // 
+            // bariAdd
+            // 
+            this.bariAdd.BarName = "bariAdd";
+            this.bariAdd.ShowToolTipInPopUp = false;
+            this.bariAdd.SizeToFit = true;
+            this.bariAdd.Click += new System.EventHandler(this.bariAdd_Click);
+            // 
+            // barItem2
+            // 
+            this.barItem2.BarName = "barItem2";
+            this.barItem2.ShowToolTipInPopUp = false;
+            this.barItem2.SizeToFit = true;
+            // 
             // tabSplitterPage1
             // 
             this.tabSplitterPage1.AutoScroll = true;
@@ -268,51 +358,6 @@
             this.xpPrAdd.TabIndex = 0;
             this.xpPrAdd.Text = "Add";
             this.xpPrAdd.Click += new System.EventHandler(this.xpPrAdd_Click);
-            // 
-            // biAdd
-            // 
-            this.biAdd.BarName = "biAdd";
-            this.biAdd.CustomNormalTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.biAdd.CustomTextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World);
-            this.biAdd.ID = "ADD";
-            this.biAdd.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("biAdd.Image")));
-            this.biAdd.PaddingForThemesY = 15;
-            this.biAdd.ResizeGlyphToFit = true;
-            this.biAdd.ShortcutText = "Add";
-            this.biAdd.ShowToolTipInPopUp = true;
-            this.biAdd.SizeToFit = true;
-            this.biAdd.Text = "ADD";
-            this.biAdd.Tooltip = "ADD (F1)";
-            this.biAdd.Click += new System.EventHandler(this.biAdd_Click);
-            // 
-            // briEdit
-            // 
-            this.briEdit.BarName = "briEdit";
-            this.briEdit.CustomTextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World);
-            this.briEdit.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("briEdit.Image")));
-            this.briEdit.ShowToolTipInPopUp = false;
-            this.briEdit.SizeToFit = true;
-            this.briEdit.Tooltip = "EDIT";
-            this.briEdit.Click += new System.EventHandler(this.briEdit_Click);
-            // 
-            // briDelete
-            // 
-            this.briDelete.BarName = "briDelete";
-            this.briDelete.CustomTextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World);
-            this.briDelete.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("briDelete.Image")));
-            this.briDelete.ShowToolTipInPopUp = false;
-            this.briDelete.SizeToFit = true;
-            this.briDelete.Tooltip = "DELETE";
-            // 
-            // briRefresh
-            // 
-            this.briRefresh.BarName = "briRefresh";
-            this.briRefresh.CustomTextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World);
-            this.briRefresh.ID = "REFRESH (F5)";
-            this.briRefresh.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("briRefresh.Image")));
-            this.briRefresh.ShowToolTipInPopUp = false;
-            this.briRefresh.SizeToFit = true;
-            this.briRefresh.Text = "REFRESH (F5)";
             // 
             // gradientPanel3
             // 
@@ -376,41 +421,6 @@
             this.cFullName.Text = "FullName";
             this.cFullName.Width = 445;
             // 
-            // cSex
-            // 
-            this.cSex.AspectName = "Sex";
-            this.cSex.DisplayIndex = 1;
-            this.cSex.IsVisible = false;
-            this.cSex.Text = "Sex";
-            // 
-            // cBirthDate
-            // 
-            this.cBirthDate.AspectName = "DateOfBirth";
-            this.cBirthDate.DisplayIndex = 2;
-            this.cBirthDate.IsVisible = false;
-            this.cBirthDate.Text = "Birth Date";
-            // 
-            // cCivilStatus
-            // 
-            this.cCivilStatus.AspectName = "Civilstatus";
-            this.cCivilStatus.DisplayIndex = 3;
-            this.cCivilStatus.IsVisible = false;
-            this.cCivilStatus.Text = "Civil Status";
-            // 
-            // cCitizenship
-            // 
-            this.cCitizenship.AspectName = "Citizenship";
-            this.cCitizenship.DisplayIndex = 4;
-            this.cCitizenship.IsVisible = false;
-            this.cCitizenship.Text = "Citizenship";
-            // 
-            // cBloodType
-            // 
-            this.cBloodType.AspectName = "Bloodtype";
-            this.cBloodType.DisplayIndex = 5;
-            this.cBloodType.IsVisible = false;
-            this.cBloodType.Text = "BloodType";
-            // 
             // tspProfile
             // 
             this.tspProfile.AutoScroll = true;
@@ -437,13 +447,13 @@
             this.groupBar1.AllowDrop = true;
             this.groupBar1.AnimatedSelection = false;
             this.groupBar1.BackColor = System.Drawing.SystemColors.Control;
-            this.groupBar1.BeforeTouchSize = new System.Drawing.Size(260, 158);
+            this.groupBar1.BeforeTouchSize = new System.Drawing.Size(218, 549);
             this.groupBar1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(146)))), ((int)(((byte)(206)))));
             this.groupBar1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.groupBar1.CollapseImage = ((System.Drawing.Image)(resources.GetObject("groupBar1.CollapseImage")));
-            this.groupBar1.Controls.Add(this.splitContainer2);
-            this.groupBar1.Controls.Add(this.splitContainer3);
             this.groupBar1.Controls.Add(this.gradientPanel2);
+            this.groupBar1.Controls.Add(this.splitContainer3);
+            this.groupBar1.Controls.Add(this.splitContainer2);
             this.groupBar1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBar1.ExpandButtonToolTip = null;
             this.groupBar1.ExpandImage = ((System.Drawing.Image)(resources.GetObject("groupBar1.ExpandImage")));
@@ -463,7 +473,7 @@
             this.groupBar1.Name = "groupBar1";
             this.groupBar1.NavigationPaneTooltip = null;
             this.groupBar1.PopupClientSize = new System.Drawing.Size(0, 0);
-            this.groupBar1.SelectedItem = 1;
+            this.groupBar1.SelectedItem = 0;
             this.groupBar1.Size = new System.Drawing.Size(448, 596);
             this.groupBar1.Splittercolor = System.Drawing.SystemColors.ControlDark;
             this.groupBar1.StackedMode = true;
@@ -578,7 +588,7 @@
             // 
             // splitContainer3
             // 
-            this.splitContainer3.Location = new System.Drawing.Point(1, 67);
+            this.splitContainer3.Location = new System.Drawing.Point(1, 27);
             this.splitContainer3.Name = "splitContainer3";
             this.splitContainer3.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -589,8 +599,8 @@
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.objectListView1);
-            this.splitContainer3.Size = new System.Drawing.Size(218, 232);
-            this.splitContainer3.SplitterDistance = 98;
+            this.splitContainer3.Size = new System.Drawing.Size(446, 464);
+            this.splitContainer3.SplitterDistance = 196;
             this.splitContainer3.TabIndex = 8;
             // 
             // xpToolBar1
@@ -615,7 +625,7 @@
             this.xpToolBar1.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
             this.xpToolBar1.Name = "xpToolBar1";
             this.xpToolBar1.ShowChevron = true;
-            this.xpToolBar1.Size = new System.Drawing.Size(218, 25);
+            this.xpToolBar1.Size = new System.Drawing.Size(446, 25);
             this.xpToolBar1.Style = Syncfusion.Windows.Forms.VisualStyle.Office2007;
             this.xpToolBar1.TabIndex = 1;
             this.xpToolBar1.Text = "Add";
@@ -638,7 +648,7 @@
             this.objectListView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.objectListView1.Location = new System.Drawing.Point(0, 0);
             this.objectListView1.Name = "objectListView1";
-            this.objectListView1.Size = new System.Drawing.Size(218, 130);
+            this.objectListView1.Size = new System.Drawing.Size(446, 264);
             this.objectListView1.TabIndex = 0;
             this.objectListView1.UseCompatibleStateImageBehavior = false;
             this.objectListView1.View = System.Windows.Forms.View.Details;
@@ -671,9 +681,7 @@
             // gradientPanel2
             // 
             this.gradientPanel2.AutoScroll = true;
-            this.gradientPanel2.Controls.Add(this.buttonAdv3);
-            this.gradientPanel2.Controls.Add(this.buttonAdv2);
-            this.gradientPanel2.Controls.Add(this.buttonAdv1);
+            this.gradientPanel2.Controls.Add(this.xpToolBar6);
             this.gradientPanel2.Controls.Add(this.groupBox2);
             this.gradientPanel2.Controls.Add(this.groupBox1);
             this.gradientPanel2.Controls.Add(this.pictureBox1);
@@ -682,38 +690,8 @@
             this.gradientPanel2.ForeColor = System.Drawing.Color.Black;
             this.gradientPanel2.Location = new System.Drawing.Point(1, 27);
             this.gradientPanel2.Name = "gradientPanel2";
-            this.gradientPanel2.Size = new System.Drawing.Size(446, 508);
+            this.gradientPanel2.Size = new System.Drawing.Size(446, 464);
             this.gradientPanel2.TabIndex = 6;
-            // 
-            // buttonAdv3
-            // 
-            this.buttonAdv3.BeforeTouchSize = new System.Drawing.Size(143, 23);
-            this.buttonAdv3.IsBackStageButton = false;
-            this.buttonAdv3.Location = new System.Drawing.Point(296, 434);
-            this.buttonAdv3.Name = "buttonAdv3";
-            this.buttonAdv3.Size = new System.Drawing.Size(143, 23);
-            this.buttonAdv3.TabIndex = 59;
-            this.buttonAdv3.Text = "REJECT CHANGES";
-            // 
-            // buttonAdv2
-            // 
-            this.buttonAdv2.BeforeTouchSize = new System.Drawing.Size(99, 23);
-            this.buttonAdv2.IsBackStageButton = false;
-            this.buttonAdv2.Location = new System.Drawing.Point(191, 434);
-            this.buttonAdv2.Name = "buttonAdv2";
-            this.buttonAdv2.Size = new System.Drawing.Size(99, 23);
-            this.buttonAdv2.TabIndex = 58;
-            this.buttonAdv2.Text = "SAVE ALL";
-            // 
-            // buttonAdv1
-            // 
-            this.buttonAdv1.BeforeTouchSize = new System.Drawing.Size(80, 23);
-            this.buttonAdv1.IsBackStageButton = false;
-            this.buttonAdv1.Location = new System.Drawing.Point(105, 434);
-            this.buttonAdv1.Name = "buttonAdv1";
-            this.buttonAdv1.Size = new System.Drawing.Size(80, 23);
-            this.buttonAdv1.TabIndex = 57;
-            this.buttonAdv1.Text = "SAVE";
             // 
             // groupBox2
             // 
@@ -727,9 +705,9 @@
             this.groupBox2.Controls.Add(this.txtPrMiddlename);
             this.groupBox2.Controls.Add(this.txtPrFirstname);
             this.groupBox2.Controls.Add(this.txtPrLastname);
-            this.groupBox2.Location = new System.Drawing.Point(127, 12);
+            this.groupBox2.Location = new System.Drawing.Point(127, 31);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(341, 174);
+            this.groupBox2.Size = new System.Drawing.Size(311, 174);
             this.groupBox2.TabIndex = 56;
             this.groupBox2.TabStop = false;
             // 
@@ -798,7 +776,7 @@
             this.txtPrMiddlename.MaximumSize = new System.Drawing.Size(300, 4);
             this.txtPrMiddlename.MinimumSize = new System.Drawing.Size(200, 20);
             this.txtPrMiddlename.Name = "txtPrMiddlename";
-            this.txtPrMiddlename.Size = new System.Drawing.Size(200, 22);
+            this.txtPrMiddlename.Size = new System.Drawing.Size(200, 20);
             this.txtPrMiddlename.TabIndex = 38;
             // 
             // txtPrFirstname
@@ -810,7 +788,7 @@
             this.txtPrFirstname.MaximumSize = new System.Drawing.Size(300, 4);
             this.txtPrFirstname.MinimumSize = new System.Drawing.Size(200, 20);
             this.txtPrFirstname.Name = "txtPrFirstname";
-            this.txtPrFirstname.Size = new System.Drawing.Size(200, 22);
+            this.txtPrFirstname.Size = new System.Drawing.Size(200, 20);
             this.txtPrFirstname.TabIndex = 37;
             // 
             // txtPrLastname
@@ -822,7 +800,7 @@
             this.txtPrLastname.MaximumSize = new System.Drawing.Size(300, 4);
             this.txtPrLastname.MinimumSize = new System.Drawing.Size(200, 20);
             this.txtPrLastname.Name = "txtPrLastname";
-            this.txtPrLastname.Size = new System.Drawing.Size(200, 22);
+            this.txtPrLastname.Size = new System.Drawing.Size(200, 20);
             this.txtPrLastname.TabIndex = 36;
             // 
             // groupBox1
@@ -845,7 +823,7 @@
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Location = new System.Drawing.Point(9, 184);
+            this.groupBox1.Location = new System.Drawing.Point(9, 203);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(435, 249);
             this.groupBox1.TabIndex = 55;
@@ -1060,7 +1038,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DEHRIS.Properties.Resources.icon_user_default;
-            this.pictureBox1.Location = new System.Drawing.Point(11, 18);
+            this.pictureBox1.Location = new System.Drawing.Point(11, 37);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(104, 98);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1077,7 +1055,7 @@
             this.dateTimePickerAdv1.DropDownImage = null;
             this.dateTimePickerAdv1.DropDownNormalColor = System.Drawing.SystemColors.Control;
             this.dateTimePickerAdv1.Font = new System.Drawing.Font("Eras Medium ITC", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerAdv1.Location = new System.Drawing.Point(127, 222);
+            this.dateTimePickerAdv1.Location = new System.Drawing.Point(127, 241);
             this.dateTimePickerAdv1.MaximumSize = new System.Drawing.Size(300, 4);
             this.dateTimePickerAdv1.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
             this.dateTimePickerAdv1.MinValue = new System.DateTime(((long)(0)));
@@ -1123,7 +1101,7 @@
             // 
             this.groupBar2.AllowDrop = true;
             this.groupBar2.BackColor = System.Drawing.SystemColors.Control;
-            this.groupBar2.BeforeTouchSize = new System.Drawing.Size(260, 158);
+            this.groupBar2.BeforeTouchSize = new System.Drawing.Size(218, 549);
             this.groupBar2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(146)))), ((int)(((byte)(206)))));
             this.groupBar2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.groupBar2.CollapseImage = ((System.Drawing.Image)(resources.GetObject("groupBar2.CollapseImage")));
@@ -1135,6 +1113,8 @@
             this.groupBar2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.groupBar2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(77)))), ((int)(((byte)(140)))));
             this.groupBar2.GroupBarDropDownToolTip = null;
+            this.groupBar2.HeaderBackColor = System.Drawing.SystemColors.ControlDark;
+            this.groupBar2.HeaderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(65)))), ((int)(((byte)(140)))));
             this.groupBar2.IndexOnVisibleItems = true;
             this.groupBar2.Location = new System.Drawing.Point(0, 0);
             this.groupBar2.MinimizeButtonToolTip = null;
@@ -1151,7 +1131,7 @@
             // 
             this.gbQualification.AllowDrop = true;
             this.gbQualification.AnimatedSelection = false;
-            this.gbQualification.BeforeTouchSize = new System.Drawing.Size(260, 158);
+            this.gbQualification.BeforeTouchSize = new System.Drawing.Size(218, 549);
             this.gbQualification.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(146)))), ((int)(((byte)(206)))));
             this.gbQualification.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.gbQualification.CollapseImage = ((System.Drawing.Image)(resources.GetObject("gbQualification.CollapseImage")));
@@ -1387,7 +1367,7 @@
             this.groupBar4.AllowDrop = true;
             this.groupBar4.AnimatedSelection = false;
             this.groupBar4.BackColor = System.Drawing.SystemColors.Control;
-            this.groupBar4.BeforeTouchSize = new System.Drawing.Size(260, 158);
+            this.groupBar4.BeforeTouchSize = new System.Drawing.Size(218, 549);
             this.groupBar4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(146)))), ((int)(((byte)(206)))));
             this.groupBar4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.groupBar4.CollapsedWidth = 48;
@@ -1466,18 +1446,32 @@
             this.groupBarItem6.Client = this.splitContainer9;
             this.groupBarItem6.Text = "IPCR";
             // 
-            // bariAdd
+            // xpToolBar6
             // 
-            this.bariAdd.BarName = "bariAdd";
-            this.bariAdd.ShowToolTipInPopUp = false;
-            this.bariAdd.SizeToFit = true;
-            this.bariAdd.Click += new System.EventHandler(this.bariAdd_Click);
+            this.xpToolBar6.BackColor = System.Drawing.Color.Transparent;
             // 
-            // barItem2
             // 
-            this.barItem2.BarName = "barItem2";
-            this.barItem2.ShowToolTipInPopUp = false;
-            this.barItem2.SizeToFit = true;
+            // 
+            this.xpToolBar6.Bar.BarName = "Add";
+            this.xpToolBar6.Bar.Caption = "Add";
+            this.xpToolBar6.Bar.Items.AddRange(new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem[] {
+            this.biAdd,
+            this.briEdit,
+            this.briDelete,
+            this.briRefresh});
+            this.xpToolBar6.Bar.Manager = null;
+            this.xpToolBar6.Bar.SeparatorIndices.AddRange(new int[] {
+            1});
+            this.xpToolBar6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xpToolBar6.LargeIcons = true;
+            this.xpToolBar6.Location = new System.Drawing.Point(0, 0);
+            this.xpToolBar6.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
+            this.xpToolBar6.Name = "xpToolBar6";
+            this.xpToolBar6.ShowChevron = true;
+            this.xpToolBar6.Size = new System.Drawing.Size(442, 25);
+            this.xpToolBar6.Style = Syncfusion.Windows.Forms.VisualStyle.Office2007;
+            this.xpToolBar6.TabIndex = 57;
+            this.xpToolBar6.Text = "Add";
             // 
             // ucPersonnelView
             // 
@@ -1633,9 +1627,6 @@
         private System.Windows.Forms.SplitContainer splitContainer9;
         private System.Windows.Forms.SplitContainer splitContainer8;
         private System.Windows.Forms.SplitContainer splitContainer7;
-        private Syncfusion.Windows.Forms.ButtonAdv buttonAdv3;
-        private Syncfusion.Windows.Forms.ButtonAdv buttonAdv2;
-        private Syncfusion.Windows.Forms.ButtonAdv buttonAdv1;
         private Syncfusion.Windows.Forms.Tools.XPMenus.XPToolBar xpToolBar1;
         private BrightIdeasSoftware.OLVColumn olvcFamBgLastName;
         private BrightIdeasSoftware.OLVColumn olvcFamBgFirstName;
@@ -1658,6 +1649,7 @@
         private BrightIdeasSoftware.OLVColumn olvcDateFrom;
         private BrightIdeasSoftware.OLVColumn olvcDateTo;
         private BrightIdeasSoftware.OLVColumn olvcHonors;
+        private Syncfusion.Windows.Forms.Tools.XPMenus.XPToolBar xpToolBar6;
 
     }
 }
