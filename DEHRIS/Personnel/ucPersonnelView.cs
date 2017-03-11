@@ -16,16 +16,29 @@ namespace DEHRIS.Importer
     public partial class ucPersonnelView : UserControl
     {
         DEHRISAPI.PersonnelUtility prodUtil = new PersonnelUtility();
-           
+        DEHRIS.Personnel.Modules.ucEligibility ucEligib;
+        DEHRIS.Personnel.Modules.ucEducationalBackground ucEduc;
         public ucPersonnelView()
         {
             InitializeComponent();
-
-
             objlPersonnelView.SetObjects(prodUtil.GetPersonnel());
 
-            biAdd.Enabled = false;
-            briEdit.Enabled = false;
+
+            EducationalBackground educc = new EducationalBackground();
+            ucEduc = new Personnel.Modules.ucEducationalBackground(educc);
+            flipEduc.Front = objEducBack;
+            flipEduc.Back = ucEduc;
+            flipEduc.TimerInterval = 10;
+
+            CivilService civ = new CivilService();
+            ucEligib = new Personnel.Modules.ucEligibility(civ);
+            flipEligib.Front = objEligib;
+            flipEligib.Back = ucEligib;
+            flipEligib.TimerInterval = 10;
+
+
+            //biEligibAdd.Enabled = false;
+            //briEdit.Enabled = false;
             //LoadProfilePicture()
             //IApplication application = excelEngine.Excel;
 
@@ -60,39 +73,134 @@ namespace DEHRIS.Importer
 
 
 
+        #region FUNCTIONS
 
-        private void spreadsheet1_Click(object sender, EventArgs e)
-        {
+            #region PERSONNEL
+            /////////////////////////  PERSONNEL
+            private void ShowViewData(DEHRISModel.Data.Personnel ppersonnel)
+            {
+                // txtPrBirthPlace
+                txtPrCitizenship.Text = ppersonnel.Citizenship;
+                txtPrBirthPlace.Text = ppersonnel.PermanenetAddress.AddressName;
+                txtPrFirstname.Text = ppersonnel.Firstname;
+                txtPrHeight.Text = ppersonnel.Height;
+                txtPrLastname.Text = ppersonnel.Lastname;
+                txtPrMiddlename.Text = ppersonnel.Middlename;
+                txtPrNameExt.Text = ppersonnel.NameExtension;
+                txtPrWeight.Text = ppersonnel.Weight;
+                cbBloodType.Text = ppersonnel.Bloodtype;
+                cbCivilStatus.Text = ppersonnel.Civilstatus;
+                cBirthDate.Text = ppersonnel.DateOfBirth.ToShortDateString();
+                int _personnelID = int.Parse(ppersonnel.PersonnelID.ToString());
+                byte[] byter = prodUtil.GetPersonnelProfilePic(_personnelID).BinaryImage;
 
-        }
+                LoadProfilePicture(byter);
+                LoadCivilService(_personnelID);
+            }
+      
+            private void SetEditable(bool iseditable)
+            {
+                // txtPrBirthPlace
+                if (iseditable)
+                {
+                    txtPrCitizenship.ReadOnly = false;
+                    txtPrFirstname.ReadOnly = false;
+                    txtPrHeight.ReadOnly = false;
+                    txtPrLastname.ReadOnly = false;
+                    txtPrMiddlename.ReadOnly = false;
+                    txtPrNameExt.ReadOnly = false;
+                    txtPrWeight.ReadOnly = false;
+                    //cbBloodType. = false;
+                    //cbCivilStatus.ReadOnly = false;
+                    //cBirthDate.ReadOnly = false;
+                }
+                else
+                {
+                    txtPrCitizenship.ReadOnly = true;
+                    txtPrFirstname.ReadOnly = true;
+                    txtPrHeight.ReadOnly = true;
+                    txtPrLastname.ReadOnly = true;
+                    txtPrMiddlename.ReadOnly = true;
+                    txtPrNameExt.ReadOnly = true;
+                    txtPrWeight.ReadOnly = true;
+                }
 
-        private void tabBarPage1_Click(object sender, EventArgs e)
-        {
+            }
 
-        }
 
-        private void objectListView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
-        }
+            private void ClearViewData()
+            {
+                // txtPrBirthPlace
+                txtPrCitizenship.Text = "";
+                txtPrFirstname.Text = "";
+                txtPrHeight.Text = "";
+                txtPrLastname.Text = "";
+                txtPrMiddlename.Text = "";
+                txtPrNameExt.Text = "";
+                txtPrWeight.Text = "";
+                cbBloodType.Text = "";
+                cbCivilStatus.Text = "";
+                cBirthDate.Text = "";
+                txtPrBirthPlace.Text = "";
+            }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
 
-        }
+            #endregion
 
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
 
-        }
+                    #region  PERSONNEL PROFILE
+                    public void LoadProfilePicture(byte[] bytearray)
+                    {
+                        pictureProfile.Image = DEHRIS.Properties.Resources.icon_user_default;
+                        if (bytearray == null)
+                            return;
 
-        private void objlPersonnelView_SelectionChanged(object sender, EventArgs e)
-        {
-            SetEditable(false);
-            DEHRISModel.Data.Personnel selectePersonnel = (DEHRISModel.Data.Personnel)objlPersonnelView.SelectedObject;
-            ShowViewData(selectePersonnel);
-          
-        }
+                        using (var ms = new MemoryStream(bytearray))
+                        {
+                            pictureProfile.Image = Image.FromStream(ms);
+                            pictureProfile.SizeMode = PictureBoxSizeMode.StretchImage;
+                            pictureProfile.Show();
+                        }
+                    }
+
+                    public void LoadEducationalBackground(int ppersonnelID)
+                    {
+                        objEducBack.SetObjects(prodUtil.GetEducationalBackground(ppersonnelID));
+                    }
+
+                    public void SelectEducationalBackground(EducationalBackground educback)
+                    {
+                       
+                        flipEduc.Flip();
+                    }
+
+                    #endregion
+
+
+                    #region PERSONNEL QUALIFICATION
+
+                    public void LoadESpecialSkills(int ppersonnelID)
+                    {
+                        objCivilService.SetObjects(prodUtil.GetSpecialSkills(ppersonnelID));
+                    }
+
+     
+                    public void LoadCivilService(int ppersonnelID)
+                    {
+                        objCivilService.SetObjects(prodUtil.GetCivilService(ppersonnelID));
+                    }
+                    #endregion
+
+
+                    #region PERSONNEL ATTACHMENTS
+
+
+
+                    #endregion
+        #endregion
+
+     
 
         //public enum Status { Active = 0, Canceled = 3 }; 
         //Setting the drop down values from it
@@ -111,109 +219,50 @@ namespace DEHRIS.Importer
         //    USStates.Add(new USState("Arkansas", "AK", 3));
         //}
 
-        private void ShowViewData(DEHRISModel.Data.Personnel ppersonnel)
+      
+
+    
+
+
+
+
+
+      
+
+
+    
+     
+        private void InitiateFlipping()
         {
-            // txtPrBirthPlace
-            txtPrCitizenship.Text = ppersonnel.Citizenship;
-            txtPrBirthPlace.Text = ppersonnel.PermanenetAddress.AddressName;
-            txtPrFirstname.Text = ppersonnel.Firstname;
-            txtPrHeight.Text = ppersonnel.Height;
-            txtPrLastname.Text = ppersonnel.Lastname;
-            txtPrMiddlename.Text = ppersonnel.Middlename;
-            txtPrNameExt.Text = ppersonnel.NameExtension;
-            txtPrWeight.Text = ppersonnel.Weight;
-            cbBloodType.Text = ppersonnel.Bloodtype;
-            cbCivilStatus.Text = ppersonnel.Civilstatus;
-            cBirthDate.Text = ppersonnel.DateOfBirth.ToShortDateString();
-            int _personnelID = int.Parse(ppersonnel.PersonnelID.ToString());
-            byte[] byter = prodUtil.GetPersonnelProfilePic(_personnelID).BinaryImage;
-            LoadProfilePicture(byter);
-            LoadCivilService(_personnelID);
-        }
+         
 
-        public void LoadProfilePicture(byte[] bytearray)
-        {
-            pictureProfile.Image = DEHRIS.Properties.Resources.icon_user_default;
-            if (bytearray == null)
-                return;
+           
 
-            using (var ms = new MemoryStream(bytearray))
-            {
-                pictureProfile.Image = Image.FromStream(ms);
-                pictureProfile.SizeMode = PictureBoxSizeMode.StretchImage;
-                pictureProfile.Show();
-            }
-        }
-
-
-
-        public void LoadCivilService(int ppersonnelID)
-        {
-           objCivilService.SetObjects(prodUtil.GetCivilService(ppersonnelID));
-        }
-
-
-        public void LoadEducationalBackground(int ppersonnelID)
-        {
-            objEducBack.SetObjects(prodUtil.GetEducationalBackground(ppersonnelID));
-        }
-
-
-        public void LoadESpecialSkills(int ppersonnelID)
-        {
-            objCivilService.SetObjects(prodUtil.GetSpecialSkills(ppersonnelID));
         }
 
 
 
 
-        private void SetEditable(bool iseditable)
+
+        #region EVENTS
+
+        /////////////////////////  PERSONNEL
+        private void objlPersonnelView_SelectionChanged(object sender, EventArgs e)
         {
-            // txtPrBirthPlace
-            if (iseditable)
-            {
-                txtPrCitizenship.ReadOnly = false;
-                txtPrFirstname.ReadOnly = false;
-                txtPrHeight.ReadOnly = false;
-                txtPrLastname.ReadOnly = false;
-                txtPrMiddlename.ReadOnly = false;
-                txtPrNameExt.ReadOnly = false;
-                txtPrWeight.ReadOnly = false;
-                //cbBloodType. = false;
-                //cbCivilStatus.ReadOnly = false;
-                //cBirthDate.ReadOnly = false;
-            }
-            else
-            {
-                txtPrCitizenship.ReadOnly = true;
-                txtPrFirstname.ReadOnly = true;
-                txtPrHeight.ReadOnly = true;
-                txtPrLastname.ReadOnly = true;
-                txtPrMiddlename.ReadOnly = true;
-                txtPrNameExt.ReadOnly = true;
-                txtPrWeight.ReadOnly = true;
-            }
+            SetEditable(false);
+            DEHRISModel.Data.Personnel selectePersonnel = (DEHRISModel.Data.Personnel)objlPersonnelView.SelectedObject;
+            ShowViewData(selectePersonnel);
 
         }
+        /////////////////////////  PROFILE
 
 
+        /////////////////////////  QUALIFICATIONS
 
-        private void ClearViewData()
-        {
-            // txtPrBirthPlace
-            txtPrCitizenship.Text = "";
-            txtPrFirstname.Text = "";
-            txtPrHeight.Text = "";
-            txtPrLastname.Text = "";
-            txtPrMiddlename.Text = "";
-            txtPrNameExt.Text = "";
-            txtPrWeight.Text = "";
-            cbBloodType.Text = "";
-            cbCivilStatus.Text = "";
-            cBirthDate.Text = "";
-            txtPrBirthPlace.Text = "";
-        }
 
+        /////////////////////////  ATTACHMENT
+
+       
         private void xpPrAdd_Click(object sender, EventArgs e)
         {
 
@@ -242,12 +291,52 @@ namespace DEHRIS.Importer
 
         private void ucPersonnelView_Click(object sender, EventArgs e)
         {
-            DEHRISAPI.PersonnelUtility prodUtil = new PersonnelUtility();
-            objlPersonnelView.SetObjects(prodUtil.GetPersonnel());
+          
         }
 
         private void splitContainer4_Panel1_Paint(object sender, PaintEventArgs e)
         {
-                    }
+        }
+
+        private void biAddEligib_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void briEligibAdd_Click(object sender, EventArgs e)
+        {
+            flipEligib.Flip();
+        }
+
+        private void spreadsheet1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabBarPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void objectListView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
+        private void briEducAdd_Click(object sender, EventArgs e)
+        {
+            SelectEducationalBackground((EducationalBackground)objEducBack.SelectedObject);
+        }
     }
 }

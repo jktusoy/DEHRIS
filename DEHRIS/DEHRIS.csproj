@@ -116,6 +116,30 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Others\FlipPanel.Designer.cs" />
+    <Compile Include="Personnel\Modules\ucEducationalBackground.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Personnel\Modules\ucEducationalBackground.Designer.cs">
+      <DependentUpon>ucEducationalBackground.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Modules\ucEligibility.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Personnel\Modules\ucEligibility.Designer.cs">
+      <DependentUpon>ucEligibility.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Modules\ucFamilyBackgroud.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Personnel\Modules\ucFamilyBackgroud.Designer.cs">
+      <DependentUpon>ucFamilyBackgroud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Modules\ucSpecialSkills.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Personnel\Modules\ucSpecialSkills.Designer.cs">
+      <DependentUpon>ucSpecialSkills.cs</DependentUpon>
+    </Compile>
     <Compile Include="Personnel\ucImportPersonnel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -191,6 +215,15 @@
       <DependentUpon>ucViewOrgChar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Others\FlipPanel.resx" />
+    <EmbeddedResource Include="Personnel\Modules\ucEducationalBackground.resx">
+      <DependentUpon>ucEducationalBackground.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personnel\Modules\ucEligibility.resx">
+      <DependentUpon>ucEligibility.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personnel\Modules\ucSpecialSkills.resx">
+      <DependentUpon>ucSpecialSkills.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Personnel\ucImportPersonnel.resx">
       <DependentUpon>ucImportPersonnel.cs</DependentUpon>
     </EmbeddedResource>
