@@ -11,6 +11,8 @@ using Syncfusion.XlsIO;
 using DEHRISAPI;
 using DEHRISModel.Data;
 using System.IO;
+using Syncfusion.Windows.Forms.Tools;
+
 namespace DEHRIS.Importer
 {
     public partial class ucPersonnelView : UserControl
@@ -37,37 +39,7 @@ namespace DEHRIS.Importer
             flipEligib.TimerInterval = 10;
 
 
-            //biEligibAdd.Enabled = false;
-            //briEdit.Enabled = false;
-            //LoadProfilePicture()
-            //IApplication application = excelEngine.Excel;
-
-
-            //application.DefaultVersion = ExcelVersion.Excel2013;
-
-            //IWorkbook sourceWorkbook = application.Workbooks.Open();
-            //sourceWorkbook.Activate();
-            //int maxcount = sourceWorkbook.MaxColumnCount;
-            //  this.spreadsheet1.Open(@"C:\Users\user\Desktop\WORKSPACE\temptemp.xlsx");
-
-            //this.spreadsheet1.AddSheet(sourceWorkbook.ActiveSheet,0);
-
-            //   IWorkbook destinationWorkbook = application.Workbooks.Open("DestinationWorkbookTemplate.xlsx");
-
-            //Copy first worksheet from the Source workbook to the destination workbook.
-
-            //destinationWorkbook.Worksheets.AddCopy(sourceWorkbook.Worksheets[0]);
-
-            //destinationWorkbook.ActiveSheetIndex = 1;
-
-            //destinationWorkbook.SaveAs("CopiedWorkbook.xlsx");
-
-            //sourceWorkbook.Close();
-
-            //destinationWorkbook.Close();
-            //excelEngine.Dispose();
-            //this.spreadsheet1.AddSheet()
-        }
+                   }
 
 
 
@@ -337,6 +309,45 @@ namespace DEHRIS.Importer
         private void briEducAdd_Click(object sender, EventArgs e)
         {
             SelectEducationalBackground((EducationalBackground)objEducBack.SelectedObject);
+        }
+
+        private void tabSplitterContainer1_Click(object sender, EventArgs e)
+        {
+         
+        }
+
+        private void briEligAdd_Click(object sender, EventArgs e)
+        {
+            //ToolTipInfo tooltip = new ToolTipInfo();
+            //tooltip.BackColor = Color.Blue;
+            //tooltip.Header.Text = "SOMETHING";
+   
+            //tooltip.Body.Text = "this is the body, this is the body,this is the body";
+            //tooltip.BackColor = Color.Blue;
+
+            //superToolTip1.SetToolTip(briEligAdd, tooltip);
+            //superToolTip1.ShowAlways = true;
+            //superToolTip1.Show(tooltip, new Point(25, 25), 10);
+            //popupNotifier1.TitleText = "SAMPLE";
+            //popupNotifier1.Image = Properties.Resources.information;
+            //popupNotifier1.Popup();
+            DEHRIS.Others.CustomPopUpNotifier customnotif = new Others.CustomPopUpNotifier();
+            customnotif.SetNotification(Others.CustomPopUpNotifier.NotificationType.Error, "Error, user must input valid string format");
+             
+        }
+
+        private void briEligEdit_Click(object sender, EventArgs e)
+        {
+            DEHRIS.Others.CustomPopUpNotifier customnotif = new Others.CustomPopUpNotifier();
+            customnotif.SetNotification(Others.CustomPopUpNotifier.NotificationType.Warning, "Error, user must input valid string format");
+         
+        }
+
+        private void briEligDelete_Click(object sender, EventArgs e)
+        {
+            DEHRIS.Others.CustomPopUpNotifier customnotif = new Others.CustomPopUpNotifier();
+            customnotif.SetNotification(Others.CustomPopUpNotifier.NotificationType.Information, "Error, user must input valid string format");
+         
         }
     }
 }

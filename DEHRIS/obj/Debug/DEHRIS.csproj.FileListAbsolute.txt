@@ -44,8 +44,10 @@ C:\Users\user\Source\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Dashboard.Reports.ucDashboar
 C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\bin\Debug\DEHRIS.exe.config
 C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\bin\Debug\DEHRIS.exe
 C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\bin\Debug\DEHRIS.pdb
+C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\bin\Debug\CustomTooltip.dll
 C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\bin\Debug\DEHRISAPI.dll
 C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\bin\Debug\DEHRISDL.dll
+C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\bin\Debug\NotificationWindow.dll
 C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\bin\Debug\DEHRISDB.dll
 C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\bin\Debug\DEHRISAPI.pdb
 C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\bin\Debug\DEHRISDL.pdb
@@ -54,6 +56,11 @@ C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.csprojResolveAsse
 C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Dashboard.Reports.ucDashboard.resources
 C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.frmMain.resources
 C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Home.ucHomePanel.resources
+C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Organization.ucViewOrgChar.resources
+C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Others.FlipPanel.resources
+C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Personnel.Modules.ucEducationalBackground.resources
+C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Personnel.Modules.ucEligibility.resources
+C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Personnel.Modules.ucSpecialSkills.resources
 C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Importer.ucImportPersonnel.resources
 C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Personnel.ucPerformance.resources
 C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Importer.ucApplicantView.resources
@@ -68,8 +75,3 @@ C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.csproj.GenerateRe
 C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.exe.licenses
 C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.exe
 C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.pdb
-C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Organization.ucViewOrgChar.resources
-C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Others.FlipPanel.resources
-C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Personnel.Modules.ucEducationalBackground.resources
-C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Personnel.Modules.ucEligibility.resources
-C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Personnel.Modules.ucSpecialSkills.resources

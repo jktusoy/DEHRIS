@@ -44,6 +44,15 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.navigationDrawer1 = new Syncfusion.Windows.Forms.Tools.NavigationDrawer();
+            this.drawerHeader1 = new Syncfusion.Windows.Forms.Tools.DrawerHeader();
+            this.drawerMenuItem1 = new Syncfusion.Windows.Forms.Tools.DrawerMenuItem();
+            this.drawerHeader2 = new Syncfusion.Windows.Forms.Tools.DrawerHeader();
+            this.drawerMenuItem2 = new Syncfusion.Windows.Forms.Tools.DrawerMenuItem();
+            this.drawerMenuItem3 = new Syncfusion.Windows.Forms.Tools.DrawerMenuItem();
+            this.drawerMenuItem4 = new Syncfusion.Windows.Forms.Tools.DrawerMenuItem();
+            this.drawerMenuItem5 = new Syncfusion.Windows.Forms.Tools.DrawerMenuItem();
+            this.drawerMenuItem6 = new Syncfusion.Windows.Forms.Tools.DrawerMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dtpReleaseDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpExamDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateTimePickerAdv1)).BeginInit();
@@ -54,6 +63,7 @@
             this.dtpReleaseDate.BorderColor = System.Drawing.Color.Empty;
             this.dtpReleaseDate.CalendarSize = new System.Drawing.Size(189, 176);
             this.dtpReleaseDate.DropDownImage = null;
+            this.dtpReleaseDate.DropDownNormalColor = System.Drawing.SystemColors.Control;
             this.dtpReleaseDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpReleaseDate.Location = new System.Drawing.Point(171, 152);
             this.dtpReleaseDate.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
@@ -68,6 +78,7 @@
             this.dtpExamDate.BorderColor = System.Drawing.Color.Empty;
             this.dtpExamDate.CalendarSize = new System.Drawing.Size(189, 176);
             this.dtpExamDate.DropDownImage = null;
+            this.dtpExamDate.DropDownNormalColor = System.Drawing.SystemColors.Control;
             this.dtpExamDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpExamDate.Location = new System.Drawing.Point(171, 77);
             this.dtpExamDate.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
@@ -165,6 +176,7 @@
             this.dateTimePickerAdv1.BorderColor = System.Drawing.Color.Empty;
             this.dateTimePickerAdv1.CalendarSize = new System.Drawing.Size(189, 176);
             this.dateTimePickerAdv1.DropDownImage = null;
+            this.dateTimePickerAdv1.DropDownNormalColor = System.Drawing.SystemColors.Control;
             this.dateTimePickerAdv1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerAdv1.Location = new System.Drawing.Point(171, 178);
             this.dateTimePickerAdv1.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
@@ -199,10 +211,121 @@
             this.textBox1.Size = new System.Drawing.Size(220, 20);
             this.textBox1.TabIndex = 32;
             // 
+            // navigationDrawer1
+            // 
+            this.navigationDrawer1.BackColor = System.Drawing.Color.White;
+            this.navigationDrawer1.Items.Add(this.drawerHeader2);
+            this.navigationDrawer1.Items.Add(this.drawerHeader1);
+            this.navigationDrawer1.Items.Add(this.drawerMenuItem1);
+            this.navigationDrawer1.Items.Add(this.drawerMenuItem2);
+            this.navigationDrawer1.Items.Add(this.drawerMenuItem3);
+            this.navigationDrawer1.Items.Add(this.drawerMenuItem4);
+            this.navigationDrawer1.Items.Add(this.drawerMenuItem5);
+            this.navigationDrawer1.Items.Add(this.drawerMenuItem6);
+            this.navigationDrawer1.Location = new System.Drawing.Point(74, 245);
+            this.navigationDrawer1.Name = "navigationDrawer1";
+            this.navigationDrawer1.Size = new System.Drawing.Size(345, 163);
+            this.navigationDrawer1.TabIndex = 34;
+            this.navigationDrawer1.Text = "navigationDrawer1";
+            this.navigationDrawer1.Transition = Syncfusion.Windows.Forms.Tools.Transition.Reveal;
+            // 
+            // drawerHeader1
+            // 
+            this.drawerHeader1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(165)))), ((int)(((byte)(221)))));
+            this.drawerHeader1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.drawerHeader1.HeaderText = "drawerHeader1";
+            this.drawerHeader1.Location = new System.Drawing.Point(2, 0);
+            this.drawerHeader1.Margin = new System.Windows.Forms.Padding(0);
+            this.drawerHeader1.Name = "drawerHeader1";
+            this.drawerHeader1.Size = new System.Drawing.Size(100, 50);
+            this.drawerHeader1.TabIndex = 0;
+            this.drawerHeader1.Text = "drawerHeader1";
+            this.drawerHeader1.TextColor = System.Drawing.Color.White;
+            // 
+            // drawerMenuItem1
+            // 
+            this.drawerMenuItem1.BackColor = System.Drawing.Color.White;
+            this.drawerMenuItem1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.drawerMenuItem1.Location = new System.Drawing.Point(2, 50);
+            this.drawerMenuItem1.Margin = new System.Windows.Forms.Padding(0);
+            this.drawerMenuItem1.Name = "drawerMenuItem1";
+            this.drawerMenuItem1.Size = new System.Drawing.Size(100, 50);
+            this.drawerMenuItem1.TabIndex = 1;
+            this.drawerMenuItem1.Text = "drawerMenuItem1";
+            // 
+            // drawerHeader2
+            // 
+            this.drawerHeader2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(165)))), ((int)(((byte)(221)))));
+            this.drawerHeader2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.drawerHeader2.HeaderText = "drawerHeader2";
+            this.drawerHeader2.Location = new System.Drawing.Point(2, 100);
+            this.drawerHeader2.Margin = new System.Windows.Forms.Padding(0);
+            this.drawerHeader2.Name = "drawerHeader2";
+            this.drawerHeader2.Size = new System.Drawing.Size(100, 50);
+            this.drawerHeader2.TabIndex = 2;
+            this.drawerHeader2.Text = "drawerHeader2";
+            this.drawerHeader2.TextColor = System.Drawing.Color.White;
+            // 
+            // drawerMenuItem2
+            // 
+            this.drawerMenuItem2.BackColor = System.Drawing.Color.White;
+            this.drawerMenuItem2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.drawerMenuItem2.Location = new System.Drawing.Point(2, 150);
+            this.drawerMenuItem2.Margin = new System.Windows.Forms.Padding(0);
+            this.drawerMenuItem2.Name = "drawerMenuItem2";
+            this.drawerMenuItem2.Size = new System.Drawing.Size(100, 50);
+            this.drawerMenuItem2.TabIndex = 3;
+            this.drawerMenuItem2.Text = "drawerMenuItem2";
+            // 
+            // drawerMenuItem3
+            // 
+            this.drawerMenuItem3.BackColor = System.Drawing.Color.White;
+            this.drawerMenuItem3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.drawerMenuItem3.Location = new System.Drawing.Point(2, 200);
+            this.drawerMenuItem3.Margin = new System.Windows.Forms.Padding(0);
+            this.drawerMenuItem3.Name = "drawerMenuItem3";
+            this.drawerMenuItem3.Size = new System.Drawing.Size(100, 50);
+            this.drawerMenuItem3.TabIndex = 4;
+            this.drawerMenuItem3.Text = "drawerMenuItem3";
+            // 
+            // drawerMenuItem4
+            // 
+            this.drawerMenuItem4.BackColor = System.Drawing.Color.White;
+            this.drawerMenuItem4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.drawerMenuItem4.Location = new System.Drawing.Point(2, 250);
+            this.drawerMenuItem4.Margin = new System.Windows.Forms.Padding(0);
+            this.drawerMenuItem4.Name = "drawerMenuItem4";
+            this.drawerMenuItem4.Size = new System.Drawing.Size(100, 50);
+            this.drawerMenuItem4.TabIndex = 5;
+            this.drawerMenuItem4.Text = "drawerMenuItem4";
+            // 
+            // drawerMenuItem5
+            // 
+            this.drawerMenuItem5.BackColor = System.Drawing.Color.White;
+            this.drawerMenuItem5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.drawerMenuItem5.Location = new System.Drawing.Point(2, 300);
+            this.drawerMenuItem5.Margin = new System.Windows.Forms.Padding(0);
+            this.drawerMenuItem5.Name = "drawerMenuItem5";
+            this.drawerMenuItem5.Size = new System.Drawing.Size(100, 50);
+            this.drawerMenuItem5.TabIndex = 6;
+            this.drawerMenuItem5.Text = "drawerMenuItem5";
+            // 
+            // drawerMenuItem6
+            // 
+            this.drawerMenuItem6.BackColor = System.Drawing.Color.White;
+            this.drawerMenuItem6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.drawerMenuItem6.Location = new System.Drawing.Point(2, 350);
+            this.drawerMenuItem6.Margin = new System.Windows.Forms.Padding(0);
+            this.drawerMenuItem6.Name = "drawerMenuItem6";
+            this.drawerMenuItem6.Size = new System.Drawing.Size(100, 50);
+            this.drawerMenuItem6.TabIndex = 7;
+            this.drawerMenuItem6.Text = "drawerMenuItem6";
+            // 
             // ucEducationalBackground
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.navigationDrawer1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dateTimePickerAdv1);
@@ -220,7 +343,7 @@
             this.Controls.Add(this.txtRate);
             this.Controls.Add(this.txtTitle);
             this.Name = "ucEducationalBackground";
-            this.Size = new System.Drawing.Size(461, 265);
+            this.Size = new System.Drawing.Size(461, 423);
             ((System.ComponentModel.ISupportInitialize)(this.dtpReleaseDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpExamDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateTimePickerAdv1)).EndInit();
@@ -247,6 +370,15 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox1;
+        private Syncfusion.Windows.Forms.Tools.NavigationDrawer navigationDrawer1;
+        private Syncfusion.Windows.Forms.Tools.DrawerHeader drawerHeader2;
+        private Syncfusion.Windows.Forms.Tools.DrawerHeader drawerHeader1;
+        private Syncfusion.Windows.Forms.Tools.DrawerMenuItem drawerMenuItem1;
+        private Syncfusion.Windows.Forms.Tools.DrawerMenuItem drawerMenuItem2;
+        private Syncfusion.Windows.Forms.Tools.DrawerMenuItem drawerMenuItem3;
+        private Syncfusion.Windows.Forms.Tools.DrawerMenuItem drawerMenuItem4;
+        private Syncfusion.Windows.Forms.Tools.DrawerMenuItem drawerMenuItem5;
+        private Syncfusion.Windows.Forms.Tools.DrawerMenuItem drawerMenuItem6;
 
     }
 }
