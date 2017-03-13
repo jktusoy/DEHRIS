@@ -49,7 +49,7 @@ namespace DEHRIS.Importer
 
             #region PERSONNEL
             /////////////////////////  PERSONNEL
-            private void ShowViewData(DEHRISModel.Data.Personnel ppersonnel)
+            private void ShowPersonnelViewData(DEHRISModel.Data.Personnel ppersonnel)
             {
                 // txtPrBirthPlace
                 txtPrCitizenship.Text = ppersonnel.Citizenship;
@@ -70,7 +70,7 @@ namespace DEHRIS.Importer
                 LoadCivilService(_personnelID);
             }
       
-            private void SetEditable(bool iseditable)
+            private void SetPersonnelEditable(bool iseditable)
             {
                 // txtPrBirthPlace
                 if (iseditable)
@@ -101,7 +101,7 @@ namespace DEHRIS.Importer
 
 
 
-            private void ClearViewData()
+            private void ClearPersonnelViewData()
             {
                 // txtPrBirthPlace
                 txtPrCitizenship.Text = "";
@@ -138,7 +138,7 @@ namespace DEHRIS.Importer
 
                     public void LoadEducationalBackground(int ppersonnelID)
                     {
-                        objEducBack.SetObjects(prodUtil.GetEducationalBackground(ppersonnelID));
+                        objEducBack.SetObjects(prodUtil.GetEducationalBackgroundListByPersonnelID(ppersonnelID));
                     }
 
                     public void SelectEducationalBackground(EducationalBackground educback)
@@ -154,13 +154,23 @@ namespace DEHRIS.Importer
 
                     public void LoadESpecialSkills(int ppersonnelID)
                     {
-                        objCivilService.SetObjects(prodUtil.GetSpecialSkills(ppersonnelID));
+                        objCivilService.SetObjects(prodUtil.GetSpecialSkillsListByPersonnelID(ppersonnelID));
                     }
 
      
                     public void LoadCivilService(int ppersonnelID)
                     {
-                        objCivilService.SetObjects(prodUtil.GetCivilService(ppersonnelID));
+                        objCivilService.SetObjects(prodUtil.GetCivilServiceListByPersonnelID(ppersonnelID));
+                    }
+
+                    public void LoadSeminar()
+                    {
+                        objCivilService.SetObjects(prodUtil.GetSeminarListByPersonnelID(ppersonnelID));
+                    }
+
+                    public void LoadWorkExperience()
+                    {
+                        objCivilService.SetObjects(prodUtil.GetWorkExperienceListByPersonnelID(ppersonnelID));
                     }
                     #endregion
 
@@ -221,9 +231,9 @@ namespace DEHRIS.Importer
         /////////////////////////  PERSONNEL
         private void objlPersonnelView_SelectionChanged(object sender, EventArgs e)
         {
-            SetEditable(false);
+            SetPersonnelEditable(false);
             DEHRISModel.Data.Personnel selectePersonnel = (DEHRISModel.Data.Personnel)objlPersonnelView.SelectedObject;
-            ShowViewData(selectePersonnel);
+            ShowPersonnelViewData(selectePersonnel);
 
         }
         /////////////////////////  PROFILE
@@ -253,12 +263,12 @@ namespace DEHRIS.Importer
 
         private void biAdd_Click(object sender, EventArgs e)
         {
-            ClearViewData();
+        
         }
 
         private void briEdit_Click(object sender, EventArgs e)
         {
-            SetEditable(true);
+          
         }
 
         private void ucPersonnelView_Click(object sender, EventArgs e)
@@ -348,6 +358,43 @@ namespace DEHRIS.Importer
             DEHRIS.Others.CustomPopUpNotifier customnotif = new Others.CustomPopUpNotifier();
             customnotif.SetNotification(Others.CustomPopUpNotifier.NotificationType.Information, "Error, user must input valid string format");
          
+        }
+
+        private void briPersonnelAdd_Click(object sender, EventArgs e)
+        {
+            briPersonnelAdd.Enabled = false;
+            briPersonnelUpdate.Enabled = false;
+            briPersonnelDelete.Enabled = false;
+            ClearPersonnelViewData();
+            objlPersonnelView.Select();
+        }
+
+        private void briPersonnelSave_Click(object sender, EventArgs e)
+        {
+            briPersonnelAdd.Enabled = true;
+            briPersonnelUpdate.Enabled = true;
+            briPersonnelDelete.Enabled = true;
+        }
+
+        private void briPersonnelEdit_Click(object sender, EventArgs e)
+        {
+            briPersonnelAdd.Enabled = false;
+            briPersonnelUpdate.Enabled = false;
+            briPersonnelDelete.Enabled = false;
+        }
+
+        private void briPersonnelDelete_Click(object sender, EventArgs e)
+        {
+            briPersonnelAdd.Enabled = false;
+            briPersonnelUpdate.Enabled = false;
+            briPersonnelDelete.Enabled = false;
+        }
+
+        private void briPersonnelRefresh_Click(object sender, EventArgs e)
+        {
+            briPersonnelAdd.Enabled = true;
+            briPersonnelUpdate.Enabled = true;
+            briPersonnelDelete.Enabled = true;
         }
     }
 }

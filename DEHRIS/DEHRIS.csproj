@@ -149,6 +149,12 @@
     <Compile Include="Personnel\Modules\ucSpecialSkills.Designer.cs">
       <DependentUpon>ucSpecialSkills.cs</DependentUpon>
     </Compile>
+    <Compile Include="Personnel\Modules\ucTraining.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Personnel\Modules\ucTraining.Designer.cs">
+      <DependentUpon>ucTraining.cs</DependentUpon>
+    </Compile>
     <Compile Include="Personnel\ucImportPersonnel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -230,8 +236,14 @@
     <EmbeddedResource Include="Personnel\Modules\ucEligibility.resx">
       <DependentUpon>ucEligibility.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Personnel\Modules\ucFamilyBackgroud.resx">
+      <DependentUpon>ucFamilyBackgroud.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Personnel\Modules\ucSpecialSkills.resx">
       <DependentUpon>ucSpecialSkills.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personnel\Modules\ucTraining.resx">
+      <DependentUpon>ucTraining.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Personnel\ucImportPersonnel.resx">
       <DependentUpon>ucImportPersonnel.cs</DependentUpon>
@@ -426,6 +438,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\error.png" />
+    <None Include="Resources\female.png" />
+    <None Include="Resources\male.png" />
     <None Include="Resources\success.png" />
     <None Include="Resources\error1.png" />
     <None Include="Resources\warning.png" />

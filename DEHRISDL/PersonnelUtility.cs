@@ -61,7 +61,7 @@ namespace DEHRISAPI
        }
 
 
-       public List<CivilService> GetCivilService(int ppersonnel_id)
+       public List<CivilService> GetCivilServiceListByPersonnelID(int ppersonnel_id)
        {
            using (DEHRISEntities dbcontext = new DEHRISEntities())
            {
@@ -88,7 +88,7 @@ namespace DEHRISAPI
        }
 
 
-       public List<EducationalBackground> GetEducationalBackground(int ppersonnel_id)
+       public List<EducationalBackground> GetEducationalBackgroundListByPersonnelID(int ppersonnel_id)
        {
            using (DEHRISEntities dbcontext = new DEHRISEntities())
            {
@@ -118,10 +118,11 @@ namespace DEHRISAPI
        }
 
 
-       public List<SpecialSkills> GetSpecialSkills(int ppersonnel_id)
+       public List<SpecialSkills> GetSpecialSkillsListByPersonnelID(int ppersonnel_id)
        {
            using (DEHRISEntities dbcontext = new DEHRISEntities())
            {
+               //List<seminar> 
                //var query = from pro in dbcontext.hris_personnel
                //  select new ProjectInfo(){ Name = pro.ProjectName, Id = pro.ProjectId };
                List<SpecialSkills> ssList = (from item in dbcontext.specialskills.Where(a => a.personnel_id == ppersonnel_id)
@@ -139,6 +140,49 @@ namespace DEHRISAPI
            }
        }
 
+
+       public List<Training> GetSeminarListByPersonnelID(int ppersonnel_id)
+       {
+           using (DEHRISEntities dbcontext = new DEHRISEntities())
+           {
+              
+               //List<seminar> 
+               //var query = from pro in dbcontext.hris_personnel
+               //  select new ProjectInfo(){ Name = pro.ProjectName, Id = pro.ProjectId };
+               List<Training> ssList = (from item in dbcontext.trainings.Where(a => a.personnel_id == ppersonnel_id)
+                                             select new Training()
+                                             {
+                                                dateCreated = item.dateCreated,
+                                                category_id  = item.category_id,
+                                                
+                                             }).ToList();
+               return ssList;
+           }
+       }
+
+
+
+       public List<SpecialSkills> GetWorkExperienceListByPersonnelID(int ppersonnel_id)
+       {
+           using (DEHRISEntities dbcontext = new DEHRISEntities())
+           {
+               //List<seminar> 
+               //var query = from pro in dbcontext.hris_personnel
+               //  select new ProjectInfo(){ Name = pro.ProjectName, Id = pro.ProjectId };
+               List<WorkExperience> ssList = (from item in dbcontext.workExperiences.Where(a => a.personnel_id == ppersonnel_id)
+                                              select new WorkExperience()
+                                             {
+                                                 DateCreated = item.dateCreated,
+                                                 IsInactive = item.isInactive,
+                                                 PersonnelID = item.personnel_id,
+                                                 RegionID = item.region_id,
+                                                 SectionID = item.section_id,
+                                                 SpecialSkillDescription = item.specialSkillDescription,
+                                                 SpecialSkillID = item.specialSkill_id
+                                             }).ToList();
+               return ssList;
+           }
+       }
 
 
     }

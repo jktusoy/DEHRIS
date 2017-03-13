@@ -46,7 +46,10 @@
     <Compile Include="Data\Contact.cs" />
     <Compile Include="Data\ProfessionalProfile.cs" />
     <Compile Include="Data\ProfilePicture.cs" />
+    <Compile Include="Data\Seminar.cs" />
     <Compile Include="Data\SpecialSkills.cs" />
+    <Compile Include="Data\Training.cs" />
+    <Compile Include="Data\WorkExperience.cs" />
     <Compile Include="Enum\ContactType.cs" />
     <Compile Include="Enum\AddressType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
