@@ -64,7 +64,7 @@ namespace DEHRIS
         private void frmMain_Load(object sender, EventArgs e)
         {
             DefaultView();
-
+            
             this.tabControlAdv1.ShowTabCloseButton = true;
 
             //Restrict the close button to be shown only for the active tab pages

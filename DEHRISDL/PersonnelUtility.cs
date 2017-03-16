@@ -27,6 +27,7 @@ namespace DEHRISAPI
                  Bloodtype = item.bloodtype,
                  DateOfBirth = item.dateofbirth == null ? DateTime.Now : (DateTime)item.dateofbirth,
                  Civilstatus = item.civilstatus,
+                 BirthPlace = item.placeofbirth,
                  Citizenship = item.citizenship,
                  CellPhone = new Contact(){ ContactDetails = item.cellphoneno, ContacType = DEHRISModel.Enum.ContactType.CellPhone},
                  Height = item.height,
@@ -152,9 +153,21 @@ namespace DEHRISAPI
                List<Training> ssList = (from item in dbcontext.trainings.Where(a => a.personnel_id == ppersonnel_id)
                                              select new Training()
                                              {
-                                                dateCreated = item.dateCreated,
-                                                category_id  = item.category_id,
-                                                
+                                                 CategoryID = item.category_id,
+                                                 ConductedBy = item.conductedBy,
+                                                 DateCreated = item.dateCreated,
+                                                 DivisionID = item.division_id,
+                                                 EndDate = (DateTime)item.endDate,
+                                                 HeaderID = item.header_id,
+                                                 IsInactive = item.isInactive,
+                                                 IsScholarship = item.isScholarship,
+                                                 NoOfHours = item.noOfHours,
+                                                 PersonnelID = (long)item.personnel_id,
+                                                 RegionID = item.region_id,
+                                                 StartDate = (DateTime)item.startDate,
+                                                 Title= item.title,
+                                                 TrainingID= item.training_id,
+                                                 TrainingModuleID = item.trainingModule_id                                               
                                              }).ToList();
                return ssList;
            }
@@ -162,7 +175,7 @@ namespace DEHRISAPI
 
 
 
-       public List<SpecialSkills> GetWorkExperienceListByPersonnelID(int ppersonnel_id)
+       public List<WorkExperience> GetWorkExperienceListByPersonnelID(int ppersonnel_id)
        {
            using (DEHRISEntities dbcontext = new DEHRISEntities())
            {
@@ -172,13 +185,24 @@ namespace DEHRISAPI
                List<WorkExperience> ssList = (from item in dbcontext.workExperiences.Where(a => a.personnel_id == ppersonnel_id)
                                               select new WorkExperience()
                                              {
-                                                 DateCreated = item.dateCreated,
+                                                 CompanyName = item.companyname,
+                                                 DateFrom = item.dateFrom,
+                                                 DateTo = item.dateTo,
+                                                 IsApproved = item.isApproved,
                                                  IsInactive = item.isInactive,
                                                  PersonnelID = item.personnel_id,
+                                                 Position = item.position,
+                                                 RdetailID = item.rdetail_id,
                                                  RegionID = item.region_id,
+                                                 Remarks = item.remarks,
+                                                 Salary = item.salary,
                                                  SectionID = item.section_id,
-                                                 SpecialSkillDescription = item.specialSkillDescription,
-                                                 SpecialSkillID = item.specialSkill_id
+                                                 SeparationCause = item.separationCause,
+                                                 SeparationDate = item.separationDate,
+                                                 ServiceLength = item.serviceLength,
+                                                 ServiceType = item.serviceType,
+                                                 StatusID = item.status_id,
+                                                 WorkExperienceID = item.workExperience_id
                                              }).ToList();
                return ssList;
            }

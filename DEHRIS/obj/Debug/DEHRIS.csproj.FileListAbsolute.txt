@@ -60,7 +60,9 @@ C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Organization.ucVi
 C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Others.FlipPanel.resources
 C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Personnel.Modules.ucEducationalBackground.resources
 C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Personnel.Modules.ucEligibility.resources
+C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Personnel.Modules.ucFamilyBackgroud.resources
 C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Personnel.Modules.ucSpecialSkills.resources
+C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Personnel.Modules.ucTraining.resources
 C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Importer.ucImportPersonnel.resources
 C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Personnel.ucPerformance.resources
 C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Importer.ucApplicantView.resources

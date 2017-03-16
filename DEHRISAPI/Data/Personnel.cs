@@ -41,7 +41,7 @@ namespace DEHRISModel.Data
         public string Height { get; set; }
         public string Weight { get; set; }
         public string Bloodtype { get; set; }
-
+        public string BirthPlace { get; set; }
         public Address ResidentialAddress { get; set; }
         public Address PermanenetAddress { get; set; }
 

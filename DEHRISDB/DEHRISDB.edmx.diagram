@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="82b9c943a0d74f95a07b4769aba7cb5f" Name="diagram1" ZoomLevel="64">
+        <EntityTypeShape EntityType="DEHRISModel.ais_cdtransactiondetails" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DEHRISModel.common_importtempate" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DEHRISModel.common_importtemplatedetail" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DEHRISModel.common_importtransaction" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DEHRISModel.common_importtransactiondetail" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DEHRISModel.hris_address" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DEHRISModel.hris_birform2305" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DEHRISModel.hris_employment" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DEHRISModel.hris_personnel" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DEHRISModel.pm_project" Width="1.5" PointX="2.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DEHRISModel.pm_projectaccess" Width="1.5" PointX="8.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DEHRISModel.sis_school" Width="1.5" PointX="8.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DEHRISModel.sis_schooldistrict" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DEHRISModel.ais_cdtransaction" Width="1.5" PointX="10.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DEHRISModel.child" Width="1.5" PointX="11.75" PointY="7.75" />
+        <EntityTypeShape EntityType="DEHRISModel.civilservice" Width="1.5" PointX="9.75" PointY="11.75" />
+        <EntityTypeShape EntityType="DEHRISModel.educationalbackground" Width="1.5" PointX="11.75" PointY="11.75" />
+        <EntityTypeShape EntityType="DEHRISModel.profilePicture" Width="1.5" PointX="13.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DEHRISModel.specialskill" Width="1.5" PointX="13.75" PointY="3.75" />
+        <EntityTypeShape EntityType="DEHRISModel.appointment" Width="1.5" PointX="13.75" PointY="7.75" />
+        <EntityTypeShape EntityType="DEHRISModel.appointmentheader" Width="1.5" PointX="15.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DEHRISModel.appointmenttype" Width="1.5" PointX="0.75" PointY="15.75" />
+        <EntityTypeShape EntityType="DEHRISModel.workExperience" Width="1.5" PointX="15.75" PointY="4.75" />
+        <EntityTypeShape EntityType="DEHRISModel.training" Width="1.5" PointX="3.375" PointY="13.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

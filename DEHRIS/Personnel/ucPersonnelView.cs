@@ -23,6 +23,10 @@ namespace DEHRIS.Importer
         public ucPersonnelView()
         {
             InitializeComponent();
+
+            dtPrBirthdate.Format = DateTimePickerFormat.Custom;
+            dtPrBirthdate.CustomFormat = " ";
+
             objlPersonnelView.SetObjects(prodUtil.GetPersonnel());
 
 
@@ -39,7 +43,7 @@ namespace DEHRIS.Importer
             flipEligib.TimerInterval = 10;
 
 
-                   }
+         }
 
 
 
@@ -53,7 +57,7 @@ namespace DEHRIS.Importer
             {
                 // txtPrBirthPlace
                 txtPrCitizenship.Text = ppersonnel.Citizenship;
-                txtPrBirthPlace.Text = ppersonnel.PermanenetAddress.AddressName;
+                txtPrBirthPlace.Text = ppersonnel.BirthPlace;
                 txtPrFirstname.Text = ppersonnel.Firstname;
                 txtPrHeight.Text = ppersonnel.Height;
                 txtPrLastname.Text = ppersonnel.Lastname;
@@ -62,9 +66,25 @@ namespace DEHRIS.Importer
                 txtPrWeight.Text = ppersonnel.Weight;
                 cbBloodType.Text = ppersonnel.Bloodtype;
                 cbCivilStatus.Text = ppersonnel.Civilstatus;
-                cBirthDate.Text = ppersonnel.DateOfBirth.ToShortDateString();
+                dtPrBirthdate.Text = ppersonnel.DateOfBirth.ToShortDateString();
                 int _personnelID = int.Parse(ppersonnel.PersonnelID.ToString());
                 byte[] byter = prodUtil.GetPersonnelProfilePic(_personnelID).BinaryImage;
+
+                if (ppersonnel.Sex.Equals("1"))
+                {
+                    rbMale.Checked =true;
+                    rbFemale.Checked = false;
+                }
+                else if (ppersonnel.Sex.Equals("2"))
+                {
+                    rbMale.Checked = false;
+                    rbFemale.Checked = true;
+                }
+                else
+                {
+                    rbMale.Checked = false;
+                    rbFemale.Checked = false;
+                }
 
                 LoadProfilePicture(byter);
                 LoadCivilService(_personnelID);
@@ -82,6 +102,7 @@ namespace DEHRIS.Importer
                     txtPrMiddlename.ReadOnly = false;
                     txtPrNameExt.ReadOnly = false;
                     txtPrWeight.ReadOnly = false;
+                    dtPrBirthdate.Enabled = true;
                     //cbBloodType. = false;
                     //cbCivilStatus.ReadOnly = false;
                     //cBirthDate.ReadOnly = false;
@@ -95,6 +116,7 @@ namespace DEHRIS.Importer
                     txtPrMiddlename.ReadOnly = true;
                     txtPrNameExt.ReadOnly = true;
                     txtPrWeight.ReadOnly = true;
+                    dtPrBirthdate.Enabled = false;
                 }
 
             }
@@ -115,6 +137,13 @@ namespace DEHRIS.Importer
                 cbCivilStatus.Text = "";
                 cBirthDate.Text = "";
                 txtPrBirthPlace.Text = "";
+
+
+              
+                dtPrBirthdate.Format = DateTimePickerFormat.Custom;
+                dtPrBirthdate.CustomFormat = " ";
+
+
             }
 
 
@@ -163,12 +192,12 @@ namespace DEHRIS.Importer
                         objCivilService.SetObjects(prodUtil.GetCivilServiceListByPersonnelID(ppersonnelID));
                     }
 
-                    public void LoadSeminar()
+                    public void LoadSeminar(int ppersonnelID)
                     {
                         objCivilService.SetObjects(prodUtil.GetSeminarListByPersonnelID(ppersonnelID));
                     }
 
-                    public void LoadWorkExperience()
+                    public void LoadWorkExperience(int ppersonnelID)
                     {
                         objCivilService.SetObjects(prodUtil.GetWorkExperienceListByPersonnelID(ppersonnelID));
                     }
@@ -395,6 +424,16 @@ namespace DEHRIS.Importer
             briPersonnelAdd.Enabled = true;
             briPersonnelUpdate.Enabled = true;
             briPersonnelDelete.Enabled = true;
+        }
+
+        private void groupBar1_GroupBarItemSelected_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void xptbSeminars_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

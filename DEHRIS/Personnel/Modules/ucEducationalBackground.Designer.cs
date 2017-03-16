@@ -28,15 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dtpReleaseDate = new Syncfusion.Windows.Forms.Tools.DateTimePickerAdv();
             this.dtpExamDate = new Syncfusion.Windows.Forms.Tools.DateTimePickerAdv();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtLicenseNo = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblYearGraduate = new System.Windows.Forms.Label();
+            this.lblDegreeEarned = new System.Windows.Forms.Label();
+            this.lblSchool = new System.Windows.Forms.Label();
+            this.lblLevel = new System.Windows.Forms.Label();
             this.txtExamPlace = new System.Windows.Forms.TextBox();
             this.txtRate = new System.Windows.Forms.TextBox();
             this.txtTitle = new System.Windows.Forms.TextBox();
@@ -44,18 +45,11 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.navigationDrawer1 = new Syncfusion.Windows.Forms.Tools.NavigationDrawer();
-            this.drawerHeader1 = new Syncfusion.Windows.Forms.Tools.DrawerHeader();
-            this.drawerMenuItem1 = new Syncfusion.Windows.Forms.Tools.DrawerMenuItem();
-            this.drawerHeader2 = new Syncfusion.Windows.Forms.Tools.DrawerHeader();
-            this.drawerMenuItem2 = new Syncfusion.Windows.Forms.Tools.DrawerMenuItem();
-            this.drawerMenuItem3 = new Syncfusion.Windows.Forms.Tools.DrawerMenuItem();
-            this.drawerMenuItem4 = new Syncfusion.Windows.Forms.Tools.DrawerMenuItem();
-            this.drawerMenuItem5 = new Syncfusion.Windows.Forms.Tools.DrawerMenuItem();
-            this.drawerMenuItem6 = new Syncfusion.Windows.Forms.Tools.DrawerMenuItem();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dtpReleaseDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpExamDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateTimePickerAdv1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // dtpReleaseDate
@@ -113,42 +107,42 @@
             this.txtLicenseNo.Size = new System.Drawing.Size(220, 20);
             this.txtLicenseNo.TabIndex = 25;
             // 
-            // label3
+            // lblYearGraduate
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(53, 110);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(110, 13);
-            this.label3.TabIndex = 24;
-            this.label3.Text = "YEAR GRADUATED:";
+            this.lblYearGraduate.AutoSize = true;
+            this.lblYearGraduate.Location = new System.Drawing.Point(53, 110);
+            this.lblYearGraduate.Name = "lblYearGraduate";
+            this.lblYearGraduate.Size = new System.Drawing.Size(110, 13);
+            this.lblYearGraduate.TabIndex = 24;
+            this.lblYearGraduate.Text = "YEAR GRADUATED:";
             // 
-            // label4
+            // lblDegreeEarned
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(53, 84);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(103, 13);
-            this.label4.TabIndex = 23;
-            this.label4.Text = "DEGREE EARNED:";
+            this.lblDegreeEarned.AutoSize = true;
+            this.lblDegreeEarned.Location = new System.Drawing.Point(53, 84);
+            this.lblDegreeEarned.Name = "lblDegreeEarned";
+            this.lblDegreeEarned.Size = new System.Drawing.Size(103, 13);
+            this.lblDegreeEarned.TabIndex = 23;
+            this.lblDegreeEarned.Text = "DEGREE EARNED:";
             // 
-            // label2
+            // lblSchool
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(55, 58);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 13);
-            this.label2.TabIndex = 22;
-            this.label2.Text = "SCHOOL:";
+            this.lblSchool.AutoSize = true;
+            this.lblSchool.Location = new System.Drawing.Point(55, 58);
+            this.lblSchool.Name = "lblSchool";
+            this.lblSchool.Size = new System.Drawing.Size(54, 13);
+            this.lblSchool.TabIndex = 22;
+            this.lblSchool.Text = "SCHOOL:";
             // 
-            // label1
+            // lblLevel
             // 
-            this.label1.AccessibleRole = System.Windows.Forms.AccessibleRole.ScrollBar;
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(55, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "LEVEL:";
+            this.lblLevel.AccessibleRole = System.Windows.Forms.AccessibleRole.ScrollBar;
+            this.lblLevel.AutoSize = true;
+            this.lblLevel.Location = new System.Drawing.Point(55, 32);
+            this.lblLevel.Name = "lblLevel";
+            this.lblLevel.Size = new System.Drawing.Size(43, 13);
+            this.lblLevel.TabIndex = 21;
+            this.lblLevel.Text = "LEVEL:";
             // 
             // txtExamPlace
             // 
@@ -211,121 +205,14 @@
             this.textBox1.Size = new System.Drawing.Size(220, 20);
             this.textBox1.TabIndex = 32;
             // 
-            // navigationDrawer1
+            // errorProvider1
             // 
-            this.navigationDrawer1.BackColor = System.Drawing.Color.White;
-            this.navigationDrawer1.Items.Add(this.drawerHeader2);
-            this.navigationDrawer1.Items.Add(this.drawerHeader1);
-            this.navigationDrawer1.Items.Add(this.drawerMenuItem1);
-            this.navigationDrawer1.Items.Add(this.drawerMenuItem2);
-            this.navigationDrawer1.Items.Add(this.drawerMenuItem3);
-            this.navigationDrawer1.Items.Add(this.drawerMenuItem4);
-            this.navigationDrawer1.Items.Add(this.drawerMenuItem5);
-            this.navigationDrawer1.Items.Add(this.drawerMenuItem6);
-            this.navigationDrawer1.Location = new System.Drawing.Point(74, 245);
-            this.navigationDrawer1.Name = "navigationDrawer1";
-            this.navigationDrawer1.Size = new System.Drawing.Size(345, 163);
-            this.navigationDrawer1.TabIndex = 34;
-            this.navigationDrawer1.Text = "navigationDrawer1";
-            this.navigationDrawer1.Transition = Syncfusion.Windows.Forms.Tools.Transition.Reveal;
-            // 
-            // drawerHeader1
-            // 
-            this.drawerHeader1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(165)))), ((int)(((byte)(221)))));
-            this.drawerHeader1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.drawerHeader1.HeaderText = "drawerHeader1";
-            this.drawerHeader1.Location = new System.Drawing.Point(2, 0);
-            this.drawerHeader1.Margin = new System.Windows.Forms.Padding(0);
-            this.drawerHeader1.Name = "drawerHeader1";
-            this.drawerHeader1.Size = new System.Drawing.Size(100, 50);
-            this.drawerHeader1.TabIndex = 0;
-            this.drawerHeader1.Text = "drawerHeader1";
-            this.drawerHeader1.TextColor = System.Drawing.Color.White;
-            // 
-            // drawerMenuItem1
-            // 
-            this.drawerMenuItem1.BackColor = System.Drawing.Color.White;
-            this.drawerMenuItem1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.drawerMenuItem1.Location = new System.Drawing.Point(2, 50);
-            this.drawerMenuItem1.Margin = new System.Windows.Forms.Padding(0);
-            this.drawerMenuItem1.Name = "drawerMenuItem1";
-            this.drawerMenuItem1.Size = new System.Drawing.Size(100, 50);
-            this.drawerMenuItem1.TabIndex = 1;
-            this.drawerMenuItem1.Text = "drawerMenuItem1";
-            // 
-            // drawerHeader2
-            // 
-            this.drawerHeader2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(165)))), ((int)(((byte)(221)))));
-            this.drawerHeader2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.drawerHeader2.HeaderText = "drawerHeader2";
-            this.drawerHeader2.Location = new System.Drawing.Point(2, 100);
-            this.drawerHeader2.Margin = new System.Windows.Forms.Padding(0);
-            this.drawerHeader2.Name = "drawerHeader2";
-            this.drawerHeader2.Size = new System.Drawing.Size(100, 50);
-            this.drawerHeader2.TabIndex = 2;
-            this.drawerHeader2.Text = "drawerHeader2";
-            this.drawerHeader2.TextColor = System.Drawing.Color.White;
-            // 
-            // drawerMenuItem2
-            // 
-            this.drawerMenuItem2.BackColor = System.Drawing.Color.White;
-            this.drawerMenuItem2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.drawerMenuItem2.Location = new System.Drawing.Point(2, 150);
-            this.drawerMenuItem2.Margin = new System.Windows.Forms.Padding(0);
-            this.drawerMenuItem2.Name = "drawerMenuItem2";
-            this.drawerMenuItem2.Size = new System.Drawing.Size(100, 50);
-            this.drawerMenuItem2.TabIndex = 3;
-            this.drawerMenuItem2.Text = "drawerMenuItem2";
-            // 
-            // drawerMenuItem3
-            // 
-            this.drawerMenuItem3.BackColor = System.Drawing.Color.White;
-            this.drawerMenuItem3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.drawerMenuItem3.Location = new System.Drawing.Point(2, 200);
-            this.drawerMenuItem3.Margin = new System.Windows.Forms.Padding(0);
-            this.drawerMenuItem3.Name = "drawerMenuItem3";
-            this.drawerMenuItem3.Size = new System.Drawing.Size(100, 50);
-            this.drawerMenuItem3.TabIndex = 4;
-            this.drawerMenuItem3.Text = "drawerMenuItem3";
-            // 
-            // drawerMenuItem4
-            // 
-            this.drawerMenuItem4.BackColor = System.Drawing.Color.White;
-            this.drawerMenuItem4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.drawerMenuItem4.Location = new System.Drawing.Point(2, 250);
-            this.drawerMenuItem4.Margin = new System.Windows.Forms.Padding(0);
-            this.drawerMenuItem4.Name = "drawerMenuItem4";
-            this.drawerMenuItem4.Size = new System.Drawing.Size(100, 50);
-            this.drawerMenuItem4.TabIndex = 5;
-            this.drawerMenuItem4.Text = "drawerMenuItem4";
-            // 
-            // drawerMenuItem5
-            // 
-            this.drawerMenuItem5.BackColor = System.Drawing.Color.White;
-            this.drawerMenuItem5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.drawerMenuItem5.Location = new System.Drawing.Point(2, 300);
-            this.drawerMenuItem5.Margin = new System.Windows.Forms.Padding(0);
-            this.drawerMenuItem5.Name = "drawerMenuItem5";
-            this.drawerMenuItem5.Size = new System.Drawing.Size(100, 50);
-            this.drawerMenuItem5.TabIndex = 6;
-            this.drawerMenuItem5.Text = "drawerMenuItem5";
-            // 
-            // drawerMenuItem6
-            // 
-            this.drawerMenuItem6.BackColor = System.Drawing.Color.White;
-            this.drawerMenuItem6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.drawerMenuItem6.Location = new System.Drawing.Point(2, 350);
-            this.drawerMenuItem6.Margin = new System.Windows.Forms.Padding(0);
-            this.drawerMenuItem6.Name = "drawerMenuItem6";
-            this.drawerMenuItem6.Size = new System.Drawing.Size(100, 50);
-            this.drawerMenuItem6.TabIndex = 7;
-            this.drawerMenuItem6.Text = "drawerMenuItem6";
+            this.errorProvider1.ContainerControl = this;
             // 
             // ucEducationalBackground
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.navigationDrawer1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dateTimePickerAdv1);
@@ -335,10 +222,10 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtLicenseNo);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblYearGraduate);
+            this.Controls.Add(this.lblDegreeEarned);
+            this.Controls.Add(this.lblSchool);
+            this.Controls.Add(this.lblLevel);
             this.Controls.Add(this.txtExamPlace);
             this.Controls.Add(this.txtRate);
             this.Controls.Add(this.txtTitle);
@@ -347,6 +234,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtpReleaseDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpExamDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateTimePickerAdv1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -359,10 +247,10 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtLicenseNo;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblYearGraduate;
+        private System.Windows.Forms.Label lblDegreeEarned;
+        private System.Windows.Forms.Label lblSchool;
+        private System.Windows.Forms.Label lblLevel;
         private System.Windows.Forms.TextBox txtExamPlace;
         private System.Windows.Forms.TextBox txtRate;
         private System.Windows.Forms.TextBox txtTitle;
@@ -370,15 +258,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox1;
-        private Syncfusion.Windows.Forms.Tools.NavigationDrawer navigationDrawer1;
-        private Syncfusion.Windows.Forms.Tools.DrawerHeader drawerHeader2;
-        private Syncfusion.Windows.Forms.Tools.DrawerHeader drawerHeader1;
-        private Syncfusion.Windows.Forms.Tools.DrawerMenuItem drawerMenuItem1;
-        private Syncfusion.Windows.Forms.Tools.DrawerMenuItem drawerMenuItem2;
-        private Syncfusion.Windows.Forms.Tools.DrawerMenuItem drawerMenuItem3;
-        private Syncfusion.Windows.Forms.Tools.DrawerMenuItem drawerMenuItem4;
-        private Syncfusion.Windows.Forms.Tools.DrawerMenuItem drawerMenuItem5;
-        private Syncfusion.Windows.Forms.Tools.DrawerMenuItem drawerMenuItem6;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
 
     }
 }
