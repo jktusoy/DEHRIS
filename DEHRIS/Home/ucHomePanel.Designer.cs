@@ -29,18 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Syncfusion.Windows.Forms.Tools.CarouselImage carouselImage11 = new Syncfusion.Windows.Forms.Tools.CarouselImage();
-            Syncfusion.Windows.Forms.Tools.CarouselImage carouselImage12 = new Syncfusion.Windows.Forms.Tools.CarouselImage();
-            Syncfusion.Windows.Forms.Tools.CarouselImage carouselImage13 = new Syncfusion.Windows.Forms.Tools.CarouselImage();
-            Syncfusion.Windows.Forms.Tools.CarouselImage carouselImage14 = new Syncfusion.Windows.Forms.Tools.CarouselImage();
-            Syncfusion.Windows.Forms.Tools.CarouselImage carouselImage15 = new Syncfusion.Windows.Forms.Tools.CarouselImage();
+            Syncfusion.Windows.Forms.Tools.CarouselImage carouselImage1 = new Syncfusion.Windows.Forms.Tools.CarouselImage();
+            Syncfusion.Windows.Forms.Tools.CarouselImage carouselImage2 = new Syncfusion.Windows.Forms.Tools.CarouselImage();
+            Syncfusion.Windows.Forms.Tools.CarouselImage carouselImage3 = new Syncfusion.Windows.Forms.Tools.CarouselImage();
+            Syncfusion.Windows.Forms.Tools.CarouselImage carouselImage4 = new Syncfusion.Windows.Forms.Tools.CarouselImage();
+            Syncfusion.Windows.Forms.Tools.CarouselImage carouselImage5 = new Syncfusion.Windows.Forms.Tools.CarouselImage();
             this.gradientPanel2 = new Syncfusion.Windows.Forms.Tools.GradientPanel();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.gradientLabel1 = new Syncfusion.Windows.Forms.Tools.GradientLabel();
             this.carousel1 = new Syncfusion.Windows.Forms.Tools.Carousel();
             this.bannerTextProvider1 = new Syncfusion.Windows.Forms.BannerTextProvider(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.gradientLabel1 = new Syncfusion.Windows.Forms.Tools.GradientLabel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttonAdv1 = new Syncfusion.Windows.Forms.ButtonAdv();
             this.buttonAdv2 = new Syncfusion.Windows.Forms.ButtonAdv();
@@ -51,12 +50,11 @@
             this.buttonAdv7 = new Syncfusion.Windows.Forms.ButtonAdv();
             ((System.ComponentModel.ISupportInitialize)(this.gradientPanel2)).BeginInit();
             this.gradientPanel2.SuspendLayout();
-            this.carousel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.carousel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,6 +73,42 @@
             this.gradientPanel2.Size = new System.Drawing.Size(950, 600);
             this.gradientPanel2.TabIndex = 3;
             // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.pictureBox1);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.gradientLabel1);
+            this.splitContainer1.Panel2.Controls.Add(this.carousel1);
+            this.splitContainer1.Size = new System.Drawing.Size(948, 598);
+            this.splitContainer1.SplitterDistance = 416;
+            this.splitContainer1.TabIndex = 1;
+            // 
+            // gradientLabel1
+            // 
+            this.gradientLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gradientLabel1.BackgroundColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.Vertical, System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(240)))), ((int)(((byte)(247))))), System.Drawing.Color.LightCyan);
+            this.gradientLabel1.BeforeTouchSize = new System.Drawing.Size(529, 71);
+            this.gradientLabel1.BorderSides = ((System.Windows.Forms.Border3DSide)((((System.Windows.Forms.Border3DSide.Left | System.Windows.Forms.Border3DSide.Top) 
+            | System.Windows.Forms.Border3DSide.Right) 
+            | System.Windows.Forms.Border3DSide.Bottom)));
+            this.gradientLabel1.Font = new System.Drawing.Font("Eras Light ITC", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gradientLabel1.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.gradientLabel1.Location = new System.Drawing.Point(0, 3);
+            this.gradientLabel1.Name = "gradientLabel1";
+            this.gradientLabel1.Size = new System.Drawing.Size(529, 71);
+            this.gradientLabel1.TabIndex = 1;
+            this.gradientLabel1.Text = "Human Resource Information System";
+            this.gradientLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // carousel1
             // 
             this.carousel1.BackColor = System.Drawing.Color.LightSteelBlue;
@@ -88,16 +122,16 @@
             this.carousel1.Controls.Add(this.buttonAdv7);
             this.carousel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.carousel1.HighlightColor = System.Drawing.Color.White;
-            carouselImage11.ItemImage = global::DEHRIS.Properties.Resources.report1;
-            carouselImage12.ItemImage = global::DEHRIS.Properties.Resources.applicant;
-            carouselImage13.ItemImage = global::DEHRIS.Properties.Resources.holiday;
-            carouselImage14.ItemImage = global::DEHRIS.Properties.Resources.org;
-            carouselImage15.ItemImage = global::DEHRIS.Properties.Resources.ipcr;
-            this.carousel1.ImageListCollection.Add(carouselImage11);
-            this.carousel1.ImageListCollection.Add(carouselImage12);
-            this.carousel1.ImageListCollection.Add(carouselImage13);
-            this.carousel1.ImageListCollection.Add(carouselImage14);
-            this.carousel1.ImageListCollection.Add(carouselImage15);
+            carouselImage1.ItemImage = global::DEHRIS.Properties.Resources.report1;
+            carouselImage2.ItemImage = global::DEHRIS.Properties.Resources.applicant;
+            carouselImage3.ItemImage = global::DEHRIS.Properties.Resources.holiday;
+            carouselImage4.ItemImage = global::DEHRIS.Properties.Resources.org;
+            carouselImage5.ItemImage = global::DEHRIS.Properties.Resources.ipcr;
+            this.carousel1.ImageListCollection.Add(carouselImage1);
+            this.carousel1.ImageListCollection.Add(carouselImage2);
+            this.carousel1.ImageListCollection.Add(carouselImage3);
+            this.carousel1.ImageListCollection.Add(carouselImage4);
+            this.carousel1.ImageListCollection.Add(carouselImage5);
             this.carousel1.ImageshadeColor = System.Drawing.Color.Black;
             this.carousel1.ImageSlides = false;
             this.carousel1.Items.Add(this.buttonAdv1);
@@ -116,7 +150,7 @@
             this.carousel1.RotateAlways = false;
             this.carousel1.ShowImagePreview = false;
             this.carousel1.ShowImageShadow = false;
-            this.carousel1.Size = new System.Drawing.Size(547, 598);
+            this.carousel1.Size = new System.Drawing.Size(528, 598);
             this.carousel1.TabIndex = 0;
             this.carousel1.Text = "carousel1";
             this.carousel1.TouchTransitionSpeed = 20F;
@@ -132,63 +166,14 @@
             this.label1.Tag = 240D;
             this.label1.Visible = false;
             // 
-            // splitContainer1
-            // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Name = "splitContainer1";
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.Controls.Add(this.pictureBox2);
-            this.splitContainer1.Panel1.Controls.Add(this.pictureBox1);
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.gradientLabel1);
-            this.splitContainer1.Panel2.Controls.Add(this.carousel1);
-            this.splitContainer1.Size = new System.Drawing.Size(948, 598);
-            this.splitContainer1.SplitterDistance = 397;
-            this.splitContainer1.TabIndex = 1;
-            // 
-            // gradientLabel1
-            // 
-            this.gradientLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.gradientLabel1.BackgroundColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.Vertical, System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(240)))), ((int)(((byte)(247))))), System.Drawing.Color.LightCyan);
-            this.gradientLabel1.BeforeTouchSize = new System.Drawing.Size(548, 71);
-            this.gradientLabel1.BorderSides = ((System.Windows.Forms.Border3DSide)((((System.Windows.Forms.Border3DSide.Left | System.Windows.Forms.Border3DSide.Top) 
-            | System.Windows.Forms.Border3DSide.Right) 
-            | System.Windows.Forms.Border3DSide.Bottom)));
-            this.gradientLabel1.Font = new System.Drawing.Font("Eras Light ITC", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gradientLabel1.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.gradientLabel1.Location = new System.Drawing.Point(0, 3);
-            this.gradientLabel1.Name = "gradientLabel1";
-            this.gradientLabel1.Size = new System.Drawing.Size(548, 71);
-            this.gradientLabel1.TabIndex = 1;
-            this.gradientLabel1.Text = "Human Resource Information System";
-            this.gradientLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox2.Image = global::DEHRIS.Properties.Resources.deped_logo1;
-            this.pictureBox2.Location = new System.Drawing.Point(121, 429);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(145, 136);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::DEHRIS.Properties.Resources.deped_logo;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::DEHRIS.Properties.Resources.birClean;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(391, 181);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.Size = new System.Drawing.Size(416, 598);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -200,7 +185,7 @@
             this.buttonAdv1.Font = new System.Drawing.Font("Eras Light ITC", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAdv1.Image = global::DEHRIS.Properties.Resources.information1;
             this.buttonAdv1.IsBackStageButton = false;
-            this.buttonAdv1.Location = new System.Drawing.Point(231, 149);
+            this.buttonAdv1.Location = new System.Drawing.Point(222, 152);
             this.buttonAdv1.Name = "buttonAdv1";
             this.buttonAdv1.Size = new System.Drawing.Size(137, 91);
             this.buttonAdv1.TabIndex = 1;
@@ -216,7 +201,7 @@
             this.buttonAdv2.Font = new System.Drawing.Font("Eras Light ITC", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAdv2.Image = global::DEHRIS.Properties.Resources.process1;
             this.buttonAdv2.IsBackStageButton = false;
-            this.buttonAdv2.Location = new System.Drawing.Point(380, 183);
+            this.buttonAdv2.Location = new System.Drawing.Point(365, 185);
             this.buttonAdv2.Name = "buttonAdv2";
             this.buttonAdv2.Size = new System.Drawing.Size(124, 83);
             this.buttonAdv2.TabIndex = 2;
@@ -232,7 +217,7 @@
             this.buttonAdv3.Font = new System.Drawing.Font("Eras Light ITC", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAdv3.Image = global::DEHRIS.Properties.Resources.requirement1;
             this.buttonAdv3.IsBackStageButton = false;
-            this.buttonAdv3.Location = new System.Drawing.Point(404, 247);
+            this.buttonAdv3.Location = new System.Drawing.Point(388, 246);
             this.buttonAdv3.Name = "buttonAdv3";
             this.buttonAdv3.Size = new System.Drawing.Size(129, 86);
             this.buttonAdv3.TabIndex = 3;
@@ -248,7 +233,7 @@
             this.buttonAdv4.Font = new System.Drawing.Font("Eras Light ITC", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAdv4.Image = global::DEHRIS.Properties.Resources.Dossier_vert_icon__1_;
             this.buttonAdv4.IsBackStageButton = false;
-            this.buttonAdv4.Location = new System.Drawing.Point(294, 301);
+            this.buttonAdv4.Location = new System.Drawing.Point(282, 298);
             this.buttonAdv4.Name = "buttonAdv4";
             this.buttonAdv4.Size = new System.Drawing.Size(124, 84);
             this.buttonAdv4.TabIndex = 4;
@@ -264,7 +249,7 @@
             this.buttonAdv5.Font = new System.Drawing.Font("Eras Light ITC", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAdv5.Image = global::DEHRIS.Properties.Resources.personnel1;
             this.buttonAdv5.IsBackStageButton = false;
-            this.buttonAdv5.Location = new System.Drawing.Point(133, 294);
+            this.buttonAdv5.Location = new System.Drawing.Point(127, 291);
             this.buttonAdv5.Name = "buttonAdv5";
             this.buttonAdv5.Size = new System.Drawing.Size(118, 91);
             this.buttonAdv5.TabIndex = 5;
@@ -280,7 +265,7 @@
             this.buttonAdv6.Font = new System.Drawing.Font("Eras Light ITC", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAdv6.Image = global::DEHRIS.Properties.Resources.home3;
             this.buttonAdv6.IsBackStageButton = false;
-            this.buttonAdv6.Location = new System.Drawing.Point(32, 237);
+            this.buttonAdv6.Location = new System.Drawing.Point(30, 236);
             this.buttonAdv6.Name = "buttonAdv6";
             this.buttonAdv6.Size = new System.Drawing.Size(128, 98);
             this.buttonAdv6.TabIndex = 6;
@@ -296,7 +281,7 @@
             this.buttonAdv7.Font = new System.Drawing.Font("Eras Light ITC", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAdv7.Image = global::DEHRIS.Properties.Resources.org1;
             this.buttonAdv7.IsBackStageButton = false;
-            this.buttonAdv7.Location = new System.Drawing.Point(79, 176);
+            this.buttonAdv7.Location = new System.Drawing.Point(76, 178);
             this.buttonAdv7.Name = "buttonAdv7";
             this.buttonAdv7.Size = new System.Drawing.Size(132, 94);
             this.buttonAdv7.TabIndex = 7;
@@ -314,12 +299,11 @@
             this.Size = new System.Drawing.Size(950, 600);
             ((System.ComponentModel.ISupportInitialize)(this.gradientPanel2)).EndInit();
             this.gradientPanel2.ResumeLayout(false);
-            this.carousel1.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.carousel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -341,6 +325,5 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Syncfusion.Windows.Forms.Tools.GradientLabel gradientLabel1;
-        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

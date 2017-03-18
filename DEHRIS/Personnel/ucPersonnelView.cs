@@ -24,8 +24,10 @@ namespace DEHRIS.Importer
         {
             InitializeComponent();
 
-            dtPrBirthdate.Format = DateTimePickerFormat.Custom;
-            dtPrBirthdate.CustomFormat = " ";
+            //dtPrBirthdate.Format = DateTimePickerFormat.Custom;
+            //dtPrBirthdate.CustomFormat = " ";
+            txtBdate.Text = "";
+
 
             objlPersonnelView.SetObjects(prodUtil.GetPersonnel());
 
@@ -55,6 +57,7 @@ namespace DEHRIS.Importer
             /////////////////////////  PERSONNEL
             private void ShowPersonnelViewData(DEHRISModel.Data.Personnel ppersonnel)
             {
+                int defaulter = 0;
                 // txtPrBirthPlace
                 txtPrCitizenship.Text = ppersonnel.Citizenship;
                 txtPrBirthPlace.Text = ppersonnel.BirthPlace;
@@ -65,8 +68,9 @@ namespace DEHRIS.Importer
                 txtPrNameExt.Text = ppersonnel.NameExtension;
                 txtPrWeight.Text = ppersonnel.Weight;
                 cbBloodType.Text = ppersonnel.Bloodtype;
-                cbCivilStatus.Text = ppersonnel.Civilstatus;
-                dtPrBirthdate.Text = ppersonnel.DateOfBirth.ToShortDateString();
+                int.TryParse(ppersonnel.Civilstatus, out defaulter);
+                cbCivilStatus.SelectedIndex = defaulter;
+                txtBdate.Text = ppersonnel.DateOfBirth.ToShortDateString();
                 int _personnelID = int.Parse(ppersonnel.PersonnelID.ToString());
                 byte[] byter = prodUtil.GetPersonnelProfilePic(_personnelID).BinaryImage;
 
@@ -88,6 +92,7 @@ namespace DEHRIS.Importer
 
                 LoadProfilePicture(byter);
                 LoadCivilService(_personnelID);
+                LoadEducationalBackground(_personnelID);
             }
       
             private void SetPersonnelEditable(bool iseditable)
@@ -102,7 +107,7 @@ namespace DEHRIS.Importer
                     txtPrMiddlename.ReadOnly = false;
                     txtPrNameExt.ReadOnly = false;
                     txtPrWeight.ReadOnly = false;
-                    dtPrBirthdate.Enabled = true;
+                    txtBdate.ReadOnly = false;
                     //cbBloodType. = false;
                     //cbCivilStatus.ReadOnly = false;
                     //cBirthDate.ReadOnly = false;
@@ -116,7 +121,8 @@ namespace DEHRIS.Importer
                     txtPrMiddlename.ReadOnly = true;
                     txtPrNameExt.ReadOnly = true;
                     txtPrWeight.ReadOnly = true;
-                    dtPrBirthdate.Enabled = false;
+                  //  dtPrBirthdate.Enabled = false;
+                    txtBdate.ReadOnly = true;
                 }
 
             }
@@ -138,10 +144,10 @@ namespace DEHRIS.Importer
                 cBirthDate.Text = "";
                 txtPrBirthPlace.Text = "";
 
-
+                txtBdate.Text = "";
               
-                dtPrBirthdate.Format = DateTimePickerFormat.Custom;
-                dtPrBirthdate.CustomFormat = " ";
+                //dtPrBirthdate.Format = DateTimePickerFormat.Custom;
+                //dtPrBirthdate.CustomFormat = " ";
 
 
             }
@@ -263,7 +269,7 @@ namespace DEHRIS.Importer
             SetPersonnelEditable(false);
             DEHRISModel.Data.Personnel selectePersonnel = (DEHRISModel.Data.Personnel)objlPersonnelView.SelectedObject;
             ShowPersonnelViewData(selectePersonnel);
-
+            
         }
         /////////////////////////  PROFILE
 

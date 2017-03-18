@@ -41,7 +41,7 @@
             this.tseVMG = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
             this.tlsbtVMG = new System.Windows.Forms.ToolStripButton();
             this.toolStripEx7 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.tsbEvents = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton10 = new System.Windows.Forms.ToolStripButton();
@@ -304,7 +304,7 @@
             this.toolStripEx7.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStripEx7.Image = null;
             this.toolStripEx7.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton4,
+            this.tsbEvents,
             this.toolStripButton5,
             this.toolStripButton8,
             this.toolStripButton10});
@@ -313,14 +313,15 @@
             this.toolStripEx7.Size = new System.Drawing.Size(434, 64);
             this.toolStripEx7.TabIndex = 1;
             // 
-            // toolStripButton4
+            // tsbEvents
             // 
-            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
-            this.toolStripButton4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(81, 43);
-            this.toolStripButton4.Text = "EVENTS";
+            this.tsbEvents.Image = ((System.Drawing.Image)(resources.GetObject("tsbEvents.Image")));
+            this.tsbEvents.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsbEvents.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbEvents.Name = "tsbEvents";
+            this.tsbEvents.Size = new System.Drawing.Size(81, 43);
+            this.tsbEvents.Text = "EVENTS";
+            this.tsbEvents.Click += new System.EventHandler(this.tsbEvents_Click);
             // 
             // toolStripButton5
             // 
@@ -827,6 +828,7 @@
             this.Name = "frmMain";
             this.Text = "DEHRIS ::  HUMAN RESOURCE INFORMATION SYSTEM ";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.tblyMain.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -906,7 +908,7 @@
         private System.Windows.Forms.ToolStripButton tsbHome;
         private System.Windows.Forms.ToolStripButton tsbReport;
         private Syncfusion.Windows.Forms.Tools.ToolStripEx toolStripEx7;
-        private System.Windows.Forms.ToolStripButton toolStripButton4;
+        private System.Windows.Forms.ToolStripButton tsbEvents;
         private System.Windows.Forms.ToolStripButton toolStripButton5;
         private System.Windows.Forms.ToolStripButton toolStripButton6;
         private System.Windows.Forms.ToolStripButton toolStripButton7;

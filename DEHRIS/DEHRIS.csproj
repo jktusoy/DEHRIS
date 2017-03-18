@@ -63,6 +63,10 @@
     <Reference Include="Syncfusion.Diagram.Windows, Version=14.4450.0.15, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
     <Reference Include="Syncfusion.Grid.Base, Version=14.4450.0.15, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
     <Reference Include="Syncfusion.Grid.Windows, Version=14.4450.0.15, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.GridHelperClasses.Windows, Version=14.4450.0.15, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\v4.0_14.4450.0.15__3d67ed1f87d44c89\Syncfusion.GridHelperClasses.Windows.dll</HintPath>
+    </Reference>
     <Reference Include="Syncfusion.HTMLUI.Base, Version=14.4450.0.15, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
     <Reference Include="Syncfusion.HTMLUI.Windows, Version=14.4450.0.15, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
     <Reference Include="Syncfusion.Maps.Windows, Version=14.4450.0.15, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
@@ -106,6 +110,18 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Home\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home\ucEvents.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Home\ucEvents.Designer.cs">
+      <DependentUpon>ucEvents.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home\ucHomePanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -125,6 +141,17 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Others\FlipPanel.Designer.cs" />
+    <Compile Include="Others\Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Others\PropertyGridForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Others\SimpleScheduleDataProvider.cs" />
+    <Compile Include="Others\ToolTipControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Others\ToolTipControl.Designer.cs" />
     <Compile Include="Personnel\Modules\ucEducationalBackground.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -222,6 +249,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home\ucEvents.resx">
+      <DependentUpon>ucEvents.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home\ucHomePanel.resx">
       <DependentUpon>ucHomePanel.cs</DependentUpon>
@@ -437,6 +470,9 @@
     <None Include="Resources\scheduler1.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\bir1.png" />
+    <None Include="Resources\birClean.png" />
+    <None Include="Resources\bir_logo.png" />
     <Content Include="Resources\error.png" />
     <None Include="Resources\female.png" />
     <None Include="Resources\male.png" />

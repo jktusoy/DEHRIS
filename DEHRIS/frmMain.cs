@@ -120,6 +120,23 @@ namespace DEHRIS
             ucOrgChar.Dock = DockStyle.Fill;
         }
 
+        private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Home.frmLogin frmlog = new Home.frmLogin();
+            frmlog.Show();
+            this.Hide();
+        }
+
+        private void tsbEvents_Click(object sender, EventArgs e)
+        {
+            Others.Form2 myForm = new Others.Form2();
+            myForm.TopLevel = false;
+            myForm.AutoScroll = true;
+            gpMain.Controls.Clear();
+            gpMain.Controls.Add(myForm); 
+            myForm.Show();
+        }
+
       
 
 

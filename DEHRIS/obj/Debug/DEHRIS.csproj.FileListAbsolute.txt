@@ -77,3 +77,5 @@ C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.csproj.GenerateRe
 C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.exe.licenses
 C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.exe
 C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.pdb
+C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Home.frmLogin.resources
+C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Home.ucEvents.resources
