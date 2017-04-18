@@ -130,24 +130,35 @@
         </EntityType>
         <EntityType Name="training">
           <Key>
-            <PropertyRef Name="training_id" />
+            <PropertyRef Name="trainingID" />
           </Key>
-          <Property Name="training_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="region_id" Type="bigint" />
-          <Property Name="header_id" Type="bigint" />
+          <Property Name="trainingID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="title" Type="nvarchar" MaxLength="150" />
-          <Property Name="inclusiveDates" Type="nvarchar" MaxLength="150" />
-          <Property Name="noOfHours" Type="int" />
+          <Property Name="duration" Type="int" />
           <Property Name="conductedBy" Type="nvarchar" MaxLength="150" />
-          <Property Name="isInactive" Type="bit" />
+          <Property Name="isActive" Type="bit" />
           <Property Name="dateCreated" Type="datetime" />
-          <Property Name="isScholarship" Type="bit" />
-          <Property Name="division_id" Type="bigint" />
-          <Property Name="trainingModule_id" Type="bigint" />
-          <Property Name="category_id" Type="bigint" />
+          <Property Name="lastUpdated" Type="datetime" />
+          <Property Name="createdBy" Type="bigint" />
+          <Property Name="updatedBy" Type="bigint" />
           <Property Name="dateFrom" Type="smalldatetime" />
           <Property Name="dateTo" Type="smalldatetime" />
-          <Property Name="personnel_id" Type="bigint" />
+          <Property Name="personnelID" Type="bigint" />
+          <Property Name="remarks" Type="nvarchar" MaxLength="250" />
+          <Property Name="type" Type="nvarchar" MaxLength="250" />
+          <Property Name="method" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="trainingAssignment">
+          <Key>
+            <PropertyRef Name="trainingAssignmentID" />
+          </Key>
+          <Property Name="trainingAssignmentID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="trainingModuleID" Type="bigint" Nullable="false" />
+          <Property Name="dateCreated" Type="datetime" Nullable="false" />
+          <Property Name="lastUpdated" Type="datetime" />
+          <Property Name="createdBy" Type="bigint" />
+          <Property Name="updatedBy" Type="bigint" />
+          <Property Name="isActive" Type="bit" />
         </EntityType>
         <EntityType Name="workExperience">
           <Key>
@@ -180,6 +191,7 @@
           <EntitySet Name="profilepicture" EntityType="Self.profilepicture" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="specialSkills" EntityType="Self.specialSkills" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="training" EntityType="Self.training" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="trainingAssignment" EntityType="Self.trainingAssignment" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="workExperience" EntityType="Self.workExperience" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -193,8 +205,9 @@
           <EntitySet Name="hris_personnel" EntityType="DEHRISModel.hris_personnel" />
           <EntitySet Name="profilepictures" EntityType="DEHRISModel.profilepicture" />
           <EntitySet Name="specialSkills" EntityType="DEHRISModel.specialSkill" />
-          <EntitySet Name="trainings" EntityType="DEHRISModel.training" />
+          <EntitySet Name="trainingAssignments" EntityType="DEHRISModel.trainingAssignment" />
           <EntitySet Name="workExperiences" EntityType="DEHRISModel.workExperience" />
+          <EntitySet Name="trainings" EntityType="DEHRISModel.training" />
         </EntityContainer>
         <EntityType Name="civilservice">
           <Key>
@@ -319,26 +332,17 @@
           <Property Name="isInactive" Type="Boolean" />
           <Property Name="dateCreated" Type="DateTime" Precision="3" />
         </EntityType>
-        <EntityType Name="training">
+        <EntityType Name="trainingAssignment">
           <Key>
-            <PropertyRef Name="training_id" />
+            <PropertyRef Name="trainingAssignmentID" />
           </Key>
-          <Property Name="training_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="region_id" Type="Int64" />
-          <Property Name="header_id" Type="Int64" />
-          <Property Name="title" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
-          <Property Name="inclusiveDates" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
-          <Property Name="noOfHours" Type="Int32" />
-          <Property Name="conductedBy" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
-          <Property Name="isInactive" Type="Boolean" />
-          <Property Name="dateCreated" Type="DateTime" Precision="3" />
-          <Property Name="isScholarship" Type="Boolean" />
-          <Property Name="division_id" Type="Int64" />
-          <Property Name="trainingModule_id" Type="Int64" />
-          <Property Name="category_id" Type="Int64" />
-          <Property Name="dateFrom" Type="DateTime" Precision="0" />
-          <Property Name="dateTo" Type="DateTime" Precision="0" />
-          <Property Name="personnel_id" Type="Int64" Nullable="true" />
+          <Property Name="trainingAssignmentID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="trainingModuleID" Type="Int64" Nullable="false" />
+          <Property Name="dateCreated" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="lastUpdated" Type="DateTime" Precision="3" />
+          <Property Name="createdBy" Type="Int64" />
+          <Property Name="updatedBy" Type="Int64" />
+          <Property Name="isActive" Type="Boolean" />
         </EntityType>
         <EntityType Name="workExperience">
           <Key>
@@ -362,6 +366,26 @@
           <Property Name="isInactive" Type="Boolean" />
           <Property Name="isApproved" Type="Boolean" />
           <Property Name="rdetail_id" Type="Int64" />
+        </EntityType>
+        <EntityType Name="training">
+          <Key>
+            <PropertyRef Name="trainingID" />
+          </Key>
+          <Property Name="trainingID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="title" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="duration" Type="Int32" />
+          <Property Name="conductedBy" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="isActive" Type="Boolean" />
+          <Property Name="dateCreated" Type="DateTime" Precision="3" />
+          <Property Name="lastUpdated" Type="DateTime" Precision="3" />
+          <Property Name="createdBy" Type="Int64" />
+          <Property Name="updatedBy" Type="Int64" />
+          <Property Name="dateFrom" Type="DateTime" Precision="0" />
+          <Property Name="dateTo" Type="DateTime" Precision="0" />
+          <Property Name="personnelID" Type="Int64" />
+          <Property Name="remarks" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="type" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="method" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
         </EntityType>
         </Schema>
     </edmx:ConceptualModels>
@@ -498,25 +522,16 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="trainings">
-            <EntityTypeMapping TypeName="DEHRISModel.training">
-              <MappingFragment StoreEntitySet="training">
-                <ScalarProperty Name="personnel_id" ColumnName="personnel_id" />
-                <ScalarProperty Name="dateTo" ColumnName="dateTo" />
-                <ScalarProperty Name="dateFrom" ColumnName="dateFrom" />
-                <ScalarProperty Name="category_id" ColumnName="category_id" />
-                <ScalarProperty Name="trainingModule_id" ColumnName="trainingModule_id" />
-                <ScalarProperty Name="division_id" ColumnName="division_id" />
-                <ScalarProperty Name="isScholarship" ColumnName="isScholarship" />
+          <EntitySetMapping Name="trainingAssignments">
+            <EntityTypeMapping TypeName="DEHRISModel.trainingAssignment">
+              <MappingFragment StoreEntitySet="trainingAssignment">
+                <ScalarProperty Name="isActive" ColumnName="isActive" />
+                <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+                <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+                <ScalarProperty Name="lastUpdated" ColumnName="lastUpdated" />
                 <ScalarProperty Name="dateCreated" ColumnName="dateCreated" />
-                <ScalarProperty Name="isInactive" ColumnName="isInactive" />
-                <ScalarProperty Name="conductedBy" ColumnName="conductedBy" />
-                <ScalarProperty Name="noOfHours" ColumnName="noOfHours" />
-                <ScalarProperty Name="inclusiveDates" ColumnName="inclusiveDates" />
-                <ScalarProperty Name="title" ColumnName="title" />
-                <ScalarProperty Name="header_id" ColumnName="header_id" />
-                <ScalarProperty Name="region_id" ColumnName="region_id" />
-                <ScalarProperty Name="training_id" ColumnName="training_id" />
+                <ScalarProperty Name="trainingModuleID" ColumnName="trainingModuleID" />
+                <ScalarProperty Name="trainingAssignmentID" ColumnName="trainingAssignmentID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -541,6 +556,27 @@
                 <ScalarProperty Name="dateFrom" ColumnName="dateFrom" />
                 <ScalarProperty Name="personnel_id" ColumnName="personnel_id" />
                 <ScalarProperty Name="workExperience_id" ColumnName="workExperience_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="trainings">
+            <EntityTypeMapping TypeName="DEHRISModel.training">
+              <MappingFragment StoreEntitySet="training">
+                <ScalarProperty Name="method" ColumnName="method" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="remarks" ColumnName="remarks" />
+                <ScalarProperty Name="personnelID" ColumnName="personnelID" />
+                <ScalarProperty Name="dateTo" ColumnName="dateTo" />
+                <ScalarProperty Name="dateFrom" ColumnName="dateFrom" />
+                <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+                <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+                <ScalarProperty Name="lastUpdated" ColumnName="lastUpdated" />
+                <ScalarProperty Name="dateCreated" ColumnName="dateCreated" />
+                <ScalarProperty Name="isActive" ColumnName="isActive" />
+                <ScalarProperty Name="conductedBy" ColumnName="conductedBy" />
+                <ScalarProperty Name="duration" ColumnName="duration" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="trainingID" ColumnName="trainingID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

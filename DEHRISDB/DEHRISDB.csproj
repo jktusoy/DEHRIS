@@ -51,7 +51,6 @@
     <Compile Include="civilservice.cs">
       <DependentUpon>DEHRISDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Class1.cs" />
     <Compile Include="DEHRISDB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -84,6 +83,9 @@
       <DependentUpon>DEHRISDB.tt</DependentUpon>
     </Compile>
     <Compile Include="training.cs">
+      <DependentUpon>DEHRISDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="trainingAssignment.cs">
       <DependentUpon>DEHRISDB.tt</DependentUpon>
     </Compile>
     <Compile Include="workExperience.cs">

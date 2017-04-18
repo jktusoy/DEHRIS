@@ -10,19 +10,19 @@ namespace DEHRISModel.Data
     {
 
         public long TrainingID { get; set; }
-        public long PersonnelID { get; set; }
-        public Nullable<long> HeaderID { get; set; }
         public string Title { get; set; }
-        public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
-        public string NoOfHours { get; set; }
+        public Nullable<int> Duration { get; set; }
         public string ConductedBy { get; set; }
-        public Nullable<bool> IsInactive { get; set; }
-        public Nullable<System.DateTime> DateCreated { get; set; }
-        public Nullable<bool> IsScholarship { get; set; }
-        public Nullable<long> RegionID { get; set; }
-        public Nullable<long> DivisionID { get; set; }
-        public Nullable<long> TrainingModuleID { get; set; }
-        public Nullable<long> CategoryID { get; set; }
+        public Nullable<bool> IsActive { get; set; }
+        public Nullable<DateTime> DateCreated { get; set; }
+        public Nullable<DateTime> LastUpdated { get; set; }
+        public Nullable<long> CreatedBy { get; set; }
+        public Nullable<long> UpdatedBy { get; set; }
+        public Nullable<DateTime> DateFrom { get; set; }
+        public Nullable<DateTime> DateTo { get; set; }
+        public Nullable<long> PersonnelID { get; set; }
+        public string Remarks { get; set; }
+        public string Type { get; set; }
+        public string Method { get; set; }
     }
 }

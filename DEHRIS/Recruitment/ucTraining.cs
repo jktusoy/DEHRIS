@@ -16,5 +16,10 @@ namespace DEHRIS.Recruitment
         {
             InitializeComponent();
         }
+
+        private void ucTraining_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

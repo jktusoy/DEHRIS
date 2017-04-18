@@ -31,7 +31,8 @@ namespace DEHRISDB
         public virtual DbSet<hris_personnel> hris_personnel { get; set; }
         public virtual DbSet<profilepicture> profilepictures { get; set; }
         public virtual DbSet<specialSkill> specialSkills { get; set; }
-        public virtual DbSet<training> trainings { get; set; }
+        public virtual DbSet<trainingAssignment> trainingAssignments { get; set; }
         public virtual DbSet<workExperience> workExperiences { get; set; }
+        public virtual DbSet<training> trainings { get; set; }
     }
 }

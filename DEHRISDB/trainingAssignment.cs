@@ -12,22 +12,14 @@ namespace DEHRISDB
     using System;
     using System.Collections.Generic;
     
-    public partial class training
+    public partial class trainingAssignment
     {
-        public long trainingID { get; set; }
-        public string title { get; set; }
-        public Nullable<int> duration { get; set; }
-        public string conductedBy { get; set; }
-        public Nullable<bool> isActive { get; set; }
-        public Nullable<System.DateTime> dateCreated { get; set; }
+        public long trainingAssignmentID { get; set; }
+        public long trainingModuleID { get; set; }
+        public System.DateTime dateCreated { get; set; }
         public Nullable<System.DateTime> lastUpdated { get; set; }
         public Nullable<long> createdBy { get; set; }
         public Nullable<long> updatedBy { get; set; }
-        public Nullable<System.DateTime> dateFrom { get; set; }
-        public Nullable<System.DateTime> dateTo { get; set; }
-        public Nullable<long> personnelID { get; set; }
-        public string remarks { get; set; }
-        public string type { get; set; }
-        public string method { get; set; }
+        public Nullable<bool> isActive { get; set; }
     }
 }
