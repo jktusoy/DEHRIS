@@ -15,20 +15,20 @@ namespace DEHRISDB
     public partial class training
     {
         public long training_id { get; set; }
+        public Nullable<long> region_id { get; set; }
         public Nullable<long> header_id { get; set; }
         public string title { get; set; }
-        public Nullable<System.DateTime> startDate { get; set; }
-        public Nullable<System.DateTime> endDate { get; set; }
-        public string noOfHours { get; set; }
+        public string inclusiveDates { get; set; }
+        public Nullable<int> noOfHours { get; set; }
         public string conductedBy { get; set; }
         public Nullable<bool> isInactive { get; set; }
         public Nullable<System.DateTime> dateCreated { get; set; }
         public Nullable<bool> isScholarship { get; set; }
-        public Nullable<long> region_id { get; set; }
         public Nullable<long> division_id { get; set; }
         public Nullable<long> trainingModule_id { get; set; }
         public Nullable<long> category_id { get; set; }
+        public Nullable<System.DateTime> dateFrom { get; set; }
+        public Nullable<System.DateTime> dateTo { get; set; }
         public Nullable<long> personnel_id { get; set; }
-        public string description { get; set; }
     }
 }

@@ -42,6 +42,7 @@ C:\Users\user\Source\DEHRIS\DEHRIS\obj\Debug\DEHRIS.exe
 C:\Users\user\Source\DEHRIS\DEHRIS\obj\Debug\DEHRIS.pdb
 C:\Users\user\Source\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Dashboard.Reports.ucDashboard.resources
 C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\bin\Debug\DEHRIS.exe
+C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\bin\Debug\DEHRIS.pdb
 C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\bin\Debug\DEHRISAPI.dll
 C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\bin\Debug\DEHRISDL.dll
 C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\bin\Debug\NotificationWindow.dll
@@ -52,6 +53,9 @@ C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\bin\Debug\DEHRISDL.pdb
 C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\bin\Debug\DEHRISDB.pdb
 C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.csprojResolveAssemblyReference.cache
 C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Dashboard.Reports.ucDashboard.resources
+C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Document.ucDiagram.resources
+C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Document.ucFileType.resources
+C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Document.ucSlideShow.resources
 C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.frmMain.resources
 C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Home.frmLogin.resources
 C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Home.ucEvents.resources
@@ -63,6 +67,7 @@ C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Personnel.Modules
 C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Personnel.Modules.ucFamilyBackgroud.resources
 C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Personnel.Modules.ucSpecialSkills.resources
 C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Personnel.Modules.ucTraining.resources
+C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Personnel.Performance.ucAttendance.resources
 C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Importer.ucImportPersonnel.resources
 C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Personnel.ucPerformance.resources
 C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.Importer.ucApplicantView.resources
@@ -80,4 +85,3 @@ C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.exe.licenses
 C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.exe
 C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\obj\Debug\DEHRIS.pdb
 C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\bin\Debug\DEHRIS.exe.config
-C:\Users\Cocoypower\Source\Repo\DEHRIS\DEHRIS\bin\Debug\DEHRIS.pdb

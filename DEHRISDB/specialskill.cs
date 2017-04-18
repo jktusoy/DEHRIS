@@ -12,14 +12,14 @@ namespace DEHRISDB
     using System;
     using System.Collections.Generic;
     
-    public partial class specialskill
+    public partial class specialSkill
     {
         public long specialSkill_id { get; set; }
-        public Nullable<long> personnel_id { get; set; }
+        public long personnel_id { get; set; }
+        public Nullable<long> region_id { get; set; }
+        public Nullable<long> section_id { get; set; }
         public string specialSkillDescription { get; set; }
         public Nullable<bool> isInactive { get; set; }
         public Nullable<System.DateTime> dateCreated { get; set; }
-        public Nullable<long> region_id { get; set; }
-        public Nullable<long> section_id { get; set; }
     }
 }

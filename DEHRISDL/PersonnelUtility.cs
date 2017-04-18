@@ -49,7 +49,7 @@ namespace DEHRISAPI
            {
                //var query = from pro in dbcontext.hris_personnel
                //  select new ProjectInfo(){ Name = pro.ProjectName, Id = pro.ProjectId };
-               ProfilePicture image = (from item in dbcontext.profilePictures.Where(a => a.personnel_id == ppersonnel_id)
+               ProfilePicture image = (from item in dbcontext.profilepictures.Where(a => a.personnel_id == ppersonnel_id)
                                        select new ProfilePicture()
                                                 {
                                                       BinaryImage = item.binaryImage,
@@ -74,7 +74,7 @@ namespace DEHRISAPI
                                            Civilservice_number = item.civilservice_number,
                                            CivilServiceID = item.civilservice_id,
                                            CivilServiceName = item.civilservicename,
-                                           DateCreated = item.datecreated,
+                                           DateCreated = item.dateCreated,
                                            DistrictID = item.district_id,
                                            ExamDate = item.examdate,
                                            IsInactive = item.isInactive,
@@ -95,7 +95,7 @@ namespace DEHRISAPI
            {
                //var query = from pro in dbcontext.hris_personnel
                //  select new ProjectInfo(){ Name = pro.ProjectName, Id = pro.ProjectId };
-               List<EducationalBackground> educList = (from item in dbcontext.educationalbackgrounds.Where(a => a.personnel_id == ppersonnel_id)
+               List<EducationalBackground> educList = (from item in dbcontext.educationalBackgrounds.Where(a => a.personnel_id == ppersonnel_id)
                                                         select new EducationalBackground()
                                                {
                                                    DateFrom= item.dateFrom,
@@ -126,7 +126,7 @@ namespace DEHRISAPI
                //List<seminar> 
                //var query = from pro in dbcontext.hris_personnel
                //  select new ProjectInfo(){ Name = pro.ProjectName, Id = pro.ProjectId };
-               List<SpecialSkills> ssList = (from item in dbcontext.specialskills.Where(a => a.personnel_id == ppersonnel_id)
+               List<SpecialSkills> ssList = (from item in dbcontext.specialSkills.Where(a => a.personnel_id == ppersonnel_id)
                                              select new SpecialSkills()
                                                        {
                                                           DateCreated = item.dateCreated,
@@ -157,14 +157,14 @@ namespace DEHRISAPI
                                                  ConductedBy = item.conductedBy,
                                                  DateCreated = item.dateCreated,
                                                  DivisionID = item.division_id,
-                                                 EndDate = (DateTime)item.endDate,
+                                                 EndDate = (DateTime)item.dateTo,
                                                  HeaderID = item.header_id,
                                                  IsInactive = item.isInactive,
                                                  IsScholarship = item.isScholarship,
-                                                 NoOfHours = item.noOfHours,
+                                                 NoOfHours = item.noOfHours.ToString(),
                                                  PersonnelID = (long)item.personnel_id,
                                                  RegionID = item.region_id,
-                                                 StartDate = (DateTime)item.startDate,
+                                                 StartDate = (DateTime)item.dateFrom,
                                                  Title= item.title,
                                                  TrainingID= item.training_id,
                                                  TrainingModuleID = item.trainingModule_id                                               
@@ -201,7 +201,7 @@ namespace DEHRISAPI
                                                  SeparationDate = item.separationDate,
                                                  ServiceLength = item.serviceLength,
                                                  ServiceType = item.serviceType,
-                                                 StatusID = item.status_id,
+                                                 StatusID = (int)item.status_id,
                                                  WorkExperienceID = item.workExperience_id
                                              }).ToList();
                return ssList;

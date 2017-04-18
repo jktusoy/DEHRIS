@@ -104,6 +104,21 @@
     <Compile Include="Dashboard\Reports\ucDashboard.Designer.cs">
       <DependentUpon>ucDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Document\ucDiagram.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Document\ucDiagram.Designer.cs">
+      <DependentUpon>ucDiagram.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Document\ucFileType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Document\ucSlideShow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Document\ucSlideShow.Designer.cs">
+      <DependentUpon>ucSlideShow.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +197,12 @@
     <Compile Include="Personnel\Modules\ucTraining.Designer.cs">
       <DependentUpon>ucTraining.cs</DependentUpon>
     </Compile>
+    <Compile Include="Personnel\Performance\ucAttendance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Personnel\Performance\ucAttendance.Designer.cs">
+      <DependentUpon>ucAttendance.cs</DependentUpon>
+    </Compile>
     <Compile Include="Personnel\ucImportPersonnel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -232,6 +253,12 @@
     <Compile Include="Recruitment\ucApplicantView.Designer.cs">
       <DependentUpon>ucApplicantView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Recruitment\ucTraining.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Recruitment\ucTraining.Designer.cs">
+      <DependentUpon>ucTraining.cs</DependentUpon>
+    </Compile>
     <Compile Include="Strategy\ucStrategyNavigation.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -258,6 +285,15 @@
     </Compile>
     <EmbeddedResource Include="Dashboard\Reports\ucDashboard.resx">
       <DependentUpon>ucDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Document\ucDiagram.resx">
+      <DependentUpon>ucDiagram.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Document\ucFileType.resx">
+      <DependentUpon>ucFileType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Document\ucSlideShow.resx">
+      <DependentUpon>ucSlideShow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
@@ -289,6 +325,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Personnel\Modules\ucTraining.resx">
       <DependentUpon>ucTraining.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personnel\Performance\ucAttendance.resx">
+      <DependentUpon>ucAttendance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Personnel\ucImportPersonnel.resx">
       <DependentUpon>ucImportPersonnel.cs</DependentUpon>
@@ -324,6 +363,9 @@
     </Compile>
     <EmbeddedResource Include="Recruitment\ucApplicantView.resx">
       <DependentUpon>ucApplicantView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recruitment\ucTraining.resx">
+      <DependentUpon>ucTraining.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Strategy\ucStrategyNavigation.resx">
       <DependentUpon>ucStrategyNavigation.cs</DependentUpon>
@@ -519,6 +561,7 @@
     <None Include="Resources\warning.png" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="NewFolder1\" />
     <Folder Include="Others\CustomUserControl\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -12,10 +12,10 @@ namespace DEHRISDB
     using System;
     using System.Collections.Generic;
     
-    public partial class profilePicture
+    public partial class profilepicture
     {
         public long profilepicture_id { get; set; }
-        public long personnel_id { get; set; }
+        public Nullable<long> personnel_id { get; set; }
         public Nullable<bool> isInActive { get; set; }
         public string filepath { get; set; }
         public string contentType { get; set; }

@@ -12,7 +12,7 @@ namespace DEHRISModel.Data
         public Nullable<long> RegionID { get; set; }
         public Nullable<long> SectionID { get; set; }
         public Nullable<long> PersonnelID { get; set; }
-        public Nullable<int> ServiceType { get; set; }
+        public string ServiceType { get; set; }
         public Nullable<System.DateTime> DateFrom { get; set; }
         public string DateTo { get; set; }
         public string ServiceLength { get; set; }
@@ -24,7 +24,7 @@ namespace DEHRISModel.Data
         public string SeparationDate { get; set; }
         public string Remarks { get; set; }
         public Nullable<bool> IsInactive { get; set; }
-        public Nullable<int> IsApproved { get; set; }
+        public bool? IsApproved { get; set; }
         public Nullable<long> RdetailID { get; set; }
     }
 }

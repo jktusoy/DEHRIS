@@ -34,20 +34,20 @@
             this.textBoxBarItem1 = new Syncfusion.Windows.Forms.Tools.XPMenus.TextBoxBarItem();
             this.gradientPanel2 = new Syncfusion.Windows.Forms.Tools.GradientPanel();
             this.gradientPanelExt1 = new Syncfusion.Windows.Forms.Tools.GradientPanelExt();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.progressBarAdv1 = new Syncfusion.Windows.Forms.Tools.ProgressBarAdv();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.buttonAdv1 = new Syncfusion.Windows.Forms.ButtonAdv();
             this.label3 = new System.Windows.Forms.Label();
+            this.buttonAdv1 = new Syncfusion.Windows.Forms.ButtonAdv();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.progressBarAdv1 = new Syncfusion.Windows.Forms.Tools.ProgressBarAdv();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.gradientPanelExt2 = new Syncfusion.Windows.Forms.Tools.GradientPanelExt();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.buttonAdv3 = new Syncfusion.Windows.Forms.ButtonAdv();
-            this.buttonAdv4 = new Syncfusion.Windows.Forms.ButtonAdv();
-            this.gradientLabel1 = new Syncfusion.Windows.Forms.Tools.GradientLabel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.progressBarAdv2 = new Syncfusion.Windows.Forms.Tools.ProgressBarAdv();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.buttonAdv4 = new Syncfusion.Windows.Forms.ButtonAdv();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.buttonAdv3 = new Syncfusion.Windows.Forms.ButtonAdv();
+            this.gradientLabel1 = new Syncfusion.Windows.Forms.Tools.GradientLabel();
             this.buttonAdv2 = new Syncfusion.Windows.Forms.ButtonAdv();
             ((System.ComponentModel.ISupportInitialize)(this.gradientPanel2)).BeginInit();
             this.gradientPanel2.SuspendLayout();
@@ -80,8 +80,7 @@
             this.textBoxBarItem1.BarName = "textBoxBarItem1";
             this.textBoxBarItem1.ShowToolTipInPopUp = false;
             this.textBoxBarItem1.SizeToFit = true;
-            this.textBoxBarItem1.TextBoxValue = null;
-            this.textBoxBarItem1.Value = null;
+            this.textBoxBarItem1.Value = "";
             // 
             // gradientPanel2
             // 
@@ -107,13 +106,33 @@
             this.gradientPanelExt1.Size = new System.Drawing.Size(862, 462);
             this.gradientPanelExt1.TabIndex = 0;
             // 
-            // textBox1
+            // label3
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(219, 35);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(487, 29);
-            this.textBox1.TabIndex = 0;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(67, 37);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(146, 24);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Select Directory:";
+            // 
+            // buttonAdv1
+            // 
+            this.buttonAdv1.BeforeTouchSize = new System.Drawing.Size(67, 29);
+            this.buttonAdv1.IsBackStageButton = false;
+            this.buttonAdv1.Location = new System.Drawing.Point(712, 35);
+            this.buttonAdv1.Name = "buttonAdv1";
+            this.buttonAdv1.Size = new System.Drawing.Size(67, 29);
+            this.buttonAdv1.TabIndex = 3;
+            this.buttonAdv1.Text = "...";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(69, 70);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(719, 319);
+            this.textBox2.TabIndex = 2;
             // 
             // progressBarAdv1
             // 
@@ -153,33 +172,13 @@
             this.progressBarAdv1.WaitingGradientEnabled = true;
             this.progressBarAdv1.WaitingGradientWidth = 400;
             // 
-            // textBox2
+            // textBox1
             // 
-            this.textBox2.Location = new System.Drawing.Point(69, 70);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(719, 319);
-            this.textBox2.TabIndex = 2;
-            // 
-            // buttonAdv1
-            // 
-            this.buttonAdv1.BeforeTouchSize = new System.Drawing.Size(67, 29);
-            this.buttonAdv1.IsBackStageButton = false;
-            this.buttonAdv1.Location = new System.Drawing.Point(712, 35);
-            this.buttonAdv1.Name = "buttonAdv1";
-            this.buttonAdv1.Size = new System.Drawing.Size(67, 29);
-            this.buttonAdv1.TabIndex = 3;
-            this.buttonAdv1.Text = "...";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(67, 37);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(146, 24);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Select Directory:";
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(219, 35);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(487, 29);
+            this.textBox1.TabIndex = 0;
             // 
             // gradientPanelExt2
             // 
@@ -196,76 +195,6 @@
             this.gradientPanelExt2.Name = "gradientPanelExt2";
             this.gradientPanelExt2.Size = new System.Drawing.Size(665, 485);
             this.gradientPanelExt2.TabIndex = 1;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(31, 42);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(503, 26);
-            this.textBox3.TabIndex = 0;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Location = new System.Drawing.Point(31, 126);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(600, 328);
-            this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = "";
-            // 
-            // buttonAdv3
-            // 
-            this.buttonAdv3.BeforeTouchSize = new System.Drawing.Size(180, 26);
-            this.buttonAdv3.IsBackStageButton = false;
-            this.buttonAdv3.Location = new System.Drawing.Point(480, 530);
-            this.buttonAdv3.Name = "buttonAdv3";
-            this.buttonAdv3.Size = new System.Drawing.Size(180, 26);
-            this.buttonAdv3.TabIndex = 2;
-            this.buttonAdv3.Text = "ABORT";
-            // 
-            // buttonAdv4
-            // 
-            this.buttonAdv4.BeforeTouchSize = new System.Drawing.Size(91, 26);
-            this.buttonAdv4.IsBackStageButton = false;
-            this.buttonAdv4.Location = new System.Drawing.Point(540, 42);
-            this.buttonAdv4.Name = "buttonAdv4";
-            this.buttonAdv4.Size = new System.Drawing.Size(91, 26);
-            this.buttonAdv4.TabIndex = 3;
-            this.buttonAdv4.Text = "BROWSE";
-            // 
-            // gradientLabel1
-            // 
-            this.gradientLabel1.BackgroundColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.Vertical, System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(240)))), ((int)(((byte)(247))))), System.Drawing.Color.LightCyan);
-            this.gradientLabel1.BeforeTouchSize = new System.Drawing.Size(130, 28);
-            this.gradientLabel1.BorderSides = ((System.Windows.Forms.Border3DSide)((((System.Windows.Forms.Border3DSide.Left | System.Windows.Forms.Border3DSide.Top) 
-            | System.Windows.Forms.Border3DSide.Right) 
-            | System.Windows.Forms.Border3DSide.Bottom)));
-            this.gradientLabel1.BorderStyle = System.Windows.Forms.Border3DStyle.Etched;
-            this.gradientLabel1.Location = new System.Drawing.Point(278, 15);
-            this.gradientLabel1.Name = "gradientLabel1";
-            this.gradientLabel1.Size = new System.Drawing.Size(130, 28);
-            this.gradientLabel1.TabIndex = 4;
-            this.gradientLabel1.Text = "IMPORT";
-            this.gradientLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(117, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "SELECT DIRECTORY:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(45, 101);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "IMPORT DETAILS:";
             // 
             // progressBarAdv2
             // 
@@ -296,6 +225,76 @@
             this.progressBarAdv2.TubeEndColor = System.Drawing.Color.Black;
             this.progressBarAdv2.TubeStartColor = System.Drawing.Color.Red;
             this.progressBarAdv2.WaitingGradientWidth = 400;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(45, 101);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(100, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "IMPORT DETAILS:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(28, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(117, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "SELECT DIRECTORY:";
+            // 
+            // buttonAdv4
+            // 
+            this.buttonAdv4.BeforeTouchSize = new System.Drawing.Size(91, 26);
+            this.buttonAdv4.IsBackStageButton = false;
+            this.buttonAdv4.Location = new System.Drawing.Point(540, 42);
+            this.buttonAdv4.Name = "buttonAdv4";
+            this.buttonAdv4.Size = new System.Drawing.Size(91, 26);
+            this.buttonAdv4.TabIndex = 3;
+            this.buttonAdv4.Text = "BROWSE";
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox1.Location = new System.Drawing.Point(31, 126);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(600, 328);
+            this.richTextBox1.TabIndex = 1;
+            this.richTextBox1.Text = "";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(31, 42);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(503, 26);
+            this.textBox3.TabIndex = 0;
+            // 
+            // buttonAdv3
+            // 
+            this.buttonAdv3.BeforeTouchSize = new System.Drawing.Size(180, 26);
+            this.buttonAdv3.IsBackStageButton = false;
+            this.buttonAdv3.Location = new System.Drawing.Point(480, 530);
+            this.buttonAdv3.Name = "buttonAdv3";
+            this.buttonAdv3.Size = new System.Drawing.Size(180, 26);
+            this.buttonAdv3.TabIndex = 2;
+            this.buttonAdv3.Text = "ABORT";
+            // 
+            // gradientLabel1
+            // 
+            this.gradientLabel1.BackgroundColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.Vertical, System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(240)))), ((int)(((byte)(247))))), System.Drawing.Color.LightCyan);
+            this.gradientLabel1.BeforeTouchSize = new System.Drawing.Size(130, 28);
+            this.gradientLabel1.BorderSides = ((System.Windows.Forms.Border3DSide)((((System.Windows.Forms.Border3DSide.Left | System.Windows.Forms.Border3DSide.Top) 
+            | System.Windows.Forms.Border3DSide.Right) 
+            | System.Windows.Forms.Border3DSide.Bottom)));
+            this.gradientLabel1.BorderStyle = System.Windows.Forms.Border3DStyle.Etched;
+            this.gradientLabel1.Location = new System.Drawing.Point(278, 15);
+            this.gradientLabel1.Name = "gradientLabel1";
+            this.gradientLabel1.Size = new System.Drawing.Size(130, 28);
+            this.gradientLabel1.TabIndex = 4;
+            this.gradientLabel1.Text = "IMPORT";
+            this.gradientLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonAdv2
             // 

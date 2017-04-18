@@ -48,40 +48,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ais_cdtransaction.cs">
-      <DependentUpon>DEHRISDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ais_cdtransactiondetails.cs">
-      <DependentUpon>DEHRISDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="appointment.cs">
-      <DependentUpon>DEHRISDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="appointmentheader.cs">
-      <DependentUpon>DEHRISDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="appointmenttype.cs">
-      <DependentUpon>DEHRISDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="child.cs">
-      <DependentUpon>DEHRISDB.tt</DependentUpon>
-    </Compile>
     <Compile Include="civilservice.cs">
       <DependentUpon>DEHRISDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Class1.cs" />
-    <Compile Include="common_importtempate.cs">
-      <DependentUpon>DEHRISDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="common_importtemplatedetail.cs">
-      <DependentUpon>DEHRISDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="common_importtransaction.cs">
-      <DependentUpon>DEHRISDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="common_importtransactiondetail.cs">
-      <DependentUpon>DEHRISDB.tt</DependentUpon>
-    </Compile>
     <Compile Include="DEHRISDB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -97,38 +67,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DEHRISDB.edmx</DependentUpon>
     </Compile>
-    <Compile Include="educationalbackground.cs">
+    <Compile Include="educationalBackground.cs">
       <DependentUpon>DEHRISDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="hris_address.cs">
-      <DependentUpon>DEHRISDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="hris_birform2305.cs">
-      <DependentUpon>DEHRISDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="hris_employment.cs">
+    <Compile Include="hris_applicants.cs">
       <DependentUpon>DEHRISDB.tt</DependentUpon>
     </Compile>
     <Compile Include="hris_personnel.cs">
       <DependentUpon>DEHRISDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="pm_project.cs">
-      <DependentUpon>DEHRISDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="pm_projectaccess.cs">
-      <DependentUpon>DEHRISDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="profilePicture.cs">
+    <Compile Include="profilepicture.cs">
       <DependentUpon>DEHRISDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="sis_school.cs">
-      <DependentUpon>DEHRISDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sis_schooldistrict.cs">
-      <DependentUpon>DEHRISDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="specialskill.cs">
+    <Compile Include="specialSkill.cs">
       <DependentUpon>DEHRISDB.tt</DependentUpon>
     </Compile>
     <Compile Include="training.cs">

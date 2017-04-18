@@ -16,6 +16,7 @@ namespace DEHRISDB
     {
         public long civilservice_id { get; set; }
         public Nullable<long> personnel_id { get; set; }
+        public Nullable<long> region_id { get; set; }
         public string civilservicename { get; set; }
         public string rate { get; set; }
         public string examdate { get; set; }
@@ -23,8 +24,7 @@ namespace DEHRISDB
         public string civilservice_number { get; set; }
         public string releasedate { get; set; }
         public Nullable<bool> isInactive { get; set; }
-        public Nullable<System.DateTime> datecreated { get; set; }
-        public Nullable<long> region_id { get; set; }
         public Nullable<long> district_id { get; set; }
+        public Nullable<System.DateTime> dateCreated { get; set; }
     }
 }

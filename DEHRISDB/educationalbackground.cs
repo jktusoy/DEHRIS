@@ -12,10 +12,11 @@ namespace DEHRISDB
     using System;
     using System.Collections.Generic;
     
-    public partial class educationalbackground
+    public partial class educationalBackground
     {
         public long educationalBackground_id { get; set; }
         public Nullable<long> personnel_id { get; set; }
+        public Nullable<bool> isInActive { get; set; }
         public string level { get; set; }
         public string school { get; set; }
         public string degreeEarned { get; set; }
@@ -24,7 +25,6 @@ namespace DEHRISDB
         public string dateFrom { get; set; }
         public string dateTo { get; set; }
         public string honorsReceived { get; set; }
-        public Nullable<bool> isInActive { get; set; }
         public Nullable<System.DateTime> datetimestamp { get; set; }
         public Nullable<long> region_id { get; set; }
         public Nullable<long> section_id { get; set; }

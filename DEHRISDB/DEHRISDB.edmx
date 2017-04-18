@@ -5,352 +5,73 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="DEHRISModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'DEHRIS.dbo.ais_cdtransaction' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <EntityType Name="ais_cdtransaction">
-          <Key>
-            <PropertyRef Name="ais_cdtransaction_id" />
-          </Key>
-          <Property Name="ais_cdtransaction_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="dateofcheck" Type="datetime" />
-          <Property Name="cashadvanceamount" Type="decimal" Precision="18" Scale="2" />
-          <Property Name="financialyear_id" Type="bigint" />
-          <Property Name="sourceoffunds" Type="nvarchar" MaxLength="250" />
-          <Property Name="particulars" Type="nvarchar" MaxLength="250" />
-          <Property Name="totalamount" Type="decimal" Precision="18" Scale="2" />
-          <Property Name="balanceunliquidated" Type="decimal" Precision="18" Scale="2" />
-        </EntityType>
-        <EntityType Name="ais_cdtransactiondetails">
-          <Key>
-            <PropertyRef Name="ais_cdtransactiondetails_id" />
-          </Key>
-          <Property Name="ais_cdtransactiondetails_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="transaction_date" Type="datetime" />
-          <Property Name="payee" Type="nvarchar" MaxLength="150" />
-          <Property Name="hris_personnel_id" Type="bigint" />
-          <Property Name="control_no" Type="nvarchar" MaxLength="150" />
-          <Property Name="ais_expensetype_id" Type="bigint" />
-          <Property Name="ais_account_id" Type="bigint" />
-          <Property Name="objectcode" Type="nvarchar" MaxLength="150" />
-          <Property Name="amount" Type="decimal" Precision="18" Scale="2" />
-          <Property Name="description" Type="nvarchar" MaxLength="250" />
-        </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'DEHRIS.dbo.appointment' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <EntityType Name="appointment">
-          <Key>
-            <PropertyRef Name="appointment_id" />
-          </Key>
-          <Property Name="appointment_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="header_id" Type="bigint" />
-          <Property Name="personnel_id" Type="bigint" />
-          <Property Name="regionid" Type="bigint" />
-          <Property Name="districtid" Type="bigint" />
-          <Property Name="prevpositiontype" Type="varchar" MaxLength="50" />
-          <Property Name="previousposition" Type="varchar" MaxLength="50" />
-          <Property Name="previoussalary" Type="float" />
-          <Property Name="appointmenttype" Type="int" />
-          <Property Name="itemno" Type="varchar" MaxLength="50" />
-          <Property Name="page" Type="varchar" MaxLength="50" />
-          <Property Name="publication" Type="varchar" MaxLength="50" />
-          <Property Name="datesigned" Type="datetime" />
-          <Property Name="datepublished" Type="varchar" MaxLength="50" />
-          <Property Name="prevemployee" Type="varchar" MaxLength="50" />
-          <Property Name="prevemployeestatus" Type="int" />
-          <Property Name="cssmcno" Type="int" />
-          <Property Name="funds" Type="varchar" MaxLength="50" />
-          <Property Name="name" Type="varchar" MaxLength="50" />
-          <Property Name="year" Type="int" />
-          <Property Name="designation" Type="varchar" MaxLength="50" />
-          <Property Name="personnelselection" Type="varchar" MaxLength="50" />
-          <Property Name="personnelselectiondesignation" Type="varchar" MaxLength="50" />
-          <Property Name="personnelofficer" Type="varchar" MaxLength="50" />
-          <Property Name="personnelofficerdesignation" Type="varchar" MaxLength="50" />
-          <Property Name="issave" Type="bit" />
-          <Property Name="datecreated" Type="datetime" />
-          <Property Name="userid" Type="bigint" />
-          <Property Name="transtype" Type="int" />
-          <Property Name="nosatype" Type="int" />
-        </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'DEHRIS.dbo.appointmentheader' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <EntityType Name="appointmentheader">
-          <Key>
-            <PropertyRef Name="header_id" />
-          </Key>
-          <Property Name="header_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="datesigned" Type="datetime" />
-          <Property Name="name" Type="varchar" MaxLength="50" />
-          <Property Name="designation" Type="varchar" MaxLength="50" />
-          <Property Name="region_id" Type="bigint" />
-          <Property Name="district_id" Type="bigint" />
-          <Property Name="datecreated" Type="datetime" />
-          <Property Name="headeridtemp" Type="varchar" MaxLength="250" />
-        </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'DEHRIS.dbo.appointmenttypes' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <EntityType Name="appointmenttypes">
-          <Key>
-            <PropertyRef Name="appointmenttype_id" />
-          </Key>
-          <Property Name="appointmenttype_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="appointmenttypename" Type="varchar" MaxLength="50" />
-        </EntityType>
-        <EntityType Name="children">
-          <Key>
-            <PropertyRef Name="child_id" />
-          </Key>
-          <Property Name="child_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="personnel_id" Type="bigint" />
-          <Property Name="childname" Type="varchar" MaxLength="50" />
-          <Property Name="childbirthdate" Type="varchar" MaxLength="50" />
-          <Property Name="childstatusid" Type="int" />
-          <Property Name="isInactive" Type="bit" />
-          <Property Name="dateCreated" Type="datetime" />
-          <Property Name="region_id" Type="bigint" />
-        </EntityType>
         <EntityType Name="civilservice">
           <Key>
             <PropertyRef Name="civilservice_id" />
           </Key>
           <Property Name="civilservice_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="personnel_id" Type="bigint" />
-          <Property Name="civilservicename" Type="varchar" MaxLength="250" />
-          <Property Name="rate" Type="varchar" MaxLength="50" />
-          <Property Name="examdate" Type="varchar" MaxLength="50" />
-          <Property Name="placeconducted" Type="varchar" MaxLength="50" />
-          <Property Name="civilservice_number" Type="varchar" MaxLength="50" />
-          <Property Name="releasedate" Type="varchar" MaxLength="50" />
-          <Property Name="isInactive" Type="bit" />
-          <Property Name="datecreated" Type="datetime" />
           <Property Name="region_id" Type="bigint" />
+          <Property Name="civilservicename" Type="varchar" MaxLength="250" />
+          <Property Name="rate" Type="varchar" MaxLength="150" />
+          <Property Name="examdate" Type="varchar" MaxLength="150" />
+          <Property Name="placeconducted" Type="varchar" MaxLength="150" />
+          <Property Name="civilservice_number" Type="varchar" MaxLength="150" />
+          <Property Name="releasedate" Type="varchar" MaxLength="150" />
+          <Property Name="isInactive" Type="bit" />
           <Property Name="district_id" Type="bigint" />
+          <Property Name="dateCreated" Type="smalldatetime" />
         </EntityType>
-        <EntityType Name="common_importtempate">
-          <Key>
-            <PropertyRef Name="common_importtemplate_id" />
-          </Key>
-          <Property Name="common_importtemplate_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="title" Type="nvarchar" MaxLength="250" />
-          <Property Name="maxiteration" Type="int" />
-          <Property Name="value2" Type="nvarchar" MaxLength="250" />
-        </EntityType>
-        <EntityType Name="common_importtemplatedetail">
-          <Key>
-            <PropertyRef Name="common_importtemplatedetail_id" />
-          </Key>
-          <Property Name="common_importtemplatedetail_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="common_importtemplate_id" Type="bigint" />
-          <Property Name="title" Type="nvarchar" MaxLength="500" />
-          <Property Name="celladdress" Type="nchar" MaxLength="20" />
-          <Property Name="value1" Type="nvarchar" MaxLength="500" />
-          <Property Name="value2" Type="nvarchar" MaxLength="500" />
-          <Property Name="iscellrange" Type="bit" />
-          <Property Name="isvoid" Type="bit" />
-          <Property Name="isvertical" Type="bit" />
-          <Property Name="maxstep" Type="int" />
-          <Property Name="worksheetno" Type="int" />
-          <Property Name="isusedefaultvalue" Type="bit" />
-          <Property Name="defaultvalue" Type="nvarchar" MaxLength="500" />
-        </EntityType>
-        <EntityType Name="common_importtransaction">
-          <Key>
-            <PropertyRef Name="common_importtransaction_id" />
-          </Key>
-          <Property Name="common_importtransaction_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="transactionname" Type="nvarchar" MaxLength="200" />
-          <Property Name="transactiondate" Type="datetime" />
-          <Property Name="user_id" Type="bigint" />
-          <Property Name="isactive" Type="bit" />
-        </EntityType>
-        <EntityType Name="common_importtransactiondetail">
-          <Key>
-            <PropertyRef Name="common_importtransactiondetails_id" />
-          </Key>
-          <Property Name="common_importtransactiondetails_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="common_importtransaction_id" Type="bigint" Nullable="false" />
-          <Property Name="title" Type="nvarchar" MaxLength="500" />
-          <Property Name="directory" Type="nvarchar" MaxLength="500" />
-          <Property Name="filename" Type="nvarchar" MaxLength="500" />
-          <Property Name="tablename" Type="nvarchar" MaxLength="250" />
-          <Property Name="tableid" Type="bigint" />
-          <Property Name="description" Type="nvarchar" MaxLength="900" />
-        </EntityType>
-        <EntityType Name="educationalbackground">
+        <EntityType Name="educationalBackground">
           <Key>
             <PropertyRef Name="educationalBackground_id" />
           </Key>
           <Property Name="educationalBackground_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="personnel_id" Type="bigint" />
-          <Property Name="level" Type="varchar" MaxLength="50" />
-          <Property Name="school" Type="varchar" MaxLength="100" />
-          <Property Name="degreeEarned" Type="varchar" MaxLength="100" />
+          <Property Name="isInActive" Type="bit" />
+          <Property Name="level" Type="varchar" MaxLength="150" />
+          <Property Name="school" Type="varchar" MaxLength="150" />
+          <Property Name="degreeEarned" Type="varchar" MaxLength="150" />
           <Property Name="yearGraduated" Type="varchar" MaxLength="50" />
-          <Property Name="unitsCompleted" Type="varchar" MaxLength="100" />
+          <Property Name="unitsCompleted" Type="varchar" MaxLength="250" />
           <Property Name="dateFrom" Type="varchar" MaxLength="50" />
           <Property Name="dateTo" Type="varchar" MaxLength="50" />
-          <Property Name="honorsReceived" Type="varchar" MaxLength="100" />
-          <Property Name="isInActive" Type="bit" />
-          <Property Name="datetimestamp" Type="datetime" />
+          <Property Name="honorsReceived" Type="varchar" MaxLength="250" />
+          <Property Name="datetimestamp" Type="smalldatetime" />
           <Property Name="region_id" Type="bigint" />
           <Property Name="section_id" Type="bigint" />
         </EntityType>
-        <EntityType Name="hris_address">
+        <EntityType Name="hris_applicants">
           <Key>
-            <PropertyRef Name="hris_address_id" />
+            <PropertyRef Name="hris_applicants_id" />
           </Key>
-          <Property Name="hris_address_id" Type="bigint" Nullable="false" />
-          <Property Name="fulladdress" Type="nchar" MaxLength="10" />
-          <Property Name="addresstype" Type="nchar" MaxLength="10" />
-          <Property Name="hris_personnel_id" Type="bigint" />
-        </EntityType>
-        <EntityType Name="hris_birform2305">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="EXMPN_CERT_SEQ_NUM" Type="nvarchar" MaxLength="350" />
-          <Property Name="EMP_VER" Type="nvarchar" MaxLength="350" />
-          <Property Name="EMP_FORM_VER" Type="nvarchar" MaxLength="350" />
-          <Property Name="FTYPE_CODE" Type="nvarchar" MaxLength="350" />
-          <Property Name="DLN" Type="nvarchar" MaxLength="350" />
-          <Property Name="EFFECTIVE_DATE" Type="nvarchar" MaxLength="350" />
-          <Property Name="FILING_REASON" Type="nvarchar" MaxLength="350" />
-          <Property Name="FILING_DATE" Type="nvarchar" MaxLength="350" />
-          <Property Name="TIN" Type="nvarchar" MaxLength="350" />
-          <Property Name="BRANCH_CODE" Type="nvarchar" MaxLength="350" />
-          <Property Name="LAST_NAME" Type="nvarchar" MaxLength="350" />
-          <Property Name="FIRST_NAME" Type="nvarchar" MaxLength="350" />
-          <Property Name="MIDDLE_NAME" Type="nvarchar" MaxLength="350" />
-          <Property Name="TYPE_FILER" Type="nvarchar" MaxLength="350" />
-          <Property Name="SIGNATURE_YN" Type="nvarchar" MaxLength="350" />
-          <Property Name="ATTACHMENT_YN" Type="nvarchar" MaxLength="350" />
-          <Property Name="CIVIL_STATUS" Type="nvarchar" MaxLength="350" />
-          <Property Name="claims_yn" Type="nvarchar" MaxLength="350" />
-          <Property Name="AF" Type="nvarchar" MaxLength="350" />
-          <Property Name="PROCESS_YN" Type="nvarchar" MaxLength="350" />
-          <Property Name="CREATED_BY" Type="nvarchar" MaxLength="350" />
-          <Property Name="DATE_CREATED" Type="nvarchar" MaxLength="350" />
-          <Property Name="RDO_CODE" Type="nvarchar" MaxLength="350" />
-          <Property Name="ADD_NUM_BLDG" Type="nvarchar" MaxLength="350" />
-          <Property Name="ADD_STREET" Type="nvarchar" MaxLength="350" />
-          <Property Name="ADD_BRGY" Type="nvarchar" MaxLength="350" />
-          <Property Name="ADD_MUN_TOWN_CITY" Type="nvarchar" MaxLength="350" />
-          <Property Name="ADD_PROV" Type="nvarchar" MaxLength="350" />
-          <Property Name="ZIP_CODE" Type="nvarchar" MaxLength="350" />
-          <Property Name="P5TIN" Type="nvarchar" MaxLength="350" />
-          <Property Name="P5BCODE" Type="nvarchar" MaxLength="350" />
-          <Property Name="P5RDOCODE" Type="nvarchar" MaxLength="350" />
-          <Property Name="P5EMP_FNAME" Type="nvarchar" MaxLength="350" />
-          <Property Name="P5EMP_LNAME" Type="nvarchar" MaxLength="350" />
-          <Property Name="P5EMP_MNAME" Type="nvarchar" MaxLength="350" />
-          <Property Name="P5EMPLOYER_NAME" Type="nvarchar" MaxLength="350" />
-          <Property Name="P5ADD_num" Type="nvarchar" MaxLength="350" />
-          <Property Name="P5ADD_SUBD" Type="nvarchar" MaxLength="350" />
-          <Property Name="P5ADD_BRGY" Type="nvarchar" MaxLength="350" />
-          <Property Name="P5ADD_MUN" Type="nvarchar" MaxLength="350" />
-          <Property Name="P5ADD_PROV" Type="nvarchar" MaxLength="350" />
-          <Property Name="P5ADD_ZCODE" Type="nvarchar" MaxLength="350" />
-          <Property Name="WA_SIGNATURE_YN" Type="nvarchar" MaxLength="350" />
-          <Property Name="WA_CERT_DATE" Type="nvarchar" MaxLength="350" />
-          <Property Name="sps_empt_status" Type="nvarchar" MaxLength="350" />
-          <Property Name="SPOUSE_TIN" Type="nvarchar" MaxLength="350" />
-          <Property Name="SPOUSE_BCODE" Type="nvarchar" MaxLength="350" />
-          <Property Name="SPOUSE_LAST_NAME" Type="nvarchar" MaxLength="350" />
-          <Property Name="SPOUSE_FIRST_NAME" Type="nvarchar" MaxLength="350" />
-          <Property Name="SPOUSE_MIDDLE_NAME" Type="nvarchar" MaxLength="350" />
-          <Property Name="SPOUSE_EMPLOYER_TIN" Type="nvarchar" MaxLength="350" />
-          <Property Name="SPOUSE_EMPLOYER_BRANCH" Type="nvarchar" MaxLength="350" />
-          <Property Name="EMPLOYMENT_TYPE" Type="nvarchar" MaxLength="350" />
-          <Property Name="MAIN_EMPR_YN" Type="nvarchar" MaxLength="350" />
-          <Property Name="NUM_QUALIFIED_DEP" Type="nvarchar" MaxLength="350" />
-          <Property Name="FORM_STATUS" Type="nvarchar" MaxLength="350" />
-          <Property Name="Editor" Type="nvarchar" MaxLength="350" />
-          <Property Name="DATE_MODIFIED" Type="nvarchar" MaxLength="350" />
-          <Property Name="NUM_OF_DEPND_CALC" Type="nvarchar" MaxLength="350" />
-          <Property Name="UPDATE_REASON" Type="nvarchar" MaxLength="350" />
-          <Property Name="CIVIL_STATUS_CALC" Type="nvarchar" MaxLength="350" />
-          <Property Name="DEPD_CERT_SEQ_NUM" Type="nvarchar" MaxLength="350" />
-          <Property Name="DEP_VER" Type="nvarchar" MaxLength="350" />
-          <Property Name="DEPENDENT1_LAST_NAME" Type="nvarchar" MaxLength="350" />
-          <Property Name="DEPENDENT1_FIRST_NAME" Type="nvarchar" MaxLength="350" />
-          <Property Name="DEPENDENT1_MIDDLE_NAME" Type="nvarchar" MaxLength="350" />
-          <Property Name="DEP1BDate" Type="nvarchar" MaxLength="350" />
-          <Property Name="DEPENDENT1_RELATIONSHIP_CODE" Type="nvarchar" MaxLength="350" />
-          <Property Name="INCAPACITATED_FLAG1_YN" Type="nvarchar" MaxLength="350" />
-          <Property Name="active_flag1" Type="nvarchar" MaxLength="350" />
-          <Property Name="dep1ModifiedBy" Type="nvarchar" MaxLength="350" />
-          <Property Name="Expr1071" Type="nvarchar" MaxLength="350" />
-          <Property Name="dep1ErrorCode" Type="nvarchar" MaxLength="350" />
-          <Property Name="DEPENDENT2_LAST_NAME" Type="nvarchar" MaxLength="350" />
-          <Property Name="DEPENDENT2_FIRST_NAME" Type="nvarchar" MaxLength="350" />
-          <Property Name="DEPENDENT2_MIDDLE_NAME" Type="nvarchar" MaxLength="350" />
-          <Property Name="DEP2BDate" Type="nvarchar" MaxLength="350" />
-          <Property Name="DEPENDENT2_RELATIONSHIP_CODE" Type="nvarchar" MaxLength="350" />
-          <Property Name="INCAPACITATED_FLAG2_YN" Type="nvarchar" MaxLength="350" />
-          <Property Name="active_flag2" Type="nvarchar" MaxLength="350" />
-          <Property Name="dep2ModifiedBy" Type="nvarchar" MaxLength="350" />
-          <Property Name="Expr1081" Type="nvarchar" MaxLength="350" />
-          <Property Name="dep2ErrorCode" Type="nvarchar" MaxLength="350" />
-          <Property Name="DEPENDENT3_LAST_NAME" Type="nvarchar" MaxLength="350" />
-          <Property Name="DEPENDENT3_FIRST_NAME" Type="nvarchar" MaxLength="350" />
-          <Property Name="DEPENDENT3_MIDDLE_NAME" Type="nvarchar" MaxLength="350" />
-          <Property Name="DEP3BDate" Type="nvarchar" MaxLength="350" />
-          <Property Name="DEPENDENT3_RELATIONSHIP_CODE" Type="nvarchar" MaxLength="350" />
-          <Property Name="INCAPACITATED_FLAG3_YN" Type="nvarchar" MaxLength="350" />
-          <Property Name="active_flag3" Type="nvarchar" MaxLength="350" />
-          <Property Name="dep3ModifiedBy" Type="nvarchar" MaxLength="350" />
-          <Property Name="Expr1091" Type="nvarchar" MaxLength="350" />
-          <Property Name="dep3ErrorCode" Type="nvarchar" MaxLength="350" />
-          <Property Name="DEPENDENT4_LAST_NAME" Type="nvarchar" MaxLength="350" />
-          <Property Name="DEPENDENT4_FIRST_NAME" Type="nvarchar" MaxLength="350" />
-          <Property Name="DEPENDENT4_MIDDLE_NAME" Type="nvarchar" MaxLength="350" />
-          <Property Name="DEP4BDate" Type="nvarchar" MaxLength="350" />
-          <Property Name="DEPENDENT4_RELATIONSHIP_CODE" Type="nvarchar" MaxLength="350" />
-          <Property Name="INCAPACITATED_FLAG4_YN" Type="nvarchar" MaxLength="350" />
-          <Property Name="active_flag4" Type="nvarchar" MaxLength="350" />
-          <Property Name="dep4ModifiedBy" Type="nvarchar" MaxLength="350" />
-          <Property Name="Expr1101" Type="nvarchar" MaxLength="350" />
-          <Property Name="dep4ErrorCode" Type="nvarchar" MaxLength="350" />
-          <Property Name="SEX" Type="nvarchar" MaxLength="350" />
-          <Property Name="PLACE_OF_BIRTH" Type="nvarchar" MaxLength="350" />
-          <Property Name="MOTHER_NAME" Type="nvarchar" MaxLength="350" />
-          <Property Name="FATHER_NAME" Type="nvarchar" MaxLength="350" />
-          <Property Name="CITIZENSHIP" Type="nvarchar" MaxLength="350" />
-          <Property Name="OTHER_CITIZENSHIP" Type="nvarchar" MaxLength="350" />
-          <Property Name="ID_TYPE" Type="nvarchar" MaxLength="350" />
-          <Property Name="ID_NUMBER" Type="nvarchar" MaxLength="350" />
-          <Property Name="ID_ISSUER" Type="nvarchar" MaxLength="350" />
-          <Property Name="ID_EFFECTIVE_DATE" Type="nvarchar" MaxLength="350" />
-          <Property Name="ID_EXPIRY_DATE" Type="nvarchar" MaxLength="350" />
-          <Property Name="ID_PLACE_ISSUE" Type="nvarchar" MaxLength="350" />
-          <Property Name="PHONE_NUMBER" Type="nvarchar" MaxLength="350" />
-          <Property Name="MOBILE_NUMBER" Type="nvarchar" MaxLength="350" />
-          <Property Name="FAX_NUMBER" Type="nvarchar" MaxLength="350" />
-          <Property Name="EMAIL_ADDRESS" Type="nvarchar" MaxLength="350" />
-          <Property Name="FOREIGN_ADDRESS" Type="nvarchar" MaxLength="350" />
-          <Property Name="WA_CONTACT_NUMBER" Type="nvarchar" MaxLength="350" />
-          <Property Name="RELATIONSHIP_START_DATE" Type="nvarchar" MaxLength="350" />
-          <Property Name="COUNTRY" Type="nvarchar" MaxLength="350" />
-          <Property Name="DATE_MODIFIED_REP" Type="nvarchar" MaxLength="350" />
-          <Property Name="DATE_MODIFIED_REPORT" Type="nvarchar" MaxLength="350" />
-          <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="BIRTH_DATE" Type="nchar" MaxLength="10" />
-        </EntityType>
-        <EntityType Name="hris_employment">
-          <Key>
-            <PropertyRef Name="hris_employment_id" />
-          </Key>
-          <Property Name="hris_employment_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="datefrom" Type="date" />
-          <Property Name="dateto" Type="date" />
-          <Property Name="positiontitle" Type="nvarchar" MaxLength="200" />
-          <Property Name="departmentagency" Type="nvarchar" MaxLength="200" />
-          <Property Name="monthlysalary" Type="float" />
-          <Property Name="salarygrade" Type="nvarchar" MaxLength="200" />
-          <Property Name="stepincrement" Type="nvarchar" MaxLength="200" />
-          <Property Name="statusofappointment" Type="nvarchar" MaxLength="200" />
-          <Property Name="isgovservice" Type="bit" />
-          <Property Name="hris_personnel_id" Type="bigint" Nullable="false" />
+          <Property Name="hris_applicants_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="lastname" Type="nvarchar" MaxLength="200" />
+          <Property Name="firstname" Type="nvarchar" MaxLength="200" />
+          <Property Name="middlename" Type="nvarchar" MaxLength="200" />
+          <Property Name="nameextension" Type="nvarchar" MaxLength="100" />
+          <Property Name="dateofbirth" Type="datetime" />
+          <Property Name="placeofbirth" Type="nvarchar" MaxLength="200" />
+          <Property Name="sex" Type="nvarchar" MaxLength="100" />
+          <Property Name="civilstatus" Type="nvarchar" MaxLength="100" />
+          <Property Name="citizenship" Type="nvarchar" MaxLength="200" />
+          <Property Name="height" Type="nvarchar" MaxLength="100" />
+          <Property Name="weight" Type="nvarchar" MaxLength="100" />
+          <Property Name="bloodtype" Type="nvarchar" MaxLength="100" />
+          <Property Name="residentialaddress" Type="nvarchar(max)" />
+          <Property Name="residentialzipcode" Type="nvarchar" MaxLength="100" />
+          <Property Name="residentialtelephoneno" Type="nvarchar" MaxLength="100" />
+          <Property Name="permanentaddress" Type="nvarchar(max)" />
+          <Property Name="permanentzipcode" Type="nvarchar" MaxLength="100" />
+          <Property Name="permanenttelephoneno" Type="nvarchar" MaxLength="100" />
+          <Property Name="emailaddress" Type="nvarchar" MaxLength="120" />
+          <Property Name="cellphoneno" Type="nvarchar" MaxLength="100" />
+          <Property Name="agencyemployeeno" Type="nvarchar" MaxLength="100" />
+          <Property Name="tin_no" Type="nvarchar" MaxLength="100" />
+          <Property Name="gsis_no" Type="nvarchar" MaxLength="100" />
+          <Property Name="sss_no" Type="nvarchar" MaxLength="100" />
+          <Property Name="pagibig_no" Type="nvarchar" MaxLength="100" />
+          <Property Name="external_id" Type="bigint" />
         </EntityType>
         <EntityType Name="hris_personnel">
           <Key>
@@ -360,478 +81,188 @@ warning 6002: The table/view 'DEHRIS.dbo.appointmenttypes' does not have a prima
           <Property Name="lastname" Type="nvarchar" MaxLength="200" />
           <Property Name="firstname" Type="nvarchar" MaxLength="200" />
           <Property Name="middlename" Type="nvarchar" MaxLength="200" />
-          <Property Name="nameextension" Type="nvarchar" MaxLength="20" />
-          <Property Name="dateofbirth" Type="date" />
+          <Property Name="nameextension" Type="nvarchar" MaxLength="100" />
+          <Property Name="dateofbirth" Type="datetime" />
           <Property Name="placeofbirth" Type="nvarchar" MaxLength="200" />
-          <Property Name="sex" Type="nvarchar" MaxLength="20" />
-          <Property Name="civilstatus" Type="nvarchar" MaxLength="20" />
+          <Property Name="sex" Type="nvarchar" MaxLength="100" />
+          <Property Name="civilstatus" Type="nvarchar" MaxLength="100" />
           <Property Name="citizenship" Type="nvarchar" MaxLength="200" />
-          <Property Name="height" Type="nvarchar" MaxLength="20" />
-          <Property Name="weight" Type="nvarchar" MaxLength="20" />
-          <Property Name="bloodtype" Type="nvarchar" MaxLength="20" />
-          <Property Name="residentialaddress" Type="nvarchar" MaxLength="500" />
-          <Property Name="residentialzipcode" Type="nvarchar" MaxLength="20" />
-          <Property Name="residentialtelephoneno" Type="nvarchar" MaxLength="50" />
-          <Property Name="permanentaddress" Type="nvarchar" MaxLength="500" />
-          <Property Name="permanentzipcode" Type="nvarchar" MaxLength="20" />
-          <Property Name="permanenttelephoneno" Type="nvarchar" MaxLength="50" />
-          <Property Name="emailaddress" Type="nvarchar" MaxLength="200" />
-          <Property Name="cellphoneno" Type="nvarchar" MaxLength="200" />
-          <Property Name="agencyemployeeno" Type="nvarchar" MaxLength="20" />
-          <Property Name="tin_no" Type="nvarchar" MaxLength="50" />
-          <Property Name="gsis_no" Type="nvarchar" MaxLength="50" />
-          <Property Name="sss_no" Type="nvarchar" MaxLength="50" />
-          <Property Name="pagibig_no" Type="nvarchar" MaxLength="50" />
+          <Property Name="height" Type="nvarchar" MaxLength="100" />
+          <Property Name="weight" Type="nvarchar" MaxLength="100" />
+          <Property Name="bloodtype" Type="nvarchar" MaxLength="100" />
+          <Property Name="residentialaddress" Type="nvarchar(max)" />
+          <Property Name="residentialzipcode" Type="nvarchar" MaxLength="100" />
+          <Property Name="residentialtelephoneno" Type="nvarchar" MaxLength="100" />
+          <Property Name="permanentaddress" Type="nvarchar(max)" />
+          <Property Name="permanentzipcode" Type="nvarchar" MaxLength="100" />
+          <Property Name="permanenttelephoneno" Type="nvarchar" MaxLength="100" />
+          <Property Name="emailaddress" Type="nvarchar" MaxLength="120" />
+          <Property Name="cellphoneno" Type="nvarchar" MaxLength="100" />
+          <Property Name="agencyemployeeno" Type="nvarchar" MaxLength="100" />
+          <Property Name="tin_no" Type="nvarchar" MaxLength="100" />
+          <Property Name="gsis_no" Type="nvarchar" MaxLength="100" />
+          <Property Name="sss_no" Type="nvarchar" MaxLength="100" />
+          <Property Name="pagibig_no" Type="nvarchar" MaxLength="100" />
           <Property Name="external_id" Type="bigint" />
         </EntityType>
-        <EntityType Name="pm_project">
-          <Key>
-            <PropertyRef Name="pm_projectid" />
-          </Key>
-          <Property Name="pm_projectid" Type="bigint" Nullable="false" />
-          <Property Name="agency" Type="nvarchar" MaxLength="200" />
-          <Property Name="address" Type="nvarchar" MaxLength="500" />
-          <Property Name="projects" Type="nvarchar" MaxLength="250" />
-          <Property Name="location" Type="nvarchar" MaxLength="500" />
-          <Property Name="totalcost" Type="decimal" Precision="18" Scale="2" />
-          <Property Name="datestarted" Type="date" />
-          <Property Name="noofextension" Type="int" />
-          <Property Name="datetargetcompletion" Type="date" />
-          <Property Name="completion" Type="int" />
-          <Property Name="totalcostincurred" Type="decimal" Precision="18" Scale="2" />
-          <Property Name="remarks" Type="nvarchar" MaxLength="500" />
-        </EntityType>
-        <EntityType Name="pm_projectaccess">
-          <Key>
-            <PropertyRef Name="pm_projectaccess_id" />
-          </Key>
-          <Property Name="pm_projectaccess_id" Type="bigint" Nullable="false" />
-          <Property Name="accessdatetime" Type="datetime" />
-          <Property Name="accesstype" Type="int" />
-        </EntityType>
-        <EntityType Name="profilePicture">
+        <EntityType Name="profilepicture">
           <Key>
             <PropertyRef Name="profilepicture_id" />
           </Key>
           <Property Name="profilepicture_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="personnel_id" Type="bigint" Nullable="false" />
+          <Property Name="personnel_id" Type="bigint" />
           <Property Name="isInActive" Type="bit" />
           <Property Name="filepath" Type="nvarchar(max)" />
-          <Property Name="contentType" Type="nchar" MaxLength="10" />
+          <Property Name="contentType" Type="nvarchar(max)" />
           <Property Name="binaryImage" Type="image" />
         </EntityType>
-        <EntityType Name="sis_school">
-          <Key>
-            <PropertyRef Name="sis_school_id" />
-          </Key>
-          <Property Name="sis_school_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="sis_schoolname" Type="nvarchar" MaxLength="500" />
-          <Property Name="sis_schoolpopulation" Type="int" />
-          <Property Name="sis_school_type" Type="nvarchar" MaxLength="50" />
-          <Property Name="division_id" Type="nchar" MaxLength="50" />
-          <Property Name="district_id" Type="nchar" MaxLength="50" />
-          <Property Name="address" Type="nvarchar" MaxLength="500" />
-          <Property Name="sis_schooldistrict_id" Type="bigint" />
-          <Property Name="ispriv" Type="bit" />
-          <Property Name="sis_school_code" Type="bigint" />
-        </EntityType>
-        <EntityType Name="sis_schooldistrict">
-          <Key>
-            <PropertyRef Name="sis_schooldistrict_id" />
-          </Key>
-          <Property Name="sis_schooldistrict_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="schooldistrictname" Type="nvarchar" MaxLength="200" />
-        </EntityType>
-        <EntityType Name="specialskills">
+        <EntityType Name="specialSkills">
           <Key>
             <PropertyRef Name="specialSkill_id" />
           </Key>
           <Property Name="specialSkill_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="personnel_id" Type="bigint" />
-          <Property Name="specialSkillDescription" Type="varchar" MaxLength="250" />
-          <Property Name="isInactive" Type="bit" />
-          <Property Name="dateCreated" Type="datetime" />
+          <Property Name="personnel_id" Type="bigint" Nullable="false" />
           <Property Name="region_id" Type="bigint" />
           <Property Name="section_id" Type="bigint" />
+          <Property Name="specialSkillDescription" Type="varchar(max)" />
+          <Property Name="isInactive" Type="bit" />
+          <Property Name="dateCreated" Type="datetime" />
         </EntityType>
         <EntityType Name="training">
           <Key>
             <PropertyRef Name="training_id" />
           </Key>
           <Property Name="training_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="region_id" Type="bigint" />
           <Property Name="header_id" Type="bigint" />
-          <Property Name="title" Type="varchar" MaxLength="1000" />
-          <Property Name="startDate" Type="smalldatetime" />
-          <Property Name="endDate" Type="smalldatetime" />
-          <Property Name="noOfHours" Type="varchar" MaxLength="50" />
-          <Property Name="conductedBy" Type="varchar" MaxLength="250" />
+          <Property Name="title" Type="nvarchar" MaxLength="150" />
+          <Property Name="inclusiveDates" Type="nvarchar" MaxLength="150" />
+          <Property Name="noOfHours" Type="int" />
+          <Property Name="conductedBy" Type="nvarchar" MaxLength="150" />
           <Property Name="isInactive" Type="bit" />
           <Property Name="dateCreated" Type="datetime" />
           <Property Name="isScholarship" Type="bit" />
-          <Property Name="region_id" Type="bigint" />
           <Property Name="division_id" Type="bigint" />
           <Property Name="trainingModule_id" Type="bigint" />
           <Property Name="category_id" Type="bigint" />
+          <Property Name="dateFrom" Type="smalldatetime" />
+          <Property Name="dateTo" Type="smalldatetime" />
           <Property Name="personnel_id" Type="bigint" />
-          <Property Name="description" Type="nchar" MaxLength="10" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'DEHRIS.dbo.workExperience' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="workExperience">
           <Key>
             <PropertyRef Name="workExperience_id" />
           </Key>
           <Property Name="workExperience_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="personnel_id" Type="bigint" />
+          <Property Name="dateFrom" Type="smalldatetime" />
+          <Property Name="dateTo" Type="varchar" MaxLength="150" />
           <Property Name="region_id" Type="bigint" />
           <Property Name="section_id" Type="bigint" />
-          <Property Name="personnel_id" Type="bigint" />
-          <Property Name="serviceType" Type="int" />
-          <Property Name="dateFrom" Type="datetime" />
-          <Property Name="dateTo" Type="varchar" MaxLength="10" />
-          <Property Name="serviceLength" Type="varchar" MaxLength="50" />
+          <Property Name="serviceType" Type="nvarchar" MaxLength="150" />
+          <Property Name="serviceLength" Type="varchar" MaxLength="150" />
           <Property Name="position" Type="varchar" MaxLength="150" />
           <Property Name="salary" Type="numeric" Precision="18" Scale="3" />
-          <Property Name="status_id" Type="int" />
-          <Property Name="companyname" Type="varchar" MaxLength="250" />
-          <Property Name="separationCause" Type="varchar" MaxLength="250" />
+          <Property Name="status_id" Type="bigint" />
+          <Property Name="companyname" Type="varchar" MaxLength="350" />
+          <Property Name="separationCause" Type="varchar" MaxLength="350" />
           <Property Name="separationDate" Type="varchar" MaxLength="50" />
-          <Property Name="remarks" Type="varchar" MaxLength="1000" />
+          <Property Name="remarks" Type="varchar(max)" />
           <Property Name="isInactive" Type="bit" />
-          <Property Name="isApproved" Type="int" />
+          <Property Name="isApproved" Type="bit" />
           <Property Name="rdetail_id" Type="bigint" />
         </EntityType>
         <EntityContainer Name="DEHRISModelStoreContainer">
-          <EntitySet Name="ais_cdtransactiondetails" EntityType="Self.ais_cdtransactiondetails" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="children" EntityType="Self.children" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="civilservice" EntityType="Self.civilservice" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="common_importtempate" EntityType="Self.common_importtempate" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="common_importtemplatedetail" EntityType="Self.common_importtemplatedetail" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="common_importtransaction" EntityType="Self.common_importtransaction" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="common_importtransactiondetail" EntityType="Self.common_importtransactiondetail" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="educationalbackground" EntityType="Self.educationalbackground" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="hris_address" EntityType="Self.hris_address" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="hris_birform2305" EntityType="Self.hris_birform2305" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="hris_employment" EntityType="Self.hris_employment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="educationalBackground" EntityType="Self.educationalBackground" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="hris_applicants" EntityType="Self.hris_applicants" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="hris_personnel" EntityType="Self.hris_personnel" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="pm_project" EntityType="Self.pm_project" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="pm_projectaccess" EntityType="Self.pm_projectaccess" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="profilePicture" EntityType="Self.profilePicture" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="sis_school" EntityType="Self.sis_school" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="sis_schooldistrict" EntityType="Self.sis_schooldistrict" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="specialskills" EntityType="Self.specialskills" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="profilepicture" EntityType="Self.profilepicture" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="specialSkills" EntityType="Self.specialSkills" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="training" EntityType="Self.training" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="ais_cdtransaction" EntityType="Self.ais_cdtransaction" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [ais_cdtransaction].[ais_cdtransaction_id] AS [ais_cdtransaction_id], 
-    [ais_cdtransaction].[dateofcheck] AS [dateofcheck], 
-    [ais_cdtransaction].[cashadvanceamount] AS [cashadvanceamount], 
-    [ais_cdtransaction].[financialyear_id] AS [financialyear_id], 
-    [ais_cdtransaction].[sourceoffunds] AS [sourceoffunds], 
-    [ais_cdtransaction].[particulars] AS [particulars], 
-    [ais_cdtransaction].[totalamount] AS [totalamount], 
-    [ais_cdtransaction].[balanceunliquidated] AS [balanceunliquidated]
-    FROM [dbo].[ais_cdtransaction] AS [ais_cdtransaction]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="appointment" EntityType="Self.appointment" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [appointment].[appointment_id] AS [appointment_id], 
-    [appointment].[header_id] AS [header_id], 
-    [appointment].[personnel_id] AS [personnel_id], 
-    [appointment].[regionid] AS [regionid], 
-    [appointment].[districtid] AS [districtid], 
-    [appointment].[prevpositiontype] AS [prevpositiontype], 
-    [appointment].[previousposition] AS [previousposition], 
-    [appointment].[previoussalary] AS [previoussalary], 
-    [appointment].[appointmenttype] AS [appointmenttype], 
-    [appointment].[itemno] AS [itemno], 
-    [appointment].[page] AS [page], 
-    [appointment].[publication] AS [publication], 
-    [appointment].[datesigned] AS [datesigned], 
-    [appointment].[datepublished] AS [datepublished], 
-    [appointment].[prevemployee] AS [prevemployee], 
-    [appointment].[prevemployeestatus] AS [prevemployeestatus], 
-    [appointment].[cssmcno] AS [cssmcno], 
-    [appointment].[funds] AS [funds], 
-    [appointment].[name] AS [name], 
-    [appointment].[year] AS [year], 
-    [appointment].[designation] AS [designation], 
-    [appointment].[personnelselection] AS [personnelselection], 
-    [appointment].[personnelselectiondesignation] AS [personnelselectiondesignation], 
-    [appointment].[personnelofficer] AS [personnelofficer], 
-    [appointment].[personnelofficerdesignation] AS [personnelofficerdesignation], 
-    [appointment].[issave] AS [issave], 
-    [appointment].[datecreated] AS [datecreated], 
-    [appointment].[userid] AS [userid], 
-    [appointment].[transtype] AS [transtype], 
-    [appointment].[nosatype] AS [nosatype]
-    FROM [dbo].[appointment] AS [appointment]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="appointmentheader" EntityType="Self.appointmentheader" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [appointmentheader].[header_id] AS [header_id], 
-    [appointmentheader].[datesigned] AS [datesigned], 
-    [appointmentheader].[name] AS [name], 
-    [appointmentheader].[designation] AS [designation], 
-    [appointmentheader].[region_id] AS [region_id], 
-    [appointmentheader].[district_id] AS [district_id], 
-    [appointmentheader].[datecreated] AS [datecreated], 
-    [appointmentheader].[headeridtemp] AS [headeridtemp]
-    FROM [dbo].[appointmentheader] AS [appointmentheader]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="appointmenttypes" EntityType="Self.appointmenttypes" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [appointmenttypes].[appointmenttype_id] AS [appointmenttype_id], 
-    [appointmenttypes].[appointmenttypename] AS [appointmenttypename]
-    FROM [dbo].[appointmenttypes] AS [appointmenttypes]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="workExperience" EntityType="Self.workExperience" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [workExperience].[workExperience_id] AS [workExperience_id], 
-    [workExperience].[region_id] AS [region_id], 
-    [workExperience].[section_id] AS [section_id], 
-    [workExperience].[personnel_id] AS [personnel_id], 
-    [workExperience].[serviceType] AS [serviceType], 
-    [workExperience].[dateFrom] AS [dateFrom], 
-    [workExperience].[dateTo] AS [dateTo], 
-    [workExperience].[serviceLength] AS [serviceLength], 
-    [workExperience].[position] AS [position], 
-    [workExperience].[salary] AS [salary], 
-    [workExperience].[status_id] AS [status_id], 
-    [workExperience].[companyname] AS [companyname], 
-    [workExperience].[separationCause] AS [separationCause], 
-    [workExperience].[separationDate] AS [separationDate], 
-    [workExperience].[remarks] AS [remarks], 
-    [workExperience].[isInactive] AS [isInactive], 
-    [workExperience].[isApproved] AS [isApproved], 
-    [workExperience].[rdetail_id] AS [rdetail_id]
-    FROM [dbo].[workExperience] AS [workExperience]</DefiningQuery>
-          </EntitySet>
+          <EntitySet Name="workExperience" EntityType="Self.workExperience" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DEHRISModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="ais_cdtransactiondetails">
+        <EntityContainer Name="DEHRISEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="civilservices" EntityType="DEHRISModel.civilservice" />
+          <EntitySet Name="educationalBackgrounds" EntityType="DEHRISModel.educationalBackground" />
+          <EntitySet Name="hris_applicants" EntityType="DEHRISModel.hris_applicants" />
+          <EntitySet Name="hris_personnel" EntityType="DEHRISModel.hris_personnel" />
+          <EntitySet Name="profilepictures" EntityType="DEHRISModel.profilepicture" />
+          <EntitySet Name="specialSkills" EntityType="DEHRISModel.specialSkill" />
+          <EntitySet Name="trainings" EntityType="DEHRISModel.training" />
+          <EntitySet Name="workExperiences" EntityType="DEHRISModel.workExperience" />
+        </EntityContainer>
+        <EntityType Name="civilservice">
           <Key>
-            <PropertyRef Name="ais_cdtransactiondetails_id" />
+            <PropertyRef Name="civilservice_id" />
           </Key>
-          <Property Name="ais_cdtransactiondetails_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="transaction_date" Type="DateTime" Precision="3" />
-          <Property Name="payee" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
-          <Property Name="hris_personnel_id" Type="Int64" />
-          <Property Name="control_no" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
-          <Property Name="ais_expensetype_id" Type="Int64" />
-          <Property Name="ais_account_id" Type="Int64" />
-          <Property Name="objectcode" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
-          <Property Name="amount" Type="Decimal" Precision="18" Scale="2" />
-          <Property Name="description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="civilservice_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="personnel_id" Type="Int64" />
+          <Property Name="region_id" Type="Int64" />
+          <Property Name="civilservicename" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="rate" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="examdate" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="placeconducted" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="civilservice_number" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="releasedate" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="isInactive" Type="Boolean" />
+          <Property Name="district_id" Type="Int64" />
+          <Property Name="dateCreated" Type="DateTime" Precision="0" />
         </EntityType>
-        <EntityType Name="common_importtempate">
+        <EntityType Name="educationalBackground">
           <Key>
-            <PropertyRef Name="common_importtemplate_id" />
+            <PropertyRef Name="educationalBackground_id" />
           </Key>
-          <Property Name="common_importtemplate_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="title" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
-          <Property Name="maxiteration" Type="Int32" />
-          <Property Name="value2" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="educationalBackground_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="personnel_id" Type="Int64" />
+          <Property Name="isInActive" Type="Boolean" />
+          <Property Name="level" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="school" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="degreeEarned" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="yearGraduated" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="unitsCompleted" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="dateFrom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="dateTo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="honorsReceived" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="datetimestamp" Type="DateTime" Precision="0" />
+          <Property Name="region_id" Type="Int64" />
+          <Property Name="section_id" Type="Int64" />
         </EntityType>
-        <EntityType Name="common_importtemplatedetail">
+        <EntityType Name="hris_applicants">
           <Key>
-            <PropertyRef Name="common_importtemplatedetail_id" />
+            <PropertyRef Name="hris_applicants_id" />
           </Key>
-          <Property Name="common_importtemplatedetail_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="common_importtemplate_id" Type="Int64" />
-          <Property Name="title" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="celladdress" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
-          <Property Name="value1" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="value2" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="iscellrange" Type="Boolean" />
-          <Property Name="isvoid" Type="Boolean" />
-          <Property Name="isvertical" Type="Boolean" />
-          <Property Name="maxstep" Type="Int32" />
-          <Property Name="worksheetno" Type="Int32" />
-          <Property Name="isusedefaultvalue" Type="Boolean" />
-          <Property Name="defaultvalue" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-        </EntityType>
-        <EntityType Name="common_importtransaction">
-          <Key>
-            <PropertyRef Name="common_importtransaction_id" />
-          </Key>
-          <Property Name="common_importtransaction_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="transactionname" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="transactiondate" Type="DateTime" Precision="3" />
-          <Property Name="user_id" Type="Int64" />
-          <Property Name="isactive" Type="Boolean" />
-        </EntityType>
-        <EntityType Name="common_importtransactiondetail">
-          <Key>
-            <PropertyRef Name="common_importtransactiondetails_id" />
-          </Key>
-          <Property Name="common_importtransactiondetails_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="common_importtransaction_id" Type="Int64" Nullable="false" />
-          <Property Name="title" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="directory" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="filename" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="tablename" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
-          <Property Name="tableid" Type="Int64" />
-          <Property Name="description" Type="String" MaxLength="900" FixedLength="false" Unicode="true" />
-        </EntityType>
-        <EntityType Name="hris_address">
-          <Key>
-            <PropertyRef Name="hris_address_id" />
-          </Key>
-          <Property Name="hris_address_id" Type="Int64" Nullable="false" />
-          <Property Name="fulladdress" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="addresstype" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="hris_personnel_id" Type="Int64" />
-        </EntityType>
-        <EntityType Name="hris_birform2305">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="EXMPN_CERT_SEQ_NUM" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="EMP_VER" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="EMP_FORM_VER" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="FTYPE_CODE" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="DLN" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="EFFECTIVE_DATE" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="FILING_REASON" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="FILING_DATE" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="TIN" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="BRANCH_CODE" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="LAST_NAME" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="FIRST_NAME" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="MIDDLE_NAME" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="TYPE_FILER" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="SIGNATURE_YN" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="ATTACHMENT_YN" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="CIVIL_STATUS" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="claims_yn" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="AF" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="PROCESS_YN" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="CREATED_BY" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="DATE_CREATED" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="RDO_CODE" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="ADD_NUM_BLDG" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="ADD_STREET" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="ADD_BRGY" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="ADD_MUN_TOWN_CITY" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="ADD_PROV" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="ZIP_CODE" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="P5TIN" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="P5BCODE" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="P5RDOCODE" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="P5EMP_FNAME" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="P5EMP_LNAME" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="P5EMP_MNAME" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="P5EMPLOYER_NAME" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="P5ADD_num" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="P5ADD_SUBD" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="P5ADD_BRGY" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="P5ADD_MUN" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="P5ADD_PROV" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="P5ADD_ZCODE" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="WA_SIGNATURE_YN" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="WA_CERT_DATE" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="sps_empt_status" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="SPOUSE_TIN" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="SPOUSE_BCODE" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="SPOUSE_LAST_NAME" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="SPOUSE_FIRST_NAME" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="SPOUSE_MIDDLE_NAME" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="SPOUSE_EMPLOYER_TIN" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="SPOUSE_EMPLOYER_BRANCH" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="EMPLOYMENT_TYPE" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="MAIN_EMPR_YN" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="NUM_QUALIFIED_DEP" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="FORM_STATUS" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="Editor" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="DATE_MODIFIED" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="NUM_OF_DEPND_CALC" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="UPDATE_REASON" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="CIVIL_STATUS_CALC" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="DEPD_CERT_SEQ_NUM" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="DEP_VER" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="DEPENDENT1_LAST_NAME" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="DEPENDENT1_FIRST_NAME" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="DEPENDENT1_MIDDLE_NAME" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="DEP1BDate" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="DEPENDENT1_RELATIONSHIP_CODE" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="INCAPACITATED_FLAG1_YN" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="active_flag1" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="dep1ModifiedBy" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="Expr1071" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="dep1ErrorCode" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="DEPENDENT2_LAST_NAME" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="DEPENDENT2_FIRST_NAME" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="DEPENDENT2_MIDDLE_NAME" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="DEP2BDate" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="DEPENDENT2_RELATIONSHIP_CODE" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="INCAPACITATED_FLAG2_YN" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="active_flag2" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="dep2ModifiedBy" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="Expr1081" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="dep2ErrorCode" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="DEPENDENT3_LAST_NAME" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="DEPENDENT3_FIRST_NAME" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="DEPENDENT3_MIDDLE_NAME" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="DEP3BDate" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="DEPENDENT3_RELATIONSHIP_CODE" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="INCAPACITATED_FLAG3_YN" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="active_flag3" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="dep3ModifiedBy" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="Expr1091" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="dep3ErrorCode" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="DEPENDENT4_LAST_NAME" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="DEPENDENT4_FIRST_NAME" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="DEPENDENT4_MIDDLE_NAME" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="DEP4BDate" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="DEPENDENT4_RELATIONSHIP_CODE" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="INCAPACITATED_FLAG4_YN" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="active_flag4" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="dep4ModifiedBy" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="Expr1101" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="dep4ErrorCode" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="SEX" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="PLACE_OF_BIRTH" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="MOTHER_NAME" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="FATHER_NAME" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="CITIZENSHIP" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="OTHER_CITIZENSHIP" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="ID_TYPE" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="ID_NUMBER" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="ID_ISSUER" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="ID_EFFECTIVE_DATE" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="ID_EXPIRY_DATE" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="ID_PLACE_ISSUE" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="PHONE_NUMBER" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="MOBILE_NUMBER" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="FAX_NUMBER" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="EMAIL_ADDRESS" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="FOREIGN_ADDRESS" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="WA_CONTACT_NUMBER" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="RELATIONSHIP_START_DATE" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="COUNTRY" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="DATE_MODIFIED_REP" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="DATE_MODIFIED_REPORT" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="BIRTH_DATE" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-        </EntityType>
-        <EntityType Name="hris_employment">
-          <Key>
-            <PropertyRef Name="hris_employment_id" />
-          </Key>
-          <Property Name="hris_employment_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="datefrom" Type="DateTime" Precision="0" />
-          <Property Name="dateto" Type="DateTime" Precision="0" />
-          <Property Name="positiontitle" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="departmentagency" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="monthlysalary" Type="Double" />
-          <Property Name="salarygrade" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="stepincrement" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="statusofappointment" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="isgovservice" Type="Boolean" />
-          <Property Name="hris_personnel_id" Type="Int64" Nullable="false" />
+          <Property Name="hris_applicants_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="lastname" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="firstname" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="middlename" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="nameextension" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="dateofbirth" Type="DateTime" Precision="3" />
+          <Property Name="placeofbirth" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="sex" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="civilstatus" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="citizenship" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="height" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="weight" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="bloodtype" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="residentialaddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="residentialzipcode" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="residentialtelephoneno" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="permanentaddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="permanentzipcode" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="permanenttelephoneno" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="emailaddress" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
+          <Property Name="cellphoneno" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="agencyemployeeno" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="tin_no" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="gsis_no" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="sss_no" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="pagibig_no" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="external_id" Type="Int64" />
         </EntityType>
         <EntityType Name="hris_personnel">
           <Key>
@@ -841,641 +272,108 @@ warning 6002: The table/view 'DEHRIS.dbo.workExperience' does not have a primary
           <Property Name="lastname" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="firstname" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="middlename" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="nameextension" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="dateofbirth" Type="DateTime" Precision="0" />
+          <Property Name="nameextension" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="dateofbirth" Type="DateTime" Precision="3" />
           <Property Name="placeofbirth" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="sex" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="civilstatus" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="sex" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="civilstatus" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="citizenship" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="height" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="weight" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="bloodtype" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="residentialaddress" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="residentialzipcode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="residentialtelephoneno" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="permanentaddress" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="permanentzipcode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="permanenttelephoneno" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="emailaddress" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="cellphoneno" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="agencyemployeeno" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="tin_no" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="gsis_no" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="sss_no" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="pagibig_no" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="height" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="weight" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="bloodtype" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="residentialaddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="residentialzipcode" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="residentialtelephoneno" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="permanentaddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="permanentzipcode" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="permanenttelephoneno" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="emailaddress" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
+          <Property Name="cellphoneno" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="agencyemployeeno" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="tin_no" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="gsis_no" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="sss_no" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="pagibig_no" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="external_id" Type="Int64" />
         </EntityType>
-        <EntityType Name="pm_project">
-          <Key>
-            <PropertyRef Name="pm_projectid" />
-          </Key>
-          <Property Name="pm_projectid" Type="Int64" Nullable="false" />
-          <Property Name="agency" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="projects" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
-          <Property Name="location" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="totalcost" Type="Decimal" Precision="18" Scale="2" />
-          <Property Name="datestarted" Type="DateTime" Precision="0" />
-          <Property Name="noofextension" Type="Int32" />
-          <Property Name="datetargetcompletion" Type="DateTime" Precision="0" />
-          <Property Name="completion" Type="Int32" />
-          <Property Name="totalcostincurred" Type="Decimal" Precision="18" Scale="2" />
-          <Property Name="remarks" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-        </EntityType>
-        <EntityType Name="pm_projectaccess">
-          <Key>
-            <PropertyRef Name="pm_projectaccess_id" />
-          </Key>
-          <Property Name="pm_projectaccess_id" Type="Int64" Nullable="false" />
-          <Property Name="accessdatetime" Type="DateTime" Precision="3" />
-          <Property Name="accesstype" Type="Int32" />
-        </EntityType>
-        <EntityType Name="sis_school">
-          <Key>
-            <PropertyRef Name="sis_school_id" />
-          </Key>
-          <Property Name="sis_school_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="sis_schoolname" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="sis_schoolpopulation" Type="Int32" />
-          <Property Name="sis_school_type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="division_id" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
-          <Property Name="district_id" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
-          <Property Name="address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="sis_schooldistrict_id" Type="Int64" />
-          <Property Name="ispriv" Type="Boolean" />
-          <Property Name="sis_school_code" Type="Int64" />
-        </EntityType>
-        <EntityType Name="sis_schooldistrict">
-          <Key>
-            <PropertyRef Name="sis_schooldistrict_id" />
-          </Key>
-          <Property Name="sis_schooldistrict_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="schooldistrictname" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-        </EntityType>
-        <EntityType Name="ais_cdtransaction">
-          <Key>
-            <PropertyRef Name="ais_cdtransaction_id" />
-          </Key>
-          <Property Name="ais_cdtransaction_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="dateofcheck" Type="DateTime" Precision="3" />
-          <Property Name="cashadvanceamount" Type="Decimal" Precision="18" Scale="2" />
-          <Property Name="financialyear_id" Type="Int64" />
-          <Property Name="sourceoffunds" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
-          <Property Name="particulars" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
-          <Property Name="totalamount" Type="Decimal" Precision="18" Scale="2" />
-          <Property Name="balanceunliquidated" Type="Decimal" Precision="18" Scale="2" />
-        </EntityType>
-        <EntityContainer Name="DEHRISEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="ais_cdtransactiondetails" EntityType="Self.ais_cdtransactiondetails" />
-          <EntitySet Name="common_importtempate" EntityType="Self.common_importtempate" />
-          <EntitySet Name="common_importtemplatedetail" EntityType="Self.common_importtemplatedetail" />
-          <EntitySet Name="common_importtransaction" EntityType="Self.common_importtransaction" />
-          <EntitySet Name="common_importtransactiondetail" EntityType="Self.common_importtransactiondetail" />
-          <EntitySet Name="hris_address" EntityType="Self.hris_address" />
-          <EntitySet Name="hris_birform2305" EntityType="Self.hris_birform2305" />
-          <EntitySet Name="hris_employment" EntityType="Self.hris_employment" />
-          <EntitySet Name="hris_personnel" EntityType="Self.hris_personnel" />
-          <EntitySet Name="pm_project" EntityType="Self.pm_project" />
-          <EntitySet Name="pm_projectaccess" EntityType="Self.pm_projectaccess" />
-          <EntitySet Name="sis_school" EntityType="Self.sis_school" />
-          <EntitySet Name="sis_schooldistrict" EntityType="Self.sis_schooldistrict" />
-          <EntitySet Name="ais_cdtransaction" EntityType="Self.ais_cdtransaction" />
-          <EntitySet Name="children" EntityType="DEHRISModel.child" />
-          <EntitySet Name="civilservices" EntityType="DEHRISModel.civilservice" />
-          <EntitySet Name="educationalbackgrounds" EntityType="DEHRISModel.educationalbackground" />
-          <EntitySet Name="profilePictures" EntityType="DEHRISModel.profilePicture" />
-          <EntitySet Name="specialskills" EntityType="DEHRISModel.specialskill" />
-          <EntitySet Name="appointments" EntityType="DEHRISModel.appointment" />
-          <EntitySet Name="appointmentheaders" EntityType="DEHRISModel.appointmentheader" />
-          <EntitySet Name="appointmenttypes" EntityType="DEHRISModel.appointmenttype" />
-          <EntitySet Name="workExperiences" EntityType="DEHRISModel.workExperience" />
-          <EntitySet Name="trainings" EntityType="DEHRISModel.training" />
-        </EntityContainer>
-        <EntityType Name="child">
-          <Key>
-            <PropertyRef Name="child_id" />
-          </Key>
-          <Property Name="child_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="personnel_id" Type="Int64" />
-          <Property Name="childname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="childbirthdate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="childstatusid" Type="Int32" />
-          <Property Name="isInactive" Type="Boolean" />
-          <Property Name="dateCreated" Type="DateTime" Precision="3" />
-          <Property Name="region_id" Type="Int64" />
-        </EntityType>
-        <EntityType Name="civilservice">
-          <Key>
-            <PropertyRef Name="civilservice_id" />
-          </Key>
-          <Property Name="civilservice_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="personnel_id" Type="Int64" />
-          <Property Name="civilservicename" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
-          <Property Name="rate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="examdate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="placeconducted" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="civilservice_number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="releasedate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="isInactive" Type="Boolean" />
-          <Property Name="datecreated" Type="DateTime" Precision="3" />
-          <Property Name="region_id" Type="Int64" />
-          <Property Name="district_id" Type="Int64" />
-        </EntityType>
-        <EntityType Name="educationalbackground">
-          <Key>
-            <PropertyRef Name="educationalBackground_id" />
-          </Key>
-          <Property Name="educationalBackground_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="personnel_id" Type="Int64" />
-          <Property Name="level" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="school" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="degreeEarned" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="yearGraduated" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="unitsCompleted" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="dateFrom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="dateTo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="honorsReceived" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="isInActive" Type="Boolean" />
-          <Property Name="datetimestamp" Type="DateTime" Precision="3" />
-          <Property Name="region_id" Type="Int64" />
-          <Property Name="section_id" Type="Int64" />
-        </EntityType>
-        <EntityType Name="profilePicture">
+        <EntityType Name="profilepicture">
           <Key>
             <PropertyRef Name="profilepicture_id" />
           </Key>
           <Property Name="profilepicture_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="personnel_id" Type="Int64" Nullable="false" />
+          <Property Name="personnel_id" Type="Int64" />
           <Property Name="isInActive" Type="Boolean" />
           <Property Name="filepath" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="contentType" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="contentType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="binaryImage" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
-        <EntityType Name="specialskill">
+        <EntityType Name="specialSkill">
           <Key>
             <PropertyRef Name="specialSkill_id" />
           </Key>
           <Property Name="specialSkill_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="personnel_id" Type="Int64" />
-          <Property Name="specialSkillDescription" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="personnel_id" Type="Int64" Nullable="false" />
+          <Property Name="region_id" Type="Int64" />
+          <Property Name="section_id" Type="Int64" />
+          <Property Name="specialSkillDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="isInactive" Type="Boolean" />
           <Property Name="dateCreated" Type="DateTime" Precision="3" />
-          <Property Name="region_id" Type="Int64" />
-          <Property Name="section_id" Type="Int64" />
-        </EntityType>
-        <EntityType Name="appointment">
-          <Key>
-            <PropertyRef Name="appointment_id" />
-          </Key>
-          <Property Name="appointment_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="header_id" Type="Int64" />
-          <Property Name="personnel_id" Type="Int64" />
-          <Property Name="regionid" Type="Int64" />
-          <Property Name="districtid" Type="Int64" />
-          <Property Name="prevpositiontype" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="previousposition" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="previoussalary" Type="Double" />
-          <Property Name="appointmenttype" Type="Int32" />
-          <Property Name="itemno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="page" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="publication" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="datesigned" Type="DateTime" Precision="3" />
-          <Property Name="datepublished" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="prevemployee" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="prevemployeestatus" Type="Int32" />
-          <Property Name="cssmcno" Type="Int32" />
-          <Property Name="funds" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="year" Type="Int32" />
-          <Property Name="designation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="personnelselection" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="personnelselectiondesignation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="personnelofficer" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="personnelofficerdesignation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="issave" Type="Boolean" />
-          <Property Name="datecreated" Type="DateTime" Precision="3" />
-          <Property Name="userid" Type="Int64" />
-          <Property Name="transtype" Type="Int32" />
-          <Property Name="nosatype" Type="Int32" />
-        </EntityType>
-        <EntityType Name="appointmentheader">
-          <Key>
-            <PropertyRef Name="header_id" />
-          </Key>
-          <Property Name="header_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="datesigned" Type="DateTime" Precision="3" />
-          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="designation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="region_id" Type="Int64" />
-          <Property Name="district_id" Type="Int64" />
-          <Property Name="datecreated" Type="DateTime" Precision="3" />
-          <Property Name="headeridtemp" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
-        </EntityType>
-        <EntityType Name="appointmenttype">
-          <Key>
-            <PropertyRef Name="appointmenttype_id" />
-          </Key>
-          <Property Name="appointmenttype_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="appointmenttypename" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-        </EntityType>
-        <EntityType Name="workExperience">
-          <Key>
-            <PropertyRef Name="workExperience_id" />
-          </Key>
-          <Property Name="workExperience_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="region_id" Type="Int64" />
-          <Property Name="section_id" Type="Int64" />
-          <Property Name="personnel_id" Type="Int64" />
-          <Property Name="serviceType" Type="Int32" />
-          <Property Name="dateFrom" Type="DateTime" Precision="3" />
-          <Property Name="dateTo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="serviceLength" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="position" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-          <Property Name="salary" Type="Decimal" Precision="18" Scale="3" />
-          <Property Name="status_id" Type="Int32" />
-          <Property Name="companyname" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
-          <Property Name="separationCause" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
-          <Property Name="separationDate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="remarks" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
-          <Property Name="isInactive" Type="Boolean" />
-          <Property Name="isApproved" Type="Int32" />
-          <Property Name="rdetail_id" Type="Int64" />
         </EntityType>
         <EntityType Name="training">
           <Key>
             <PropertyRef Name="training_id" />
           </Key>
           <Property Name="training_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="region_id" Type="Int64" />
           <Property Name="header_id" Type="Int64" />
-          <Property Name="title" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
-          <Property Name="startDate" Type="DateTime" Precision="0" />
-          <Property Name="endDate" Type="DateTime" Precision="0" />
-          <Property Name="noOfHours" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="conductedBy" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="title" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="inclusiveDates" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="noOfHours" Type="Int32" />
+          <Property Name="conductedBy" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
           <Property Name="isInactive" Type="Boolean" />
           <Property Name="dateCreated" Type="DateTime" Precision="3" />
           <Property Name="isScholarship" Type="Boolean" />
-          <Property Name="region_id" Type="Int64" />
           <Property Name="division_id" Type="Int64" />
           <Property Name="trainingModule_id" Type="Int64" />
           <Property Name="category_id" Type="Int64" />
-          <Property Name="personnel_id" Type="Int64" />
-          <Property Name="description" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="dateFrom" Type="DateTime" Precision="0" />
+          <Property Name="dateTo" Type="DateTime" Precision="0" />
+          <Property Name="personnel_id" Type="Int64" Nullable="true" />
         </EntityType>
-      </Schema>
+        <EntityType Name="workExperience">
+          <Key>
+            <PropertyRef Name="workExperience_id" />
+          </Key>
+          <Property Name="workExperience_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="personnel_id" Type="Int64" />
+          <Property Name="dateFrom" Type="DateTime" Precision="0" />
+          <Property Name="dateTo" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="region_id" Type="Int64" />
+          <Property Name="section_id" Type="Int64" />
+          <Property Name="serviceType" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="serviceLength" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="position" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="salary" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="status_id" Type="Int64" />
+          <Property Name="companyname" Type="String" MaxLength="350" FixedLength="false" Unicode="false" />
+          <Property Name="separationCause" Type="String" MaxLength="350" FixedLength="false" Unicode="false" />
+          <Property Name="separationDate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="isInactive" Type="Boolean" />
+          <Property Name="isApproved" Type="Boolean" />
+          <Property Name="rdetail_id" Type="Int64" />
+        </EntityType>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="DEHRISModelStoreContainer" CdmEntityContainer="DEHRISEntities">
-          <EntitySetMapping Name="ais_cdtransactiondetails">
-            <EntityTypeMapping TypeName="DEHRISModel.ais_cdtransactiondetails">
-              <MappingFragment StoreEntitySet="ais_cdtransactiondetails">
-                <ScalarProperty Name="ais_cdtransactiondetails_id" ColumnName="ais_cdtransactiondetails_id" />
-                <ScalarProperty Name="transaction_date" ColumnName="transaction_date" />
-                <ScalarProperty Name="payee" ColumnName="payee" />
-                <ScalarProperty Name="hris_personnel_id" ColumnName="hris_personnel_id" />
-                <ScalarProperty Name="control_no" ColumnName="control_no" />
-                <ScalarProperty Name="ais_expensetype_id" ColumnName="ais_expensetype_id" />
-                <ScalarProperty Name="ais_account_id" ColumnName="ais_account_id" />
-                <ScalarProperty Name="objectcode" ColumnName="objectcode" />
-                <ScalarProperty Name="amount" ColumnName="amount" />
-                <ScalarProperty Name="description" ColumnName="description" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="common_importtempate">
-            <EntityTypeMapping TypeName="DEHRISModel.common_importtempate">
-              <MappingFragment StoreEntitySet="common_importtempate">
-                <ScalarProperty Name="common_importtemplate_id" ColumnName="common_importtemplate_id" />
-                <ScalarProperty Name="title" ColumnName="title" />
-                <ScalarProperty Name="maxiteration" ColumnName="maxiteration" />
-                <ScalarProperty Name="value2" ColumnName="value2" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="common_importtemplatedetail">
-            <EntityTypeMapping TypeName="DEHRISModel.common_importtemplatedetail">
-              <MappingFragment StoreEntitySet="common_importtemplatedetail">
-                <ScalarProperty Name="common_importtemplatedetail_id" ColumnName="common_importtemplatedetail_id" />
-                <ScalarProperty Name="common_importtemplate_id" ColumnName="common_importtemplate_id" />
-                <ScalarProperty Name="title" ColumnName="title" />
-                <ScalarProperty Name="celladdress" ColumnName="celladdress" />
-                <ScalarProperty Name="value1" ColumnName="value1" />
-                <ScalarProperty Name="value2" ColumnName="value2" />
-                <ScalarProperty Name="iscellrange" ColumnName="iscellrange" />
-                <ScalarProperty Name="isvoid" ColumnName="isvoid" />
-                <ScalarProperty Name="isvertical" ColumnName="isvertical" />
-                <ScalarProperty Name="maxstep" ColumnName="maxstep" />
-                <ScalarProperty Name="worksheetno" ColumnName="worksheetno" />
-                <ScalarProperty Name="isusedefaultvalue" ColumnName="isusedefaultvalue" />
-                <ScalarProperty Name="defaultvalue" ColumnName="defaultvalue" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="common_importtransaction">
-            <EntityTypeMapping TypeName="DEHRISModel.common_importtransaction">
-              <MappingFragment StoreEntitySet="common_importtransaction">
-                <ScalarProperty Name="common_importtransaction_id" ColumnName="common_importtransaction_id" />
-                <ScalarProperty Name="transactionname" ColumnName="transactionname" />
-                <ScalarProperty Name="transactiondate" ColumnName="transactiondate" />
-                <ScalarProperty Name="user_id" ColumnName="user_id" />
-                <ScalarProperty Name="isactive" ColumnName="isactive" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="common_importtransactiondetail">
-            <EntityTypeMapping TypeName="DEHRISModel.common_importtransactiondetail">
-              <MappingFragment StoreEntitySet="common_importtransactiondetail">
-                <ScalarProperty Name="common_importtransactiondetails_id" ColumnName="common_importtransactiondetails_id" />
-                <ScalarProperty Name="common_importtransaction_id" ColumnName="common_importtransaction_id" />
-                <ScalarProperty Name="title" ColumnName="title" />
-                <ScalarProperty Name="directory" ColumnName="directory" />
-                <ScalarProperty Name="filename" ColumnName="filename" />
-                <ScalarProperty Name="tablename" ColumnName="tablename" />
-                <ScalarProperty Name="tableid" ColumnName="tableid" />
-                <ScalarProperty Name="description" ColumnName="description" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="hris_address">
-            <EntityTypeMapping TypeName="DEHRISModel.hris_address">
-              <MappingFragment StoreEntitySet="hris_address">
-                <ScalarProperty Name="hris_address_id" ColumnName="hris_address_id" />
-                <ScalarProperty Name="fulladdress" ColumnName="fulladdress" />
-                <ScalarProperty Name="addresstype" ColumnName="addresstype" />
-                <ScalarProperty Name="hris_personnel_id" ColumnName="hris_personnel_id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="hris_birform2305">
-            <EntityTypeMapping TypeName="DEHRISModel.hris_birform2305">
-              <MappingFragment StoreEntitySet="hris_birform2305">
-                <ScalarProperty Name="EXMPN_CERT_SEQ_NUM" ColumnName="EXMPN_CERT_SEQ_NUM" />
-                <ScalarProperty Name="EMP_VER" ColumnName="EMP_VER" />
-                <ScalarProperty Name="EMP_FORM_VER" ColumnName="EMP_FORM_VER" />
-                <ScalarProperty Name="FTYPE_CODE" ColumnName="FTYPE_CODE" />
-                <ScalarProperty Name="DLN" ColumnName="DLN" />
-                <ScalarProperty Name="EFFECTIVE_DATE" ColumnName="EFFECTIVE_DATE" />
-                <ScalarProperty Name="FILING_REASON" ColumnName="FILING_REASON" />
-                <ScalarProperty Name="FILING_DATE" ColumnName="FILING_DATE" />
-                <ScalarProperty Name="TIN" ColumnName="TIN" />
-                <ScalarProperty Name="BRANCH_CODE" ColumnName="BRANCH_CODE" />
-                <ScalarProperty Name="LAST_NAME" ColumnName="LAST_NAME" />
-                <ScalarProperty Name="FIRST_NAME" ColumnName="FIRST_NAME" />
-                <ScalarProperty Name="MIDDLE_NAME" ColumnName="MIDDLE_NAME" />
-                <ScalarProperty Name="TYPE_FILER" ColumnName="TYPE_FILER" />
-                <ScalarProperty Name="SIGNATURE_YN" ColumnName="SIGNATURE_YN" />
-                <ScalarProperty Name="ATTACHMENT_YN" ColumnName="ATTACHMENT_YN" />
-                <ScalarProperty Name="CIVIL_STATUS" ColumnName="CIVIL_STATUS" />
-                <ScalarProperty Name="claims_yn" ColumnName="claims_yn" />
-                <ScalarProperty Name="AF" ColumnName="AF" />
-                <ScalarProperty Name="PROCESS_YN" ColumnName="PROCESS_YN" />
-                <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
-                <ScalarProperty Name="DATE_CREATED" ColumnName="DATE_CREATED" />
-                <ScalarProperty Name="RDO_CODE" ColumnName="RDO_CODE" />
-                <ScalarProperty Name="ADD_NUM_BLDG" ColumnName="ADD_NUM_BLDG" />
-                <ScalarProperty Name="ADD_STREET" ColumnName="ADD_STREET" />
-                <ScalarProperty Name="ADD_BRGY" ColumnName="ADD_BRGY" />
-                <ScalarProperty Name="ADD_MUN_TOWN_CITY" ColumnName="ADD_MUN_TOWN_CITY" />
-                <ScalarProperty Name="ADD_PROV" ColumnName="ADD_PROV" />
-                <ScalarProperty Name="ZIP_CODE" ColumnName="ZIP_CODE" />
-                <ScalarProperty Name="P5TIN" ColumnName="P5TIN" />
-                <ScalarProperty Name="P5BCODE" ColumnName="P5BCODE" />
-                <ScalarProperty Name="P5RDOCODE" ColumnName="P5RDOCODE" />
-                <ScalarProperty Name="P5EMP_FNAME" ColumnName="P5EMP_FNAME" />
-                <ScalarProperty Name="P5EMP_LNAME" ColumnName="P5EMP_LNAME" />
-                <ScalarProperty Name="P5EMP_MNAME" ColumnName="P5EMP_MNAME" />
-                <ScalarProperty Name="P5EMPLOYER_NAME" ColumnName="P5EMPLOYER_NAME" />
-                <ScalarProperty Name="P5ADD_num" ColumnName="P5ADD_num" />
-                <ScalarProperty Name="P5ADD_SUBD" ColumnName="P5ADD_SUBD" />
-                <ScalarProperty Name="P5ADD_BRGY" ColumnName="P5ADD_BRGY" />
-                <ScalarProperty Name="P5ADD_MUN" ColumnName="P5ADD_MUN" />
-                <ScalarProperty Name="P5ADD_PROV" ColumnName="P5ADD_PROV" />
-                <ScalarProperty Name="P5ADD_ZCODE" ColumnName="P5ADD_ZCODE" />
-                <ScalarProperty Name="WA_SIGNATURE_YN" ColumnName="WA_SIGNATURE_YN" />
-                <ScalarProperty Name="WA_CERT_DATE" ColumnName="WA_CERT_DATE" />
-                <ScalarProperty Name="sps_empt_status" ColumnName="sps_empt_status" />
-                <ScalarProperty Name="SPOUSE_TIN" ColumnName="SPOUSE_TIN" />
-                <ScalarProperty Name="SPOUSE_BCODE" ColumnName="SPOUSE_BCODE" />
-                <ScalarProperty Name="SPOUSE_LAST_NAME" ColumnName="SPOUSE_LAST_NAME" />
-                <ScalarProperty Name="SPOUSE_FIRST_NAME" ColumnName="SPOUSE_FIRST_NAME" />
-                <ScalarProperty Name="SPOUSE_MIDDLE_NAME" ColumnName="SPOUSE_MIDDLE_NAME" />
-                <ScalarProperty Name="SPOUSE_EMPLOYER_TIN" ColumnName="SPOUSE_EMPLOYER_TIN" />
-                <ScalarProperty Name="SPOUSE_EMPLOYER_BRANCH" ColumnName="SPOUSE_EMPLOYER_BRANCH" />
-                <ScalarProperty Name="EMPLOYMENT_TYPE" ColumnName="EMPLOYMENT_TYPE" />
-                <ScalarProperty Name="MAIN_EMPR_YN" ColumnName="MAIN_EMPR_YN" />
-                <ScalarProperty Name="NUM_QUALIFIED_DEP" ColumnName="NUM_QUALIFIED_DEP" />
-                <ScalarProperty Name="FORM_STATUS" ColumnName="FORM_STATUS" />
-                <ScalarProperty Name="Editor" ColumnName="Editor" />
-                <ScalarProperty Name="DATE_MODIFIED" ColumnName="DATE_MODIFIED" />
-                <ScalarProperty Name="NUM_OF_DEPND_CALC" ColumnName="NUM_OF_DEPND_CALC" />
-                <ScalarProperty Name="UPDATE_REASON" ColumnName="UPDATE_REASON" />
-                <ScalarProperty Name="CIVIL_STATUS_CALC" ColumnName="CIVIL_STATUS_CALC" />
-                <ScalarProperty Name="DEPD_CERT_SEQ_NUM" ColumnName="DEPD_CERT_SEQ_NUM" />
-                <ScalarProperty Name="DEP_VER" ColumnName="DEP_VER" />
-                <ScalarProperty Name="DEPENDENT1_LAST_NAME" ColumnName="DEPENDENT1_LAST_NAME" />
-                <ScalarProperty Name="DEPENDENT1_FIRST_NAME" ColumnName="DEPENDENT1_FIRST_NAME" />
-                <ScalarProperty Name="DEPENDENT1_MIDDLE_NAME" ColumnName="DEPENDENT1_MIDDLE_NAME" />
-                <ScalarProperty Name="DEP1BDate" ColumnName="DEP1BDate" />
-                <ScalarProperty Name="DEPENDENT1_RELATIONSHIP_CODE" ColumnName="DEPENDENT1_RELATIONSHIP_CODE" />
-                <ScalarProperty Name="INCAPACITATED_FLAG1_YN" ColumnName="INCAPACITATED_FLAG1_YN" />
-                <ScalarProperty Name="active_flag1" ColumnName="active_flag1" />
-                <ScalarProperty Name="dep1ModifiedBy" ColumnName="dep1ModifiedBy" />
-                <ScalarProperty Name="Expr1071" ColumnName="Expr1071" />
-                <ScalarProperty Name="dep1ErrorCode" ColumnName="dep1ErrorCode" />
-                <ScalarProperty Name="DEPENDENT2_LAST_NAME" ColumnName="DEPENDENT2_LAST_NAME" />
-                <ScalarProperty Name="DEPENDENT2_FIRST_NAME" ColumnName="DEPENDENT2_FIRST_NAME" />
-                <ScalarProperty Name="DEPENDENT2_MIDDLE_NAME" ColumnName="DEPENDENT2_MIDDLE_NAME" />
-                <ScalarProperty Name="DEP2BDate" ColumnName="DEP2BDate" />
-                <ScalarProperty Name="DEPENDENT2_RELATIONSHIP_CODE" ColumnName="DEPENDENT2_RELATIONSHIP_CODE" />
-                <ScalarProperty Name="INCAPACITATED_FLAG2_YN" ColumnName="INCAPACITATED_FLAG2_YN" />
-                <ScalarProperty Name="active_flag2" ColumnName="active_flag2" />
-                <ScalarProperty Name="dep2ModifiedBy" ColumnName="dep2ModifiedBy" />
-                <ScalarProperty Name="Expr1081" ColumnName="Expr1081" />
-                <ScalarProperty Name="dep2ErrorCode" ColumnName="dep2ErrorCode" />
-                <ScalarProperty Name="DEPENDENT3_LAST_NAME" ColumnName="DEPENDENT3_LAST_NAME" />
-                <ScalarProperty Name="DEPENDENT3_FIRST_NAME" ColumnName="DEPENDENT3_FIRST_NAME" />
-                <ScalarProperty Name="DEPENDENT3_MIDDLE_NAME" ColumnName="DEPENDENT3_MIDDLE_NAME" />
-                <ScalarProperty Name="DEP3BDate" ColumnName="DEP3BDate" />
-                <ScalarProperty Name="DEPENDENT3_RELATIONSHIP_CODE" ColumnName="DEPENDENT3_RELATIONSHIP_CODE" />
-                <ScalarProperty Name="INCAPACITATED_FLAG3_YN" ColumnName="INCAPACITATED_FLAG3_YN" />
-                <ScalarProperty Name="active_flag3" ColumnName="active_flag3" />
-                <ScalarProperty Name="dep3ModifiedBy" ColumnName="dep3ModifiedBy" />
-                <ScalarProperty Name="Expr1091" ColumnName="Expr1091" />
-                <ScalarProperty Name="dep3ErrorCode" ColumnName="dep3ErrorCode" />
-                <ScalarProperty Name="DEPENDENT4_LAST_NAME" ColumnName="DEPENDENT4_LAST_NAME" />
-                <ScalarProperty Name="DEPENDENT4_FIRST_NAME" ColumnName="DEPENDENT4_FIRST_NAME" />
-                <ScalarProperty Name="DEPENDENT4_MIDDLE_NAME" ColumnName="DEPENDENT4_MIDDLE_NAME" />
-                <ScalarProperty Name="DEP4BDate" ColumnName="DEP4BDate" />
-                <ScalarProperty Name="DEPENDENT4_RELATIONSHIP_CODE" ColumnName="DEPENDENT4_RELATIONSHIP_CODE" />
-                <ScalarProperty Name="INCAPACITATED_FLAG4_YN" ColumnName="INCAPACITATED_FLAG4_YN" />
-                <ScalarProperty Name="active_flag4" ColumnName="active_flag4" />
-                <ScalarProperty Name="dep4ModifiedBy" ColumnName="dep4ModifiedBy" />
-                <ScalarProperty Name="Expr1101" ColumnName="Expr1101" />
-                <ScalarProperty Name="dep4ErrorCode" ColumnName="dep4ErrorCode" />
-                <ScalarProperty Name="SEX" ColumnName="SEX" />
-                <ScalarProperty Name="PLACE_OF_BIRTH" ColumnName="PLACE_OF_BIRTH" />
-                <ScalarProperty Name="MOTHER_NAME" ColumnName="MOTHER_NAME" />
-                <ScalarProperty Name="FATHER_NAME" ColumnName="FATHER_NAME" />
-                <ScalarProperty Name="CITIZENSHIP" ColumnName="CITIZENSHIP" />
-                <ScalarProperty Name="OTHER_CITIZENSHIP" ColumnName="OTHER_CITIZENSHIP" />
-                <ScalarProperty Name="ID_TYPE" ColumnName="ID_TYPE" />
-                <ScalarProperty Name="ID_NUMBER" ColumnName="ID_NUMBER" />
-                <ScalarProperty Name="ID_ISSUER" ColumnName="ID_ISSUER" />
-                <ScalarProperty Name="ID_EFFECTIVE_DATE" ColumnName="ID_EFFECTIVE_DATE" />
-                <ScalarProperty Name="ID_EXPIRY_DATE" ColumnName="ID_EXPIRY_DATE" />
-                <ScalarProperty Name="ID_PLACE_ISSUE" ColumnName="ID_PLACE_ISSUE" />
-                <ScalarProperty Name="PHONE_NUMBER" ColumnName="PHONE_NUMBER" />
-                <ScalarProperty Name="MOBILE_NUMBER" ColumnName="MOBILE_NUMBER" />
-                <ScalarProperty Name="FAX_NUMBER" ColumnName="FAX_NUMBER" />
-                <ScalarProperty Name="EMAIL_ADDRESS" ColumnName="EMAIL_ADDRESS" />
-                <ScalarProperty Name="FOREIGN_ADDRESS" ColumnName="FOREIGN_ADDRESS" />
-                <ScalarProperty Name="WA_CONTACT_NUMBER" ColumnName="WA_CONTACT_NUMBER" />
-                <ScalarProperty Name="RELATIONSHIP_START_DATE" ColumnName="RELATIONSHIP_START_DATE" />
-                <ScalarProperty Name="COUNTRY" ColumnName="COUNTRY" />
-                <ScalarProperty Name="DATE_MODIFIED_REP" ColumnName="DATE_MODIFIED_REP" />
-                <ScalarProperty Name="DATE_MODIFIED_REPORT" ColumnName="DATE_MODIFIED_REPORT" />
-                <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="BIRTH_DATE" ColumnName="BIRTH_DATE" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="hris_employment">
-            <EntityTypeMapping TypeName="DEHRISModel.hris_employment">
-              <MappingFragment StoreEntitySet="hris_employment">
-                <ScalarProperty Name="hris_employment_id" ColumnName="hris_employment_id" />
-                <ScalarProperty Name="datefrom" ColumnName="datefrom" />
-                <ScalarProperty Name="dateto" ColumnName="dateto" />
-                <ScalarProperty Name="positiontitle" ColumnName="positiontitle" />
-                <ScalarProperty Name="departmentagency" ColumnName="departmentagency" />
-                <ScalarProperty Name="monthlysalary" ColumnName="monthlysalary" />
-                <ScalarProperty Name="salarygrade" ColumnName="salarygrade" />
-                <ScalarProperty Name="stepincrement" ColumnName="stepincrement" />
-                <ScalarProperty Name="statusofappointment" ColumnName="statusofappointment" />
-                <ScalarProperty Name="isgovservice" ColumnName="isgovservice" />
-                <ScalarProperty Name="hris_personnel_id" ColumnName="hris_personnel_id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="hris_personnel">
-            <EntityTypeMapping TypeName="DEHRISModel.hris_personnel">
-              <MappingFragment StoreEntitySet="hris_personnel">
-                <ScalarProperty Name="external_id" ColumnName="external_id" />
-                <ScalarProperty Name="hris_personnel_id" ColumnName="hris_personnel_id" />
-                <ScalarProperty Name="lastname" ColumnName="lastname" />
-                <ScalarProperty Name="firstname" ColumnName="firstname" />
-                <ScalarProperty Name="middlename" ColumnName="middlename" />
-                <ScalarProperty Name="nameextension" ColumnName="nameextension" />
-                <ScalarProperty Name="dateofbirth" ColumnName="dateofbirth" />
-                <ScalarProperty Name="placeofbirth" ColumnName="placeofbirth" />
-                <ScalarProperty Name="sex" ColumnName="sex" />
-                <ScalarProperty Name="civilstatus" ColumnName="civilstatus" />
-                <ScalarProperty Name="citizenship" ColumnName="citizenship" />
-                <ScalarProperty Name="height" ColumnName="height" />
-                <ScalarProperty Name="weight" ColumnName="weight" />
-                <ScalarProperty Name="bloodtype" ColumnName="bloodtype" />
-                <ScalarProperty Name="residentialaddress" ColumnName="residentialaddress" />
-                <ScalarProperty Name="residentialzipcode" ColumnName="residentialzipcode" />
-                <ScalarProperty Name="residentialtelephoneno" ColumnName="residentialtelephoneno" />
-                <ScalarProperty Name="permanentaddress" ColumnName="permanentaddress" />
-                <ScalarProperty Name="permanentzipcode" ColumnName="permanentzipcode" />
-                <ScalarProperty Name="permanenttelephoneno" ColumnName="permanenttelephoneno" />
-                <ScalarProperty Name="emailaddress" ColumnName="emailaddress" />
-                <ScalarProperty Name="cellphoneno" ColumnName="cellphoneno" />
-                <ScalarProperty Name="agencyemployeeno" ColumnName="agencyemployeeno" />
-                <ScalarProperty Name="tin_no" ColumnName="tin_no" />
-                <ScalarProperty Name="gsis_no" ColumnName="gsis_no" />
-                <ScalarProperty Name="sss_no" ColumnName="sss_no" />
-                <ScalarProperty Name="pagibig_no" ColumnName="pagibig_no" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="pm_project">
-            <EntityTypeMapping TypeName="DEHRISModel.pm_project">
-              <MappingFragment StoreEntitySet="pm_project">
-                <ScalarProperty Name="pm_projectid" ColumnName="pm_projectid" />
-                <ScalarProperty Name="agency" ColumnName="agency" />
-                <ScalarProperty Name="address" ColumnName="address" />
-                <ScalarProperty Name="projects" ColumnName="projects" />
-                <ScalarProperty Name="location" ColumnName="location" />
-                <ScalarProperty Name="totalcost" ColumnName="totalcost" />
-                <ScalarProperty Name="datestarted" ColumnName="datestarted" />
-                <ScalarProperty Name="noofextension" ColumnName="noofextension" />
-                <ScalarProperty Name="datetargetcompletion" ColumnName="datetargetcompletion" />
-                <ScalarProperty Name="completion" ColumnName="completion" />
-                <ScalarProperty Name="totalcostincurred" ColumnName="totalcostincurred" />
-                <ScalarProperty Name="remarks" ColumnName="remarks" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="pm_projectaccess">
-            <EntityTypeMapping TypeName="DEHRISModel.pm_projectaccess">
-              <MappingFragment StoreEntitySet="pm_projectaccess">
-                <ScalarProperty Name="pm_projectaccess_id" ColumnName="pm_projectaccess_id" />
-                <ScalarProperty Name="accessdatetime" ColumnName="accessdatetime" />
-                <ScalarProperty Name="accesstype" ColumnName="accesstype" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="sis_school">
-            <EntityTypeMapping TypeName="DEHRISModel.sis_school">
-              <MappingFragment StoreEntitySet="sis_school">
-                <ScalarProperty Name="sis_school_id" ColumnName="sis_school_id" />
-                <ScalarProperty Name="sis_schoolname" ColumnName="sis_schoolname" />
-                <ScalarProperty Name="sis_schoolpopulation" ColumnName="sis_schoolpopulation" />
-                <ScalarProperty Name="sis_school_type" ColumnName="sis_school_type" />
-                <ScalarProperty Name="division_id" ColumnName="division_id" />
-                <ScalarProperty Name="district_id" ColumnName="district_id" />
-                <ScalarProperty Name="address" ColumnName="address" />
-                <ScalarProperty Name="sis_schooldistrict_id" ColumnName="sis_schooldistrict_id" />
-                <ScalarProperty Name="ispriv" ColumnName="ispriv" />
-                <ScalarProperty Name="sis_school_code" ColumnName="sis_school_code" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="sis_schooldistrict">
-            <EntityTypeMapping TypeName="DEHRISModel.sis_schooldistrict">
-              <MappingFragment StoreEntitySet="sis_schooldistrict">
-                <ScalarProperty Name="sis_schooldistrict_id" ColumnName="sis_schooldistrict_id" />
-                <ScalarProperty Name="schooldistrictname" ColumnName="schooldistrictname" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="ais_cdtransaction">
-            <EntityTypeMapping TypeName="DEHRISModel.ais_cdtransaction">
-              <MappingFragment StoreEntitySet="ais_cdtransaction">
-                <ScalarProperty Name="ais_cdtransaction_id" ColumnName="ais_cdtransaction_id" />
-                <ScalarProperty Name="dateofcheck" ColumnName="dateofcheck" />
-                <ScalarProperty Name="cashadvanceamount" ColumnName="cashadvanceamount" />
-                <ScalarProperty Name="financialyear_id" ColumnName="financialyear_id" />
-                <ScalarProperty Name="sourceoffunds" ColumnName="sourceoffunds" />
-                <ScalarProperty Name="particulars" ColumnName="particulars" />
-                <ScalarProperty Name="totalamount" ColumnName="totalamount" />
-                <ScalarProperty Name="balanceunliquidated" ColumnName="balanceunliquidated" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="children">
-            <EntityTypeMapping TypeName="DEHRISModel.child">
-              <MappingFragment StoreEntitySet="children">
-                <ScalarProperty Name="region_id" ColumnName="region_id" />
-                <ScalarProperty Name="dateCreated" ColumnName="dateCreated" />
-                <ScalarProperty Name="isInactive" ColumnName="isInactive" />
-                <ScalarProperty Name="childstatusid" ColumnName="childstatusid" />
-                <ScalarProperty Name="childbirthdate" ColumnName="childbirthdate" />
-                <ScalarProperty Name="childname" ColumnName="childname" />
-                <ScalarProperty Name="personnel_id" ColumnName="personnel_id" />
-                <ScalarProperty Name="child_id" ColumnName="child_id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="civilservices">
             <EntityTypeMapping TypeName="DEHRISModel.civilservice">
               <MappingFragment StoreEntitySet="civilservice">
+                <ScalarProperty Name="dateCreated" ColumnName="dateCreated" />
                 <ScalarProperty Name="district_id" ColumnName="district_id" />
-                <ScalarProperty Name="region_id" ColumnName="region_id" />
-                <ScalarProperty Name="datecreated" ColumnName="datecreated" />
                 <ScalarProperty Name="isInactive" ColumnName="isInactive" />
                 <ScalarProperty Name="releasedate" ColumnName="releasedate" />
                 <ScalarProperty Name="civilservice_number" ColumnName="civilservice_number" />
@@ -1483,18 +381,18 @@ warning 6002: The table/view 'DEHRIS.dbo.workExperience' does not have a primary
                 <ScalarProperty Name="examdate" ColumnName="examdate" />
                 <ScalarProperty Name="rate" ColumnName="rate" />
                 <ScalarProperty Name="civilservicename" ColumnName="civilservicename" />
+                <ScalarProperty Name="region_id" ColumnName="region_id" />
                 <ScalarProperty Name="personnel_id" ColumnName="personnel_id" />
                 <ScalarProperty Name="civilservice_id" ColumnName="civilservice_id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="educationalbackgrounds">
-            <EntityTypeMapping TypeName="DEHRISModel.educationalbackground">
-              <MappingFragment StoreEntitySet="educationalbackground">
+          <EntitySetMapping Name="educationalBackgrounds">
+            <EntityTypeMapping TypeName="DEHRISModel.educationalBackground">
+              <MappingFragment StoreEntitySet="educationalBackground">
                 <ScalarProperty Name="section_id" ColumnName="section_id" />
                 <ScalarProperty Name="region_id" ColumnName="region_id" />
                 <ScalarProperty Name="datetimestamp" ColumnName="datetimestamp" />
-                <ScalarProperty Name="isInActive" ColumnName="isInActive" />
                 <ScalarProperty Name="honorsReceived" ColumnName="honorsReceived" />
                 <ScalarProperty Name="dateTo" ColumnName="dateTo" />
                 <ScalarProperty Name="dateFrom" ColumnName="dateFrom" />
@@ -1503,14 +401,81 @@ warning 6002: The table/view 'DEHRIS.dbo.workExperience' does not have a primary
                 <ScalarProperty Name="degreeEarned" ColumnName="degreeEarned" />
                 <ScalarProperty Name="school" ColumnName="school" />
                 <ScalarProperty Name="level" ColumnName="level" />
+                <ScalarProperty Name="isInActive" ColumnName="isInActive" />
                 <ScalarProperty Name="personnel_id" ColumnName="personnel_id" />
                 <ScalarProperty Name="educationalBackground_id" ColumnName="educationalBackground_id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="profilePictures">
-            <EntityTypeMapping TypeName="DEHRISModel.profilePicture">
-              <MappingFragment StoreEntitySet="profilePicture">
+          <EntitySetMapping Name="hris_applicants">
+            <EntityTypeMapping TypeName="DEHRISModel.hris_applicants">
+              <MappingFragment StoreEntitySet="hris_applicants">
+                <ScalarProperty Name="external_id" ColumnName="external_id" />
+                <ScalarProperty Name="pagibig_no" ColumnName="pagibig_no" />
+                <ScalarProperty Name="sss_no" ColumnName="sss_no" />
+                <ScalarProperty Name="gsis_no" ColumnName="gsis_no" />
+                <ScalarProperty Name="tin_no" ColumnName="tin_no" />
+                <ScalarProperty Name="agencyemployeeno" ColumnName="agencyemployeeno" />
+                <ScalarProperty Name="cellphoneno" ColumnName="cellphoneno" />
+                <ScalarProperty Name="emailaddress" ColumnName="emailaddress" />
+                <ScalarProperty Name="permanenttelephoneno" ColumnName="permanenttelephoneno" />
+                <ScalarProperty Name="permanentzipcode" ColumnName="permanentzipcode" />
+                <ScalarProperty Name="permanentaddress" ColumnName="permanentaddress" />
+                <ScalarProperty Name="residentialtelephoneno" ColumnName="residentialtelephoneno" />
+                <ScalarProperty Name="residentialzipcode" ColumnName="residentialzipcode" />
+                <ScalarProperty Name="residentialaddress" ColumnName="residentialaddress" />
+                <ScalarProperty Name="bloodtype" ColumnName="bloodtype" />
+                <ScalarProperty Name="weight" ColumnName="weight" />
+                <ScalarProperty Name="height" ColumnName="height" />
+                <ScalarProperty Name="citizenship" ColumnName="citizenship" />
+                <ScalarProperty Name="civilstatus" ColumnName="civilstatus" />
+                <ScalarProperty Name="sex" ColumnName="sex" />
+                <ScalarProperty Name="placeofbirth" ColumnName="placeofbirth" />
+                <ScalarProperty Name="dateofbirth" ColumnName="dateofbirth" />
+                <ScalarProperty Name="nameextension" ColumnName="nameextension" />
+                <ScalarProperty Name="middlename" ColumnName="middlename" />
+                <ScalarProperty Name="firstname" ColumnName="firstname" />
+                <ScalarProperty Name="lastname" ColumnName="lastname" />
+                <ScalarProperty Name="hris_applicants_id" ColumnName="hris_applicants_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="hris_personnel">
+            <EntityTypeMapping TypeName="DEHRISModel.hris_personnel">
+              <MappingFragment StoreEntitySet="hris_personnel">
+                <ScalarProperty Name="external_id" ColumnName="external_id" />
+                <ScalarProperty Name="pagibig_no" ColumnName="pagibig_no" />
+                <ScalarProperty Name="sss_no" ColumnName="sss_no" />
+                <ScalarProperty Name="gsis_no" ColumnName="gsis_no" />
+                <ScalarProperty Name="tin_no" ColumnName="tin_no" />
+                <ScalarProperty Name="agencyemployeeno" ColumnName="agencyemployeeno" />
+                <ScalarProperty Name="cellphoneno" ColumnName="cellphoneno" />
+                <ScalarProperty Name="emailaddress" ColumnName="emailaddress" />
+                <ScalarProperty Name="permanenttelephoneno" ColumnName="permanenttelephoneno" />
+                <ScalarProperty Name="permanentzipcode" ColumnName="permanentzipcode" />
+                <ScalarProperty Name="permanentaddress" ColumnName="permanentaddress" />
+                <ScalarProperty Name="residentialtelephoneno" ColumnName="residentialtelephoneno" />
+                <ScalarProperty Name="residentialzipcode" ColumnName="residentialzipcode" />
+                <ScalarProperty Name="residentialaddress" ColumnName="residentialaddress" />
+                <ScalarProperty Name="bloodtype" ColumnName="bloodtype" />
+                <ScalarProperty Name="weight" ColumnName="weight" />
+                <ScalarProperty Name="height" ColumnName="height" />
+                <ScalarProperty Name="citizenship" ColumnName="citizenship" />
+                <ScalarProperty Name="civilstatus" ColumnName="civilstatus" />
+                <ScalarProperty Name="sex" ColumnName="sex" />
+                <ScalarProperty Name="placeofbirth" ColumnName="placeofbirth" />
+                <ScalarProperty Name="dateofbirth" ColumnName="dateofbirth" />
+                <ScalarProperty Name="nameextension" ColumnName="nameextension" />
+                <ScalarProperty Name="middlename" ColumnName="middlename" />
+                <ScalarProperty Name="firstname" ColumnName="firstname" />
+                <ScalarProperty Name="lastname" ColumnName="lastname" />
+                <ScalarProperty Name="hris_personnel_id" ColumnName="hris_personnel_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="profilepictures">
+            <EntityTypeMapping TypeName="DEHRISModel.profilepicture">
+              <MappingFragment StoreEntitySet="profilepicture">
                 <ScalarProperty Name="binaryImage" ColumnName="binaryImage" />
                 <ScalarProperty Name="contentType" ColumnName="contentType" />
                 <ScalarProperty Name="filepath" ColumnName="filepath" />
@@ -1520,74 +485,38 @@ warning 6002: The table/view 'DEHRIS.dbo.workExperience' does not have a primary
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="specialskills">
-            <EntityTypeMapping TypeName="DEHRISModel.specialskill">
-              <MappingFragment StoreEntitySet="specialskills">
-                <ScalarProperty Name="section_id" ColumnName="section_id" />
-                <ScalarProperty Name="region_id" ColumnName="region_id" />
+          <EntitySetMapping Name="specialSkills">
+            <EntityTypeMapping TypeName="DEHRISModel.specialSkill">
+              <MappingFragment StoreEntitySet="specialSkills">
                 <ScalarProperty Name="dateCreated" ColumnName="dateCreated" />
                 <ScalarProperty Name="isInactive" ColumnName="isInactive" />
                 <ScalarProperty Name="specialSkillDescription" ColumnName="specialSkillDescription" />
+                <ScalarProperty Name="section_id" ColumnName="section_id" />
+                <ScalarProperty Name="region_id" ColumnName="region_id" />
                 <ScalarProperty Name="personnel_id" ColumnName="personnel_id" />
                 <ScalarProperty Name="specialSkill_id" ColumnName="specialSkill_id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="appointments">
-            <EntityTypeMapping TypeName="DEHRISModel.appointment">
-              <MappingFragment StoreEntitySet="appointment">
-                <ScalarProperty Name="nosatype" ColumnName="nosatype" />
-                <ScalarProperty Name="transtype" ColumnName="transtype" />
-                <ScalarProperty Name="userid" ColumnName="userid" />
-                <ScalarProperty Name="datecreated" ColumnName="datecreated" />
-                <ScalarProperty Name="issave" ColumnName="issave" />
-                <ScalarProperty Name="personnelofficerdesignation" ColumnName="personnelofficerdesignation" />
-                <ScalarProperty Name="personnelofficer" ColumnName="personnelofficer" />
-                <ScalarProperty Name="personnelselectiondesignation" ColumnName="personnelselectiondesignation" />
-                <ScalarProperty Name="personnelselection" ColumnName="personnelselection" />
-                <ScalarProperty Name="designation" ColumnName="designation" />
-                <ScalarProperty Name="year" ColumnName="year" />
-                <ScalarProperty Name="name" ColumnName="name" />
-                <ScalarProperty Name="funds" ColumnName="funds" />
-                <ScalarProperty Name="cssmcno" ColumnName="cssmcno" />
-                <ScalarProperty Name="prevemployeestatus" ColumnName="prevemployeestatus" />
-                <ScalarProperty Name="prevemployee" ColumnName="prevemployee" />
-                <ScalarProperty Name="datepublished" ColumnName="datepublished" />
-                <ScalarProperty Name="datesigned" ColumnName="datesigned" />
-                <ScalarProperty Name="publication" ColumnName="publication" />
-                <ScalarProperty Name="page" ColumnName="page" />
-                <ScalarProperty Name="itemno" ColumnName="itemno" />
-                <ScalarProperty Name="appointmenttype" ColumnName="appointmenttype" />
-                <ScalarProperty Name="previoussalary" ColumnName="previoussalary" />
-                <ScalarProperty Name="previousposition" ColumnName="previousposition" />
-                <ScalarProperty Name="prevpositiontype" ColumnName="prevpositiontype" />
-                <ScalarProperty Name="districtid" ColumnName="districtid" />
-                <ScalarProperty Name="regionid" ColumnName="regionid" />
+          <EntitySetMapping Name="trainings">
+            <EntityTypeMapping TypeName="DEHRISModel.training">
+              <MappingFragment StoreEntitySet="training">
                 <ScalarProperty Name="personnel_id" ColumnName="personnel_id" />
+                <ScalarProperty Name="dateTo" ColumnName="dateTo" />
+                <ScalarProperty Name="dateFrom" ColumnName="dateFrom" />
+                <ScalarProperty Name="category_id" ColumnName="category_id" />
+                <ScalarProperty Name="trainingModule_id" ColumnName="trainingModule_id" />
+                <ScalarProperty Name="division_id" ColumnName="division_id" />
+                <ScalarProperty Name="isScholarship" ColumnName="isScholarship" />
+                <ScalarProperty Name="dateCreated" ColumnName="dateCreated" />
+                <ScalarProperty Name="isInactive" ColumnName="isInactive" />
+                <ScalarProperty Name="conductedBy" ColumnName="conductedBy" />
+                <ScalarProperty Name="noOfHours" ColumnName="noOfHours" />
+                <ScalarProperty Name="inclusiveDates" ColumnName="inclusiveDates" />
+                <ScalarProperty Name="title" ColumnName="title" />
                 <ScalarProperty Name="header_id" ColumnName="header_id" />
-                <ScalarProperty Name="appointment_id" ColumnName="appointment_id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="appointmentheaders">
-            <EntityTypeMapping TypeName="DEHRISModel.appointmentheader">
-              <MappingFragment StoreEntitySet="appointmentheader">
-                <ScalarProperty Name="headeridtemp" ColumnName="headeridtemp" />
-                <ScalarProperty Name="datecreated" ColumnName="datecreated" />
-                <ScalarProperty Name="district_id" ColumnName="district_id" />
                 <ScalarProperty Name="region_id" ColumnName="region_id" />
-                <ScalarProperty Name="designation" ColumnName="designation" />
-                <ScalarProperty Name="name" ColumnName="name" />
-                <ScalarProperty Name="datesigned" ColumnName="datesigned" />
-                <ScalarProperty Name="header_id" ColumnName="header_id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="appointmenttypes">
-            <EntityTypeMapping TypeName="DEHRISModel.appointmenttype">
-              <MappingFragment StoreEntitySet="appointmenttypes">
-                <ScalarProperty Name="appointmenttypename" ColumnName="appointmenttypename" />
-                <ScalarProperty Name="appointmenttype_id" ColumnName="appointmenttype_id" />
+                <ScalarProperty Name="training_id" ColumnName="training_id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1605,35 +534,13 @@ warning 6002: The table/view 'DEHRIS.dbo.workExperience' does not have a primary
                 <ScalarProperty Name="salary" ColumnName="salary" />
                 <ScalarProperty Name="position" ColumnName="position" />
                 <ScalarProperty Name="serviceLength" ColumnName="serviceLength" />
-                <ScalarProperty Name="dateTo" ColumnName="dateTo" />
-                <ScalarProperty Name="dateFrom" ColumnName="dateFrom" />
                 <ScalarProperty Name="serviceType" ColumnName="serviceType" />
-                <ScalarProperty Name="personnel_id" ColumnName="personnel_id" />
                 <ScalarProperty Name="section_id" ColumnName="section_id" />
                 <ScalarProperty Name="region_id" ColumnName="region_id" />
-                <ScalarProperty Name="workExperience_id" ColumnName="workExperience_id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="trainings">
-            <EntityTypeMapping TypeName="DEHRISModel.training">
-              <MappingFragment StoreEntitySet="training">
-                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="dateTo" ColumnName="dateTo" />
+                <ScalarProperty Name="dateFrom" ColumnName="dateFrom" />
                 <ScalarProperty Name="personnel_id" ColumnName="personnel_id" />
-                <ScalarProperty Name="category_id" ColumnName="category_id" />
-                <ScalarProperty Name="trainingModule_id" ColumnName="trainingModule_id" />
-                <ScalarProperty Name="division_id" ColumnName="division_id" />
-                <ScalarProperty Name="region_id" ColumnName="region_id" />
-                <ScalarProperty Name="isScholarship" ColumnName="isScholarship" />
-                <ScalarProperty Name="dateCreated" ColumnName="dateCreated" />
-                <ScalarProperty Name="isInactive" ColumnName="isInactive" />
-                <ScalarProperty Name="conductedBy" ColumnName="conductedBy" />
-                <ScalarProperty Name="noOfHours" ColumnName="noOfHours" />
-                <ScalarProperty Name="endDate" ColumnName="endDate" />
-                <ScalarProperty Name="startDate" ColumnName="startDate" />
-                <ScalarProperty Name="title" ColumnName="title" />
-                <ScalarProperty Name="header_id" ColumnName="header_id" />
-                <ScalarProperty Name="training_id" ColumnName="training_id" />
+                <ScalarProperty Name="workExperience_id" ColumnName="workExperience_id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

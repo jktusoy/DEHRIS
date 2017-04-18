@@ -41,6 +41,7 @@
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.gradientLabel1 = new Syncfusion.Windows.Forms.Tools.GradientLabel();
             this.bannerTextProvider1 = new Syncfusion.Windows.Forms.BannerTextProvider(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gradientPanel3)).BeginInit();
             this.gradientPanel3.SuspendLayout();
@@ -127,6 +128,7 @@
             this.gradientPanel2.Border3DStyle = System.Windows.Forms.Border3DStyle.Flat;
             this.gradientPanel2.BorderColor = System.Drawing.Color.Gainsboro;
             this.gradientPanel2.BorderSingle = System.Windows.Forms.ButtonBorderStyle.Dashed;
+            this.gradientPanel2.Controls.Add(this.label1);
             this.gradientPanel2.Controls.Add(this.gradientLabel2);
             this.gradientPanel2.Controls.Add(this.richTextBox2);
             this.gradientPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -221,6 +223,15 @@
             this.gradientLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.gradientLabel1.Click += new System.EventHandler(this.gradientLabel1_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(145, 41);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "label1";
+            // 
             // ucVMG
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -233,6 +244,7 @@
             this.gradientPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gradientPanel2)).EndInit();
             this.gradientPanel2.ResumeLayout(false);
+            this.gradientPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gradientPanel1)).EndInit();
             this.gradientPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -252,6 +264,7 @@
         private System.Windows.Forms.RichTextBox richTextBox2;
         private Syncfusion.Windows.Forms.Tools.GradientLabel gradientLabel3;
         private Syncfusion.Windows.Forms.Tools.GradientLabel gradientLabel2;
+        private System.Windows.Forms.Label label1;
 
     }
 }

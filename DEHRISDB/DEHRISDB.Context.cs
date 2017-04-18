@@ -25,29 +25,13 @@ namespace DEHRISDB
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<ais_cdtransactiondetails> ais_cdtransactiondetails { get; set; }
-        public virtual DbSet<common_importtempate> common_importtempate { get; set; }
-        public virtual DbSet<common_importtemplatedetail> common_importtemplatedetail { get; set; }
-        public virtual DbSet<common_importtransaction> common_importtransaction { get; set; }
-        public virtual DbSet<common_importtransactiondetail> common_importtransactiondetail { get; set; }
-        public virtual DbSet<hris_address> hris_address { get; set; }
-        public virtual DbSet<hris_birform2305> hris_birform2305 { get; set; }
-        public virtual DbSet<hris_employment> hris_employment { get; set; }
-        public virtual DbSet<hris_personnel> hris_personnel { get; set; }
-        public virtual DbSet<pm_project> pm_project { get; set; }
-        public virtual DbSet<pm_projectaccess> pm_projectaccess { get; set; }
-        public virtual DbSet<sis_school> sis_school { get; set; }
-        public virtual DbSet<sis_schooldistrict> sis_schooldistrict { get; set; }
-        public virtual DbSet<ais_cdtransaction> ais_cdtransaction { get; set; }
-        public virtual DbSet<child> children { get; set; }
         public virtual DbSet<civilservice> civilservices { get; set; }
-        public virtual DbSet<educationalbackground> educationalbackgrounds { get; set; }
-        public virtual DbSet<profilePicture> profilePictures { get; set; }
-        public virtual DbSet<specialskill> specialskills { get; set; }
-        public virtual DbSet<appointment> appointments { get; set; }
-        public virtual DbSet<appointmentheader> appointmentheaders { get; set; }
-        public virtual DbSet<appointmenttype> appointmenttypes { get; set; }
-        public virtual DbSet<workExperience> workExperiences { get; set; }
+        public virtual DbSet<educationalBackground> educationalBackgrounds { get; set; }
+        public virtual DbSet<hris_applicants> hris_applicants { get; set; }
+        public virtual DbSet<hris_personnel> hris_personnel { get; set; }
+        public virtual DbSet<profilepicture> profilepictures { get; set; }
+        public virtual DbSet<specialSkill> specialSkills { get; set; }
         public virtual DbSet<training> trainings { get; set; }
+        public virtual DbSet<workExperience> workExperiences { get; set; }
     }
 }
