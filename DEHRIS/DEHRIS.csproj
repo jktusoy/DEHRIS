@@ -125,6 +125,7 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helper\TransactionHelper.cs" />
     <Compile Include="Home\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,6 +198,18 @@
     <Compile Include="Personnel\Modules\ucTraining.Designer.cs">
       <DependentUpon>ucTraining.cs</DependentUpon>
     </Compile>
+    <Compile Include="Personnel\Modules\ucTrainingAssignment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Personnel\Modules\ucTrainingAssignment.Designer.cs">
+      <DependentUpon>ucTrainingAssignment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\Modules\ucTrainingView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Personnel\Modules\ucTrainingView.Designer.cs">
+      <DependentUpon>ucTrainingView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Personnel\Performance\ucAttendance.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -252,12 +265,6 @@
     </Compile>
     <Compile Include="Recruitment\ucApplicantView.Designer.cs">
       <DependentUpon>ucApplicantView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Recruitment\ucTraining.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Recruitment\ucTraining.Designer.cs">
-      <DependentUpon>ucTraining.cs</DependentUpon>
     </Compile>
     <Compile Include="Strategy\ucStrategyNavigation.cs">
       <SubType>UserControl</SubType>
@@ -326,6 +333,12 @@
     <EmbeddedResource Include="Personnel\Modules\ucTraining.resx">
       <DependentUpon>ucTraining.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Personnel\Modules\ucTrainingAssignment.resx">
+      <DependentUpon>ucTrainingAssignment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personnel\Modules\ucTrainingView.resx">
+      <DependentUpon>ucTrainingView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Personnel\Performance\ucAttendance.resx">
       <DependentUpon>ucAttendance.cs</DependentUpon>
     </EmbeddedResource>
@@ -363,9 +376,6 @@
     </Compile>
     <EmbeddedResource Include="Recruitment\ucApplicantView.resx">
       <DependentUpon>ucApplicantView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Recruitment\ucTraining.resx">
-      <DependentUpon>ucTraining.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Strategy\ucStrategyNavigation.resx">
       <DependentUpon>ucStrategyNavigation.cs</DependentUpon>
@@ -530,6 +540,7 @@
     <None Include="Resources\scheduler1.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\save.png" />
     <None Include="Resources\module.png" />
     <None Include="Resources\template.png" />
     <None Include="Resources\filetype.png" />

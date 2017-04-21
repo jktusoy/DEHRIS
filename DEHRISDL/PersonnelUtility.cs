@@ -144,7 +144,7 @@ namespace DEHRISAPI
         }
 
 
-        public List<Training> GetSeminarListByPersonnelID(int ppersonnel_id)
+        public List<Training> GetTrainingListByPersonnelID(int ppersonnel_id)
         {
             using (DEHRISEntities dbcontext = new DEHRISEntities())
             {
@@ -156,12 +156,9 @@ namespace DEHRISAPI
                                          select new Training()
                                          {
                                              ConductedBy = item.conductedBy,
-                                             DateCreated = item.dateCreated,
-                                             LastUpdated = (DateTime)item.lastUpdated,
                                              IsActive = item.isActive,
                                              PersonnelID = (long)item.personnelID,
                                              Title = item.title,
-                                             CreatedBy = item.createdBy,
                                              DateFrom = item.dateFrom,
                                              DateTo = item.dateTo,
                                              Duration = item.duration,
@@ -169,7 +166,7 @@ namespace DEHRISAPI
                                              Remarks = item.remarks,
                                              TrainingID = item.trainingID,
                                              Type = item.type,
-                                             UpdatedBy = item.updatedBy
+
                                          }).ToList();
                 return ssList;
             }

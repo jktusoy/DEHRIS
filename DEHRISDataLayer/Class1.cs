@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DEHRISClientAPI
+namespace DEHRISDataLayer
 {
     public class Class1
     {

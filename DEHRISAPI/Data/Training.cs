@@ -14,15 +14,14 @@ namespace DEHRISModel.Data
         public Nullable<int> Duration { get; set; }
         public string ConductedBy { get; set; }
         public Nullable<bool> IsActive { get; set; }
-        public Nullable<DateTime> DateCreated { get; set; }
-        public Nullable<DateTime> LastUpdated { get; set; }
-        public Nullable<long> CreatedBy { get; set; }
-        public Nullable<long> UpdatedBy { get; set; }
         public Nullable<DateTime> DateFrom { get; set; }
         public Nullable<DateTime> DateTo { get; set; }
         public Nullable<long> PersonnelID { get; set; }
         public string Remarks { get; set; }
         public string Type { get; set; }
         public string Method { get; set; }
+        public bool? IsMandatory { get; set; }
+        public string Schedule { get; set; }
+        public string TranslatedDuration { get; set; }
     }
 }

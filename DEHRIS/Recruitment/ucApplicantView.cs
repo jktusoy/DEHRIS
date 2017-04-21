@@ -200,7 +200,7 @@ namespace DEHRIS.Recruitment
 
                     public void LoadSeminar(int ppersonnelID)
                     {
-                        objCivilService.SetObjects(prodUtil.GetSeminarListByPersonnelID(ppersonnelID));
+                        objCivilService.SetObjects(prodUtil.GetTrainingListByPersonnelID(ppersonnelID));
                     }
 
                     public void LoadWorkExperience(int ppersonnelID)

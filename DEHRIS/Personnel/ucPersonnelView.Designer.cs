@@ -82,24 +82,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.pictureProfile = new System.Windows.Forms.PictureBox();
             this.dateTimePickerAdv1 = new Syncfusion.Windows.Forms.Tools.DateTimePickerAdv();
-            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.xptbEducation = new Syncfusion.Windows.Forms.Tools.XPMenus.XPToolBar();
-            this.briEduc = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
-            this.briEducAdd = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
-            this.briEducEdit = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
-            this.briEducDelete = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
-            this.briEducRefresh = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
-            this.briEducSave = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
-            this.flipEduc = new wdi.ui.FlipPanel();
-            this.objEducBack = new BrightIdeasSoftware.ObjectListView();
-            this.olvcLevel = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvcSchool = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvcDegree = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvcYearGraduated = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvcHighestLevel = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvcDateFrom = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvcDateTo = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvcHonors = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.xptbFamily = new Syncfusion.Windows.Forms.Tools.XPMenus.XPToolBar();
             this.briFamily = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
@@ -114,6 +96,14 @@
             this.olvcFamBgMiddleName = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.olvcFamBgBirthdate = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.olvcFamBgOccupation = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.xptbEducation = new Syncfusion.Windows.Forms.Tools.XPMenus.XPToolBar();
+            this.briEduc = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
+            this.briEducAdd = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
+            this.briEducEdit = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
+            this.briEducDelete = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
+            this.briEducRefresh = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
+            this.briEducSave = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
             this.gpProfile = new Syncfusion.Windows.Forms.Tools.GroupBarItem();
             this.gpEduc = new Syncfusion.Windows.Forms.Tools.GroupBarItem();
             this.gpFamily = new Syncfusion.Windows.Forms.Tools.GroupBarItem();
@@ -121,18 +111,6 @@
             this.groupBar2 = new Syncfusion.Windows.Forms.Tools.GroupBar();
             this.gbQualification = new Syncfusion.Windows.Forms.Tools.GroupBar();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.flipPanel1 = new wdi.ui.FlipPanel();
-            this.objectListView2 = new BrightIdeasSoftware.ObjectListView();
-            this.olvColumn5 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn6 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn7 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn8 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.flipPanel3 = new wdi.ui.FlipPanel();
-            this.objectListView3 = new BrightIdeasSoftware.ObjectListView();
-            this.olvColumn9 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn10 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn11 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn12 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.xptbSeminars = new Syncfusion.Windows.Forms.Tools.XPMenus.XPToolBar();
             this.barItem3 = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
             this.barItem4 = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
@@ -145,18 +123,6 @@
             this.xpToolBar3 = new Syncfusion.Windows.Forms.Tools.XPMenus.XPToolBar();
             this.objectListView4 = new BrightIdeasSoftware.ObjectListView();
             this.tblayoutEligibility = new System.Windows.Forms.TableLayoutPanel();
-            this.flipPanel2 = new wdi.ui.FlipPanel();
-            this.objCivilService = new BrightIdeasSoftware.ObjectListView();
-            this.olvCivilName = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvConductDAte = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvcRate = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvcPlace = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.flipEligib = new wdi.ui.FlipPanel();
-            this.objEligib = new BrightIdeasSoftware.ObjectListView();
-            this.olvColumn1 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn2 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn3 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn4 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.xptbSkills = new Syncfusion.Windows.Forms.Tools.XPMenus.XPToolBar();
             this.briSkills = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
             this.briSkillsAdd = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
@@ -181,6 +147,40 @@
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.popupNotifier1 = new NotificationWindow.PopupNotifier();
             this.superToolTip1 = new Syncfusion.Windows.Forms.Tools.SuperToolTip(null);
+            this.flipEduc = new wdi.ui.FlipPanel();
+            this.objEducBack = new BrightIdeasSoftware.ObjectListView();
+            this.olvcLevel = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvcSchool = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvcDegree = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvcYearGraduated = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvcHighestLevel = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvcDateFrom = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvcDateTo = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvcHonors = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.flipPanel1 = new wdi.ui.FlipPanel();
+            this.objectListView2 = new BrightIdeasSoftware.ObjectListView();
+            this.olvColumn5 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvColumn6 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvColumn7 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvColumn8 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.flipPanel3 = new wdi.ui.FlipPanel();
+            this.objectListView3 = new BrightIdeasSoftware.ObjectListView();
+            this.olvColumn9 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvColumn10 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvColumn11 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvColumn12 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.flipPanel2 = new wdi.ui.FlipPanel();
+            this.objCivilService = new BrightIdeasSoftware.ObjectListView();
+            this.olvCivilName = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvConductDAte = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvcRate = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvcPlace = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.flipEligib = new wdi.ui.FlipPanel();
+            this.objEligib = new BrightIdeasSoftware.ObjectListView();
+            this.olvColumn1 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvColumn2 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvColumn3 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvColumn4 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.tabSplitterContainer1.SuspendLayout();
             this.tabSplitterPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -204,37 +204,27 @@
             ((System.ComponentModel.ISupportInitialize)(this.rbMale)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureProfile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateTimePickerAdv1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
-            this.splitContainer2.Panel1.SuspendLayout();
-            this.splitContainer2.Panel2.SuspendLayout();
-            this.splitContainer2.SuspendLayout();
-            this.flipEduc.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.objEducBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.Panel1.SuspendLayout();
             this.splitContainer3.Panel2.SuspendLayout();
             this.splitContainer3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.objectListView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
+            this.splitContainer2.Panel1.SuspendLayout();
+            this.splitContainer2.Panel2.SuspendLayout();
+            this.splitContainer2.SuspendLayout();
             this.tspQualification.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupBar2)).BeginInit();
             this.groupBar2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gbQualification)).BeginInit();
             this.gbQualification.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.flipPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.objectListView2)).BeginInit();
-            this.flipPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.objectListView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).BeginInit();
             this.splitContainer6.Panel1.SuspendLayout();
             this.splitContainer6.Panel2.SuspendLayout();
             this.splitContainer6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.objectListView4)).BeginInit();
             this.tblayoutEligibility.SuspendLayout();
-            this.flipPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.objCivilService)).BeginInit();
-            this.flipEligib.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.objEligib)).BeginInit();
             this.tspAttachment.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupBar4)).BeginInit();
             this.groupBar4.SuspendLayout();
@@ -244,6 +234,16 @@
             this.splitContainer9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).BeginInit();
             this.splitContainer7.SuspendLayout();
+            this.flipEduc.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.objEducBack)).BeginInit();
+            this.flipPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.objectListView2)).BeginInit();
+            this.flipPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.objectListView3)).BeginInit();
+            this.flipPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.objCivilService)).BeginInit();
+            this.flipEligib.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.objEligib)).BeginInit();
             this.SuspendLayout();
             // 
             // tabSplitterContainer1
@@ -913,6 +913,7 @@
             this.dateTimePickerAdv1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimePickerAdv1.BorderColor = System.Drawing.Color.Empty;
+            this.dateTimePickerAdv1.CalendarFont = new System.Drawing.Font("Eras Medium ITC", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerAdv1.CalendarForeColor = System.Drawing.SystemColors.ControlText;
             this.dateTimePickerAdv1.CalendarSize = new System.Drawing.Size(189, 176);
             this.dateTimePickerAdv1.DropDownImage = null;
@@ -926,6 +927,148 @@
             this.dateTimePickerAdv1.Size = new System.Drawing.Size(0, 0);
             this.dateTimePickerAdv1.TabIndex = 46;
             this.dateTimePickerAdv1.Value = new System.DateTime(2017, 3, 4, 11, 21, 59, 936);
+            // 
+            // splitContainer3
+            // 
+            this.splitContainer3.Location = new System.Drawing.Point(1, 27);
+            this.splitContainer3.Name = "splitContainer3";
+            this.splitContainer3.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer3.Panel1
+            // 
+            this.splitContainer3.Panel1.Controls.Add(this.xptbFamily);
+            // 
+            // splitContainer3.Panel2
+            // 
+            this.splitContainer3.Panel2.Controls.Add(this.objectListView1);
+            this.splitContainer3.Size = new System.Drawing.Size(446, 490);
+            this.splitContainer3.SplitterDistance = 245;
+            this.splitContainer3.TabIndex = 8;
+            // 
+            // xptbFamily
+            // 
+            this.xptbFamily.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.xptbFamily.Bar.BarName = "Add";
+            this.xptbFamily.Bar.Caption = "Add";
+            this.xptbFamily.Bar.Items.AddRange(new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem[] {
+            this.briFamily,
+            this.briFamilyAdd,
+            this.briFamilyEdit,
+            this.briFamilyDelete,
+            this.briFamilyRefresh,
+            this.briFamilySave});
+            this.xptbFamily.Bar.Manager = null;
+            this.xptbFamily.Bar.SeparatorIndices.AddRange(new int[] {
+            1});
+            this.xptbFamily.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xptbFamily.LargeIcons = true;
+            this.xptbFamily.Location = new System.Drawing.Point(0, 0);
+            this.xptbFamily.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
+            this.xptbFamily.Name = "xptbFamily";
+            this.xptbFamily.ShowChevron = true;
+            this.xptbFamily.Size = new System.Drawing.Size(446, 25);
+            this.xptbFamily.Style = Syncfusion.Windows.Forms.VisualStyle.Office2007;
+            this.xptbFamily.TabIndex = 60;
+            this.xptbFamily.Text = "Add";
+            // 
+            // briFamily
+            // 
+            this.briFamily.BarName = "briFamily";
+            this.briFamily.CustomTextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World);
+            this.briFamily.ShowToolTipInPopUp = false;
+            this.briFamily.SizeToFit = true;
+            // 
+            // briFamilyAdd
+            // 
+            this.briFamilyAdd.BarName = "briFamilyAdd";
+            this.briFamilyAdd.CustomTextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World);
+            this.briFamilyAdd.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("briFamilyAdd.Image")));
+            this.briFamilyAdd.ShowToolTipInPopUp = false;
+            this.briFamilyAdd.SizeToFit = true;
+            // 
+            // briFamilyEdit
+            // 
+            this.briFamilyEdit.BarName = "briFamilyEdit";
+            this.briFamilyEdit.CustomTextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World);
+            this.briFamilyEdit.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("briFamilyEdit.Image")));
+            this.briFamilyEdit.ShowToolTipInPopUp = false;
+            this.briFamilyEdit.SizeToFit = true;
+            // 
+            // briFamilyDelete
+            // 
+            this.briFamilyDelete.BarName = "briFamilyDelete";
+            this.briFamilyDelete.CustomTextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World);
+            this.briFamilyDelete.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("briFamilyDelete.Image")));
+            this.briFamilyDelete.ShowToolTipInPopUp = false;
+            this.briFamilyDelete.SizeToFit = true;
+            // 
+            // briFamilyRefresh
+            // 
+            this.briFamilyRefresh.BarName = "briFamilyRefresh";
+            this.briFamilyRefresh.CustomTextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World);
+            this.briFamilyRefresh.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("briFamilyRefresh.Image")));
+            this.briFamilyRefresh.ShowToolTipInPopUp = false;
+            this.briFamilyRefresh.SizeToFit = true;
+            // 
+            // briFamilySave
+            // 
+            this.briFamilySave.BarName = "briFamilySave";
+            this.briFamilySave.CustomTextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World);
+            this.briFamilySave.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("briFamilySave.Image")));
+            this.briFamilySave.ShowToolTipInPopUp = false;
+            this.briFamilySave.SizeToFit = true;
+            // 
+            // objectListView1
+            // 
+            this.objectListView1.AllColumns.Add(this.olvcFamBgLastName);
+            this.objectListView1.AllColumns.Add(this.olvcFamBgFirstName);
+            this.objectListView1.AllColumns.Add(this.olvcFamBgMiddleName);
+            this.objectListView1.AllColumns.Add(this.olvcFamBgBirthdate);
+            this.objectListView1.AllColumns.Add(this.olvcFamBgOccupation);
+            this.objectListView1.CellEditUseWholeCell = false;
+            this.objectListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.olvcFamBgLastName,
+            this.olvcFamBgFirstName,
+            this.olvcFamBgMiddleName,
+            this.olvcFamBgBirthdate,
+            this.olvcFamBgOccupation});
+            this.objectListView1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.objectListView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.objectListView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.objectListView1.Location = new System.Drawing.Point(0, 0);
+            this.objectListView1.Name = "objectListView1";
+            this.objectListView1.Size = new System.Drawing.Size(446, 241);
+            this.objectListView1.TabIndex = 0;
+            this.objectListView1.UseCompatibleStateImageBehavior = false;
+            this.objectListView1.View = System.Windows.Forms.View.Details;
+            // 
+            // olvcFamBgLastName
+            // 
+            this.olvcFamBgLastName.Text = "Lastname";
+            this.olvcFamBgLastName.Width = 96;
+            // 
+            // olvcFamBgFirstName
+            // 
+            this.olvcFamBgFirstName.Text = "Firstname";
+            this.olvcFamBgFirstName.Width = 98;
+            // 
+            // olvcFamBgMiddleName
+            // 
+            this.olvcFamBgMiddleName.Text = "Middlename";
+            this.olvcFamBgMiddleName.Width = 97;
+            // 
+            // olvcFamBgBirthdate
+            // 
+            this.olvcFamBgBirthdate.Text = "Birthdate";
+            this.olvcFamBgBirthdate.Width = 72;
+            // 
+            // olvcFamBgOccupation
+            // 
+            this.olvcFamBgOccupation.Text = "Occupation";
+            this.olvcFamBgOccupation.Width = 107;
             // 
             // splitContainer2
             // 
@@ -1022,237 +1165,6 @@
             this.briEducSave.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("briEducSave.Image")));
             this.briEducSave.ShowToolTipInPopUp = false;
             this.briEducSave.SizeToFit = true;
-            // 
-            // flipEduc
-            // 
-            this.flipEduc.Back = null;
-            this.flipEduc.Controls.Add(this.objEducBack);
-            this.flipEduc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flipEduc.DoShading = false;
-            this.flipEduc.Front = null;
-            this.flipEduc.Location = new System.Drawing.Point(0, 0);
-            this.flipEduc.Name = "flipEduc";
-            this.flipEduc.Size = new System.Drawing.Size(446, 458);
-            this.flipEduc.TabIndex = 1;
-            this.flipEduc.TimerInterval = 100;
-            // 
-            // objEducBack
-            // 
-            this.objEducBack.AllColumns.Add(this.olvcLevel);
-            this.objEducBack.AllColumns.Add(this.olvcSchool);
-            this.objEducBack.AllColumns.Add(this.olvcDegree);
-            this.objEducBack.AllColumns.Add(this.olvcYearGraduated);
-            this.objEducBack.AllColumns.Add(this.olvcHighestLevel);
-            this.objEducBack.AllColumns.Add(this.olvcDateFrom);
-            this.objEducBack.AllColumns.Add(this.olvcDateTo);
-            this.objEducBack.AllColumns.Add(this.olvcHonors);
-            this.objEducBack.CellEditUseWholeCell = false;
-            this.objEducBack.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.olvcLevel,
-            this.olvcSchool,
-            this.olvcDegree,
-            this.olvcYearGraduated,
-            this.olvcHighestLevel,
-            this.olvcDateFrom,
-            this.olvcDateTo,
-            this.olvcHonors});
-            this.objEducBack.Cursor = System.Windows.Forms.Cursors.Default;
-            this.objEducBack.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.objEducBack.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.objEducBack.Location = new System.Drawing.Point(0, 0);
-            this.objEducBack.Name = "objEducBack";
-            this.objEducBack.Size = new System.Drawing.Size(446, 458);
-            this.objEducBack.TabIndex = 0;
-            this.objEducBack.UseCompatibleStateImageBehavior = false;
-            this.objEducBack.View = System.Windows.Forms.View.Details;
-            // 
-            // olvcLevel
-            // 
-            this.olvcLevel.AspectName = "Level";
-            this.olvcLevel.Text = "Level";
-            this.olvcLevel.Width = 42;
-            // 
-            // olvcSchool
-            // 
-            this.olvcSchool.AspectName = "School";
-            this.olvcSchool.Text = "School Name";
-            this.olvcSchool.Width = 106;
-            // 
-            // olvcDegree
-            // 
-            this.olvcDegree.AspectName = "DegreeEarned";
-            this.olvcDegree.Text = "Degree/  Course";
-            this.olvcDegree.Width = 89;
-            // 
-            // olvcYearGraduated
-            // 
-            this.olvcYearGraduated.AspectName = "YearGraduated";
-            this.olvcYearGraduated.Text = "Year Graduated";
-            this.olvcYearGraduated.Width = 86;
-            // 
-            // olvcHighestLevel
-            // 
-            this.olvcHighestLevel.AspectName = "UnitsCompleted";
-            this.olvcHighestLevel.Text = "Highest Level";
-            this.olvcHighestLevel.Width = 72;
-            // 
-            // olvcDateFrom
-            // 
-            this.olvcDateFrom.AspectName = "DateFrom";
-            this.olvcDateFrom.Text = "Date From";
-            // 
-            // olvcDateTo
-            // 
-            this.olvcDateTo.AspectName = "DateTo";
-            this.olvcDateTo.Text = "Date To";
-            this.olvcDateTo.Width = 45;
-            // 
-            // olvcHonors
-            // 
-            this.olvcHonors.AspectName = "HonorsReceived";
-            this.olvcHonors.Text = "Honors";
-            // 
-            // splitContainer3
-            // 
-            this.splitContainer3.Location = new System.Drawing.Point(1, 55);
-            this.splitContainer3.Name = "splitContainer3";
-            this.splitContainer3.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer3.Panel1
-            // 
-            this.splitContainer3.Panel1.Controls.Add(this.xptbFamily);
-            // 
-            // splitContainer3.Panel2
-            // 
-            this.splitContainer3.Panel2.Controls.Add(this.objectListView1);
-            this.splitContainer3.Size = new System.Drawing.Size(218, 244);
-            this.splitContainer3.SplitterDistance = 122;
-            this.splitContainer3.TabIndex = 8;
-            // 
-            // xptbFamily
-            // 
-            this.xptbFamily.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.xptbFamily.Bar.BarName = "Add";
-            this.xptbFamily.Bar.Caption = "Add";
-            this.xptbFamily.Bar.Items.AddRange(new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem[] {
-            this.briFamily,
-            this.briFamilyAdd,
-            this.briFamilyEdit,
-            this.briFamilyDelete,
-            this.briFamilyRefresh,
-            this.briFamilySave});
-            this.xptbFamily.Bar.Manager = null;
-            this.xptbFamily.Bar.SeparatorIndices.AddRange(new int[] {
-            1});
-            this.xptbFamily.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xptbFamily.LargeIcons = true;
-            this.xptbFamily.Location = new System.Drawing.Point(0, 0);
-            this.xptbFamily.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.xptbFamily.Name = "xptbFamily";
-            this.xptbFamily.ShowChevron = true;
-            this.xptbFamily.Size = new System.Drawing.Size(218, 25);
-            this.xptbFamily.Style = Syncfusion.Windows.Forms.VisualStyle.Office2007;
-            this.xptbFamily.TabIndex = 60;
-            this.xptbFamily.Text = "Add";
-            // 
-            // briFamily
-            // 
-            this.briFamily.BarName = "briFamily";
-            this.briFamily.CustomTextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World);
-            this.briFamily.ShowToolTipInPopUp = false;
-            this.briFamily.SizeToFit = true;
-            // 
-            // briFamilyAdd
-            // 
-            this.briFamilyAdd.BarName = "briFamilyAdd";
-            this.briFamilyAdd.CustomTextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World);
-            this.briFamilyAdd.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("briFamilyAdd.Image")));
-            this.briFamilyAdd.ShowToolTipInPopUp = false;
-            this.briFamilyAdd.SizeToFit = true;
-            // 
-            // briFamilyEdit
-            // 
-            this.briFamilyEdit.BarName = "briFamilyEdit";
-            this.briFamilyEdit.CustomTextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World);
-            this.briFamilyEdit.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("briFamilyEdit.Image")));
-            this.briFamilyEdit.ShowToolTipInPopUp = false;
-            this.briFamilyEdit.SizeToFit = true;
-            // 
-            // briFamilyDelete
-            // 
-            this.briFamilyDelete.BarName = "briFamilyDelete";
-            this.briFamilyDelete.CustomTextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World);
-            this.briFamilyDelete.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("briFamilyDelete.Image")));
-            this.briFamilyDelete.ShowToolTipInPopUp = false;
-            this.briFamilyDelete.SizeToFit = true;
-            // 
-            // briFamilyRefresh
-            // 
-            this.briFamilyRefresh.BarName = "briFamilyRefresh";
-            this.briFamilyRefresh.CustomTextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World);
-            this.briFamilyRefresh.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("briFamilyRefresh.Image")));
-            this.briFamilyRefresh.ShowToolTipInPopUp = false;
-            this.briFamilyRefresh.SizeToFit = true;
-            // 
-            // briFamilySave
-            // 
-            this.briFamilySave.BarName = "briFamilySave";
-            this.briFamilySave.CustomTextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World);
-            this.briFamilySave.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("briFamilySave.Image")));
-            this.briFamilySave.ShowToolTipInPopUp = false;
-            this.briFamilySave.SizeToFit = true;
-            // 
-            // objectListView1
-            // 
-            this.objectListView1.AllColumns.Add(this.olvcFamBgLastName);
-            this.objectListView1.AllColumns.Add(this.olvcFamBgFirstName);
-            this.objectListView1.AllColumns.Add(this.olvcFamBgMiddleName);
-            this.objectListView1.AllColumns.Add(this.olvcFamBgBirthdate);
-            this.objectListView1.AllColumns.Add(this.olvcFamBgOccupation);
-            this.objectListView1.CellEditUseWholeCell = false;
-            this.objectListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.olvcFamBgLastName,
-            this.olvcFamBgFirstName,
-            this.olvcFamBgMiddleName,
-            this.olvcFamBgBirthdate,
-            this.olvcFamBgOccupation});
-            this.objectListView1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.objectListView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.objectListView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.objectListView1.Location = new System.Drawing.Point(0, 0);
-            this.objectListView1.Name = "objectListView1";
-            this.objectListView1.Size = new System.Drawing.Size(218, 118);
-            this.objectListView1.TabIndex = 0;
-            this.objectListView1.UseCompatibleStateImageBehavior = false;
-            this.objectListView1.View = System.Windows.Forms.View.Details;
-            // 
-            // olvcFamBgLastName
-            // 
-            this.olvcFamBgLastName.Text = "Lastname";
-            this.olvcFamBgLastName.Width = 96;
-            // 
-            // olvcFamBgFirstName
-            // 
-            this.olvcFamBgFirstName.Text = "Firstname";
-            this.olvcFamBgFirstName.Width = 98;
-            // 
-            // olvcFamBgMiddleName
-            // 
-            this.olvcFamBgMiddleName.Text = "Middlename";
-            this.olvcFamBgMiddleName.Width = 97;
-            // 
-            // olvcFamBgBirthdate
-            // 
-            this.olvcFamBgBirthdate.Text = "Birthdate";
-            this.olvcFamBgBirthdate.Width = 72;
-            // 
-            // olvcFamBgOccupation
-            // 
-            this.olvcFamBgOccupation.Text = "Occupation";
-            this.olvcFamBgOccupation.Width = 107;
             // 
             // gpProfile
             // 
@@ -1372,124 +1284,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(450, 502);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
-            // flipPanel1
-            // 
-            this.flipPanel1.Back = null;
-            this.flipPanel1.Controls.Add(this.objectListView2);
-            this.flipPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flipPanel1.DoShading = false;
-            this.flipPanel1.Front = null;
-            this.flipPanel1.Location = new System.Drawing.Point(3, 278);
-            this.flipPanel1.Name = "flipPanel1";
-            this.flipPanel1.Size = new System.Drawing.Size(444, 221);
-            this.flipPanel1.TabIndex = 2;
-            this.flipPanel1.TimerInterval = 100;
-            // 
-            // objectListView2
-            // 
-            this.objectListView2.AllColumns.Add(this.olvColumn5);
-            this.objectListView2.AllColumns.Add(this.olvColumn6);
-            this.objectListView2.AllColumns.Add(this.olvColumn7);
-            this.objectListView2.AllColumns.Add(this.olvColumn8);
-            this.objectListView2.CellEditUseWholeCell = false;
-            this.objectListView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.olvColumn5,
-            this.olvColumn6,
-            this.olvColumn7,
-            this.olvColumn8});
-            this.objectListView2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.objectListView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.objectListView2.Font = new System.Drawing.Font("Calibri Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.objectListView2.Location = new System.Drawing.Point(0, 0);
-            this.objectListView2.Name = "objectListView2";
-            this.objectListView2.Size = new System.Drawing.Size(444, 221);
-            this.objectListView2.TabIndex = 0;
-            this.objectListView2.UseCompatibleStateImageBehavior = false;
-            this.objectListView2.View = System.Windows.Forms.View.Details;
-            // 
-            // olvColumn5
-            // 
-            this.olvColumn5.AspectName = "CivilServiceName ";
-            this.olvColumn5.Text = "Title";
-            this.olvColumn5.Width = 193;
-            // 
-            // olvColumn6
-            // 
-            this.olvColumn6.AspectName = "ExamDate ";
-            this.olvColumn6.Text = "Date Conducted";
-            this.olvColumn6.Width = 110;
-            // 
-            // olvColumn7
-            // 
-            this.olvColumn7.AspectName = "Rate";
-            this.olvColumn7.Text = "Rate";
-            this.olvColumn7.Width = 78;
-            // 
-            // olvColumn8
-            // 
-            this.olvColumn8.AspectName = "PlaceConducted ";
-            this.olvColumn8.Text = "Place Conducted";
-            this.olvColumn8.Width = 86;
-            // 
-            // flipPanel3
-            // 
-            this.flipPanel3.Back = null;
-            this.flipPanel3.Controls.Add(this.objectListView3);
-            this.flipPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flipPanel3.DoShading = false;
-            this.flipPanel3.Front = null;
-            this.flipPanel3.Location = new System.Drawing.Point(3, 31);
-            this.flipPanel3.Name = "flipPanel3";
-            this.flipPanel3.Size = new System.Drawing.Size(444, 216);
-            this.flipPanel3.TabIndex = 2;
-            this.flipPanel3.TimerInterval = 100;
-            // 
-            // objectListView3
-            // 
-            this.objectListView3.AllColumns.Add(this.olvColumn9);
-            this.objectListView3.AllColumns.Add(this.olvColumn10);
-            this.objectListView3.AllColumns.Add(this.olvColumn11);
-            this.objectListView3.AllColumns.Add(this.olvColumn12);
-            this.objectListView3.CellEditUseWholeCell = false;
-            this.objectListView3.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.olvColumn9,
-            this.olvColumn10,
-            this.olvColumn11,
-            this.olvColumn12});
-            this.objectListView3.Cursor = System.Windows.Forms.Cursors.Default;
-            this.objectListView3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.objectListView3.Font = new System.Drawing.Font("Calibri Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.objectListView3.Location = new System.Drawing.Point(0, 0);
-            this.objectListView3.Name = "objectListView3";
-            this.objectListView3.Size = new System.Drawing.Size(444, 216);
-            this.objectListView3.TabIndex = 60;
-            this.objectListView3.UseCompatibleStateImageBehavior = false;
-            this.objectListView3.View = System.Windows.Forms.View.Details;
-            // 
-            // olvColumn9
-            // 
-            this.olvColumn9.AspectName = "CivilServiceName ";
-            this.olvColumn9.Text = "Title";
-            this.olvColumn9.Width = 193;
-            // 
-            // olvColumn10
-            // 
-            this.olvColumn10.AspectName = "ExamDate ";
-            this.olvColumn10.Text = "Date Conducted";
-            this.olvColumn10.Width = 110;
-            // 
-            // olvColumn11
-            // 
-            this.olvColumn11.AspectName = "Rate";
-            this.olvColumn11.Text = "Rate";
-            this.olvColumn11.Width = 78;
-            // 
-            // olvColumn12
-            // 
-            this.olvColumn12.AspectName = "PlaceConducted ";
-            this.olvColumn12.Text = "Place Conducted";
-            this.olvColumn12.Width = 86;
-            // 
             // xptbSeminars
             // 
             this.xptbSeminars.BackColor = System.Drawing.Color.Transparent;
@@ -1589,7 +1383,7 @@
             // 
             // splitContainer6
             // 
-            this.splitContainer6.Location = new System.Drawing.Point(1, 55);
+            this.splitContainer6.Location = new System.Drawing.Point(1, 19);
             this.splitContainer6.Name = "splitContainer6";
             this.splitContainer6.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -1600,8 +1394,8 @@
             // splitContainer6.Panel2
             // 
             this.splitContainer6.Panel2.Controls.Add(this.objectListView4);
-            this.splitContainer6.Size = new System.Drawing.Size(218, 244);
-            this.splitContainer6.SplitterDistance = 114;
+            this.splitContainer6.Size = new System.Drawing.Size(450, 502);
+            this.splitContainer6.SplitterDistance = 234;
             this.splitContainer6.TabIndex = 2;
             // 
             // xpToolBar3
@@ -1621,7 +1415,7 @@
             this.xpToolBar3.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
             this.xpToolBar3.Name = "xpToolBar3";
             this.xpToolBar3.ShowChevron = true;
-            this.xpToolBar3.Size = new System.Drawing.Size(218, 31);
+            this.xpToolBar3.Size = new System.Drawing.Size(450, 31);
             this.xpToolBar3.Style = Syncfusion.Windows.Forms.VisualStyle.Office2007;
             this.xpToolBar3.TabIndex = 3;
             this.xpToolBar3.Text = "Add";
@@ -1633,7 +1427,7 @@
             this.objectListView4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.objectListView4.Location = new System.Drawing.Point(0, 0);
             this.objectListView4.Name = "objectListView4";
-            this.objectListView4.Size = new System.Drawing.Size(218, 126);
+            this.objectListView4.Size = new System.Drawing.Size(450, 264);
             this.objectListView4.TabIndex = 0;
             this.objectListView4.UseCompatibleStateImageBehavior = false;
             this.objectListView4.View = System.Windows.Forms.View.Details;
@@ -1655,124 +1449,6 @@
             this.tblayoutEligibility.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45F));
             this.tblayoutEligibility.Size = new System.Drawing.Size(450, 502);
             this.tblayoutEligibility.TabIndex = 3;
-            // 
-            // flipPanel2
-            // 
-            this.flipPanel2.Back = null;
-            this.flipPanel2.Controls.Add(this.objCivilService);
-            this.flipPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flipPanel2.DoShading = false;
-            this.flipPanel2.Front = null;
-            this.flipPanel2.Location = new System.Drawing.Point(3, 278);
-            this.flipPanel2.Name = "flipPanel2";
-            this.flipPanel2.Size = new System.Drawing.Size(444, 221);
-            this.flipPanel2.TabIndex = 2;
-            this.flipPanel2.TimerInterval = 100;
-            // 
-            // objCivilService
-            // 
-            this.objCivilService.AllColumns.Add(this.olvCivilName);
-            this.objCivilService.AllColumns.Add(this.olvConductDAte);
-            this.objCivilService.AllColumns.Add(this.olvcRate);
-            this.objCivilService.AllColumns.Add(this.olvcPlace);
-            this.objCivilService.CellEditUseWholeCell = false;
-            this.objCivilService.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.olvCivilName,
-            this.olvConductDAte,
-            this.olvcRate,
-            this.olvcPlace});
-            this.objCivilService.Cursor = System.Windows.Forms.Cursors.Default;
-            this.objCivilService.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.objCivilService.Font = new System.Drawing.Font("Calibri Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.objCivilService.Location = new System.Drawing.Point(0, 0);
-            this.objCivilService.Name = "objCivilService";
-            this.objCivilService.Size = new System.Drawing.Size(444, 221);
-            this.objCivilService.TabIndex = 0;
-            this.objCivilService.UseCompatibleStateImageBehavior = false;
-            this.objCivilService.View = System.Windows.Forms.View.Details;
-            // 
-            // olvCivilName
-            // 
-            this.olvCivilName.AspectName = "CivilServiceName ";
-            this.olvCivilName.Text = "Title";
-            this.olvCivilName.Width = 193;
-            // 
-            // olvConductDAte
-            // 
-            this.olvConductDAte.AspectName = "ExamDate ";
-            this.olvConductDAte.Text = "Date Conducted";
-            this.olvConductDAte.Width = 110;
-            // 
-            // olvcRate
-            // 
-            this.olvcRate.AspectName = "Rate";
-            this.olvcRate.Text = "Rate";
-            this.olvcRate.Width = 78;
-            // 
-            // olvcPlace
-            // 
-            this.olvcPlace.AspectName = "PlaceConducted ";
-            this.olvcPlace.Text = "Place Conducted";
-            this.olvcPlace.Width = 86;
-            // 
-            // flipEligib
-            // 
-            this.flipEligib.Back = null;
-            this.flipEligib.Controls.Add(this.objEligib);
-            this.flipEligib.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flipEligib.DoShading = false;
-            this.flipEligib.Front = null;
-            this.flipEligib.Location = new System.Drawing.Point(3, 28);
-            this.flipEligib.Name = "flipEligib";
-            this.flipEligib.Size = new System.Drawing.Size(444, 219);
-            this.flipEligib.TabIndex = 2;
-            this.flipEligib.TimerInterval = 100;
-            // 
-            // objEligib
-            // 
-            this.objEligib.AllColumns.Add(this.olvColumn1);
-            this.objEligib.AllColumns.Add(this.olvColumn2);
-            this.objEligib.AllColumns.Add(this.olvColumn3);
-            this.objEligib.AllColumns.Add(this.olvColumn4);
-            this.objEligib.CellEditUseWholeCell = false;
-            this.objEligib.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.olvColumn1,
-            this.olvColumn2,
-            this.olvColumn3,
-            this.olvColumn4});
-            this.objEligib.Cursor = System.Windows.Forms.Cursors.Default;
-            this.objEligib.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.objEligib.Font = new System.Drawing.Font("Calibri Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.objEligib.Location = new System.Drawing.Point(0, 0);
-            this.objEligib.Name = "objEligib";
-            this.objEligib.Size = new System.Drawing.Size(444, 219);
-            this.objEligib.TabIndex = 60;
-            this.objEligib.UseCompatibleStateImageBehavior = false;
-            this.objEligib.View = System.Windows.Forms.View.Details;
-            // 
-            // olvColumn1
-            // 
-            this.olvColumn1.AspectName = "CivilServiceName ";
-            this.olvColumn1.Text = "Title";
-            this.olvColumn1.Width = 193;
-            // 
-            // olvColumn2
-            // 
-            this.olvColumn2.AspectName = "ExamDate ";
-            this.olvColumn2.Text = "Date Conducted";
-            this.olvColumn2.Width = 110;
-            // 
-            // olvColumn3
-            // 
-            this.olvColumn3.AspectName = "Rate";
-            this.olvColumn3.Text = "Rate";
-            this.olvColumn3.Width = 78;
-            // 
-            // olvColumn4
-            // 
-            this.olvColumn4.AspectName = "PlaceConducted ";
-            this.olvColumn4.Text = "Place Conducted";
-            this.olvColumn4.Width = 86;
             // 
             // xptbSkills
             // 
@@ -1961,11 +1637,11 @@
             // 
             // splitContainer9
             // 
-            this.splitContainer9.Location = new System.Drawing.Point(1, 55);
+            this.splitContainer9.Location = new System.Drawing.Point(1, 19);
             this.splitContainer9.Name = "splitContainer9";
             this.splitContainer9.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            this.splitContainer9.Size = new System.Drawing.Size(218, 244);
-            this.splitContainer9.SplitterDistance = 33;
+            this.splitContainer9.Size = new System.Drawing.Size(450, 502);
+            this.splitContainer9.SplitterDistance = 67;
             this.splitContainer9.TabIndex = 2;
             // 
             // splitContainer7
@@ -2029,6 +1705,331 @@
             // 
             this.superToolTip1.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(158)))), ((int)(((byte)(218)))));
             // 
+            // flipEduc
+            // 
+            this.flipEduc.Back = null;
+            this.flipEduc.Controls.Add(this.objEducBack);
+            this.flipEduc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flipEduc.DoShading = false;
+            this.flipEduc.Front = null;
+            this.flipEduc.Location = new System.Drawing.Point(0, 0);
+            this.flipEduc.Name = "flipEduc";
+            this.flipEduc.Size = new System.Drawing.Size(446, 458);
+            this.flipEduc.TabIndex = 1;
+            this.flipEduc.TimerInterval = 100;
+            // 
+            // objEducBack
+            // 
+            this.objEducBack.AllColumns.Add(this.olvcLevel);
+            this.objEducBack.AllColumns.Add(this.olvcSchool);
+            this.objEducBack.AllColumns.Add(this.olvcDegree);
+            this.objEducBack.AllColumns.Add(this.olvcYearGraduated);
+            this.objEducBack.AllColumns.Add(this.olvcHighestLevel);
+            this.objEducBack.AllColumns.Add(this.olvcDateFrom);
+            this.objEducBack.AllColumns.Add(this.olvcDateTo);
+            this.objEducBack.AllColumns.Add(this.olvcHonors);
+            this.objEducBack.CellEditUseWholeCell = false;
+            this.objEducBack.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.olvcLevel,
+            this.olvcSchool,
+            this.olvcDegree,
+            this.olvcYearGraduated,
+            this.olvcHighestLevel,
+            this.olvcDateFrom,
+            this.olvcDateTo,
+            this.olvcHonors});
+            this.objEducBack.Cursor = System.Windows.Forms.Cursors.Default;
+            this.objEducBack.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.objEducBack.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.objEducBack.Location = new System.Drawing.Point(0, 0);
+            this.objEducBack.Name = "objEducBack";
+            this.objEducBack.Size = new System.Drawing.Size(446, 458);
+            this.objEducBack.TabIndex = 0;
+            this.objEducBack.UseCompatibleStateImageBehavior = false;
+            this.objEducBack.View = System.Windows.Forms.View.Details;
+            // 
+            // olvcLevel
+            // 
+            this.olvcLevel.AspectName = "Level";
+            this.olvcLevel.Text = "Level";
+            this.olvcLevel.Width = 42;
+            // 
+            // olvcSchool
+            // 
+            this.olvcSchool.AspectName = "School";
+            this.olvcSchool.Text = "School Name";
+            this.olvcSchool.Width = 106;
+            // 
+            // olvcDegree
+            // 
+            this.olvcDegree.AspectName = "DegreeEarned";
+            this.olvcDegree.Text = "Degree/  Course";
+            this.olvcDegree.Width = 89;
+            // 
+            // olvcYearGraduated
+            // 
+            this.olvcYearGraduated.AspectName = "YearGraduated";
+            this.olvcYearGraduated.Text = "Year Graduated";
+            this.olvcYearGraduated.Width = 86;
+            // 
+            // olvcHighestLevel
+            // 
+            this.olvcHighestLevel.AspectName = "UnitsCompleted";
+            this.olvcHighestLevel.Text = "Highest Level";
+            this.olvcHighestLevel.Width = 72;
+            // 
+            // olvcDateFrom
+            // 
+            this.olvcDateFrom.AspectName = "DateFrom";
+            this.olvcDateFrom.Text = "Date From";
+            // 
+            // olvcDateTo
+            // 
+            this.olvcDateTo.AspectName = "DateTo";
+            this.olvcDateTo.Text = "Date To";
+            this.olvcDateTo.Width = 45;
+            // 
+            // olvcHonors
+            // 
+            this.olvcHonors.AspectName = "HonorsReceived";
+            this.olvcHonors.Text = "Honors";
+            // 
+            // flipPanel1
+            // 
+            this.flipPanel1.Back = null;
+            this.flipPanel1.Controls.Add(this.objectListView2);
+            this.flipPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flipPanel1.DoShading = false;
+            this.flipPanel1.Front = null;
+            this.flipPanel1.Location = new System.Drawing.Point(3, 278);
+            this.flipPanel1.Name = "flipPanel1";
+            this.flipPanel1.Size = new System.Drawing.Size(444, 221);
+            this.flipPanel1.TabIndex = 2;
+            this.flipPanel1.TimerInterval = 100;
+            // 
+            // objectListView2
+            // 
+            this.objectListView2.AllColumns.Add(this.olvColumn5);
+            this.objectListView2.AllColumns.Add(this.olvColumn6);
+            this.objectListView2.AllColumns.Add(this.olvColumn7);
+            this.objectListView2.AllColumns.Add(this.olvColumn8);
+            this.objectListView2.CellEditUseWholeCell = false;
+            this.objectListView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.olvColumn5,
+            this.olvColumn6,
+            this.olvColumn7,
+            this.olvColumn8});
+            this.objectListView2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.objectListView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.objectListView2.Font = new System.Drawing.Font("Calibri Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.objectListView2.Location = new System.Drawing.Point(0, 0);
+            this.objectListView2.Name = "objectListView2";
+            this.objectListView2.Size = new System.Drawing.Size(444, 221);
+            this.objectListView2.TabIndex = 0;
+            this.objectListView2.UseCompatibleStateImageBehavior = false;
+            this.objectListView2.View = System.Windows.Forms.View.Details;
+            // 
+            // olvColumn5
+            // 
+            this.olvColumn5.AspectName = "CivilServiceName ";
+            this.olvColumn5.Text = "Title";
+            this.olvColumn5.Width = 193;
+            // 
+            // olvColumn6
+            // 
+            this.olvColumn6.AspectName = "ExamDate ";
+            this.olvColumn6.Text = "Date Conducted";
+            this.olvColumn6.Width = 110;
+            // 
+            // olvColumn7
+            // 
+            this.olvColumn7.AspectName = "Rate";
+            this.olvColumn7.Text = "Rate";
+            this.olvColumn7.Width = 78;
+            // 
+            // olvColumn8
+            // 
+            this.olvColumn8.AspectName = "PlaceConducted ";
+            this.olvColumn8.Text = "Place Conducted";
+            this.olvColumn8.Width = 86;
+            // 
+            // flipPanel3
+            // 
+            this.flipPanel3.Back = null;
+            this.flipPanel3.Controls.Add(this.objectListView3);
+            this.flipPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flipPanel3.DoShading = false;
+            this.flipPanel3.Front = null;
+            this.flipPanel3.Location = new System.Drawing.Point(3, 31);
+            this.flipPanel3.Name = "flipPanel3";
+            this.flipPanel3.Size = new System.Drawing.Size(444, 216);
+            this.flipPanel3.TabIndex = 2;
+            this.flipPanel3.TimerInterval = 100;
+            // 
+            // objectListView3
+            // 
+            this.objectListView3.AllColumns.Add(this.olvColumn9);
+            this.objectListView3.AllColumns.Add(this.olvColumn10);
+            this.objectListView3.AllColumns.Add(this.olvColumn11);
+            this.objectListView3.AllColumns.Add(this.olvColumn12);
+            this.objectListView3.CellEditUseWholeCell = false;
+            this.objectListView3.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.olvColumn9,
+            this.olvColumn10,
+            this.olvColumn11,
+            this.olvColumn12});
+            this.objectListView3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.objectListView3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.objectListView3.Font = new System.Drawing.Font("Calibri Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.objectListView3.Location = new System.Drawing.Point(0, 0);
+            this.objectListView3.Name = "objectListView3";
+            this.objectListView3.Size = new System.Drawing.Size(444, 216);
+            this.objectListView3.TabIndex = 60;
+            this.objectListView3.UseCompatibleStateImageBehavior = false;
+            this.objectListView3.View = System.Windows.Forms.View.Details;
+            // 
+            // olvColumn9
+            // 
+            this.olvColumn9.AspectName = "CivilServiceName ";
+            this.olvColumn9.Text = "Title";
+            this.olvColumn9.Width = 193;
+            // 
+            // olvColumn10
+            // 
+            this.olvColumn10.AspectName = "ExamDate ";
+            this.olvColumn10.Text = "Date Conducted";
+            this.olvColumn10.Width = 110;
+            // 
+            // olvColumn11
+            // 
+            this.olvColumn11.AspectName = "Rate";
+            this.olvColumn11.Text = "Rate";
+            this.olvColumn11.Width = 78;
+            // 
+            // olvColumn12
+            // 
+            this.olvColumn12.AspectName = "PlaceConducted ";
+            this.olvColumn12.Text = "Place Conducted";
+            this.olvColumn12.Width = 86;
+            // 
+            // flipPanel2
+            // 
+            this.flipPanel2.Back = null;
+            this.flipPanel2.Controls.Add(this.objCivilService);
+            this.flipPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flipPanel2.DoShading = false;
+            this.flipPanel2.Front = null;
+            this.flipPanel2.Location = new System.Drawing.Point(3, 278);
+            this.flipPanel2.Name = "flipPanel2";
+            this.flipPanel2.Size = new System.Drawing.Size(444, 221);
+            this.flipPanel2.TabIndex = 2;
+            this.flipPanel2.TimerInterval = 100;
+            // 
+            // objCivilService
+            // 
+            this.objCivilService.AllColumns.Add(this.olvCivilName);
+            this.objCivilService.AllColumns.Add(this.olvConductDAte);
+            this.objCivilService.AllColumns.Add(this.olvcRate);
+            this.objCivilService.AllColumns.Add(this.olvcPlace);
+            this.objCivilService.CellEditUseWholeCell = false;
+            this.objCivilService.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.olvCivilName,
+            this.olvConductDAte,
+            this.olvcRate,
+            this.olvcPlace});
+            this.objCivilService.Cursor = System.Windows.Forms.Cursors.Default;
+            this.objCivilService.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.objCivilService.Font = new System.Drawing.Font("Calibri Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.objCivilService.Location = new System.Drawing.Point(0, 0);
+            this.objCivilService.Name = "objCivilService";
+            this.objCivilService.Size = new System.Drawing.Size(444, 221);
+            this.objCivilService.TabIndex = 0;
+            this.objCivilService.UseCompatibleStateImageBehavior = false;
+            this.objCivilService.View = System.Windows.Forms.View.Details;
+            // 
+            // olvCivilName
+            // 
+            this.olvCivilName.AspectName = "CivilServiceName ";
+            this.olvCivilName.Text = "Title";
+            this.olvCivilName.Width = 193;
+            // 
+            // olvConductDAte
+            // 
+            this.olvConductDAte.AspectName = "ExamDate ";
+            this.olvConductDAte.Text = "Date Conducted";
+            this.olvConductDAte.Width = 110;
+            // 
+            // olvcRate
+            // 
+            this.olvcRate.AspectName = "Rate";
+            this.olvcRate.Text = "Rate";
+            this.olvcRate.Width = 78;
+            // 
+            // olvcPlace
+            // 
+            this.olvcPlace.AspectName = "PlaceConducted ";
+            this.olvcPlace.Text = "Place Conducted";
+            this.olvcPlace.Width = 86;
+            // 
+            // flipEligib
+            // 
+            this.flipEligib.Back = null;
+            this.flipEligib.Controls.Add(this.objEligib);
+            this.flipEligib.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flipEligib.DoShading = false;
+            this.flipEligib.Front = null;
+            this.flipEligib.Location = new System.Drawing.Point(3, 28);
+            this.flipEligib.Name = "flipEligib";
+            this.flipEligib.Size = new System.Drawing.Size(444, 219);
+            this.flipEligib.TabIndex = 2;
+            this.flipEligib.TimerInterval = 100;
+            // 
+            // objEligib
+            // 
+            this.objEligib.AllColumns.Add(this.olvColumn1);
+            this.objEligib.AllColumns.Add(this.olvColumn2);
+            this.objEligib.AllColumns.Add(this.olvColumn3);
+            this.objEligib.AllColumns.Add(this.olvColumn4);
+            this.objEligib.CellEditUseWholeCell = false;
+            this.objEligib.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.olvColumn1,
+            this.olvColumn2,
+            this.olvColumn3,
+            this.olvColumn4});
+            this.objEligib.Cursor = System.Windows.Forms.Cursors.Default;
+            this.objEligib.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.objEligib.Font = new System.Drawing.Font("Calibri Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.objEligib.Location = new System.Drawing.Point(0, 0);
+            this.objEligib.Name = "objEligib";
+            this.objEligib.Size = new System.Drawing.Size(444, 219);
+            this.objEligib.TabIndex = 60;
+            this.objEligib.UseCompatibleStateImageBehavior = false;
+            this.objEligib.View = System.Windows.Forms.View.Details;
+            // 
+            // olvColumn1
+            // 
+            this.olvColumn1.AspectName = "CivilServiceName ";
+            this.olvColumn1.Text = "Title";
+            this.olvColumn1.Width = 193;
+            // 
+            // olvColumn2
+            // 
+            this.olvColumn2.AspectName = "ExamDate ";
+            this.olvColumn2.Text = "Date Conducted";
+            this.olvColumn2.Width = 110;
+            // 
+            // olvColumn3
+            // 
+            this.olvColumn3.AspectName = "Rate";
+            this.olvColumn3.Text = "Rate";
+            this.olvColumn3.Width = 78;
+            // 
+            // olvColumn4
+            // 
+            this.olvColumn4.AspectName = "PlaceConducted ";
+            this.olvColumn4.Text = "Place Conducted";
+            this.olvColumn4.Width = 86;
+            // 
             // ucPersonnelView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2062,37 +2063,27 @@
             ((System.ComponentModel.ISupportInitialize)(this.rbMale)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureProfile)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateTimePickerAdv1)).EndInit();
-            this.splitContainer2.Panel1.ResumeLayout(false);
-            this.splitContainer2.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
-            this.splitContainer2.ResumeLayout(false);
-            this.flipEduc.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.objEducBack)).EndInit();
             this.splitContainer3.Panel1.ResumeLayout(false);
             this.splitContainer3.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
             this.splitContainer3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.objectListView1)).EndInit();
+            this.splitContainer2.Panel1.ResumeLayout(false);
+            this.splitContainer2.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
+            this.splitContainer2.ResumeLayout(false);
             this.tspQualification.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupBar2)).EndInit();
             this.groupBar2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gbQualification)).EndInit();
             this.gbQualification.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.flipPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.objectListView2)).EndInit();
-            this.flipPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.objectListView3)).EndInit();
             this.splitContainer6.Panel1.ResumeLayout(false);
             this.splitContainer6.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).EndInit();
             this.splitContainer6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.objectListView4)).EndInit();
             this.tblayoutEligibility.ResumeLayout(false);
-            this.flipPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.objCivilService)).EndInit();
-            this.flipEligib.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.objEligib)).EndInit();
             this.tspAttachment.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupBar4)).EndInit();
             this.groupBar4.ResumeLayout(false);
@@ -2102,6 +2093,16 @@
             this.splitContainer9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).EndInit();
             this.splitContainer7.ResumeLayout(false);
+            this.flipEduc.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.objEducBack)).EndInit();
+            this.flipPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.objectListView2)).EndInit();
+            this.flipPanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.objectListView3)).EndInit();
+            this.flipPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.objCivilService)).EndInit();
+            this.flipEligib.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.objEligib)).EndInit();
             this.ResumeLayout(false);
 
         }

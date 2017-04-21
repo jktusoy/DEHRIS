@@ -13,7 +13,9 @@
         <EntityTypeShape EntityType="DEHRISModel.specialSkill" Width="1.5" PointX="6.75" PointY="3.75" />
         <EntityTypeShape EntityType="DEHRISModel.trainingAssignment" Width="1.5" PointX="4.75" PointY="7.75" />
         <EntityTypeShape EntityType="DEHRISModel.workExperience" Width="1.5" PointX="6.75" PointY="7.75" />
-        <EntityTypeShape EntityType="DEHRISModel.training" Width="1.5" PointX="9.375" PointY="0.75" />
+        <EntityTypeShape EntityType="DEHRISModel.sysTransactionRecordTypeID" Width="1.5" PointX="9.375" PointY="0.75" />
+        <EntityTypeShape EntityType="DEHRISModel.transactionRecord" Width="1.5" PointX="9.375" PointY="8.75" />
+        <EntityTypeShape EntityType="DEHRISModel.training" Width="1.5" PointX="11.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

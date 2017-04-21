@@ -137,6 +137,15 @@ namespace DEHRIS
             myForm.Show();
         }
 
+        private void tsbPMTraining_Click(object sender, EventArgs e)
+        {
+            Personnel.Modules.ucTrainingView ucTrn = new Personnel.Modules.ucTrainingView();
+
+            gpMain.Controls.Clear();
+            gpMain.Controls.Add(ucTrn);
+            ucTrn.Dock = DockStyle.Fill;
+        }
+
       
 
 
