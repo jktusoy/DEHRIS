@@ -98,25 +98,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dashboard\Reports\ucDashboard.cs">
+    <Compile Include="VIEW\Dashboard\Reports\ucDashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Dashboard\Reports\ucDashboard.Designer.cs">
+    <Compile Include="VIEW\Dashboard\Reports\ucDashboard.Designer.cs">
       <DependentUpon>ucDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Document\ucDiagram.cs">
+    <Compile Include="VIEW\Document\ucDiagram.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Document\ucDiagram.Designer.cs">
+    <Compile Include="VIEW\Document\ucDiagram.Designer.cs">
       <DependentUpon>ucDiagram.cs</DependentUpon>
     </Compile>
-    <Compile Include="Document\ucFileType.cs">
+    <Compile Include="VIEW\Document\ucFileType.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Document\ucSlideShow.cs">
+    <Compile Include="VIEW\Document\ucSlideShow.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Document\ucSlideShow.Designer.cs">
+    <Compile Include="VIEW\Document\ucSlideShow.Designer.cs">
       <DependentUpon>ucSlideShow.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMain.cs">
@@ -126,28 +126,28 @@
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Helper\TransactionHelper.cs" />
-    <Compile Include="Home\frmLogin.cs">
+    <Compile Include="VIEW\Home\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Home\frmLogin.Designer.cs">
+    <Compile Include="VIEW\Home\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Home\ucEvents.cs">
+    <Compile Include="VIEW\Home\ucEvents.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Home\ucEvents.Designer.cs">
+    <Compile Include="VIEW\Home\ucEvents.Designer.cs">
       <DependentUpon>ucEvents.cs</DependentUpon>
     </Compile>
-    <Compile Include="Home\ucHomePanel.cs">
+    <Compile Include="VIEW\Home\ucHomePanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Home\ucHomePanel.Designer.cs">
+    <Compile Include="VIEW\Home\ucHomePanel.Designer.cs">
       <DependentUpon>ucHomePanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Organization\ucViewOrgChar.cs">
+    <Compile Include="VIEW\Organization\ucViewOrgChar.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Organization\ucViewOrgChar.Designer.cs">
+    <Compile Include="VIEW\Organization\ucViewOrgChar.Designer.cs">
       <DependentUpon>ucViewOrgChar.cs</DependentUpon>
     </Compile>
     <Compile Include="Others\CustomPopUpNotifier.cs">
@@ -168,108 +168,120 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Others\ToolTipControl.Designer.cs" />
-    <Compile Include="Personnel\Modules\ucEducationalBackground.cs">
+    <Compile Include="VIEW\Personnel\ucEducationalBackground.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Personnel\Modules\ucEducationalBackground.Designer.cs">
+    <Compile Include="VIEW\Personnel\ucEducationalBackground.Designer.cs">
       <DependentUpon>ucEducationalBackground.cs</DependentUpon>
     </Compile>
-    <Compile Include="Personnel\Modules\ucEligibility.cs">
+    <Compile Include="VIEW\Personnel\Modules\ucEligibility.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Personnel\Modules\ucEligibility.Designer.cs">
+    <Compile Include="VIEW\Personnel\Modules\ucEligibility.Designer.cs">
       <DependentUpon>ucEligibility.cs</DependentUpon>
     </Compile>
-    <Compile Include="Personnel\Modules\ucFamilyBackgroud.cs">
+    <Compile Include="VIEW\Personnel\Modules\ucFamilyBackgroud.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Personnel\Modules\ucFamilyBackgroud.Designer.cs">
+    <Compile Include="VIEW\Personnel\Modules\ucFamilyBackgroud.Designer.cs">
       <DependentUpon>ucFamilyBackgroud.cs</DependentUpon>
     </Compile>
-    <Compile Include="Personnel\Modules\ucSpecialSkills.cs">
+    <Compile Include="VIEW\Personnel\Modules\ucSpecialSkills.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Personnel\Modules\ucSpecialSkills.Designer.cs">
+    <Compile Include="VIEW\Personnel\Modules\ucSpecialSkills.Designer.cs">
       <DependentUpon>ucSpecialSkills.cs</DependentUpon>
     </Compile>
-    <Compile Include="Personnel\Modules\ucTraining.cs">
+    <Compile Include="VIEW\Personnel\Modules\ucTraining.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Personnel\Modules\ucTraining.Designer.cs">
+    <Compile Include="VIEW\Personnel\Modules\ucTraining.Designer.cs">
       <DependentUpon>ucTraining.cs</DependentUpon>
     </Compile>
-    <Compile Include="Personnel\Modules\ucTrainingAssignment.cs">
+    <Compile Include="VIEW\Personnel\Modules\ucTrainingAssignment.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Personnel\Modules\ucTrainingAssignment.Designer.cs">
+    <Compile Include="VIEW\Personnel\Modules\ucTrainingAssignment.Designer.cs">
       <DependentUpon>ucTrainingAssignment.cs</DependentUpon>
     </Compile>
-    <Compile Include="Personnel\Modules\ucTrainingView.cs">
+    <Compile Include="VIEW\Personnel\Modules\ucTrainingView.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Personnel\Modules\ucTrainingView.Designer.cs">
+    <Compile Include="VIEW\Personnel\Modules\ucTrainingView.Designer.cs">
       <DependentUpon>ucTrainingView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Personnel\Performance\ucAttendance.cs">
+    <Compile Include="VIEW\Personnel\Performance\ucAttendance.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Personnel\Performance\ucAttendance.Designer.cs">
+    <Compile Include="VIEW\Personnel\Performance\ucAttendance.Designer.cs">
       <DependentUpon>ucAttendance.cs</DependentUpon>
     </Compile>
-    <Compile Include="Personnel\ucImportPersonnel.cs">
+    <Compile Include="VIEW\Personnel\ucImportPersonnel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Personnel\ucImportPersonnel.Designer.cs">
+    <Compile Include="VIEW\Personnel\ucImportPersonnel.Designer.cs">
       <DependentUpon>ucImportPersonnel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Personnel\ucPerformance.cs">
+    <Compile Include="VIEW\Personnel\ucPerformance.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Personnel\ucPerformance.Designer.cs">
+    <Compile Include="VIEW\Personnel\ucPerformance.Designer.cs">
       <DependentUpon>ucPerformance.cs</DependentUpon>
     </Compile>
-    <Compile Include="Personnel\ucApplicantView.cs">
+    <Compile Include="VIEW\Personnel\ucApplicantView.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Personnel\ucApplicantView.Designer.cs">
+    <Compile Include="VIEW\Personnel\ucApplicantView.Designer.cs">
       <DependentUpon>ucApplicantView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Personnel\ucPersonnelView.cs">
+    <Compile Include="VIEW\Personnel\ucPersonalProfile.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Personnel\ucPersonnelView.Designer.cs">
+    <Compile Include="VIEW\Personnel\ucPersonalProfile.Designer.cs">
+      <DependentUpon>ucPersonalProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\Personnel\ucPersonnelView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VIEW\Personnel\ucPersonnelView.Designer.cs">
       <DependentUpon>ucPersonnelView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Navigation\ucNavigation.cs">
+    <Compile Include="VIEW\Navigation\ucNavigation.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Navigation\ucNavigation.Designer.cs">
+    <Compile Include="VIEW\Navigation\ucNavigation.Designer.cs">
       <DependentUpon>ucNavigation.cs</DependentUpon>
     </Compile>
-    <Compile Include="Organization\ucOrganizationalChart.cs">
+    <Compile Include="VIEW\Organization\ucOrganizationalChart.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Organization\ucOrganizationalChart.Designer.cs">
+    <Compile Include="VIEW\Organization\ucOrganizationalChart.Designer.cs">
       <DependentUpon>ucOrganizationalChart.cs</DependentUpon>
     </Compile>
-    <Compile Include="Organization\ucVMG.cs">
+    <Compile Include="VIEW\Organization\ucVMG.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Organization\ucVMG.Designer.cs">
+    <Compile Include="VIEW\Organization\ucVMG.Designer.cs">
       <DependentUpon>ucVMG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\Personnel\ViewManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VIEW\Personnel\ViewManager.Designer.cs">
+      <DependentUpon>ViewManager.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Recruitment\ucApplicantView.cs">
+    <Compile Include="VIEW\Recruitment\ucApplicantView.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Recruitment\ucApplicantView.Designer.cs">
+    <Compile Include="VIEW\Recruitment\ucApplicantView.Designer.cs">
       <DependentUpon>ucApplicantView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Strategy\ucStrategyNavigation.cs">
+    <Compile Include="VIEW\Strategy\ucStrategyNavigation.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Strategy\ucStrategyNavigation.Designer.cs">
+    <Compile Include="VIEW\Strategy\ucStrategyNavigation.Designer.cs">
       <DependentUpon>ucStrategyNavigation.cs</DependentUpon>
     </Compile>
     <Compile Include="Tool\ucBrowser.cs">
@@ -290,78 +302,84 @@
     <Compile Include="Tool\ucSpreadsheet.Designer.cs">
       <DependentUpon>ucSpreadsheet.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Dashboard\Reports\ucDashboard.resx">
+    <EmbeddedResource Include="VIEW\Dashboard\Reports\ucDashboard.resx">
       <DependentUpon>ucDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Document\ucDiagram.resx">
+    <EmbeddedResource Include="VIEW\Document\ucDiagram.resx">
       <DependentUpon>ucDiagram.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Document\ucFileType.resx">
+    <EmbeddedResource Include="VIEW\Document\ucFileType.resx">
       <DependentUpon>ucFileType.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Document\ucSlideShow.resx">
+    <EmbeddedResource Include="VIEW\Document\ucSlideShow.resx">
       <DependentUpon>ucSlideShow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Home\frmLogin.resx">
+    <EmbeddedResource Include="VIEW\Home\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Home\ucEvents.resx">
+    <EmbeddedResource Include="VIEW\Home\ucEvents.resx">
       <DependentUpon>ucEvents.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Home\ucHomePanel.resx">
+    <EmbeddedResource Include="VIEW\Home\ucHomePanel.resx">
       <DependentUpon>ucHomePanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Organization\ucViewOrgChar.resx">
+    <EmbeddedResource Include="VIEW\Organization\ucViewOrgChar.resx">
       <DependentUpon>ucViewOrgChar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Others\FlipPanel.resx" />
-    <EmbeddedResource Include="Personnel\Modules\ucEducationalBackground.resx">
+    <EmbeddedResource Include="VIEW\Personnel\ucEducationalBackground.resx">
       <DependentUpon>ucEducationalBackground.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Personnel\Modules\ucEligibility.resx">
+    <EmbeddedResource Include="VIEW\Personnel\Modules\ucEligibility.resx">
       <DependentUpon>ucEligibility.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Personnel\Modules\ucFamilyBackgroud.resx">
+    <EmbeddedResource Include="VIEW\Personnel\Modules\ucFamilyBackgroud.resx">
       <DependentUpon>ucFamilyBackgroud.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Personnel\Modules\ucSpecialSkills.resx">
+    <EmbeddedResource Include="VIEW\Personnel\Modules\ucSpecialSkills.resx">
       <DependentUpon>ucSpecialSkills.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Personnel\Modules\ucTraining.resx">
+    <EmbeddedResource Include="VIEW\Personnel\Modules\ucTraining.resx">
       <DependentUpon>ucTraining.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Personnel\Modules\ucTrainingAssignment.resx">
+    <EmbeddedResource Include="VIEW\Personnel\Modules\ucTrainingAssignment.resx">
       <DependentUpon>ucTrainingAssignment.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Personnel\Modules\ucTrainingView.resx">
+    <EmbeddedResource Include="VIEW\Personnel\Modules\ucTrainingView.resx">
       <DependentUpon>ucTrainingView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Personnel\Performance\ucAttendance.resx">
+    <EmbeddedResource Include="VIEW\Personnel\Performance\ucAttendance.resx">
       <DependentUpon>ucAttendance.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Personnel\ucImportPersonnel.resx">
+    <EmbeddedResource Include="VIEW\Personnel\ucImportPersonnel.resx">
       <DependentUpon>ucImportPersonnel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Personnel\ucPerformance.resx">
+    <EmbeddedResource Include="VIEW\Personnel\ucPerformance.resx">
       <DependentUpon>ucPerformance.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Personnel\ucApplicantView.resx">
+    <EmbeddedResource Include="VIEW\Personnel\ucApplicantView.resx">
       <DependentUpon>ucApplicantView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Personnel\ucPersonnelView.resx">
+    <EmbeddedResource Include="VIEW\Personnel\ucPersonalProfile.resx">
+      <DependentUpon>ucPersonalProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\Personnel\ucPersonnelView.resx">
       <DependentUpon>ucPersonnelView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Navigation\ucNavigation.resx">
+    <EmbeddedResource Include="VIEW\Navigation\ucNavigation.resx">
       <DependentUpon>ucNavigation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Organization\ucOrganizationalChart.resx">
+    <EmbeddedResource Include="VIEW\Organization\ucOrganizationalChart.resx">
       <DependentUpon>ucOrganizationalChart.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Organization\ucVMG.resx">
+    <EmbeddedResource Include="VIEW\Organization\ucVMG.resx">
       <DependentUpon>ucVMG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\Personnel\ViewManager.resx">
+      <DependentUpon>ViewManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -374,10 +392,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Recruitment\ucApplicantView.resx">
+    <EmbeddedResource Include="VIEW\Recruitment\ucApplicantView.resx">
       <DependentUpon>ucApplicantView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Strategy\ucStrategyNavigation.resx">
+    <EmbeddedResource Include="VIEW\Strategy\ucStrategyNavigation.resx">
       <DependentUpon>ucStrategyNavigation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tool\ucBrowser.resx">
@@ -540,6 +558,11 @@
     <None Include="Resources\scheduler1.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\save1.png" />
+    <None Include="Resources\add-icon32.png" />
+    <None Include="Resources\edit-icon32.png" />
+    <None Include="Resources\delete-icon32.png" />
+    <None Include="Resources\refresh.png" />
     <Content Include="Resources\save.png" />
     <None Include="Resources\module.png" />
     <None Include="Resources\template.png" />
@@ -572,6 +595,7 @@
     <None Include="Resources\warning.png" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="CONTROLLER\" />
     <Folder Include="Others\CustomUserControl\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

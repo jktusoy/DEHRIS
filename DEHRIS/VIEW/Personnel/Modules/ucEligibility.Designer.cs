@@ -46,29 +46,37 @@
             // 
             // txtExamPlace
             // 
-            this.txtExamPlace.Location = new System.Drawing.Point(152, 107);
+            this.txtExamPlace.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtExamPlace.Location = new System.Drawing.Point(194, 116);
             this.txtExamPlace.Name = "txtExamPlace";
-            this.txtExamPlace.Size = new System.Drawing.Size(194, 20);
+            this.txtExamPlace.Size = new System.Drawing.Size(307, 20);
             this.txtExamPlace.TabIndex = 7;
             // 
             // txtRate
             // 
-            this.txtRate.Location = new System.Drawing.Point(152, 55);
+            this.txtRate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtRate.Location = new System.Drawing.Point(194, 64);
             this.txtRate.Name = "txtRate";
-            this.txtRate.Size = new System.Drawing.Size(194, 20);
+            this.txtRate.Size = new System.Drawing.Size(307, 20);
             this.txtRate.TabIndex = 5;
             // 
             // txtTitle
             // 
-            this.txtTitle.Location = new System.Drawing.Point(152, 29);
+            this.txtTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTitle.Location = new System.Drawing.Point(194, 38);
             this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(194, 20);
+            this.txtTitle.Size = new System.Drawing.Size(307, 20);
             this.txtTitle.TabIndex = 4;
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(36, 36);
+            this.label1.Location = new System.Drawing.Point(65, 45);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(37, 13);
             this.label1.TabIndex = 8;
@@ -76,8 +84,10 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(36, 62);
+            this.label2.Location = new System.Drawing.Point(65, 71);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(39, 13);
             this.label2.TabIndex = 9;
@@ -85,8 +95,10 @@
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(34, 114);
+            this.label3.Location = new System.Drawing.Point(63, 123);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(94, 13);
             this.label3.TabIndex = 11;
@@ -94,8 +106,10 @@
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(34, 88);
+            this.label4.Location = new System.Drawing.Point(63, 97);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 13);
             this.label4.TabIndex = 10;
@@ -103,8 +117,10 @@
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(34, 137);
+            this.label5.Location = new System.Drawing.Point(63, 146);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(74, 13);
             this.label5.TabIndex = 13;
@@ -112,15 +128,19 @@
             // 
             // txtLicenseNo
             // 
-            this.txtLicenseNo.Location = new System.Drawing.Point(152, 130);
+            this.txtLicenseNo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtLicenseNo.Location = new System.Drawing.Point(194, 139);
             this.txtLicenseNo.Name = "txtLicenseNo";
-            this.txtLicenseNo.Size = new System.Drawing.Size(194, 20);
+            this.txtLicenseNo.Size = new System.Drawing.Size(307, 20);
             this.txtLicenseNo.TabIndex = 12;
             // 
             // label6
             // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(34, 159);
+            this.label6.Location = new System.Drawing.Point(63, 168);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(91, 13);
             this.label6.TabIndex = 15;
@@ -128,29 +148,35 @@
             // 
             // dtpExamDate
             // 
+            this.dtpExamDate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpExamDate.BorderColor = System.Drawing.Color.Empty;
             this.dtpExamDate.CalendarSize = new System.Drawing.Size(189, 176);
             this.dtpExamDate.DropDownImage = null;
+            this.dtpExamDate.DropDownNormalColor = System.Drawing.SystemColors.Control;
             this.dtpExamDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpExamDate.Location = new System.Drawing.Point(152, 81);
+            this.dtpExamDate.Location = new System.Drawing.Point(194, 90);
             this.dtpExamDate.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
             this.dtpExamDate.MinValue = new System.DateTime(((long)(0)));
             this.dtpExamDate.Name = "dtpExamDate";
-            this.dtpExamDate.Size = new System.Drawing.Size(194, 20);
+            this.dtpExamDate.Size = new System.Drawing.Size(307, 20);
             this.dtpExamDate.TabIndex = 16;
             this.dtpExamDate.Value = new System.DateTime(2017, 3, 10, 20, 12, 6, 918);
             // 
             // dtpReleaseDate
             // 
+            this.dtpReleaseDate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpReleaseDate.BorderColor = System.Drawing.Color.Empty;
             this.dtpReleaseDate.CalendarSize = new System.Drawing.Size(189, 176);
             this.dtpReleaseDate.DropDownImage = null;
+            this.dtpReleaseDate.DropDownNormalColor = System.Drawing.SystemColors.Control;
             this.dtpReleaseDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpReleaseDate.Location = new System.Drawing.Point(152, 156);
+            this.dtpReleaseDate.Location = new System.Drawing.Point(194, 165);
             this.dtpReleaseDate.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
             this.dtpReleaseDate.MinValue = new System.DateTime(((long)(0)));
             this.dtpReleaseDate.Name = "dtpReleaseDate";
-            this.dtpReleaseDate.Size = new System.Drawing.Size(194, 20);
+            this.dtpReleaseDate.Size = new System.Drawing.Size(307, 20);
             this.dtpReleaseDate.TabIndex = 17;
             this.dtpReleaseDate.Value = new System.DateTime(2017, 3, 10, 20, 12, 6, 918);
             // 
@@ -171,7 +197,7 @@
             this.Controls.Add(this.txtRate);
             this.Controls.Add(this.txtTitle);
             this.Name = "ucEligibility";
-            this.Size = new System.Drawing.Size(400, 199);
+            this.Size = new System.Drawing.Size(550, 250);
             ((System.ComponentModel.ISupportInitialize)(this.dtpExamDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpReleaseDate)).EndInit();
             this.ResumeLayout(false);

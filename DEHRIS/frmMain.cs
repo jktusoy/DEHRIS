@@ -146,6 +146,20 @@ namespace DEHRIS
             ucTrn.Dock = DockStyle.Fill;
         }
 
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            DEHRISAPI.PersonnelUtility person = new DEHRISAPI.PersonnelUtility();
+
+            List<object> objlist = new List<object>();
+            objlist = person.GetPersonnel().Cast<object>().ToList();
+
+            Personnel.ViewManager ucTrn = new Personnel.ViewManager( objlist);
+
+            gpMain.Controls.Clear();
+            gpMain.Controls.Add(ucTrn);
+            ucTrn.Dock = DockStyle.Fill;
+        }
+
       
 
 

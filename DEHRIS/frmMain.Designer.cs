@@ -214,7 +214,7 @@
             this.ribbonControlAdv1.OfficeMenu.Size = new System.Drawing.Size(118, 224);
             this.ribbonControlAdv1.QuickPanelImageLayout = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ribbonControlAdv1.RibbonHeaderImage = Syncfusion.Windows.Forms.Tools.RibbonHeaderImage.None;
-            this.ribbonControlAdv1.SelectedTab = this.toolStripTabItem3;
+            this.ribbonControlAdv1.SelectedTab = this.toolStripTabItem8;
             this.ribbonControlAdv1.ShowRibbonDisplayOptionButton = true;
             this.ribbonControlAdv1.Size = new System.Drawing.Size(1135, 120);
             this.ribbonControlAdv1.SystemText.QuickAccessDialogDropDownName = "Start menu";
@@ -897,6 +897,7 @@
             this.toolStripButton4.Name = "toolStripButton4";
             this.toolStripButton4.Size = new System.Drawing.Size(104, 43);
             this.toolStripButton4.Text = "STAFFING PLAN";
+            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
             // officeDropDownButton1
             // 
@@ -1082,7 +1083,7 @@
             this.toolStripButton9.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton9.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton9.Name = "toolStripButton9";
-            this.toolStripButton9.Size = new System.Drawing.Size(73, 47);
+            this.toolStripButton9.Size = new System.Drawing.Size(73, 61);
             this.toolStripButton9.Text = "LEAVE";
             // 
             // tsbIPCR
@@ -1091,7 +1092,7 @@
             this.tsbIPCR.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsbIPCR.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbIPCR.Name = "tsbIPCR";
-            this.tsbIPCR.Size = new System.Drawing.Size(66, 47);
+            this.tsbIPCR.Size = new System.Drawing.Size(66, 61);
             this.tsbIPCR.Text = "IPCR";
             this.tsbIPCR.Click += new System.EventHandler(this.tsbIPCR_Click);
             // 
