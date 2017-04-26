@@ -98,6 +98,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CONTROLLER\Structure\EnumModule.cs" />
+    <Compile Include="CONTROLLER\Helper\PromotionHelper.cs" />
+    <Compile Include="CONTROLLER\Helper\PromotionNavigation.cs" />
+    <Compile Include="CONTROLLER\PersonnelUtility.cs" />
+    <Compile Include="CONTROLLER\TrainingController.cs" />
+    <Compile Include="MODEL\Data\Address.cs" />
+    <Compile Include="MODEL\Data\CivilService.cs" />
+    <Compile Include="MODEL\Data\Contact.cs" />
+    <Compile Include="MODEL\Data\EducationalBackground.cs" />
+    <Compile Include="MODEL\Data\Personnel.cs" />
+    <Compile Include="MODEL\Data\ProfessionalProfile.cs" />
+    <Compile Include="MODEL\Data\ProfilePicture.cs" />
+    <Compile Include="MODEL\Data\Seminar.cs" />
+    <Compile Include="MODEL\Data\SpecialSkills.cs" />
+    <Compile Include="MODEL\Data\Training.cs" />
+    <Compile Include="MODEL\Data\WorkExperience.cs" />
+    <Compile Include="MODEL\Enum\AddressType.cs" />
+    <Compile Include="MODEL\Enum\ContactType.cs" />
+    <Compile Include="MODEL\Enum\TransactionType.cs" />
+    <Compile Include="VIEW\Structure\EnumTypes.cs" />
+    <Compile Include="VIEW\Structure\ICRUDDefinition.cs" />
+    <Compile Include="CONTROLLER\Structure\IController.cs" />
     <Compile Include="VIEW\Dashboard\Reports\ucDashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -119,13 +141,12 @@
     <Compile Include="VIEW\Document\ucSlideShow.Designer.cs">
       <DependentUpon>ucSlideShow.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMain.cs">
+    <Compile Include="CONTROLLER\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMain.Designer.cs">
+    <Compile Include="CONTROLLER\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Helper\TransactionHelper.cs" />
     <Compile Include="VIEW\Home\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,24 +171,24 @@
     <Compile Include="VIEW\Organization\ucViewOrgChar.Designer.cs">
       <DependentUpon>ucViewOrgChar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Others\CustomPopUpNotifier.cs">
+    <Compile Include="CONTROLLER\Others\CustomPopUpNotifier.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Others\FlipPanel.cs">
+    <Compile Include="CONTROLLER\Others\FlipPanel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Others\FlipPanel.Designer.cs" />
-    <Compile Include="Others\Form2.cs">
+    <Compile Include="CONTROLLER\Others\FlipPanel.Designer.cs" />
+    <Compile Include="CONTROLLER\Others\Form2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Others\PropertyGridForm.cs">
+    <Compile Include="CONTROLLER\Others\PropertyGridForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Others\SimpleScheduleDataProvider.cs" />
-    <Compile Include="Others\ToolTipControl.cs">
+    <Compile Include="CONTROLLER\Others\SimpleScheduleDataProvider.cs" />
+    <Compile Include="CONTROLLER\Others\ToolTipControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Others\ToolTipControl.Designer.cs" />
+    <Compile Include="CONTROLLER\Others\ToolTipControl.Designer.cs" />
     <Compile Include="VIEW\Personnel\ucEducationalBackground.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -192,23 +213,17 @@
     <Compile Include="VIEW\Personnel\Modules\ucSpecialSkills.Designer.cs">
       <DependentUpon>ucSpecialSkills.cs</DependentUpon>
     </Compile>
-    <Compile Include="VIEW\Personnel\Modules\ucTraining.cs">
+    <Compile Include="VIEW\Promotion\ucTraining.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="VIEW\Personnel\Modules\ucTraining.Designer.cs">
+    <Compile Include="VIEW\Promotion\ucTraining.Designer.cs">
       <DependentUpon>ucTraining.cs</DependentUpon>
     </Compile>
-    <Compile Include="VIEW\Personnel\Modules\ucTrainingAssignment.cs">
+    <Compile Include="VIEW\Promotion\ucTrainingAssignment.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="VIEW\Personnel\Modules\ucTrainingAssignment.Designer.cs">
+    <Compile Include="VIEW\Promotion\ucTrainingAssignment.Designer.cs">
       <DependentUpon>ucTrainingAssignment.cs</DependentUpon>
-    </Compile>
-    <Compile Include="VIEW\Personnel\Modules\ucTrainingView.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="VIEW\Personnel\Modules\ucTrainingView.Designer.cs">
-      <DependentUpon>ucTrainingView.cs</DependentUpon>
     </Compile>
     <Compile Include="VIEW\Personnel\Performance\ucAttendance.cs">
       <SubType>UserControl</SubType>
@@ -264,10 +279,10 @@
     <Compile Include="VIEW\Organization\ucVMG.Designer.cs">
       <DependentUpon>ucVMG.cs</DependentUpon>
     </Compile>
-    <Compile Include="VIEW\Personnel\ViewManager.cs">
+    <Compile Include="VIEW\ViewManager.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="VIEW\Personnel\ViewManager.Designer.cs">
+    <Compile Include="VIEW\ViewManager.Designer.cs">
       <DependentUpon>ViewManager.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -314,7 +329,7 @@
     <EmbeddedResource Include="VIEW\Document\ucSlideShow.resx">
       <DependentUpon>ucSlideShow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMain.resx">
+    <EmbeddedResource Include="CONTROLLER\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VIEW\Home\frmLogin.resx">
@@ -329,7 +344,7 @@
     <EmbeddedResource Include="VIEW\Organization\ucViewOrgChar.resx">
       <DependentUpon>ucViewOrgChar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Others\FlipPanel.resx" />
+    <EmbeddedResource Include="CONTROLLER\Others\FlipPanel.resx" />
     <EmbeddedResource Include="VIEW\Personnel\ucEducationalBackground.resx">
       <DependentUpon>ucEducationalBackground.cs</DependentUpon>
     </EmbeddedResource>
@@ -342,14 +357,11 @@
     <EmbeddedResource Include="VIEW\Personnel\Modules\ucSpecialSkills.resx">
       <DependentUpon>ucSpecialSkills.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VIEW\Personnel\Modules\ucTraining.resx">
+    <EmbeddedResource Include="VIEW\Promotion\ucTraining.resx">
       <DependentUpon>ucTraining.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VIEW\Personnel\Modules\ucTrainingAssignment.resx">
+    <EmbeddedResource Include="VIEW\Promotion\ucTrainingAssignment.resx">
       <DependentUpon>ucTrainingAssignment.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="VIEW\Personnel\Modules\ucTrainingView.resx">
-      <DependentUpon>ucTrainingView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VIEW\Personnel\Performance\ucAttendance.resx">
       <DependentUpon>ucAttendance.cs</DependentUpon>
@@ -378,7 +390,7 @@
     <EmbeddedResource Include="VIEW\Organization\ucVMG.resx">
       <DependentUpon>ucVMG.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VIEW\Personnel\ViewManager.resx">
+    <EmbeddedResource Include="VIEW\ViewManager.resx">
       <DependentUpon>ViewManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
@@ -417,16 +429,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\DEHRISAPI\DEHRISModel.csproj">
-      <Project>{7eadd593-e824-4e16-8f6f-be8af2a68440}</Project>
-      <Name>DEHRISModel</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DEHRISDL\DEHRISAPI.csproj">
-      <Project>{93fdfe09-d8a3-40fb-ba05-1dcf10e818b1}</Project>
-      <Name>DEHRISAPI</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon-user-default.png" />
@@ -595,8 +597,13 @@
     <None Include="Resources\warning.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="CONTROLLER\" />
-    <Folder Include="Others\CustomUserControl\" />
+    <Folder Include="CONTROLLER\Others\CustomUserControl\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DEHRISDB\DEHRISDB.csproj">
+      <Project>{e59dd593-21a7-4270-be14-3a91edb93adb}</Project>
+      <Name>DEHRISDB</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

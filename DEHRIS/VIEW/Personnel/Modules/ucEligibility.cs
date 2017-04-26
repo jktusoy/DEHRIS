@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DEHRISModel.Data;
+using DEHRIS.MODEL.Data;
 namespace DEHRIS.Personnel.Modules
 {
     public partial class ucEligibility : UserControl

@@ -149,9 +149,6 @@ namespace DEHRISAPI
             using (DEHRISEntities dbcontext = new DEHRISEntities())
             {
 
-                //List<seminar> 
-                //var query = from pro in dbcontext.hris_personnel
-                //  select new ProjectInfo(){ Name = pro.ProjectName, Id = pro.ProjectId };
                 List<Training> ssList = (from item in dbcontext.trainings.Where(a => a.personnelID == ppersonnel_id)
                                          select new Training()
                                          {

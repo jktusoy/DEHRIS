@@ -8,8 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Syncfusion.XlsIO;
-using DEHRISAPI;
-using DEHRISModel.Data;
+using DEHRIS.MODEL.Data;
+using DEHRIS.CONTROLLER;
+using DEHRIS.CONTROLLER;
 namespace DEHRIS.Importer
 {
     public partial class ucApplicantView : UserControl
@@ -17,37 +18,7 @@ namespace DEHRIS.Importer
         public ucApplicantView()
         {
             InitializeComponent();
-
-
-            DEHRISAPI.PersonnelUtility prodUtil = new PersonnelUtility();
-          //  objlPersonnelView.SetObjects(prodUtil.GetPersonnel());
-            //IApplication application = excelEngine.Excel;
-
-
-            //application.DefaultVersion = ExcelVersion.Excel2013;
-
-            //IWorkbook sourceWorkbook = application.Workbooks.Open();
-            //sourceWorkbook.Activate();
-            //int maxcount = sourceWorkbook.MaxColumnCount;
-            //  this.spreadsheet1.Open(@"C:\Users\user\Desktop\WORKSPACE\temptemp.xlsx");
-
-            //this.spreadsheet1.AddSheet(sourceWorkbook.ActiveSheet,0);
-
-            //   IWorkbook destinationWorkbook = application.Workbooks.Open("DestinationWorkbookTemplate.xlsx");
-
-            //Copy first worksheet from the Source workbook to the destination workbook.
-
-            //destinationWorkbook.Worksheets.AddCopy(sourceWorkbook.Worksheets[0]);
-
-            //destinationWorkbook.ActiveSheetIndex = 1;
-
-            //destinationWorkbook.SaveAs("CopiedWorkbook.xlsx");
-
-            //sourceWorkbook.Close();
-
-            //destinationWorkbook.Close();
-            //excelEngine.Dispose();
-            //this.spreadsheet1.AddSheet()
+            PersonnelUtility prodUtil = new PersonnelUtility();
         }
 
 
@@ -83,28 +54,12 @@ namespace DEHRIS.Importer
         private void objlPersonnelView_SelectionChanged(object sender, EventArgs e)
         {
             SetEditable(false);
-            DEHRISModel.Data.Personnel selectePersonnel = (DEHRISModel.Data.Personnel)objlPersonnelView.SelectedObject;
+            DEHRIS.MODEL.Data.Personnel selectePersonnel = (DEHRIS.MODEL.Data.Personnel)objlPersonnelView.SelectedObject;
             ShowViewData(selectePersonnel);
         }
 
-        //public enum Status { Active = 0, Canceled = 3 }; 
-        //Setting the drop down values from it
-
-        //cbStatus.DataSource = Enum.GetValues(typeof(Status));
-        //Getting the enum from the selected item
-
-        //Status status; 
-        //Enum.TryParse<Status>(cbStatus.SelectedValue.ToString(), out status); 
-        //public void PopulateComboBox(Combo)
-        //{
-
-        //    ArrayList USStates = new ArrayList();
-        //    USStates.Add(new USState("Alaska", "AK", 1));
-        //    USStates.Add(new USState("Arizona", "AZ", 2));
-        //    USStates.Add(new USState("Arkansas", "AK", 3));
-        //}
-
-        private void ShowViewData(DEHRISModel.Data.Personnel ppersonnel)
+       
+        private void ShowViewData(DEHRIS.MODEL.Data.Personnel ppersonnel)
         {
             // txtPrBirthPlace
             txtPrCitizenship.Text = ppersonnel.Citizenship;
@@ -192,7 +147,7 @@ namespace DEHRIS.Importer
 
         private void ucPersonnelView_Click(object sender, EventArgs e)
         {
-            DEHRISAPI.PersonnelUtility prodUtil = new PersonnelUtility();
+            PersonnelUtility prodUtil = new PersonnelUtility();
             objlPersonnelView.SetObjects(prodUtil.GetPersonnel());
         }
     }

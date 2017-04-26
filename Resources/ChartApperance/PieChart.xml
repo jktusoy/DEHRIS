@@ -1,0 +1,294 @@
+<Chart>
+  <ChartArea>
+    <BorderWidth value="1" />
+    <BorderColor value="ControlText" />
+    <BorderStyle value="None" />
+    <DivideArea value="False" />
+    <MultiplePies value="False" />
+    <BackInterior value="Solid; Transparent" />
+    <GridBackInterior value="Solid; White" />
+    <XAxesLayoutMode value="Stacking" />
+    <YAxesLayoutMode value="Stacking" />
+    <Watermark>
+      <Margin value="10; 10; 10; 10" />
+    </Watermark>
+  </ChartArea>
+  <DockingManager>
+    <DockAlignment value="False" />
+  </DockingManager>
+  <NeedPerformance value="False" />
+  <ImprovePerformance value="False" />
+  <AllowUserEditStyles value="False" />
+  <ForeColor value="ControlText" />
+  <BackInterior value="Solid; White" />
+  <CalcRegions value="True" />
+  <ColumnDrawMode value="InDepthMode" />
+  <Skins value="None" />
+  <ColumnWidthMode value="DefaultWidthMode" />
+  <ColumnFixedWidth value="20" />
+  <HidePartialLabels value="False" />
+  <RadarStyle value="Polygon" />
+  <TextPosition value="Top" />
+  <RealMode3D value="False" />
+  <BorderAppearance>
+    <Interior>
+      <ForeColor value="DarkGray" />
+      <Width value="2" />
+      <DashStyle value="Solid" />
+    </Interior>
+    <SkinStyle value="None" />
+    <BaseColor value="Gray" />
+    <FrameThickness value="15; 30; 15; 15" />
+    <Thickness value="0; 0; 0; 0" />
+  </BorderAppearance>
+  <Zooming />
+  <Legend>
+    <Spacing value="4" />
+    <Border>
+      <BackColor value="Black" />
+      <DashStyle value="Solid" />
+      <ForeColor value="Black" />
+      <Width value="1" />
+    </Border>
+    <RepresentationType value="SeriesType" />
+    <ShowBorder value="False" />
+    <ShowSymbol value="False" />
+    <LegendAlignment value="Near" />
+    <ItemsAlignment value="Near" />
+    <TextAlignment value="Center" />
+    <ItemsTextAligment value="Center" />
+    <ShowItemsShadow value="False" />
+    <ItemsShadowColor value="Gray" />
+    <BackInterior value="Solid; Transparent" />
+    <Font value="Verdana, 8pt" />
+    <Text value="" />
+    <Position value="Right" />
+    <Orientation value="Vertical" />
+    <FloatingAutoSize value="True" />
+    <ColumnsCount value="1" />
+    <RowsCount value="1" />
+    <OnlyColumnsForFloating value="True" />
+    <VisibleCheckBox value="False" />
+  </Legend>
+  <LegendPosition value="Right" />
+  <ShowLegend value="False" />
+  <LegendAlignment value="Near" />
+  <LegendsPlacement value="Inside" />
+  <ToolBar>
+    <ButtonSize value="22, 22" />
+    <BackColor value="Control" />
+    <Border>
+      <BackColor value="Black" />
+      <DashStyle value="Solid" />
+      <ForeColor value="Black" />
+      <Width value="1" />
+    </Border>
+    <ShowBorder value="True" />
+    <ShowDialog value="False" />
+    <ButtonBackColor value="Transparent" />
+    <ButtonForeColor value="Transparent" />
+  </ToolBar>
+  <ShowToolbarInImage value="True" />
+  <ShowToolbar value="False" />
+  <AllowGapForEmptyPoints value="True" />
+  <PrimaryXAxis>
+    <LocationType value="Auto" />
+    <LabelAlignment value="Center" />
+    <RotateFromTicks value="False" />
+    <DrawTickLabelGrid value="False" />
+    <TickLabelGridPadding value="5" />
+    <MakeBreaks value="True" />
+    <LabelIntersectionActionEffect value="All" />
+    <SmartDateZoom value="False" />
+    <SmartDateZoomLabelsCulture value="en-US" />
+    <SmartDateZoomYearLevelLabelFormat value="y" />
+    <SmartDateZoomMonthLevelLabelFormat value="MMMM d, yyyy" />
+    <SmartDateZoomDayLevelLabelFormat value="g" />
+    <SmartDateZoomWeekLevelLabelFormat value="MMM, ddd d, yyyy" />
+    <SmartDateZoomHourLevelLabelFormat value="t" />
+    <SmartDateZoomMinuteLevelLabelFormat value="T" />
+    <SmartDateZoomSecondLevelLabelFormat value="T" />
+    <CurrentSmartDateTimeFormat value="MMM, ddd d, yyyy" />
+    <InterlacedGrid value="False" />
+    <InterlacedGridInterior value="Solid; LightGray" />
+    <EdgeLabelsDrawingMode value="Center" />
+    <CustomOrigin value="False" />
+    <Origin value="0" />
+    <OriginDate value="1899-12-30" />
+    <DateTimeFormat value="g" />
+    <DesiredIntervals value="6" />
+    <RangePaddingType value="Calculate" />
+    <PreferZero value="True" />
+    <DrawGrid value="True" />
+    <ShowAxisLabelTooltip value="True" />
+    <ShowCrosshairTooltip value="False" />
+    <DrawMinorGrid value="False" />
+    <GridDrawMode value="Default" />
+    <LabelPlacement value="OnTicks" />
+    <GridLineType>
+      <BackColor value="Black" />
+      <DashStyle value="Solid" />
+      <ForeColor value="Black" />
+      <Width value="1" />
+    </GridLineType>
+    <MinorGridLineType>
+      <BackColor value="Black" />
+      <DashStyle value="Solid" />
+      <ForeColor value="Black" />
+      <Width value="1" />
+    </MinorGridLineType>
+    <TickDrawingOperationMode value="NumberOfIntervalsFixed" />
+    <Font value="Verdana, 8pt" />
+    <TitleFont value="Verdana, 8pt" />
+    <ForeColor value="ControlText" />
+    <TitleColor value="ControlText" />
+    <TitleDrawMode value="None" />
+    <Format value="" />
+    <Inversed value="False" />
+    <LabelIntersectAction value="None" />
+    <HidePartialLabels value="False" />
+    <LabelRotate value="False" />
+    <LabelRotateAngle value="0" />
+    <LineType>
+      <BackColor value="Black" />
+      <DashStyle value="Solid" />
+      <ForeColor value="Black" />
+      <Width value="1" />
+    </LineType>
+    <LogBase value="10" />
+    <Offset value="0" />
+    <PointOffset value="0" />
+    <OpposedPosition value="False" />
+    <Orientation value="Horizontal" />
+    <RoundingPlaces value="2" />
+    <SmallTickSize value="1, 1" />
+    <SmallTicksPerInterval value="0" />
+    <TickColor value="ControlText" />
+    <TickSize value="1, 1" />
+    <Title value="" />
+    <TitleSpacing value="4" />
+    <TitleAlignment value="Center" />
+    <ToolTip value="" />
+    <ValueType value="Double" />
+    <TickLabelsDrawingMode value="AutomaticMode" />
+    <ZoomActions value="None" />
+    <IsVisible value="True" />
+    <ExcludeInvisibleSeriesRange value="False" />
+    <LabelsOffset value="0" />
+  </PrimaryXAxis>
+  <PrimaryYAxis>
+    <LocationType value="Auto" />
+    <LabelAlignment value="Center" />
+    <RotateFromTicks value="False" />
+    <DrawTickLabelGrid value="False" />
+    <TickLabelGridPadding value="5" />
+    <MakeBreaks value="True" />
+    <LabelIntersectionActionEffect value="All" />
+    <SmartDateZoom value="False" />
+    <SmartDateZoomLabelsCulture value="en-US" />
+    <SmartDateZoomYearLevelLabelFormat value="y" />
+    <SmartDateZoomMonthLevelLabelFormat value="MMMM d, yyyy" />
+    <SmartDateZoomDayLevelLabelFormat value="g" />
+    <SmartDateZoomWeekLevelLabelFormat value="MMM, ddd d, yyyy" />
+    <SmartDateZoomHourLevelLabelFormat value="t" />
+    <SmartDateZoomMinuteLevelLabelFormat value="T" />
+    <SmartDateZoomSecondLevelLabelFormat value="T" />
+    <CurrentSmartDateTimeFormat value="y" />
+    <InterlacedGrid value="False" />
+    <InterlacedGridInterior value="Solid; LightGray" />
+    <EdgeLabelsDrawingMode value="Center" />
+    <CustomOrigin value="False" />
+    <Origin value="0" />
+    <OriginDate value="1899-12-30" />
+    <DateTimeFormat value="g" />
+    <DesiredIntervals value="6" />
+    <RangePaddingType value="Calculate" />
+    <PreferZero value="True" />
+    <DrawGrid value="True" />
+    <ShowAxisLabelTooltip value="True" />
+    <ShowCrosshairTooltip value="False" />
+    <DrawMinorGrid value="False" />
+    <GridDrawMode value="Default" />
+    <LabelPlacement value="OnTicks" />
+    <GridLineType>
+      <BackColor value="Black" />
+      <DashStyle value="Solid" />
+      <ForeColor value="Black" />
+      <Width value="1" />
+    </GridLineType>
+    <MinorGridLineType>
+      <BackColor value="Black" />
+      <DashStyle value="Solid" />
+      <ForeColor value="Black" />
+      <Width value="1" />
+    </MinorGridLineType>
+    <TickDrawingOperationMode value="NumberOfIntervalsFixed" />
+    <Font value="Verdana, 8pt" />
+    <TitleFont value="Verdana, 8pt" />
+    <ForeColor value="ControlText" />
+    <TitleColor value="ControlText" />
+    <TitleDrawMode value="None" />
+    <Format value="" />
+    <Inversed value="False" />
+    <LabelIntersectAction value="None" />
+    <HidePartialLabels value="False" />
+    <LabelRotate value="False" />
+    <LabelRotateAngle value="0" />
+    <LineType>
+      <BackColor value="Black" />
+      <DashStyle value="Solid" />
+      <ForeColor value="Black" />
+      <Width value="1" />
+    </LineType>
+    <LogBase value="10" />
+    <Offset value="0" />
+    <PointOffset value="0" />
+    <OpposedPosition value="False" />
+    <Orientation value="Vertical" />
+    <RoundingPlaces value="2" />
+    <SmallTickSize value="1, 1" />
+    <SmallTicksPerInterval value="0" />
+    <TickColor value="ControlText" />
+    <TickSize value="1, 1" />
+    <Title value="" />
+    <TitleSpacing value="4" />
+    <TitleAlignment value="Center" />
+    <ToolTip value="" />
+    <ValueType value="Double" />
+    <TickLabelsDrawingMode value="AutomaticMode" />
+    <ZoomActions value="None" />
+    <IsVisible value="True" />
+    <ExcludeInvisibleSeriesRange value="False" />
+    <LabelsOffset value="0" />
+  </PrimaryYAxis>
+  <AutoHighlight value="False" />
+  <SeriesHighlight value="False" />
+  <HighlightSymbol value="False" />
+  <SeriesHighlightIndex value="-1" />
+  <ChartAreaShadow value="False" />
+  <ChartInterior value="Solid; White" />
+  <Depth value="50" />
+  <ElementsSpacing value="10" />
+  <EnableXZooming value="False" />
+  <EnableYZooming value="False" />
+  <Palette value="Default" />
+  <AllowGradientPalette value="False" />
+  <Rotation value="30" />
+  <Series3D value="False" />
+  <Style3D value="False" />
+  <ShadowColor value="Solid; 155, 169, 169, 169" />
+  <ShadowWidth value="5" />
+  <SmoothingMode value="AntiAlias" />
+  <Spacing value="30" />
+  <SpacingBetweenSeries value="10" />
+  <SpacingBetweenPoints value="0" />
+  <TextAlignment value="Center" />
+  <Tilt value="30" />
+  <Text value="Gender" />
+  <TextRenderingHint value="SystemDefault" />
+  <DisplaySeriesContextMenu value="True" />
+  <DisplayChartContextMenu value="True" />
+  <ShowContextMenu value="False" />
+  <ShowContextMenuInLegend value="False" />
+  <NeedRegionUpdate value="False" />
+</Chart>

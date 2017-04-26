@@ -8,8 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Syncfusion.XlsIO;
-using DEHRISAPI;
-using DEHRISModel.Data;
+using DEHRIS.MODEL.Data;
+using DEHRIS.CONTROLLER;
 using System.IO;
 using Syncfusion.Windows.Forms.Tools;
 
@@ -17,7 +17,7 @@ namespace DEHRIS.Importer
 {
     public partial class ucPersonnelView : UserControl
     {
-        DEHRISAPI.PersonnelUtility prodUtil = new PersonnelUtility();
+        PersonnelUtility prodUtil = new PersonnelUtility();
         DEHRIS.Personnel.Modules.ucEligibility ucEligib;
         DEHRIS.Personnel.Modules.ucEducationalBackground ucEduc;
         public ucPersonnelView()
@@ -55,7 +55,7 @@ namespace DEHRIS.Importer
 
             #region PERSONNEL
             /////////////////////////  PERSONNEL
-            private void ShowPersonnelViewData(DEHRISModel.Data.Personnel ppersonnel)
+            private void ShowPersonnelViewData(DEHRIS.MODEL.Data.Personnel ppersonnel)
             {
                 int defaulter = 0;
                 // txtPrBirthPlace
@@ -267,7 +267,7 @@ namespace DEHRIS.Importer
         private void objlPersonnelView_SelectionChanged(object sender, EventArgs e)
         {
             SetPersonnelEditable(false);
-            DEHRISModel.Data.Personnel selectePersonnel = (DEHRISModel.Data.Personnel)objlPersonnelView.SelectedObject;
+            DEHRIS.MODEL.Data.Personnel selectePersonnel = (DEHRIS.MODEL.Data.Personnel)objlPersonnelView.SelectedObject;
             ShowPersonnelViewData(selectePersonnel);
             
         }

@@ -8,8 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Syncfusion.XlsIO;
-using DEHRISAPI;
-using DEHRISModel.Data;
+using DEHRIS.CONTROLLER;
+using DEHRIS.MODEL.Data;
 using System.IO;
 using Syncfusion.Windows.Forms.Tools;
 
@@ -17,7 +17,7 @@ namespace DEHRIS.Recruitment
 {
     public partial class ucApplicantView : UserControl
     {
-        DEHRISAPI.PersonnelUtility prodUtil = new PersonnelUtility();
+        PersonnelUtility prodUtil = new PersonnelUtility();
         DEHRIS.Personnel.Modules.ucEligibility ucEligib;
         DEHRIS.Personnel.Modules.ucEducationalBackground ucEduc;
         public ucApplicantView()
@@ -55,7 +55,7 @@ namespace DEHRIS.Recruitment
 
             #region PERSONNEL
             /////////////////////////  PERSONNEL
-            private void ShowPersonnelViewData(DEHRISModel.Data.Personnel ppersonnel)
+            private void ShowPersonnelViewData(DEHRIS.MODEL.Data.Personnel ppersonnel)
             {
                 int defaulter = 0;
                 // txtPrBirthPlace
@@ -267,7 +267,7 @@ namespace DEHRIS.Recruitment
         private void objlPersonnelView_SelectionChanged(object sender, EventArgs e)
         {
             SetPersonnelEditable(false);
-            DEHRISModel.Data.Personnel selectePersonnel = (DEHRISModel.Data.Personnel)objlPersonnelView.SelectedObject;
+            DEHRIS.MODEL.Data.Personnel selectePersonnel = (DEHRIS.MODEL.Data.Personnel)objlPersonnelView.SelectedObject;
             ShowPersonnelViewData(selectePersonnel);
             
         }
