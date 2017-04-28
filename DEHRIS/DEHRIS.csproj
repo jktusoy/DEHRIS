@@ -598,6 +598,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CONTROLLER\Others\CustomUserControl\" />
+    <Folder Include="MODEL\Interface\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DEHRISDB\DEHRISDB.csproj">

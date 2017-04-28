@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucTraining));
             this.briTRNTitle = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
             this.briTRNAdd = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
             this.briTRNEdit = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
@@ -52,13 +51,48 @@
             this.lblTrnTitle = new System.Windows.Forms.Label();
             this.txtTRNConductedBy = new System.Windows.Forms.TextBox();
             this.txtTRNRemarks = new System.Windows.Forms.TextBox();
+            this.lblTitle = new Syncfusion.Windows.Forms.Tools.GradientLabel();
             ((System.ComponentModel.ISupportInitialize)(this.txtTRNDuration)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpTRNDateFrom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpTRNDateTo)).BeginInit();
             this.SuspendLayout();
             // 
             // briTRNTitle
-
+            // 
+            this.briTRNTitle.BarName = "briTRNTitle";
+            this.briTRNTitle.ShowToolTipInPopUp = false;
+            this.briTRNTitle.SizeToFit = true;
+            // 
+            // briTRNAdd
+            // 
+            this.briTRNAdd.BarName = "briTRNAdd";
+            this.briTRNAdd.ShowToolTipInPopUp = false;
+            this.briTRNAdd.SizeToFit = true;
+            // 
+            // briTRNEdit
+            // 
+            this.briTRNEdit.BarName = "briTRNEdit";
+            this.briTRNEdit.ShowToolTipInPopUp = false;
+            this.briTRNEdit.SizeToFit = true;
+            // 
+            // briTRNDelete
+            // 
+            this.briTRNDelete.BarName = "briTRNDelete";
+            this.briTRNDelete.ShowToolTipInPopUp = false;
+            this.briTRNDelete.SizeToFit = true;
+            // 
+            // briTRNRefresh
+            // 
+            this.briTRNRefresh.BarName = "briTRNRefresh";
+            this.briTRNRefresh.ShowToolTipInPopUp = false;
+            this.briTRNRefresh.SizeToFit = true;
+            // 
+            // briTRNSave
+            // 
+            this.briTRNSave.BarName = "briTRNSave";
+            this.briTRNSave.ShowToolTipInPopUp = false;
+            this.briTRNSave.SizeToFit = true;
+            // 
             // label8
             // 
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -268,11 +302,32 @@
             this.txtTRNRemarks.Size = new System.Drawing.Size(300, 46);
             this.txtTRNRemarks.TabIndex = 96;
             // 
+            // lblTitle
+            // 
+            this.lblTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTitle.BackgroundColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.Vertical, System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(240)))), ((int)(((byte)(247))))), System.Drawing.Color.LightCyan);
+            this.lblTitle.BeforeTouchSize = new System.Drawing.Size(562, 34);
+            this.lblTitle.BorderAppearance = System.Windows.Forms.BorderStyle.None;
+            this.lblTitle.BorderColor = System.Drawing.Color.LightGray;
+            this.lblTitle.BorderSides = ((System.Windows.Forms.Border3DSide)((((System.Windows.Forms.Border3DSide.Left | System.Windows.Forms.Border3DSide.Top) 
+            | System.Windows.Forms.Border3DSide.Right) 
+            | System.Windows.Forms.Border3DSide.Bottom)));
+            this.lblTitle.Font = new System.Drawing.Font("Square721 BT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblTitle.Location = new System.Drawing.Point(0, 0);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(562, 34);
+            this.lblTitle.TabIndex = 113;
+            this.lblTitle.Text = "Training";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // ucTraining
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtTRNDuration);
             this.Controls.Add(this.txtTRNMethod);
@@ -325,5 +380,6 @@
         private System.Windows.Forms.Label lblTrnTitle;
         private System.Windows.Forms.TextBox txtTRNConductedBy;
         private System.Windows.Forms.TextBox txtTRNRemarks;
+        private Syncfusion.Windows.Forms.Tools.GradientLabel lblTitle;
     }
 }

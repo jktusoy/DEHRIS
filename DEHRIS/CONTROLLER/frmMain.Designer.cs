@@ -81,6 +81,7 @@
             this.toolStripTabItem8 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
             this.toolStripEx9 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.tsTabTools = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
             this.toolStripEx4 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
             this.tsBtnImporter = new System.Windows.Forms.ToolStripButton();
@@ -117,7 +118,6 @@
             this.ribbonPanel7 = new Syncfusion.Windows.Forms.Tools.RibbonPanel();
             this.toolStripTabItem5 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
             this.toolStripEx10 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.tblyMain.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControlAdv1)).BeginInit();
@@ -793,6 +793,16 @@
             this.toolStripButton4.Text = "STAFFING PLAN";
             this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 43);
+            this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click_1);
+            // 
             // tsTabTools
             // 
             this.tsTabTools.Name = "tsTabTools";
@@ -1085,7 +1095,7 @@
             this.toolStripButton9.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton9.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton9.Name = "toolStripButton9";
-            this.toolStripButton9.Size = new System.Drawing.Size(73, 61);
+            this.toolStripButton9.Size = new System.Drawing.Size(73, 47);
             this.toolStripButton9.Text = "LEAVE";
             // 
             // tsbIPCR
@@ -1094,7 +1104,7 @@
             this.tsbIPCR.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsbIPCR.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbIPCR.Name = "tsbIPCR";
-            this.tsbIPCR.Size = new System.Drawing.Size(66, 61);
+            this.tsbIPCR.Size = new System.Drawing.Size(66, 47);
             this.tsbIPCR.Text = "IPCR";
             this.tsbIPCR.Click += new System.EventHandler(this.tsbIPCR_Click);
             // 
@@ -1179,16 +1189,6 @@
             this.toolStripEx10.Name = "toolStripEx10";
             this.toolStripEx10.Size = new System.Drawing.Size(100, 25);
             this.toolStripEx10.TabIndex = 0;
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 43);
-            this.toolStripButton1.Text = "toolStripButton1";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click_1);
             // 
             // frmMain
             // 

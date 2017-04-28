@@ -13,50 +13,118 @@ using DEHRIS.CONTROLLER.Structure;
 using BrightIdeasSoftware;
 using DEHRIS.MODEL.Data;
 using DEHRIS.VIEW.Structure;
- 
+
 namespace DEHRIS.VIEW
 {
     public partial class ViewManager : UserControl
     {
         private ICRUDDefinition mUsercontrol;
-
-
-
-
         private EnumTypes.ViewType viewType = EnumTypes.ViewType.ViewOnly;
         private EnumTypes.TransactionType transType = EnumTypes.TransactionType.Refresh;
-        private IController<object> instanceController;
-        private List<Object> objList;
-    
+        private EnumTypes.LayoutType layoutType = EnumTypes.LayoutType.FullLoad;
+
 
         public string Title { get; set; }
 
+        public EnumTypes.LayoutType Layout
+        {
+            get { return layoutType; }
+            set { layoutType = value; }
+        }
 
         //Type myType = Type.GetType("MyNamespace.MyType");
-   
 
 
-        public ViewManager(List<object> objl, ICRUDDefinition uccont)
+
+        public ViewManager(ICRUDDefinition uccont)
         {
-            
-           
             InitializeComponent();
+            DefaultControl();
+         
 
-   
-           
             Generator.GenerateColumns(this.objlViewMgr, Type.GetType("DEHRIS.MODEL.Data.Training"), true);
             lblViewMgrlHeader.Text = Title;
-            objlViewMgr.SetObjects(objl);
-
+            objlViewMgr.SetObjects(uccont.ListItem());
+            
             pnlViewMgrContent.Controls.Clear();
  
             mUsercontrol = uccont;
             pnlViewMgrContent.Controls.Add((UserControl)mUsercontrol);
-
             viewType = EnumTypes.ViewType.ViewAndManage;
-           
+        }
 
-          // //   instanceController = controller;
+        public void UpdateLayout()
+        {
+
+            switch (layoutType)
+            {
+                case EnumTypes.LayoutType.ViewMainHorizontal:
+                    tbsViewMgr.Collapsed = false;
+                    tbsViewMgr.SplitterPosition = tbsViewMgr.Height / 2;
+                    tbsViewMgr.Orientation = Orientation.Horizontal;
+                    tbsViewMgr.Swapped = false;
+                    break;
+                case EnumTypes.LayoutType.ManageMainHorizontal:
+                    tbsViewMgr.Collapsed = false;
+                    tbsViewMgr.SplitterPosition = tbsViewMgr.Height / 2;
+                    tbsViewMgr.Swapped = true;
+                    break;
+                case EnumTypes.LayoutType.ViewMainVertical:
+                    tbsViewMgr.Collapsed = false;
+                    tbsViewMgr.SplitterPosition = tbsViewMgr.Height / 2;
+                    tbsViewMgr.Orientation = Orientation.Vertical;
+                    tbsViewMgr.Swapped = false;
+                    break;
+                case EnumTypes.LayoutType.ManageMainVertical:
+                    tbsViewMgr.Collapsed = false;
+                    tbsViewMgr.SplitterPosition = tbsViewMgr.Height / 2;
+                    tbsViewMgr.Orientation = Orientation.Vertical;
+                    tbsViewMgr.Swapped = true;
+                    break;
+                case EnumTypes.LayoutType.FullLoad:
+                    tbsViewMgr.Collapsed = true;
+                    break;
+                default:
+                    break;
+            }
+        
+        }
+
+        public void UpdateLayout(EnumTypes.LayoutType _layoutType)
+        {
+
+            switch (_layoutType)
+            {
+                case EnumTypes.LayoutType.ViewMainHorizontal:
+                    tbsViewMgr.Collapsed = false;
+                    tbsViewMgr.SplitterPosition = tbsViewMgr.Height / 2;
+                    tbsViewMgr.Orientation = Orientation.Horizontal;
+                    tbsViewMgr.Swapped = false;
+                    break;
+                case EnumTypes.LayoutType.ManageMainHorizontal:
+                    tbsViewMgr.Collapsed = false;
+                    tbsViewMgr.SplitterPosition = tbsViewMgr.Height / 2;
+                    tbsViewMgr.Swapped = true;
+                    break;
+                case EnumTypes.LayoutType.ViewMainVertical:
+                    tbsViewMgr.Collapsed = false;
+                    tbsViewMgr.SplitterPosition = tbsViewMgr.Height / 2;
+                    tbsViewMgr.Orientation = Orientation.Vertical;
+                    tbsViewMgr.Swapped = false;
+                    break;
+                case EnumTypes.LayoutType.ManageMainVertical:
+                    tbsViewMgr.Collapsed = false;
+                    tbsViewMgr.SplitterPosition = tbsViewMgr.Height / 2;
+                    tbsViewMgr.Orientation = Orientation.Vertical;
+                    tbsViewMgr.Swapped = true;
+                    break;
+                case EnumTypes.LayoutType.FullLoad:
+                    tbsViewMgr.Collapsed = true;
+                    break;
+                default:
+                    break;
+            }
+
         }
 
 
@@ -82,7 +150,53 @@ namespace DEHRIS.VIEW
 
         private void briAdd_Click(object sender, EventArgs e)
         {
-            transType = EnumTypes.TransactionType.Add;
+            Add();
+        }
+
+        private void objlViewMgr_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            Edit(false);
+            DefaultControl();
+        }
+
+
+        #region TRANSACTION
+        public void Edit(bool enabled)
+        {
+
+            mUsercontrol.TransactionType = transType = EnumTypes.TransactionType.Update;
+            mUsercontrol.UpdateTitle();
+
+            if (viewType == EnumTypes.ViewType.ViewAndManage)
+            {
+                object objectv = objlViewMgr.SelectedObject;
+
+                if (objectv == null)
+                    return;
+                mUsercontrol.ViewItem(objectv, enabled);
+
+                if (tbsViewMgr.Collapsed == true)
+                {
+                    tbsViewMgr.Collapsed = false;
+                    tbsViewMgr.Swapped = false;
+                    tbsViewMgr.Collapsed = true;
+                }
+
+            }
+        }
+
+        public void Add()
+        {
+            transType = mUsercontrol.TransactionType = EnumTypes.TransactionType.Add;
+            mUsercontrol.UpdateTitle();
+
+            briEdit.Enabled = false;
+            briAdd.Enabled = false;
+            briDelete.Enabled = false;
+            briSave.Enabled = true;
+            briCancel.Enabled = true;
+
             if (tbsViewMgr.Collapsed == true)
             {
                 tbsViewMgr.Collapsed = false;
@@ -93,52 +207,43 @@ namespace DEHRIS.VIEW
             mUsercontrol.ClearItem();
 
 
+        
+        
+        
         }
 
-        private void objlViewMgr_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
 
-            if (viewType == EnumTypes.ViewType.ViewAndManage)
-            {
-                object objectv = objlViewMgr.SelectedObject;
 
-                if (objectv == null)
-                    return;
-                mUsercontrol.ViewItem(objectv);
+        #endregion 
 
-                if (tbsViewMgr.Collapsed == true)
-                {
-                    tbsViewMgr.Collapsed = false;
-                    tbsViewMgr.Swapped = false;
-                    tbsViewMgr.Collapsed = true;
-                }
-
-            }
-
-        }
+      
 
         private void briSave_Click(object sender, EventArgs e)
         {
-            switch (transType){
+            
+            switch (transType)
+            {
                 case EnumTypes.TransactionType.Add:
-                     mUsercontrol.AddItem();
-                     break;
+                    mUsercontrol.AddItem();
+                    break;
                 case EnumTypes.TransactionType.Update:
-                     object objectv = objlViewMgr.SelectedObject;
-                     mUsercontrol.UpdateItem(objectv);
-                     break;
+                    object objectv = objlViewMgr.SelectedObject;
+                    mUsercontrol.UpdateItem(objectv);
+                    break;
 
             }
 
-            transType = EnumTypes.TransactionType.Refresh;
+            briEdit.Enabled = true;
+            briAdd.Enabled = true;
+            briDelete.Enabled = true;
+            briSave.Enabled = false;
+            briCancel.Enabled = false;
+
+            objlViewMgr.SetObjects(mUsercontrol.ListItem());
         }
 
-        private void briEdit_Click(object sender, EventArgs e)
-        {
-            transType = EnumTypes.TransactionType.Update;
-        }
-
+       
         private void briDelete_Click(object sender, EventArgs e)
         {
             transType = EnumTypes.TransactionType.Refresh;
@@ -146,7 +251,42 @@ namespace DEHRIS.VIEW
 
         private void briRefresh_Click(object sender, EventArgs e)
         {
+            DefaultControl();
+
             transType = EnumTypes.TransactionType.Refresh;
+            objlViewMgr.SetObjects(mUsercontrol.ListItem());
+        }
+
+
+        public void DefaultControl()
+        {
+
+            briEdit.Enabled = true;
+            briAdd.Enabled = true;
+            briDelete.Enabled = true;
+            briSave.Enabled = false;
+            briCancel.Enabled = false;
+        }
+        private void briEdit_Click_1(object sender, EventArgs e)
+        {
+            briEdit.Enabled = false;
+            briAdd.Enabled = false;
+            briDelete.Enabled = false;
+            briSave.Enabled = true;
+            briCancel.Enabled = true;
+
+            object objectv = objlViewMgr.SelectedObject;
+
+            if (objectv == null)
+                return;
+            mUsercontrol.EditItem(objectv);
+
+            Edit(true);
+        }
+
+        private void briCancel_Click(object sender, EventArgs e)
+        {
+            DefaultControl();
         }
 
 

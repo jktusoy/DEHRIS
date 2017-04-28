@@ -44,6 +44,7 @@
             this.briDelete = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
             this.briSave = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
             this.briRefresh = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
+            this.briCancel = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
             this.tbsViewMgr.SuspendLayout();
             this.tabSplitterPage1.SuspendLayout();
             this.tabSplitterPage2.SuspendLayout();
@@ -63,7 +64,7 @@
             this.tabSplitterPage2});
             this.tbsViewMgr.Size = new System.Drawing.Size(713, 280);
             this.tbsViewMgr.SplitterBackColor = System.Drawing.SystemColors.Control;
-            this.tbsViewMgr.SplitterPosition = 139;
+            this.tbsViewMgr.SplitterPosition = 88;
             this.tbsViewMgr.Swapped = true;
             this.tbsViewMgr.TabIndex = 1;
             this.tbsViewMgr.Text = "tabSplitterContainer1";
@@ -73,9 +74,9 @@
             this.tabSplitterPage1.AutoScroll = true;
             this.tabSplitterPage1.Controls.Add(this.pnlViewMgrContent);
             this.tabSplitterPage1.Hide = false;
-            this.tabSplitterPage1.Location = new System.Drawing.Point(0, 159);
+            this.tabSplitterPage1.Location = new System.Drawing.Point(0, 108);
             this.tabSplitterPage1.Name = "tabSplitterPage1";
-            this.tabSplitterPage1.Size = new System.Drawing.Size(713, 121);
+            this.tabSplitterPage1.Size = new System.Drawing.Size(713, 172);
             this.tabSplitterPage1.TabIndex = 3;
             this.tabSplitterPage1.Text = "Manage";
             // 
@@ -85,7 +86,7 @@
             this.pnlViewMgrContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlViewMgrContent.Location = new System.Drawing.Point(0, 0);
             this.pnlViewMgrContent.Name = "pnlViewMgrContent";
-            this.pnlViewMgrContent.Size = new System.Drawing.Size(713, 121);
+            this.pnlViewMgrContent.Size = new System.Drawing.Size(713, 172);
             this.pnlViewMgrContent.TabIndex = 3;
             // 
             // tabSplitterPage2
@@ -95,7 +96,7 @@
             this.tabSplitterPage2.Hide = false;
             this.tabSplitterPage2.Location = new System.Drawing.Point(0, 0);
             this.tabSplitterPage2.Name = "tabSplitterPage2";
-            this.tabSplitterPage2.Size = new System.Drawing.Size(713, 139);
+            this.tabSplitterPage2.Size = new System.Drawing.Size(713, 88);
             this.tabSplitterPage2.TabIndex = 2;
             this.tabSplitterPage2.Text = "View";
             // 
@@ -122,7 +123,7 @@
             this.objlViewMgr.ShowImagesOnSubItems = true;
             this.objlViewMgr.ShowItemCountOnGroups = true;
             this.objlViewMgr.ShowItemToolTips = true;
-            this.objlViewMgr.Size = new System.Drawing.Size(713, 139);
+            this.objlViewMgr.Size = new System.Drawing.Size(713, 88);
             this.objlViewMgr.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.objlViewMgr.TabIndex = 3;
             this.objlViewMgr.UnfocusedSelectedBackColor = System.Drawing.Color.WhiteSmoke;
@@ -170,6 +171,7 @@
             this.briEdit,
             this.briDelete,
             this.briSave,
+            this.briCancel,
             this.briRefresh});
             this.xpToolBar1.Bar.Manager = null;
             this.xpToolBar1.Location = new System.Drawing.Point(-3, 35);
@@ -189,6 +191,8 @@
             // briAdd
             // 
             this.briAdd.BarName = "briAdd";
+            this.briAdd.DisabledImageIndex = 5;
+            this.briAdd.DisabledImageList = this.imgControls;
             this.briAdd.ImageIndex = 0;
             this.briAdd.ImageList = this.imgControls;
             this.briAdd.ShowToolTipInPopUp = false;
@@ -207,19 +211,26 @@
             this.imgControls.Images.SetKeyName(5, "add-iconDisabled32.png");
             this.imgControls.Images.SetKeyName(6, "delete-iconDisabled32.png");
             this.imgControls.Images.SetKeyName(7, "edit-iconDisabled32.png");
+            this.imgControls.Images.SetKeyName(8, "save-Disabled.png");
+            this.imgControls.Images.SetKeyName(9, "cancel-icon.png");
+            this.imgControls.Images.SetKeyName(10, "cancel-iconDisabled.png");
             // 
             // briEdit
             // 
             this.briEdit.BarName = "briEdit";
+            this.briEdit.DisabledImageIndex = 7;
+            this.briEdit.DisabledImageList = this.imgControls;
             this.briEdit.ImageIndex = 2;
             this.briEdit.ImageList = this.imgControls;
             this.briEdit.ShowToolTipInPopUp = false;
             this.briEdit.SizeToFit = true;
-            this.briEdit.Click += new System.EventHandler(this.briEdit_Click);
+            this.briEdit.Click += new System.EventHandler(this.briEdit_Click_1);
             // 
             // briDelete
             // 
             this.briDelete.BarName = "briDelete";
+            this.briDelete.DisabledImageIndex = 6;
+            this.briDelete.DisabledImageList = this.imgControls;
             this.briDelete.ImageIndex = 1;
             this.briDelete.ImageList = this.imgControls;
             this.briDelete.ShowToolTipInPopUp = false;
@@ -229,6 +240,8 @@
             // briSave
             // 
             this.briSave.BarName = "briSave";
+            this.briSave.DisabledImageIndex = 8;
+            this.briSave.DisabledImageList = this.imgControls;
             this.briSave.ImageIndex = 4;
             this.briSave.ImageList = this.imgControls;
             this.briSave.ShowToolTipInPopUp = false;
@@ -243,6 +256,17 @@
             this.briRefresh.ShowToolTipInPopUp = false;
             this.briRefresh.SizeToFit = true;
             this.briRefresh.Click += new System.EventHandler(this.briRefresh_Click);
+            // 
+            // briCancel
+            // 
+            this.briCancel.BarName = "briCancel";
+            this.briCancel.DisabledImageIndex = 10;
+            this.briCancel.DisabledImageList = this.imgControls;
+            this.briCancel.ImageIndex = 9;
+            this.briCancel.ImageList = this.imgControls;
+            this.briCancel.ShowToolTipInPopUp = false;
+            this.briCancel.SizeToFit = true;
+            this.briCancel.Click += new System.EventHandler(this.briCancel_Click);
             // 
             // ViewManager
             // 
@@ -277,6 +301,7 @@
         private Syncfusion.Windows.Forms.Tools.XPMenus.BarItem briRefresh;
         private BrightIdeasSoftware.ObjectListView objlViewMgr;
         private System.Windows.Forms.Panel pnlViewMgrContent;
+        private Syncfusion.Windows.Forms.Tools.XPMenus.BarItem briCancel;
 
 
     }

@@ -172,6 +172,7 @@
             this.MinimizeBox = false;
             this.Name = "frmLogin";
             this.Text = "frmLogin";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmLogin_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.gradientPanel1)).EndInit();
             this.gradientPanel1.ResumeLayout(false);
             this.gradientPanel1.PerformLayout();

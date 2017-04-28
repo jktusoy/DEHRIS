@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+using DEHRIS.VIEW.Structure;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,10 +12,21 @@ namespace DEHRIS.VIEW.Structure
     {
 
 
-       void ViewItem(Object obj);
+       void ViewItem(Object obj, bool enabled);
 
        void ClearItem();
        void AddItem();
+
+       List<object> ListItem();
        void UpdateItem(Object obj);
+       void EditItem(Object obj);
+       void UpdateTitle();
+       EnumTypes.TransactionType TransactionType
+       {
+           get;
+           set;
+       }
+     
+
     }
 }

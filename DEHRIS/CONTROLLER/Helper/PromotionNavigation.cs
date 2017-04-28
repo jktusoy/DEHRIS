@@ -16,17 +16,15 @@ namespace DEHRIS.CONTROLLER
 
         public static void TrainingView(Panel gpMain)
         {
-            TrainingController perf = new TrainingController();
-            List<object> objlist = new List<object>();
-            objlist = perf.GetList().Cast<object>().ToList();
+            TrainingController perf = new TrainingController();      
             VIEW.Promotion.ucTraining uctrn = new VIEW.Promotion.ucTraining(perf);
-           // VIEW.Promotion.ucTraining uctrn = new VIEW.Promotion.ucTraining();
-            Training data = new Training();
+            ViewManager vmTrn = new ViewManager(uctrn);
+            vmTrn.Layout = VIEW.Structure.EnumTypes.LayoutType.ManageMainVertical;
+            vmTrn.UpdateLayout();
 
-            ViewManager ucTrn = new ViewManager(objlist, uctrn);
             gpMain.Controls.Clear();
-            gpMain.Controls.Add(ucTrn);
-            ucTrn.Dock = DockStyle.Fill;
+            gpMain.Controls.Add(vmTrn);
+            vmTrn.Dock = DockStyle.Fill;
         }
         public static void TrainingView2(Panel gpMain)
         {

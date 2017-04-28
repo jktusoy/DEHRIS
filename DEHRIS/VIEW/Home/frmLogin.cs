@@ -28,5 +28,10 @@ namespace DEHRIS.Home
         {
             Application.Exit();
         }
+
+        private void frmLogin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
