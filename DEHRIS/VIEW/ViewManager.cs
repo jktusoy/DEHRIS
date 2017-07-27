@@ -26,13 +26,23 @@ namespace DEHRIS.VIEW
 
         public string Title { get; set; }
 
-        public EnumTypes.LayoutType Layout
+        public EnumTypes.LayoutType LayoutOrientation
         {
             get { return layoutType; }
             set { layoutType = value; }
         }
 
-        //Type myType = Type.GetType("MyNamespace.MyType");
+
+        public ViewManager()
+        {
+            InitializeComponent();
+            DefaultControl();
+            Generator.GenerateColumns(this.objlViewMgr, Type.GetType("DEHRIS.MODEL.Data.Training"), true);
+            lblViewMgrlHeader.Text = Title;
+            pnlViewMgrContent.Controls.Clear();
+            pnlViewMgrContent.Controls.Add((UserControl)mUsercontrol);
+            viewType = EnumTypes.ViewType.ViewAndManage;
+        }
 
 
 
@@ -148,25 +158,14 @@ namespace DEHRIS.VIEW
 
         }
 
-        private void briAdd_Click(object sender, EventArgs e)
-        {
-            Add();
-        }
-
-        private void objlViewMgr_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-            Edit(false);
-            DefaultControl();
-        }
+      
 
 
-        #region TRANSACTION
+        #region COMMON FUNCTION
         public void Edit(bool enabled)
         {
 
-            mUsercontrol.TransactionType = transType = EnumTypes.TransactionType.Update;
-            mUsercontrol.UpdateTitle();
+         
 
             if (viewType == EnumTypes.ViewType.ViewAndManage)
             {
@@ -189,7 +188,7 @@ namespace DEHRIS.VIEW
         public void Add()
         {
             transType = mUsercontrol.TransactionType = EnumTypes.TransactionType.Add;
-            mUsercontrol.UpdateTitle();
+            mUsercontrol.UpdateTitle(transType);
 
             briEdit.Enabled = false;
             briAdd.Enabled = false;
@@ -212,13 +211,33 @@ namespace DEHRIS.VIEW
         
         }
 
+        public void DefaultControl()
+        {
 
+            briEdit.Enabled = true;
+            briAdd.Enabled = true;
+            briDelete.Enabled = true;
+            briSave.Enabled = false;
+            briCancel.Enabled = false;
+        }
 
 
         #endregion 
 
-      
+        #region EVENTS
+        private void briAdd_Click(object sender, EventArgs e)
+        {
+            Add();
+        }
 
+        private void objlViewMgr_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            mUsercontrol.TransactionType = transType = EnumTypes.TransactionType.Refresh;
+            mUsercontrol.UpdateTitle(transType);
+
+            Edit(false);
+            DefaultControl();
+        }
         private void briSave_Click(object sender, EventArgs e)
         {
             
@@ -242,8 +261,7 @@ namespace DEHRIS.VIEW
 
             objlViewMgr.SetObjects(mUsercontrol.ListItem());
         }
-
-       
+      
         private void briDelete_Click(object sender, EventArgs e)
         {
             transType = EnumTypes.TransactionType.Refresh;
@@ -258,17 +276,12 @@ namespace DEHRIS.VIEW
         }
 
 
-        public void DefaultControl()
-        {
-
-            briEdit.Enabled = true;
-            briAdd.Enabled = true;
-            briDelete.Enabled = true;
-            briSave.Enabled = false;
-            briCancel.Enabled = false;
-        }
         private void briEdit_Click_1(object sender, EventArgs e)
         {
+            transType = mUsercontrol.TransactionType = EnumTypes.TransactionType.Update;
+            mUsercontrol.UpdateTitle(transType);
+
+
             briEdit.Enabled = false;
             briAdd.Enabled = false;
             briDelete.Enabled = false;
@@ -289,7 +302,7 @@ namespace DEHRIS.VIEW
             DefaultControl();
         }
 
-
+#endregion
 
     }
 }

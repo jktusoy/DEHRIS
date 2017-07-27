@@ -45,9 +45,15 @@
     <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
+    <Reference Include="FarPoint.CalcEngine, Version=7.35.20142.0, Culture=neutral, PublicKeyToken=327c3516b1b18457" />
+    <Reference Include="FarPoint.Excel, Version=7.35.20142.0, Culture=neutral, PublicKeyToken=327c3516b1b18457" />
     <Reference Include="FarPoint.Localization, Version=7.20.20142.0, Culture=neutral, PublicKeyToken=327c3516b1b18457" />
+    <Reference Include="FarPoint.PluginCalendar.WinForms, Version=7.35.20142.0, Culture=neutral, PublicKeyToken=327c3516b1b18457" />
     <Reference Include="FarPoint.Win, Version=7.35.20142.0, Culture=neutral, PublicKeyToken=327c3516b1b18457" />
     <Reference Include="FarPoint.Win.Chart, Version=7.35.20142.0, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL" />
+    <Reference Include="FarPoint.Win.Spread, Version=7.35.20142.0, Culture=neutral, PublicKeyToken=327c3516b1b18457" />
+    <Reference Include="FarPoint.Win.Spread.Design, Version=7.35.20142.0, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.Vsa, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
     <Reference Include="NotificationWindow">
       <HintPath>..\packages\NotificationWindow\NotificationWindow.dll</HintPath>
@@ -101,7 +107,9 @@
     <Compile Include="CONTROLLER\Structure\EnumModule.cs" />
     <Compile Include="CONTROLLER\Helper\PromotionHelper.cs" />
     <Compile Include="CONTROLLER\Helper\PromotionNavigation.cs" />
-    <Compile Include="CONTROLLER\PersonnelUtility.cs" />
+    <Compile Include="CONTROLLER\PersonnelController.cs" />
+    <Compile Include="CONTROLLER\Helper\ToolsNavigation.cs" />
+    <Compile Include="CONTROLLER\ToolController.cs" />
     <Compile Include="CONTROLLER\TrainingController.cs" />
     <Compile Include="MODEL\Data\Address.cs" />
     <Compile Include="MODEL\Data\CivilService.cs" />
@@ -112,11 +120,18 @@
     <Compile Include="MODEL\Data\ProfilePicture.cs" />
     <Compile Include="MODEL\Data\Seminar.cs" />
     <Compile Include="MODEL\Data\SpecialSkills.cs" />
+    <Compile Include="MODEL\Data\ToolTemplateCategory.cs" />
     <Compile Include="MODEL\Data\Training.cs" />
     <Compile Include="MODEL\Data\WorkExperience.cs" />
     <Compile Include="MODEL\Enum\AddressType.cs" />
     <Compile Include="MODEL\Enum\ContactType.cs" />
     <Compile Include="MODEL\Enum\TransactionType.cs" />
+    <Compile Include="VIEW\Personnel\ucPersonnelListView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VIEW\Personnel\ucPersonnelListView.Designer.cs">
+      <DependentUpon>ucPersonnelListView.cs</DependentUpon>
+    </Compile>
     <Compile Include="VIEW\Structure\EnumTypes.cs" />
     <Compile Include="VIEW\Structure\ICRUDDefinition.cs" />
     <Compile Include="CONTROLLER\Structure\IController.cs" />
@@ -279,6 +294,12 @@
     <Compile Include="VIEW\Organization\ucVMG.Designer.cs">
       <DependentUpon>ucVMG.cs</DependentUpon>
     </Compile>
+    <Compile Include="VIEW\Tools\ucImportTool.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VIEW\Tools\ucImportTool.Designer.cs">
+      <DependentUpon>ucImportTool.cs</DependentUpon>
+    </Compile>
     <Compile Include="VIEW\ViewManager.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -357,6 +378,9 @@
     <EmbeddedResource Include="VIEW\Personnel\Modules\ucSpecialSkills.resx">
       <DependentUpon>ucSpecialSkills.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\Personnel\ucPersonnelListView.resx">
+      <DependentUpon>ucPersonnelListView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VIEW\Promotion\ucTraining.resx">
       <DependentUpon>ucTraining.cs</DependentUpon>
     </EmbeddedResource>
@@ -389,6 +413,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VIEW\Organization\ucVMG.resx">
       <DependentUpon>ucVMG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\Tools\ucImportTool.resx">
+      <DependentUpon>ucImportTool.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VIEW\ViewManager.resx">
       <DependentUpon>ViewManager.cs</DependentUpon>

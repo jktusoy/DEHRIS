@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using DEHRIS.VIEW;
+using DEHRIS.VIEW.Tools;
 namespace DEHRIS
 {
     public partial class frmMain : Form
@@ -55,7 +56,7 @@ namespace DEHRIS
 
         private void tsBtnImporter_Click(object sender, EventArgs e)
         {
-            Importer.ucPersonnelView iucImport = new Importer.ucPersonnelView();
+            ucImportTool iucImport = new  ucImportTool();
             gpMain.Controls.Clear();
             gpMain.Controls.Add(iucImport);
             iucImport.Dock = DockStyle.Fill;
@@ -148,12 +149,12 @@ namespace DEHRIS
 
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
-            CONTROLLER.PromotionNavigation.TrainingView(gpMain);
+            CONTROLLER.Helper.PromotionNavigation.TrainingView(gpMain);
         }
 
         private void toolStripButton1_Click_1(object sender, EventArgs e)
         {
-            CONTROLLER.PromotionNavigation.TrainingView2(gpMain);
+            CONTROLLER.Helper.PromotionNavigation.TrainingView2(gpMain);
         }
 
       

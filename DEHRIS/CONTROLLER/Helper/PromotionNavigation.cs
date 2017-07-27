@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DEHRIS.CONTROLLER
+namespace DEHRIS.CONTROLLER.Helper
 {
     public static class PromotionNavigation
     { 
@@ -19,7 +19,7 @@ namespace DEHRIS.CONTROLLER
             TrainingController perf = new TrainingController();      
             VIEW.Promotion.ucTraining uctrn = new VIEW.Promotion.ucTraining(perf);
             ViewManager vmTrn = new ViewManager(uctrn);
-            vmTrn.Layout = VIEW.Structure.EnumTypes.LayoutType.ManageMainVertical;
+            vmTrn.LayoutOrientation = VIEW.Structure.EnumTypes.LayoutType.ManageMainVertical;
             vmTrn.UpdateLayout();
 
             gpMain.Controls.Clear();

@@ -82,16 +82,13 @@
     <Compile Include="specialSkill.cs">
       <DependentUpon>DEHRISDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="sysTransactionRecordTypeID.cs">
-      <DependentUpon>DEHRISDB.tt</DependentUpon>
-    </Compile>
     <Compile Include="training.cs">
       <DependentUpon>DEHRISDB.tt</DependentUpon>
     </Compile>
     <Compile Include="trainingAssignment.cs">
       <DependentUpon>DEHRISDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="transactionRecord.cs">
+    <Compile Include="type_ImportTemplateCategory.cs">
       <DependentUpon>DEHRISDB.tt</DependentUpon>
     </Compile>
     <Compile Include="workExperience.cs">

@@ -20,7 +20,7 @@ namespace DEHRIS.VIEW.Structure
        List<object> ListItem();
        void UpdateItem(Object obj);
        void EditItem(Object obj);
-       void UpdateTitle();
+       void UpdateTitle(EnumTypes.TransactionType transtype);
        EnumTypes.TransactionType TransactionType
        {
            get;

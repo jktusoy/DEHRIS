@@ -215,7 +215,7 @@
             this.ribbonControlAdv1.OfficeMenu.Size = new System.Drawing.Size(118, 224);
             this.ribbonControlAdv1.QuickPanelImageLayout = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ribbonControlAdv1.RibbonHeaderImage = Syncfusion.Windows.Forms.Tools.RibbonHeaderImage.None;
-            this.ribbonControlAdv1.SelectedTab = this.toolStripTabItem8;
+            this.ribbonControlAdv1.SelectedTab = this.tsTabTools;
             this.ribbonControlAdv1.ShowRibbonDisplayOptionButton = true;
             this.ribbonControlAdv1.Size = new System.Drawing.Size(1135, 120);
             this.ribbonControlAdv1.SystemText.QuickAccessDialogDropDownName = "Start menu";

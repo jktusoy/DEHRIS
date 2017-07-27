@@ -12,6 +12,7 @@ using DEHRIS.MODEL.Data;
 using DEHRIS.VIEW.Structure;
 using DEHRIS.CONTROLLER;
 using DEHRIS.CONTROLLER.Structure;
+using Syncfusion.Windows.Forms.Tools;
 namespace DEHRIS.VIEW.Promotion
 {
     public partial class ucTraining : UserControl, ICRUDDefinition
@@ -50,20 +51,20 @@ namespace DEHRIS.VIEW.Promotion
             return mController.GetList().Cast<object>().ToList();
         }
 
-        public void UpdateTitle()
+        public void UpdateTitle(EnumTypes.TransactionType mtransType)
         {
 
             if (mtransType == EnumTypes.TransactionType.Add)
             {
-                lblTitle.Text = "Adding new record: " + mTitle;
+                lblTitle.Text = "Adding new " + mTitle + " record"; 
             }
             else if (mtransType == EnumTypes.TransactionType.Update)
             {
-                lblTitle.Text = "Updating new record: " + mTitle;
+                lblTitle.Text = "Updating " + mTitle + " record";
             }
             else
             {
-                lblTitle.Text = "Viewing new record: " + mTitle;
+                lblTitle.Text = "Viewing " + mTitle + " record";
             }
         
         }
@@ -72,42 +73,28 @@ namespace DEHRIS.VIEW.Promotion
         {
             try
             {
+                foreach (var item in this.Controls)
+                {
+                    if (item is TextBox)
+                        ((TextBox)item).ReadOnly = !enabled;
+                    else if (item is DateTimePickerAdv)
+                    {
+                        if (enabled)
+                        {
+                            ((DateTimePickerAdv)item).ReadOnly = !enabled;
+                            ((DateTimePickerAdv)item).Format = DateTimePickerFormat.Short;
+                            ((DateTimePickerAdv)item).Value = (DateTime)Item.DateFrom;
+                        }
+                        else {
+                            ((DateTimePickerAdv)item).ReadOnly = !enabled;
+                            ((DateTimePickerAdv)item).Format = DateTimePickerFormat.Custom;
+                            ((DateTimePickerAdv)item).CustomFormat = " ";
+                        
+                        }
 
-                txtTRNDuration.ReadOnly = !enabled;
-                txtTRNConductedBy.ReadOnly = !enabled;
-                txtTRNMethod.ReadOnly = !enabled;
-                txtTRNRemarks.ReadOnly = !enabled;
-                txtTRNTitle.ReadOnly = !enabled;
-                txtTRNTrainingType.ReadOnly = !enabled;
-                txtTRNMethod.ReadOnly = !enabled;
-
-
-
-                if (enabled) {
-                    dtpTRNDateFrom.ReadOnly = !enabled;
-                    dtpTRNDateFrom.Format = DateTimePickerFormat.Short;
-                    dtpTRNDateFrom.Value =(DateTime)Item.DateFrom;
-
-                    dtpTRNDateTo.ReadOnly = !enabled;
-                    dtpTRNDateTo.Format = DateTimePickerFormat.Short;
-                    dtpTRNDateFrom.Value = (DateTime)Item.DateTo;
-                
+                    }
                 }
-
-                else {
-
-                    dtpTRNDateFrom.ReadOnly = !enabled;
-                    dtpTRNDateFrom.Format = DateTimePickerFormat.Custom;
-                    dtpTRNDateFrom.CustomFormat = " ";
-
-                    dtpTRNDateTo.ReadOnly = !enabled;
-                    dtpTRNDateTo.Format = DateTimePickerFormat.Custom;
-                    dtpTRNDateTo.CustomFormat = " ";
-                }
-
-              
-
-
+               
 
                 mItem = (Training)obj;
                 txtTRNDuration.Text = mItem.Duration.ToString();
@@ -155,19 +142,19 @@ namespace DEHRIS.VIEW.Promotion
             txtTRNTrainingType.Text = "";
             txtTRNMethod.Text = "";
 
-            dtpTRNDateFrom.Enabled = true;
+            dtpTRNDateFrom.ReadOnly = false;
             dtpTRNDateFrom.Format = DateTimePickerFormat.Short;
 
-            dtpTRNDateTo.Enabled = true;
-            dtpTRNDateTo.Format = DateTimePickerFormat.Short;   
+            dtpTRNDateTo.ReadOnly = false;
+            dtpTRNDateTo.Format = DateTimePickerFormat.Short;
 
-            txtTRNDuration.Enabled = true;
-            txtTRNConductedBy.Enabled = true;
-            txtTRNMethod.Enabled = true;
-            txtTRNRemarks.Enabled = true;
-            txtTRNTitle.Enabled = true;
-            txtTRNTrainingType.Enabled = true;
-            txtTRNMethod.Enabled = true;
+            txtTRNDuration.ReadOnly = false;
+            txtTRNConductedBy.ReadOnly = false;
+            txtTRNMethod.ReadOnly = false;
+            txtTRNRemarks.ReadOnly = false;
+            txtTRNTitle.ReadOnly = false;
+            txtTRNTrainingType.ReadOnly = false;
+            txtTRNMethod.ReadOnly = false;
         }
 
 

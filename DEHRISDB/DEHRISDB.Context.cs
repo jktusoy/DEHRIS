@@ -33,8 +33,7 @@ namespace DEHRISDB
         public virtual DbSet<specialSkill> specialSkills { get; set; }
         public virtual DbSet<trainingAssignment> trainingAssignments { get; set; }
         public virtual DbSet<workExperience> workExperiences { get; set; }
-        public virtual DbSet<sysTransactionRecordTypeID> sysTransactionRecordTypeIDs { get; set; }
-        public virtual DbSet<transactionRecord> transactionRecords { get; set; }
         public virtual DbSet<training> trainings { get; set; }
+        public virtual DbSet<type_ImportTemplateCategory> type_ImportTemplateCategory { get; set; }
     }
 }

@@ -10,7 +10,7 @@ using DEHRIS.CONTROLLER.Structure;
 
 namespace DEHRIS.CONTROLLER
 {
-    public class PersonnelUtility  
+    public class PersonnelController  
     {
 
         public List<DEHRIS.MODEL.Data.Personnel> GetPersonnel()

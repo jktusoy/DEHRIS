@@ -18,7 +18,7 @@ namespace DEHRIS.Importer
         public ucApplicantView()
         {
             InitializeComponent();
-            PersonnelUtility prodUtil = new PersonnelUtility();
+            PersonnelController prodUtil = new PersonnelController();
         }
 
 
@@ -147,7 +147,7 @@ namespace DEHRIS.Importer
 
         private void ucPersonnelView_Click(object sender, EventArgs e)
         {
-            PersonnelUtility prodUtil = new PersonnelUtility();
+            PersonnelController prodUtil = new PersonnelController();
             objlPersonnelView.SetObjects(prodUtil.GetPersonnel());
         }
     }

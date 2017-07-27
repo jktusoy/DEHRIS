@@ -39,7 +39,7 @@ namespace DEHRIS.Personnel.Modules
         public void PopulatePersonnel()
         {
 
-            PersonnelUtility personutil = new PersonnelUtility();
+            PersonnelController personutil = new PersonnelController();
             objlPersonnelView.SetObjects(personutil.GetPersonnel());
 
         
@@ -47,7 +47,7 @@ namespace DEHRIS.Personnel.Modules
 
         public void PopulateTrainingByPersonnelID(int personnelID)
         {
-            PersonnelUtility personutil = new PersonnelUtility();
+            PersonnelController personutil = new PersonnelController();
             objlTraining.SetObjects(personutil.GetTrainingListByPersonnelID(personnelID));
             
         }

@@ -128,19 +128,6 @@
           <Property Name="isInactive" Type="bit" />
           <Property Name="dateCreated" Type="datetime" />
         </EntityType>
-        <EntityType Name="sysTransactionRecordTypeID">
-          <Key>
-            <PropertyRef Name="sysTransactionRecordTypeID" />
-          </Key>
-          <Property Name="sysTransactionRecordTypeID" Type="bigint" Nullable="false" />
-          <Property Name="transactionTitle" Type="nvarchar" MaxLength="250" />
-          <Property Name="isActive" Type="bit" />
-          <Property Name="createdBy" Type="bigint" />
-          <Property Name="updatedBy" Type="bigint" />
-          <Property Name="deletedBy" Type="bigint" />
-          <Property Name="dateCreated" Type="smalldatetime" />
-          <Property Name="lastUpdated" Type="smalldatetime" />
-        </EntityType>
         <EntityType Name="training">
           <Key>
             <PropertyRef Name="trainingID" />
@@ -170,16 +157,19 @@
           <Property Name="updatedBy" Type="bigint" />
           <Property Name="isActive" Type="bit" />
         </EntityType>
-        <EntityType Name="transactionRecord">
+        <EntityType Name="type_ImportTemplateCategory">
           <Key>
-            <PropertyRef Name="transactionRecordID" />
+            <PropertyRef Name="type_ImportTemplateCategoryID" />
           </Key>
-          <Property Name="transactionRecordID" Type="bigint" Nullable="false" />
-          <Property Name="sysTransactionRecordType" Type="bigint" />
-          <Property Name="name" Type="nvarchar" MaxLength="150" />
-          <Property Name="description" Type="nvarchar" MaxLength="250" />
-          <Property Name="value" Type="nvarchar" MaxLength="250" />
-          <Property Name="dbtable" Type="nvarchar" MaxLength="150" />
+          <Property Name="type_ImportTemplateCategoryID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="parentID" Type="bigint" />
+          <Property Name="title" Type="nvarchar" MaxLength="250" />
+          <Property Name="description" Type="nvarchar" MaxLength="500" />
+          <Property Name="isActive" Type="bit" />
+          <Property Name="createdBy" Type="bigint" />
+          <Property Name="updatedBy" Type="bigint" />
+          <Property Name="dateLastUpdated" Type="datetime" />
+          <Property Name="dateCreated" Type="datetime" />
         </EntityType>
         <EntityType Name="workExperience">
           <Key>
@@ -211,10 +201,9 @@
           <EntitySet Name="hris_personnel" EntityType="Self.hris_personnel" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="profilepicture" EntityType="Self.profilepicture" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="specialSkills" EntityType="Self.specialSkills" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="sysTransactionRecordTypeID" EntityType="Self.sysTransactionRecordTypeID" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="training" EntityType="Self.training" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="trainingAssignment" EntityType="Self.trainingAssignment" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="transactionRecord" EntityType="Self.transactionRecord" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="type_ImportTemplateCategory" EntityType="Self.type_ImportTemplateCategory" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="workExperience" EntityType="Self.workExperience" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -230,9 +219,8 @@
           <EntitySet Name="specialSkills" EntityType="DEHRISModel.specialSkill" />
           <EntitySet Name="trainingAssignments" EntityType="DEHRISModel.trainingAssignment" />
           <EntitySet Name="workExperiences" EntityType="DEHRISModel.workExperience" />
-          <EntitySet Name="sysTransactionRecordTypeIDs" EntityType="DEHRISModel.sysTransactionRecordTypeID" />
-          <EntitySet Name="transactionRecords" EntityType="DEHRISModel.transactionRecord" />
           <EntitySet Name="trainings" EntityType="DEHRISModel.training" />
+          <EntitySet Name="type_ImportTemplateCategory" EntityType="DEHRISModel.type_ImportTemplateCategory" />
         </EntityContainer>
         <EntityType Name="civilservice">
           <Key>
@@ -392,30 +380,6 @@
           <Property Name="isApproved" Type="Boolean" />
           <Property Name="rdetail_id" Type="Int64" />
         </EntityType>
-        <EntityType Name="sysTransactionRecordTypeID">
-          <Key>
-            <PropertyRef Name="sysTransactionRecordTypeID1" />
-          </Key>
-          <Property Name="sysTransactionRecordTypeID1" Type="Int64" Nullable="false" />
-          <Property Name="transactionTitle" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
-          <Property Name="isActive" Type="Boolean" />
-          <Property Name="createdBy" Type="Int64" />
-          <Property Name="updatedBy" Type="Int64" />
-          <Property Name="deletedBy" Type="Int64" />
-          <Property Name="dateCreated" Type="DateTime" Precision="0" />
-          <Property Name="lastUpdated" Type="DateTime" Precision="0" />
-        </EntityType>
-        <EntityType Name="transactionRecord">
-          <Key>
-            <PropertyRef Name="transactionRecordID" />
-          </Key>
-          <Property Name="transactionRecordID" Type="Int64" Nullable="false" />
-          <Property Name="sysTransactionRecordType" Type="Int64" />
-          <Property Name="name" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
-          <Property Name="description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
-          <Property Name="value" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
-          <Property Name="dbtable" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
-        </EntityType>
         <EntityType Name="training">
           <Key>
             <PropertyRef Name="trainingID" />
@@ -432,6 +396,20 @@
           <Property Name="method" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="isMandatory" Type="Boolean" />
           <Property Name="isActive" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="type_ImportTemplateCategory">
+          <Key>
+            <PropertyRef Name="type_ImportTemplateCategoryID" />
+          </Key>
+          <Property Name="type_ImportTemplateCategoryID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="parentID" Type="Int64" />
+          <Property Name="title" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="isActive" Type="Boolean" />
+          <Property Name="createdBy" Type="Int64" />
+          <Property Name="updatedBy" Type="Int64" />
+          <Property Name="dateLastUpdated" Type="DateTime" Precision="3" />
+          <Property Name="dateCreated" Type="DateTime" Precision="3" />
         </EntityType>
         </Schema>
     </edmx:ConceptualModels>
@@ -605,32 +583,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="sysTransactionRecordTypeIDs">
-            <EntityTypeMapping TypeName="DEHRISModel.sysTransactionRecordTypeID">
-              <MappingFragment StoreEntitySet="sysTransactionRecordTypeID">
-                <ScalarProperty Name="lastUpdated" ColumnName="lastUpdated" />
-                <ScalarProperty Name="dateCreated" ColumnName="dateCreated" />
-                <ScalarProperty Name="deletedBy" ColumnName="deletedBy" />
-                <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
-                <ScalarProperty Name="createdBy" ColumnName="createdBy" />
-                <ScalarProperty Name="isActive" ColumnName="isActive" />
-                <ScalarProperty Name="transactionTitle" ColumnName="transactionTitle" />
-                <ScalarProperty Name="sysTransactionRecordTypeID1" ColumnName="sysTransactionRecordTypeID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="transactionRecords">
-            <EntityTypeMapping TypeName="DEHRISModel.transactionRecord">
-              <MappingFragment StoreEntitySet="transactionRecord">
-                <ScalarProperty Name="dbtable" ColumnName="dbtable" />
-                <ScalarProperty Name="value" ColumnName="value" />
-                <ScalarProperty Name="description" ColumnName="description" />
-                <ScalarProperty Name="name" ColumnName="name" />
-                <ScalarProperty Name="sysTransactionRecordType" ColumnName="sysTransactionRecordType" />
-                <ScalarProperty Name="transactionRecordID" ColumnName="transactionRecordID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="trainings">
             <EntityTypeMapping TypeName="DEHRISModel.training">
               <MappingFragment StoreEntitySet="training">
@@ -646,6 +598,21 @@
                 <ScalarProperty Name="duration" ColumnName="duration" />
                 <ScalarProperty Name="title" ColumnName="title" />
                 <ScalarProperty Name="trainingID" ColumnName="trainingID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="type_ImportTemplateCategory">
+            <EntityTypeMapping TypeName="DEHRISModel.type_ImportTemplateCategory">
+              <MappingFragment StoreEntitySet="type_ImportTemplateCategory">
+                <ScalarProperty Name="dateCreated" ColumnName="dateCreated" />
+                <ScalarProperty Name="dateLastUpdated" ColumnName="dateLastUpdated" />
+                <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+                <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+                <ScalarProperty Name="isActive" ColumnName="isActive" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="parentID" ColumnName="parentID" />
+                <ScalarProperty Name="type_ImportTemplateCategoryID" ColumnName="type_ImportTemplateCategoryID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

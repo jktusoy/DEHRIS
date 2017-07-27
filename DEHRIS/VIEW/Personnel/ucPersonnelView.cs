@@ -17,7 +17,7 @@ namespace DEHRIS.Importer
 {
     public partial class ucPersonnelView : UserControl
     {
-        PersonnelUtility prodUtil = new PersonnelUtility();
+        PersonnelController prodUtil = new PersonnelController();
         DEHRIS.Personnel.Modules.ucEligibility ucEligib;
         DEHRIS.Personnel.Modules.ucEducationalBackground ucEduc;
         public ucPersonnelView()
