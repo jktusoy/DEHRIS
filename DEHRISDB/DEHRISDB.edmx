@@ -5,6 +5,60 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="DEHRISModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="applicants">
+          <Key>
+            <PropertyRef Name="applicantsID" />
+          </Key>
+          <Property Name="applicantsID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="fullname" Type="nvarchar" MaxLength="250" />
+          <Property Name="firstname" Type="nvarchar" MaxLength="250" />
+          <Property Name="lastname" Type="nvarchar" MaxLength="250" />
+          <Property Name="middlename" Type="nvarchar" MaxLength="250" />
+          <Property Name="workgroupcategory" Type="nvarchar" MaxLength="250" />
+          <Property Name="sex" Type="nvarchar" MaxLength="250" />
+          <Property Name="civilStatus" Type="nvarchar" MaxLength="250" />
+          <Property Name="dateofBirth" Type="nvarchar" MaxLength="250" />
+          <Property Name="presentAddress" Type="nvarchar" MaxLength="250" />
+          <Property Name="provincialAddress" Type="nvarchar" MaxLength="250" />
+          <Property Name="telephoneNo" Type="nvarchar" MaxLength="250" />
+          <Property Name="cellphoneNo" Type="nvarchar" MaxLength="250" />
+          <Property Name="emailAddress" Type="nvarchar" MaxLength="250" />
+          <Property Name="school" Type="nvarchar" MaxLength="250" />
+          <Property Name="eligibility" Type="nvarchar" MaxLength="250" />
+          <Property Name="isCPA" Type="nvarchar" MaxLength="250" />
+          <Property Name="cpaRating" Type="nvarchar" MaxLength="250" />
+          <Property Name="cpaLicenseNo" Type="nvarchar" MaxLength="250" />
+          <Property Name="cpaDateOfExam" Type="nvarchar" MaxLength="250" />
+          <Property Name="cpaplaceOfExam" Type="nvarchar" MaxLength="250" />
+          <Property Name="isBar" Type="nvarchar" MaxLength="250" />
+          <Property Name="barRating" Type="nvarchar" MaxLength="250" />
+          <Property Name="rollNo" Type="nvarchar" MaxLength="250" />
+          <Property Name="barDateofExam" Type="nvarchar" MaxLength="250" />
+          <Property Name="barPlaceofExam" Type="nvarchar" MaxLength="250" />
+          <Property Name="prefAssign1" Type="nvarchar" MaxLength="250" />
+          <Property Name="prefAssign2" Type="nvarchar" MaxLength="250" />
+          <Property Name="prefAssign3" Type="nvarchar" MaxLength="250" />
+          <Property Name="employer" Type="nvarchar" MaxLength="250" />
+          <Property Name="empAddress" Type="nvarchar" MaxLength="250" />
+          <Property Name="personalRef" Type="nvarchar" MaxLength="250" />
+          <Property Name="perRefAddress" Type="nvarchar" MaxLength="250" />
+          <Property Name="PDS" Type="nvarchar" MaxLength="250" />
+          <Property Name="StRelative" Type="nvarchar" MaxLength="250" />
+          <Property Name="RefReleaseWaiver" Type="nvarchar" MaxLength="250" />
+          <Property Name="CollegeDiploma" Type="nvarchar" MaxLength="250" />
+          <Property Name="CollegeTOR" Type="nvarchar" MaxLength="250" />
+          <Property Name="CSP" Type="nvarchar" MaxLength="250" />
+          <Property Name="CSSP" Type="nvarchar" MaxLength="250" />
+          <Property Name="RenewedPRCLicense" Type="nvarchar" MaxLength="250" />
+          <Property Name="masteralDiploma" Type="nvarchar" MaxLength="250" />
+          <Property Name="masteralTOR" Type="nvarchar" MaxLength="250" />
+          <Property Name="llbTOR" Type="nvarchar" MaxLength="250" />
+          <Property Name="barSRating" Type="nvarchar" MaxLength="250" />
+          <Property Name="barCert" Type="nvarchar" MaxLength="250" />
+          <Property Name="vocDiploma" Type="nvarchar" MaxLength="250" />
+          <Property Name="hsDiploma" Type="nvarchar" MaxLength="250" />
+          <Property Name="OtherDocs" Type="nvarchar(max)" />
+        </EntityType>
         <EntityType Name="civilservice">
           <Key>
             <PropertyRef Name="civilservice_id" />
@@ -128,6 +182,25 @@
           <Property Name="isInactive" Type="bit" />
           <Property Name="dateCreated" Type="datetime" />
         </EntityType>
+        <EntityType Name="templateImport">
+          <Key>
+            <PropertyRef Name="templateImportID" />
+          </Key>
+          <Property Name="templateImportID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="title" Type="nvarchar" MaxLength="150" />
+          <Property Name="description" Type="nvarchar" MaxLength="550" />
+          <Property Name="isActive" Type="bit" />
+        </EntityType>
+        <EntityType Name="templateImportDetails">
+          <Key>
+            <PropertyRef Name="templateImportDetailsID" />
+          </Key>
+          <Property Name="templateImportDetailsID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="templateImportID" Type="bigint" />
+          <Property Name="columnname" Type="nvarchar" MaxLength="150" />
+          <Property Name="Address" Type="nvarchar" MaxLength="250" />
+          <Property Name="isActive" Type="bit" />
+        </EntityType>
         <EntityType Name="training">
           <Key>
             <PropertyRef Name="trainingID" />
@@ -156,6 +229,26 @@
           <Property Name="createdBy" Type="bigint" />
           <Property Name="updatedBy" Type="bigint" />
           <Property Name="isActive" Type="bit" />
+        </EntityType>
+        <EntityType Name="transImport">
+          <Key>
+            <PropertyRef Name="transImportID" />
+          </Key>
+          <Property Name="transImportID" Type="bigint" Nullable="false" />
+          <Property Name="templateImportID" Type="bigint" />
+          <Property Name="dateImported" Type="datetime" />
+          <Property Name="importBy" Type="bigint" />
+        </EntityType>
+        <EntityType Name="transImportDetails">
+          <Key>
+            <PropertyRef Name="transImportDetailsID" />
+          </Key>
+          <Property Name="transImportDetailsID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="transImportID" Type="bigint" />
+          <Property Name="templateImportID" Type="bigint" />
+          <Property Name="templateImportDetailsID" Type="bigint" />
+          <Property Name="columnAddress" Type="nvarchar" MaxLength="50" />
+          <Property Name="value" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="type_ImportTemplateCategory">
           <Key>
@@ -195,14 +288,19 @@
           <Property Name="rdetail_id" Type="bigint" />
         </EntityType>
         <EntityContainer Name="DEHRISModelStoreContainer">
+          <EntitySet Name="applicants" EntityType="Self.applicants" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="civilservice" EntityType="Self.civilservice" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="educationalBackground" EntityType="Self.educationalBackground" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="hris_applicants" EntityType="Self.hris_applicants" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="hris_personnel" EntityType="Self.hris_personnel" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="profilepicture" EntityType="Self.profilepicture" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="specialSkills" EntityType="Self.specialSkills" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="templateImport" EntityType="Self.templateImport" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="templateImportDetails" EntityType="Self.templateImportDetails" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="training" EntityType="Self.training" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="trainingAssignment" EntityType="Self.trainingAssignment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="transImport" EntityType="Self.transImport" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="transImportDetails" EntityType="Self.transImportDetails" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="type_ImportTemplateCategory" EntityType="Self.type_ImportTemplateCategory" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="workExperience" EntityType="Self.workExperience" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
@@ -221,6 +319,11 @@
           <EntitySet Name="workExperiences" EntityType="DEHRISModel.workExperience" />
           <EntitySet Name="trainings" EntityType="DEHRISModel.training" />
           <EntitySet Name="type_ImportTemplateCategory" EntityType="DEHRISModel.type_ImportTemplateCategory" />
+          <EntitySet Name="applicants" EntityType="DEHRISModel.applicant" />
+          <EntitySet Name="templateImports" EntityType="DEHRISModel.templateImport" />
+          <EntitySet Name="templateImportDetails" EntityType="DEHRISModel.templateImportDetail" />
+          <EntitySet Name="transImports" EntityType="DEHRISModel.transImport" />
+          <EntitySet Name="transImportDetails" EntityType="DEHRISModel.transImportDetail" />
         </EntityContainer>
         <EntityType Name="civilservice">
           <Key>
@@ -410,6 +513,99 @@
           <Property Name="updatedBy" Type="Int64" />
           <Property Name="dateLastUpdated" Type="DateTime" Precision="3" />
           <Property Name="dateCreated" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="applicant">
+          <Key>
+            <PropertyRef Name="applicantsID" />
+          </Key>
+          <Property Name="applicantsID" Type="Int64" Nullable="false" />
+          <Property Name="fullname" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="firstname" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="lastname" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="middlename" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="workgroupcategory" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="sex" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="civilStatus" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="dateofBirth" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="presentAddress" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="provincialAddress" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="telephoneNo" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="cellphoneNo" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="emailAddress" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="school" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="eligibility" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="isCPA" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="cpaRating" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="cpaLicenseNo" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="cpaDateOfExam" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="cpaplaceOfExam" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="isBar" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="barRating" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="rollNo" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="barDateofExam" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="barPlaceofExam" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="prefAssign1" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="prefAssign2" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="prefAssign3" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="employer" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="empAddress" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="personalRef" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="perRefAddress" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="PDS" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="StRelative" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="RefReleaseWaiver" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="CollegeDiploma" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="CollegeTOR" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="CSP" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="CSSP" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="RenewedPRCLicense" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="masteralDiploma" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="masteralTOR" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="llbTOR" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="barSRating" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="barCert" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="vocDiploma" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="hsDiploma" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="OtherDocs" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="templateImport">
+          <Key>
+            <PropertyRef Name="templateImportID" />
+          </Key>
+          <Property Name="templateImportID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="title" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="description" Type="String" MaxLength="550" FixedLength="false" Unicode="true" />
+          <Property Name="isActive" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="templateImportDetail">
+          <Key>
+            <PropertyRef Name="templateImportDetailsID" />
+          </Key>
+          <Property Name="templateImportDetailsID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="templateImportID" Type="Int64" />
+          <Property Name="columnname" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="isActive" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="transImport">
+          <Key>
+            <PropertyRef Name="transImportID" />
+          </Key>
+          <Property Name="transImportID" Type="Int64" Nullable="false" />
+          <Property Name="templateImportID" Type="Int64" />
+          <Property Name="dateImported" Type="DateTime" Precision="3" />
+          <Property Name="importBy" Type="Int64" />
+        </EntityType>
+        <EntityType Name="transImportDetail">
+          <Key>
+            <PropertyRef Name="transImportDetailsID" />
+          </Key>
+          <Property Name="transImportDetailsID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="transImportID" Type="Int64" />
+          <Property Name="templateImportID" Type="Int64" />
+          <Property Name="templateImportDetailsID" Type="Int64" />
+          <Property Name="columnAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="value" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         </Schema>
     </edmx:ConceptualModels>
@@ -613,6 +809,104 @@
                 <ScalarProperty Name="title" ColumnName="title" />
                 <ScalarProperty Name="parentID" ColumnName="parentID" />
                 <ScalarProperty Name="type_ImportTemplateCategoryID" ColumnName="type_ImportTemplateCategoryID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="applicants">
+            <EntityTypeMapping TypeName="DEHRISModel.applicant">
+              <MappingFragment StoreEntitySet="applicants">
+                <ScalarProperty Name="OtherDocs" ColumnName="OtherDocs" />
+                <ScalarProperty Name="hsDiploma" ColumnName="hsDiploma" />
+                <ScalarProperty Name="vocDiploma" ColumnName="vocDiploma" />
+                <ScalarProperty Name="barCert" ColumnName="barCert" />
+                <ScalarProperty Name="barSRating" ColumnName="barSRating" />
+                <ScalarProperty Name="llbTOR" ColumnName="llbTOR" />
+                <ScalarProperty Name="masteralTOR" ColumnName="masteralTOR" />
+                <ScalarProperty Name="masteralDiploma" ColumnName="masteralDiploma" />
+                <ScalarProperty Name="RenewedPRCLicense" ColumnName="RenewedPRCLicense" />
+                <ScalarProperty Name="CSSP" ColumnName="CSSP" />
+                <ScalarProperty Name="CSP" ColumnName="CSP" />
+                <ScalarProperty Name="CollegeTOR" ColumnName="CollegeTOR" />
+                <ScalarProperty Name="CollegeDiploma" ColumnName="CollegeDiploma" />
+                <ScalarProperty Name="RefReleaseWaiver" ColumnName="RefReleaseWaiver" />
+                <ScalarProperty Name="StRelative" ColumnName="StRelative" />
+                <ScalarProperty Name="PDS" ColumnName="PDS" />
+                <ScalarProperty Name="perRefAddress" ColumnName="perRefAddress" />
+                <ScalarProperty Name="personalRef" ColumnName="personalRef" />
+                <ScalarProperty Name="empAddress" ColumnName="empAddress" />
+                <ScalarProperty Name="employer" ColumnName="employer" />
+                <ScalarProperty Name="prefAssign3" ColumnName="prefAssign3" />
+                <ScalarProperty Name="prefAssign2" ColumnName="prefAssign2" />
+                <ScalarProperty Name="prefAssign1" ColumnName="prefAssign1" />
+                <ScalarProperty Name="barPlaceofExam" ColumnName="barPlaceofExam" />
+                <ScalarProperty Name="barDateofExam" ColumnName="barDateofExam" />
+                <ScalarProperty Name="rollNo" ColumnName="rollNo" />
+                <ScalarProperty Name="barRating" ColumnName="barRating" />
+                <ScalarProperty Name="isBar" ColumnName="isBar" />
+                <ScalarProperty Name="cpaplaceOfExam" ColumnName="cpaplaceOfExam" />
+                <ScalarProperty Name="cpaDateOfExam" ColumnName="cpaDateOfExam" />
+                <ScalarProperty Name="cpaLicenseNo" ColumnName="cpaLicenseNo" />
+                <ScalarProperty Name="cpaRating" ColumnName="cpaRating" />
+                <ScalarProperty Name="isCPA" ColumnName="isCPA" />
+                <ScalarProperty Name="eligibility" ColumnName="eligibility" />
+                <ScalarProperty Name="school" ColumnName="school" />
+                <ScalarProperty Name="emailAddress" ColumnName="emailAddress" />
+                <ScalarProperty Name="cellphoneNo" ColumnName="cellphoneNo" />
+                <ScalarProperty Name="telephoneNo" ColumnName="telephoneNo" />
+                <ScalarProperty Name="provincialAddress" ColumnName="provincialAddress" />
+                <ScalarProperty Name="presentAddress" ColumnName="presentAddress" />
+                <ScalarProperty Name="dateofBirth" ColumnName="dateofBirth" />
+                <ScalarProperty Name="civilStatus" ColumnName="civilStatus" />
+                <ScalarProperty Name="sex" ColumnName="sex" />
+                <ScalarProperty Name="workgroupcategory" ColumnName="workgroupcategory" />
+                <ScalarProperty Name="middlename" ColumnName="middlename" />
+                <ScalarProperty Name="lastname" ColumnName="lastname" />
+                <ScalarProperty Name="firstname" ColumnName="firstname" />
+                <ScalarProperty Name="fullname" ColumnName="fullname" />
+                <ScalarProperty Name="applicantsID" ColumnName="applicantsID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="templateImports">
+            <EntityTypeMapping TypeName="DEHRISModel.templateImport">
+              <MappingFragment StoreEntitySet="templateImport">
+                <ScalarProperty Name="isActive" ColumnName="isActive" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="templateImportID" ColumnName="templateImportID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="templateImportDetails">
+            <EntityTypeMapping TypeName="DEHRISModel.templateImportDetail">
+              <MappingFragment StoreEntitySet="templateImportDetails">
+                <ScalarProperty Name="isActive" ColumnName="isActive" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="columnname" ColumnName="columnname" />
+                <ScalarProperty Name="templateImportID" ColumnName="templateImportID" />
+                <ScalarProperty Name="templateImportDetailsID" ColumnName="templateImportDetailsID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="transImports">
+            <EntityTypeMapping TypeName="DEHRISModel.transImport">
+              <MappingFragment StoreEntitySet="transImport">
+                <ScalarProperty Name="importBy" ColumnName="importBy" />
+                <ScalarProperty Name="dateImported" ColumnName="dateImported" />
+                <ScalarProperty Name="templateImportID" ColumnName="templateImportID" />
+                <ScalarProperty Name="transImportID" ColumnName="transImportID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="transImportDetails">
+            <EntityTypeMapping TypeName="DEHRISModel.transImportDetail">
+              <MappingFragment StoreEntitySet="transImportDetails">
+                <ScalarProperty Name="value" ColumnName="value" />
+                <ScalarProperty Name="columnAddress" ColumnName="columnAddress" />
+                <ScalarProperty Name="templateImportDetailsID" ColumnName="templateImportDetailsID" />
+                <ScalarProperty Name="templateImportID" ColumnName="templateImportID" />
+                <ScalarProperty Name="transImportID" ColumnName="transImportID" />
+                <ScalarProperty Name="transImportDetailsID" ColumnName="transImportDetailsID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

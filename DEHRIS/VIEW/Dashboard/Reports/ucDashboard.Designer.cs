@@ -65,12 +65,14 @@
             this.chartCivil = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.chartGender = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.chartTitle1 = new Syncfusion.Windows.Forms.Chart.ChartTitle();
+            this.ucHomePanel1 = new DEHRIS.Home.ucHomePanel();
             ((System.ComponentModel.ISupportInitialize)(this.gradientPanel1)).BeginInit();
             this.gradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gradientPanel1
             // 
+            this.gradientPanel1.Controls.Add(this.ucHomePanel1);
             this.gradientPanel1.Controls.Add(this.chartBirth);
             this.gradientPanel1.Controls.Add(this.chartCivil);
             this.gradientPanel1.Controls.Add(this.chartGender);
@@ -325,6 +327,13 @@
             this.chartTitle1.Name = "chartTitle1";
             this.chartTitle1.Text = "chartTitle1";
             // 
+            // ucHomePanel1
+            // 
+            this.ucHomePanel1.Location = new System.Drawing.Point(306, 304);
+            this.ucHomePanel1.Name = "ucHomePanel1";
+            this.ucHomePanel1.Size = new System.Drawing.Size(950, 600);
+            this.ucHomePanel1.TabIndex = 3;
+            // 
             // ucDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -345,6 +354,7 @@
         private Syncfusion.Windows.Forms.Chart.ChartTitle chartTitle1;
         private Syncfusion.Windows.Forms.Chart.ChartControl chartCivil;
         private Syncfusion.Windows.Forms.Chart.ChartControl chartBirth;
+        private Home.ucHomePanel ucHomePanel1;
 
     }
 }

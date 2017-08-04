@@ -30,13 +30,41 @@
         {
             Syncfusion.Windows.Forms.Spreadsheet.SpreadsheetCopyPaste spreadsheetCopyPaste1 = new Syncfusion.Windows.Forms.Spreadsheet.SpreadsheetCopyPaste();
             Syncfusion.Windows.Forms.Spreadsheet.FormulaRangeSelectionController formulaRangeSelectionController1 = new Syncfusion.Windows.Forms.Spreadsheet.FormulaRangeSelectionController();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucSpreadsheet));
+            this.miniToolBar1 = new Syncfusion.Windows.Forms.Tools.MiniToolBar();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.spreadsheet1 = new Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet();
-            this.tabSplitterContainer1 = new Syncfusion.Windows.Forms.Tools.TabSplitterContainer();
-            this.tabSplitterPage1 = new Syncfusion.Windows.Forms.Tools.TabSplitterPage();
-            this.tabSplitterPage2 = new Syncfusion.Windows.Forms.Tools.TabSplitterPage();
-            this.tabSplitterContainer1.SuspendLayout();
-            this.tabSplitterPage2.SuspendLayout();
+            this.xpToolBar1 = new Syncfusion.Windows.Forms.Tools.XPMenus.XPToolBar();
+            this.barItem1 = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
+            this.barItem2 = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // miniToolBar1
+            // 
+            this.miniToolBar1.Name = "miniToolBar1";
+            this.miniToolBar1.Size = new System.Drawing.Size(24, 24);
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.spreadsheet1);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.xpToolBar1);
+            this.splitContainer1.Size = new System.Drawing.Size(949, 670);
+            this.splitContainer1.SplitterDistance = 635;
+            this.splitContainer1.TabIndex = 3;
             // 
             // spreadsheet1
             // 
@@ -63,67 +91,74 @@
             this.spreadsheet1.SelectedTabIndex = 0;
             this.spreadsheet1.SelectedTabItem = null;
             this.spreadsheet1.ShowBusyIndicator = true;
-            this.spreadsheet1.Size = new System.Drawing.Size(929, 670);
-            this.spreadsheet1.TabIndex = 0;
+            this.spreadsheet1.Size = new System.Drawing.Size(949, 635);
+            this.spreadsheet1.TabIndex = 9;
             this.spreadsheet1.TabItemContextMenu = null;
             this.spreadsheet1.Text = "spreadsheet1";
+            this.spreadsheet1.Click += new System.EventHandler(this.spreadsheet1_Click);
             // 
-            // tabSplitterContainer1
+            // xpToolBar1
             // 
-            this.tabSplitterContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabSplitterContainer1.Location = new System.Drawing.Point(0, 0);
-            this.tabSplitterContainer1.Name = "tabSplitterContainer1";
-            this.tabSplitterContainer1.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.tabSplitterContainer1.PrimaryPages.AddRange(new Syncfusion.Windows.Forms.Tools.TabSplitterPage[] {
-            this.tabSplitterPage1});
-            this.tabSplitterContainer1.SecondaryPages.AddRange(new Syncfusion.Windows.Forms.Tools.TabSplitterPage[] {
-            this.tabSplitterPage2});
-            this.tabSplitterContainer1.Size = new System.Drawing.Size(949, 670);
-            this.tabSplitterContainer1.SplitterBackColor = System.Drawing.SystemColors.Control;
-            this.tabSplitterContainer1.SplitterPosition = 0;
-            this.tabSplitterContainer1.TabIndex = 1;
-            this.tabSplitterContainer1.Text = "tabSplitterContainer1";
+            this.xpToolBar1.BackColor = System.Drawing.Color.Transparent;
             // 
-            // tabSplitterPage1
             // 
-            this.tabSplitterPage1.AutoScroll = true;
-            this.tabSplitterPage1.Hide = false;
-            this.tabSplitterPage1.Location = new System.Drawing.Point(0, 0);
-            this.tabSplitterPage1.Name = "tabSplitterPage1";
-            this.tabSplitterPage1.Size = new System.Drawing.Size(0, 670);
-            this.tabSplitterPage1.TabIndex = 1;
-            this.tabSplitterPage1.Text = "tabSplitterPage1";
             // 
-            // tabSplitterPage2
+            this.xpToolBar1.Bar.BarName = "";
+            this.xpToolBar1.Bar.Items.AddRange(new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem[] {
+            this.barItem1,
+            this.barItem2});
+            this.xpToolBar1.Bar.Manager = null;
+            this.xpToolBar1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xpToolBar1.LargeIcons = true;
+            this.xpToolBar1.Location = new System.Drawing.Point(0, 0);
+            this.xpToolBar1.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
+            this.xpToolBar1.Name = "xpToolBar1";
+            this.xpToolBar1.ShowChevron = true;
+            this.xpToolBar1.Size = new System.Drawing.Size(949, 25);
+            this.xpToolBar1.Style = Syncfusion.Windows.Forms.VisualStyle.Office2007;
+            this.xpToolBar1.TabIndex = 1;
+            this.xpToolBar1.Text = "xpToolBar1";
+            this.xpToolBar1.Click += new System.EventHandler(this.xpToolBar1_Click);
             // 
-            this.tabSplitterPage2.AutoScroll = true;
-            this.tabSplitterPage2.Controls.Add(this.spreadsheet1);
-            this.tabSplitterPage2.Hide = false;
-            this.tabSplitterPage2.Location = new System.Drawing.Point(20, 0);
-            this.tabSplitterPage2.Name = "tabSplitterPage2";
-            this.tabSplitterPage2.Size = new System.Drawing.Size(929, 670);
-            this.tabSplitterPage2.TabIndex = 2;
-            this.tabSplitterPage2.Text = "tabSplitterPage2";
+            // barItem1
+            // 
+            this.barItem1.BarName = "barItem1";
+            this.barItem1.ID = "SOMETHING";
+            this.barItem1.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("barItem1.Image")));
+            this.barItem1.ShowToolTipInPopUp = true;
+            this.barItem1.SizeToFit = true;
+            this.barItem1.Text = "SOMETHING";
+            // 
+            // barItem2
+            // 
+            this.barItem2.BarName = "barItem2";
+            this.barItem2.ShowToolTipInPopUp = false;
+            this.barItem2.SizeToFit = true;
             // 
             // ucSpreadsheet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.tabSplitterContainer1);
+            this.Controls.Add(this.splitContainer1);
             this.Name = "ucSpreadsheet";
             this.Size = new System.Drawing.Size(949, 670);
-            this.tabSplitterContainer1.ResumeLayout(false);
-            this.tabSplitterPage2.ResumeLayout(false);
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
+        private Syncfusion.Windows.Forms.Tools.MiniToolBar miniToolBar1;
+        private System.Windows.Forms.SplitContainer splitContainer1;
         private Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet spreadsheet1;
-        private Syncfusion.Windows.Forms.Tools.TabSplitterContainer tabSplitterContainer1;
-        private Syncfusion.Windows.Forms.Tools.TabSplitterPage tabSplitterPage1;
-        private Syncfusion.Windows.Forms.Tools.TabSplitterPage tabSplitterPage2;
+        private Syncfusion.Windows.Forms.Tools.XPMenus.XPToolBar xpToolBar1;
+        private Syncfusion.Windows.Forms.Tools.XPMenus.BarItem barItem1;
+        private Syncfusion.Windows.Forms.Tools.XPMenus.BarItem barItem2;
 
     }
 }

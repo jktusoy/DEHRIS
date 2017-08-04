@@ -15,11 +15,13 @@ namespace DEHRIS.VIEW.Structure
        void ViewItem(Object obj, bool enabled);
 
        void ClearItem();
-       void AddItem();
+       bool AddItem();
 
        List<object> ListItem();
-       void UpdateItem(Object obj);
-       void EditItem(Object obj);
+       bool UpdateItem(Object obj);
+       bool EditItem(Object obj);
+
+       bool DeleteItem(Object obj);
        void UpdateTitle(EnumTypes.TransactionType transtype);
        EnumTypes.TransactionType TransactionType
        {

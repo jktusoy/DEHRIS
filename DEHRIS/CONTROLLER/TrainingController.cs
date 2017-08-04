@@ -38,7 +38,6 @@ namespace DEHRIS.CONTROLLER
             }
         }
 
-
         public List<Training> GetList()
         {
             using (DEHRISEntities dbcontext = new DEHRISEntities())
@@ -63,9 +62,6 @@ namespace DEHRIS.CONTROLLER
                 return ssList;
             }
         }
-
-
-
 
         public bool Add(Training trnItem)
         {
@@ -134,6 +130,9 @@ namespace DEHRIS.CONTROLLER
 
         }
 
-
+        public bool Delete(Training trnItem)
+        {
+            return false;
+        }
     }
 }

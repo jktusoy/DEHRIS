@@ -19,7 +19,7 @@ namespace DEHRIS.Home
 
         private void buttonAdv1_Click(object sender, EventArgs e)
         {
-            frmMain frm = new frmMain();
+            frmRSPMain frm = new frmRSPMain();
             frm.Show();
             this.Hide();
         }

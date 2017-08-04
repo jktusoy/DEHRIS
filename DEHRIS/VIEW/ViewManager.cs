@@ -37,27 +37,30 @@ namespace DEHRIS.VIEW
         {
             InitializeComponent();
             DefaultControl();
+            objlViewMgr.UseFiltering = true;
             Generator.GenerateColumns(this.objlViewMgr, Type.GetType("DEHRIS.MODEL.Data.Training"), true);
-            lblViewMgrlHeader.Text = Title;
+            briTitle.Text = Title;
             pnlViewMgrContent.Controls.Clear();
             pnlViewMgrContent.Controls.Add((UserControl)mUsercontrol);
+
             viewType = EnumTypes.ViewType.ViewAndManage;
+            ((UserControl)mUsercontrol).Dock = DockStyle.Fill;
+            pnlViewMgrContent.Dock = DockStyle.Fill;
         }
 
 
 
-        public ViewManager(ICRUDDefinition uccont)
+        public ViewManager(ICRUDDefinition uccont, string classType, string stitle)
         {
             InitializeComponent();
             DefaultControl();
-         
-
-            Generator.GenerateColumns(this.objlViewMgr, Type.GetType("DEHRIS.MODEL.Data.Training"), true);
-            lblViewMgrlHeader.Text = Title;
+            Title = stitle;
+            briTitle.Text = Title;
+            Generator.GenerateColumns(this.objlViewMgr, Type.GetType(classType), true);
             objlViewMgr.SetObjects(uccont.ListItem());
-            
+
             pnlViewMgrContent.Controls.Clear();
- 
+
             mUsercontrol = uccont;
             pnlViewMgrContent.Controls.Add((UserControl)mUsercontrol);
             viewType = EnumTypes.ViewType.ViewAndManage;
@@ -81,13 +84,13 @@ namespace DEHRIS.VIEW
                     break;
                 case EnumTypes.LayoutType.ViewMainVertical:
                     tbsViewMgr.Collapsed = false;
-                    tbsViewMgr.SplitterPosition = tbsViewMgr.Height / 2;
+                    tbsViewMgr.SplitterPosition = tbsViewMgr.Height * (2 / 3);
                     tbsViewMgr.Orientation = Orientation.Vertical;
                     tbsViewMgr.Swapped = false;
                     break;
                 case EnumTypes.LayoutType.ManageMainVertical:
                     tbsViewMgr.Collapsed = false;
-                    tbsViewMgr.SplitterPosition = tbsViewMgr.Height / 2;
+                    tbsViewMgr.SplitterPosition = (tbsViewMgr.Height * 2 / 3) + 50;
                     tbsViewMgr.Orientation = Orientation.Vertical;
                     tbsViewMgr.Swapped = true;
                     break;
@@ -97,7 +100,7 @@ namespace DEHRIS.VIEW
                 default:
                     break;
             }
-        
+
         }
 
         public void UpdateLayout(EnumTypes.LayoutType _layoutType)
@@ -158,21 +161,21 @@ namespace DEHRIS.VIEW
 
         }
 
-      
+
 
 
         #region COMMON FUNCTION
-        public void Edit(bool enabled)
+        public bool Edit(bool enabled)
         {
 
-         
+
 
             if (viewType == EnumTypes.ViewType.ViewAndManage)
             {
                 object objectv = objlViewMgr.SelectedObject;
 
                 if (objectv == null)
-                    return;
+                    return false;
                 mUsercontrol.ViewItem(objectv, enabled);
 
                 if (tbsViewMgr.Collapsed == true)
@@ -183,10 +186,12 @@ namespace DEHRIS.VIEW
                 }
 
             }
+            return true;
         }
 
-        public void Add()
+        public bool Add()
         {
+
             transType = mUsercontrol.TransactionType = EnumTypes.TransactionType.Add;
             mUsercontrol.UpdateTitle(transType);
 
@@ -205,10 +210,10 @@ namespace DEHRIS.VIEW
 
             mUsercontrol.ClearItem();
 
+            return true;
 
-        
-        
-        
+
+
         }
 
         public void DefaultControl()
@@ -222,12 +227,16 @@ namespace DEHRIS.VIEW
         }
 
 
-        #endregion 
+        #endregion
 
         #region EVENTS
         private void briAdd_Click(object sender, EventArgs e)
         {
-            Add();
+            if (Add())
+            {
+                DEHRIS.Others.CustomPopUpNotifier customnotif = new Others.CustomPopUpNotifier();
+                customnotif.SetNotification(Others.CustomPopUpNotifier.NotificationType.Successful, "Record successfully added.");
+            }
         }
 
         private void objlViewMgr_SelectedIndexChanged(object sender, EventArgs e)
@@ -240,17 +249,26 @@ namespace DEHRIS.VIEW
         }
         private void briSave_Click(object sender, EventArgs e)
         {
-            
+
             switch (transType)
             {
                 case EnumTypes.TransactionType.Add:
-                    mUsercontrol.AddItem();
+
+                    if (mUsercontrol.AddItem())
+                    {
+                        DEHRIS.Others.CustomPopUpNotifier customnotif = new Others.CustomPopUpNotifier();
+                        customnotif.SetNotification(Others.CustomPopUpNotifier.NotificationType.Successful, "Record successfully updated.");
+                    }
+
                     break;
                 case EnumTypes.TransactionType.Update:
                     object objectv = objlViewMgr.SelectedObject;
-                    mUsercontrol.UpdateItem(objectv);
+                    if (mUsercontrol.UpdateItem(objectv))
+                    {
+                        DEHRIS.Others.CustomPopUpNotifier customnotif = new Others.CustomPopUpNotifier();
+                        customnotif.SetNotification(Others.CustomPopUpNotifier.NotificationType.Successful, "Record successfully updated.");
+                    }
                     break;
-
             }
 
             briEdit.Enabled = true;
@@ -261,10 +279,18 @@ namespace DEHRIS.VIEW
 
             objlViewMgr.SetObjects(mUsercontrol.ListItem());
         }
-      
+
         private void briDelete_Click(object sender, EventArgs e)
         {
+
             transType = EnumTypes.TransactionType.Refresh;
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this record?", "Delete Record", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                object objectv = objlViewMgr.SelectedObject;
+                mUsercontrol.DeleteItem(objectv);
+            }
+           
         }
 
         private void briRefresh_Click(object sender, EventArgs e)
@@ -295,6 +321,7 @@ namespace DEHRIS.VIEW
             mUsercontrol.EditItem(objectv);
 
             Edit(true);
+
         }
 
         private void briCancel_Click(object sender, EventArgs e)
@@ -302,7 +329,23 @@ namespace DEHRIS.VIEW
             DefaultControl();
         }
 
-#endregion
+        #endregion
+
+        private void briTitle_Selected(object sender, EventArgs e)
+        {
+
+        }
+
+        private void briSearchEnter_Click(object sender, EventArgs e)
+        {
+
+            objlViewMgr.ModelFilter = TextMatchFilter.Contains(objlViewMgr, brtxtSearch.Value.ToString());
+        }
+
+        private void brtxtSearch_Click(object sender, EventArgs e)
+        {
+
+        }
 
     }
 }

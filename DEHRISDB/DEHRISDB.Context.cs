@@ -35,5 +35,10 @@ namespace DEHRISDB
         public virtual DbSet<workExperience> workExperiences { get; set; }
         public virtual DbSet<training> trainings { get; set; }
         public virtual DbSet<type_ImportTemplateCategory> type_ImportTemplateCategory { get; set; }
+        public virtual DbSet<applicant> applicants { get; set; }
+        public virtual DbSet<templateImport> templateImports { get; set; }
+        public virtual DbSet<templateImportDetail> templateImportDetails { get; set; }
+        public virtual DbSet<transImport> transImports { get; set; }
+        public virtual DbSet<transImportDetail> transImportDetails { get; set; }
     }
 }

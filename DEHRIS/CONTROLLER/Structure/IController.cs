@@ -13,7 +13,7 @@ namespace DEHRIS.CONTROLLER.Structure
         List<T> GetList();
 
         bool Add(T objname);
-
+        bool Delete(T objname);
 
         bool Update(T objname);
     }

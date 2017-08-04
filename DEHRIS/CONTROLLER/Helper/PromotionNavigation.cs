@@ -18,7 +18,7 @@ namespace DEHRIS.CONTROLLER.Helper
         {
             TrainingController perf = new TrainingController();      
             VIEW.Promotion.ucTraining uctrn = new VIEW.Promotion.ucTraining(perf);
-            ViewManager vmTrn = new ViewManager(uctrn);
+            ViewManager vmTrn = new ViewManager(uctrn, "DEHRIS.MODEL.Data.Training", "Training");
             vmTrn.LayoutOrientation = VIEW.Structure.EnumTypes.LayoutType.ManageMainVertical;
             vmTrn.UpdateLayout();
 
@@ -26,6 +26,21 @@ namespace DEHRIS.CONTROLLER.Helper
             gpMain.Controls.Add(vmTrn);
             vmTrn.Dock = DockStyle.Fill;
         }
+
+
+        public static void ApplicantsView(Panel gpMain)
+        {
+            ApplicantController perf = new ApplicantController();
+            VIEW.Promotion.ucApplicants uctrn = new VIEW.Promotion.ucApplicants(perf);
+            ViewManager vmTrn = new ViewManager(uctrn, "DEHRIS.MODEL.Data.Applicants", "Applicants");
+            vmTrn.LayoutOrientation = VIEW.Structure.EnumTypes.LayoutType.ManageMainVertical;
+            vmTrn.UpdateLayout();
+
+            gpMain.Controls.Clear();
+            gpMain.Controls.Add(vmTrn);
+            vmTrn.Dock = DockStyle.Fill;
+        }
+
         public static void TrainingView2(Panel gpMain)
         {
             //TrainingController perf = new TrainingController();

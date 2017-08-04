@@ -32,15 +32,6 @@
             this.tblyMain = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.ribbonControlAdv1 = new Syncfusion.Windows.Forms.Tools.RibbonControlAdv();
-            this.toolStripTabItem1 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
-            this.toolStripEx2 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
-            this.tsbHome = new System.Windows.Forms.ToolStripButton();
-            this.toolStripEx3 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
-            this.tsbReport = new System.Windows.Forms.ToolStripButton();
-            this.tsbMessages = new System.Windows.Forms.ToolStripButton();
-            this.tsbAnnouncements = new System.Windows.Forms.ToolStripButton();
-            this.tsbNotifications = new System.Windows.Forms.ToolStripButton();
-            this.tsbBookmarks = new System.Windows.Forms.ToolStripButton();
             this.toolStripTabItem2 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
             this.tseVMG = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
             this.tlsbtVMG = new System.Windows.Forms.ToolStripButton();
@@ -79,9 +70,6 @@
             this.toolStripButton14 = new System.Windows.Forms.ToolStripButton();
             this.tsbPMTraining = new System.Windows.Forms.ToolStripButton();
             this.toolStripTabItem8 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
-            this.toolStripEx9 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.tsTabTools = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
             this.toolStripEx4 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
             this.tsBtnImporter = new System.Windows.Forms.ToolStripButton();
@@ -105,6 +93,18 @@
             this.tabControlAdv1 = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
             this.tabPageAdv1 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.gpMain = new Syncfusion.Windows.Forms.Tools.GradientPanel();
+            this.toolStripTabItem1 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
+            this.toolStripEx2 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
+            this.tsbHome = new System.Windows.Forms.ToolStripButton();
+            this.toolStripEx3 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
+            this.tsbReport = new System.Windows.Forms.ToolStripButton();
+            this.tsbMessages = new System.Windows.Forms.ToolStripButton();
+            this.tsbAnnouncements = new System.Windows.Forms.ToolStripButton();
+            this.tsbNotifications = new System.Windows.Forms.ToolStripButton();
+            this.tsbBookmarks = new System.Windows.Forms.ToolStripButton();
+            this.toolStripEx9 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
+            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripEx8 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
             this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
             this.tsbIPCR = new System.Windows.Forms.ToolStripButton();
@@ -122,9 +122,6 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControlAdv1)).BeginInit();
             this.ribbonControlAdv1.SuspendLayout();
-            this.toolStripTabItem1.Panel.SuspendLayout();
-            this.toolStripEx2.SuspendLayout();
-            this.toolStripEx3.SuspendLayout();
             this.toolStripTabItem2.Panel.SuspendLayout();
             this.tseVMG.SuspendLayout();
             this.toolStripEx7.SuspendLayout();
@@ -135,8 +132,6 @@
             this.toolStripEx12.SuspendLayout();
             this.toolStripTabItem3.Panel.SuspendLayout();
             this.toolStripEx5.SuspendLayout();
-            this.toolStripTabItem8.Panel.SuspendLayout();
-            this.toolStripEx9.SuspendLayout();
             this.tsTabTools.Panel.SuspendLayout();
             this.toolStripEx4.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -147,6 +142,10 @@
             this.tabControlAdv1.SuspendLayout();
             this.tabPageAdv1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gpMain)).BeginInit();
+            this.toolStripTabItem1.Panel.SuspendLayout();
+            this.toolStripEx2.SuspendLayout();
+            this.toolStripEx3.SuspendLayout();
+            this.toolStripEx9.SuspendLayout();
             this.toolStripEx8.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -186,7 +185,6 @@
             // 
             this.ribbonControlAdv1.Dock = Syncfusion.Windows.Forms.Tools.DockStyleEx.Fill;
             this.ribbonControlAdv1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.ribbonControlAdv1.Header.AddMainItem(toolStripTabItem1);
             this.ribbonControlAdv1.Header.AddMainItem(toolStripTabItem2);
             this.ribbonControlAdv1.Header.AddMainItem(toolStripTabItem4);
             this.ribbonControlAdv1.Header.AddMainItem(toolStripTabItem7);
@@ -215,7 +213,7 @@
             this.ribbonControlAdv1.OfficeMenu.Size = new System.Drawing.Size(118, 224);
             this.ribbonControlAdv1.QuickPanelImageLayout = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ribbonControlAdv1.RibbonHeaderImage = Syncfusion.Windows.Forms.Tools.RibbonHeaderImage.None;
-            this.ribbonControlAdv1.SelectedTab = this.tsTabTools;
+            this.ribbonControlAdv1.SelectedTab = this.toolStripTabItem2;
             this.ribbonControlAdv1.ShowRibbonDisplayOptionButton = true;
             this.ribbonControlAdv1.Size = new System.Drawing.Size(1135, 120);
             this.ribbonControlAdv1.SystemText.QuickAccessDialogDropDownName = "Start menu";
@@ -223,127 +221,19 @@
             this.ribbonControlAdv1.TabIndex = 0;
             this.ribbonControlAdv1.Text = "ribbonControlAdv1";
             // 
-            // toolStripTabItem1
-            // 
-            this.toolStripTabItem1.Name = "toolStripTabItem1";
-            // 
-            // ribbonControlAdv1.ribbonPanel8
-            // 
-            this.toolStripTabItem1.Panel.Controls.Add(this.toolStripEx2);
-            this.toolStripTabItem1.Panel.Controls.Add(this.toolStripEx3);
-            this.toolStripTabItem1.Panel.Name = "ribbonPanel8";
-            this.toolStripTabItem1.Panel.ScrollPosition = 0;
-            this.toolStripTabItem1.Panel.TabIndex = 2;
-            this.toolStripTabItem1.Panel.Text = "Home";
-            this.toolStripTabItem1.Position = 0;
-            this.toolStripTabItem1.Size = new System.Drawing.Size(43, 19);
-            this.toolStripTabItem1.Text = "Home";
-            // 
-            // toolStripEx2
-            // 
-            this.toolStripEx2.AutoSize = false;
-            this.toolStripEx2.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStripEx2.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.toolStripEx2.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.toolStripEx2.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.toolStripEx2.Image = null;
-            this.toolStripEx2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsbHome});
-            this.toolStripEx2.Location = new System.Drawing.Point(0, 1);
-            this.toolStripEx2.Name = "toolStripEx2";
-            this.toolStripEx2.Size = new System.Drawing.Size(97, 64);
-            this.toolStripEx2.TabIndex = 0;
-            // 
-            // tsbHome
-            // 
-            this.ribbonControlAdv1.SetDescription(this.tsbHome, "Home");
-            this.tsbHome.Image = global::DEHRIS.Properties.Resources.home1;
-            this.tsbHome.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsbHome.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbHome.Name = "tsbHome";
-            this.tsbHome.Size = new System.Drawing.Size(73, 43);
-            this.tsbHome.Text = "Home";
-            this.tsbHome.Click += new System.EventHandler(this.toolStripButton2_Click);
-            // 
-            // toolStripEx3
-            // 
-            this.toolStripEx3.AutoSize = false;
-            this.toolStripEx3.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStripEx3.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.toolStripEx3.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.toolStripEx3.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.toolStripEx3.Image = null;
-            this.toolStripEx3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsbReport,
-            this.tsbMessages,
-            this.tsbAnnouncements,
-            this.tsbNotifications,
-            this.tsbBookmarks});
-            this.toolStripEx3.Location = new System.Drawing.Point(99, 1);
-            this.toolStripEx3.Name = "toolStripEx3";
-            this.toolStripEx3.Size = new System.Drawing.Size(562, 64);
-            this.toolStripEx3.TabIndex = 1;
-            // 
-            // tsbReport
-            // 
-            this.tsbReport.Image = global::DEHRIS.Properties.Resources.dashboard;
-            this.tsbReport.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsbReport.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbReport.Name = "tsbReport";
-            this.tsbReport.Size = new System.Drawing.Size(100, 43);
-            this.tsbReport.Text = "Dashboard";
-            this.tsbReport.Click += new System.EventHandler(this.tsbReport_Click);
-            // 
-            // tsbMessages
-            // 
-            this.tsbMessages.Image = ((System.Drawing.Image)(resources.GetObject("tsbMessages.Image")));
-            this.tsbMessages.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsbMessages.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbMessages.Name = "tsbMessages";
-            this.tsbMessages.Size = new System.Drawing.Size(93, 43);
-            this.tsbMessages.Text = "Messages";
-            this.tsbMessages.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // tsbAnnouncements
-            // 
-            this.tsbAnnouncements.Image = global::DEHRIS.Properties.Resources.announcement;
-            this.tsbAnnouncements.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsbAnnouncements.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbAnnouncements.Name = "tsbAnnouncements";
-            this.tsbAnnouncements.Size = new System.Drawing.Size(127, 43);
-            this.tsbAnnouncements.Text = "Announcements";
-            // 
-            // tsbNotifications
-            // 
-            this.tsbNotifications.Image = global::DEHRIS.Properties.Resources.notification;
-            this.tsbNotifications.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsbNotifications.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbNotifications.Name = "tsbNotifications";
-            this.tsbNotifications.Size = new System.Drawing.Size(109, 43);
-            this.tsbNotifications.Text = "Notifications";
-            // 
-            // tsbBookmarks
-            // 
-            this.tsbBookmarks.Image = global::DEHRIS.Properties.Resources.bookmark;
-            this.tsbBookmarks.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsbBookmarks.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbBookmarks.Name = "tsbBookmarks";
-            this.tsbBookmarks.Size = new System.Drawing.Size(100, 43);
-            this.tsbBookmarks.Text = "Bookmarks";
-            // 
             // toolStripTabItem2
             // 
             this.toolStripTabItem2.Name = "toolStripTabItem2";
             // 
-            // ribbonControlAdv1.ribbonPanel9
+            // ribbonControlAdv1.ribbonPanel8
             // 
             this.toolStripTabItem2.Panel.Controls.Add(this.tseVMG);
             this.toolStripTabItem2.Panel.Controls.Add(this.toolStripEx7);
-            this.toolStripTabItem2.Panel.Name = "ribbonPanel9";
+            this.toolStripTabItem2.Panel.Name = "ribbonPanel8";
             this.toolStripTabItem2.Panel.ScrollPosition = 0;
             this.toolStripTabItem2.Panel.TabIndex = 3;
             this.toolStripTabItem2.Panel.Text = "The Organization ";
-            this.toolStripTabItem2.Position = 1;
+            this.toolStripTabItem2.Position = 0;
             this.toolStripTabItem2.Size = new System.Drawing.Size(105, 19);
             this.toolStripTabItem2.Text = "The Organization ";
             // 
@@ -451,14 +341,14 @@
             // 
             this.toolStripTabItem4.Name = "toolStripTabItem4";
             // 
-            // ribbonControlAdv1.ribbonPanel10
+            // ribbonControlAdv1.ribbonPanel9
             // 
             this.toolStripTabItem4.Panel.Controls.Add(this.toolStripEx6);
-            this.toolStripTabItem4.Panel.Name = "ribbonPanel10";
+            this.toolStripTabItem4.Panel.Name = "ribbonPanel9";
             this.toolStripTabItem4.Panel.ScrollPosition = 0;
             this.toolStripTabItem4.Panel.TabIndex = 5;
             this.toolStripTabItem4.Panel.Text = "Recruitment, Selection Placement";
-            this.toolStripTabItem4.Position = 2;
+            this.toolStripTabItem4.Position = 1;
             this.toolStripTabItem4.Size = new System.Drawing.Size(183, 19);
             this.toolStripTabItem4.Text = "Recruitment, Selection Placement";
             // 
@@ -530,15 +420,15 @@
             // 
             this.toolStripTabItem7.Name = "toolStripTabItem7";
             // 
-            // ribbonControlAdv1.ribbonPanel11
+            // ribbonControlAdv1.ribbonPanel10
             // 
             this.toolStripTabItem7.Panel.Controls.Add(this.toolStripEx11);
             this.toolStripTabItem7.Panel.Controls.Add(this.toolStripEx12);
-            this.toolStripTabItem7.Panel.Name = "ribbonPanel11";
+            this.toolStripTabItem7.Panel.Name = "ribbonPanel10";
             this.toolStripTabItem7.Panel.ScrollPosition = 0;
             this.toolStripTabItem7.Panel.TabIndex = 8;
             this.toolStripTabItem7.Panel.Text = "Learning and Development";
-            this.toolStripTabItem7.Position = 3;
+            this.toolStripTabItem7.Position = 2;
             this.toolStripTabItem7.Size = new System.Drawing.Size(152, 19);
             this.toolStripTabItem7.Tag = "7";
             this.toolStripTabItem7.Text = "Learning and Development";
@@ -655,14 +545,14 @@
             // 
             this.toolStripTabItem3.Name = "toolStripTabItem3";
             // 
-            // ribbonControlAdv1.ribbonPanel12
+            // ribbonControlAdv1.ribbonPanel11
             // 
             this.toolStripTabItem3.Panel.Controls.Add(this.toolStripEx5);
-            this.toolStripTabItem3.Panel.Name = "ribbonPanel12";
+            this.toolStripTabItem3.Panel.Name = "ribbonPanel11";
             this.toolStripTabItem3.Panel.ScrollPosition = 0;
             this.toolStripTabItem3.Panel.TabIndex = 4;
             this.toolStripTabItem3.Panel.Text = "Performance Management";
-            this.toolStripTabItem3.Position = 4;
+            this.toolStripTabItem3.Position = 3;
             this.toolStripTabItem3.Size = new System.Drawing.Size(148, 19);
             this.toolStripTabItem3.Text = "Performance Management";
             // 
@@ -756,68 +646,34 @@
             // 
             this.toolStripTabItem8.Name = "toolStripTabItem8";
             // 
-            // ribbonControlAdv1.ribbonPanel13
+            // ribbonControlAdv1.ribbonPanel12
             // 
-            this.toolStripTabItem8.Panel.Controls.Add(this.toolStripEx9);
-            this.toolStripTabItem8.Panel.Name = "ribbonPanel13";
+            this.toolStripTabItem8.Panel.Name = "ribbonPanel12";
             this.toolStripTabItem8.Panel.ScrollPosition = 0;
             this.toolStripTabItem8.Panel.TabIndex = 10;
             this.toolStripTabItem8.Panel.Text = "Rewards and Recognition";
-            this.toolStripTabItem8.Position = 5;
+            this.toolStripTabItem8.Position = 4;
             this.toolStripTabItem8.Size = new System.Drawing.Size(146, 19);
             this.toolStripTabItem8.Tag = "8";
             this.toolStripTabItem8.Text = "Rewards and Recognition";
             // 
-            // toolStripEx9
-            // 
-            this.toolStripEx9.AutoSize = false;
-            this.toolStripEx9.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStripEx9.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.toolStripEx9.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.toolStripEx9.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.toolStripEx9.Image = null;
-            this.toolStripEx9.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton4,
-            this.toolStripButton1});
-            this.toolStripEx9.Location = new System.Drawing.Point(0, 1);
-            this.toolStripEx9.Name = "toolStripEx9";
-            this.toolStripEx9.Size = new System.Drawing.Size(219, 64);
-            this.toolStripEx9.TabIndex = 0;
-            // 
-            // toolStripButton4
-            // 
-            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(104, 43);
-            this.toolStripButton4.Text = "STAFFING PLAN";
-            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 43);
-            this.toolStripButton1.Text = "toolStripButton1";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click_1);
-            // 
             // tsTabTools
             // 
+            this.tsTabTools.Enabled = false;
             this.tsTabTools.Name = "tsTabTools";
             // 
-            // ribbonControlAdv1.ribbonPanel14
+            // ribbonControlAdv1.ribbonPanel13
             // 
             this.tsTabTools.Panel.Controls.Add(this.toolStripEx4);
-            this.tsTabTools.Panel.Name = "ribbonPanel14";
+            this.tsTabTools.Panel.Name = "ribbonPanel13";
             this.tsTabTools.Panel.ScrollPosition = 0;
             this.tsTabTools.Panel.TabIndex = 9;
             this.tsTabTools.Panel.Text = "Tools";
-            this.tsTabTools.Position = 6;
+            this.tsTabTools.Position = 5;
             this.tsTabTools.Size = new System.Drawing.Size(39, 19);
             this.tsTabTools.Tag = "8";
             this.tsTabTools.Text = "Tools";
+            this.tsTabTools.Visible = false;
             // 
             // toolStripEx4
             // 
@@ -979,8 +835,8 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.47475F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 77.52525F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.62555F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 85.37445F));
             this.tableLayoutPanel1.Controls.Add(this.gpNavigation, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.gradientPanel1, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1002,7 +858,7 @@
             this.gpNavigation.IgnoreThemeBackground = true;
             this.gpNavigation.Location = new System.Drawing.Point(3, 3);
             this.gpNavigation.Name = "gpNavigation";
-            this.gpNavigation.Size = new System.Drawing.Size(249, 501);
+            this.gpNavigation.Size = new System.Drawing.Size(159, 501);
             this.gpNavigation.TabIndex = 1;
             // 
             // gradientPanel1
@@ -1012,9 +868,9 @@
             this.gradientPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.gradientPanel1.Controls.Add(this.tabControlAdv1);
             this.gradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gradientPanel1.Location = new System.Drawing.Point(258, 3);
+            this.gradientPanel1.Location = new System.Drawing.Point(168, 3);
             this.gradientPanel1.Name = "gradientPanel1";
-            this.gradientPanel1.Size = new System.Drawing.Size(874, 501);
+            this.gradientPanel1.Size = new System.Drawing.Size(964, 501);
             this.gradientPanel1.TabIndex = 0;
             // 
             // tabControlAdv1
@@ -1022,7 +878,7 @@
             this.tabControlAdv1.ActiveTabFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.tabControlAdv1.ActiveTabForeColor = System.Drawing.Color.Empty;
             this.tabControlAdv1.AllowDrop = true;
-            this.tabControlAdv1.BeforeTouchSize = new System.Drawing.Size(872, 499);
+            this.tabControlAdv1.BeforeTouchSize = new System.Drawing.Size(962, 499);
             this.tabControlAdv1.CloseButtonBackColor = System.Drawing.Color.Black;
             this.tabControlAdv1.CloseButtonForeColor = System.Drawing.Color.Empty;
             this.tabControlAdv1.CloseButtonHoverForeColor = System.Drawing.Color.Empty;
@@ -1040,7 +896,7 @@
             this.tabControlAdv1.ShowSeparator = true;
             this.tabControlAdv1.ShowSuperToolTips = true;
             this.tabControlAdv1.ShowToolTips = true;
-            this.tabControlAdv1.Size = new System.Drawing.Size(872, 499);
+            this.tabControlAdv1.Size = new System.Drawing.Size(962, 499);
             this.tabControlAdv1.TabGap = 10;
             this.tabControlAdv1.TabIndex = 0;
             this.tabControlAdv1.TabPanelBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(216)))), ((int)(((byte)(237)))));
@@ -1054,7 +910,7 @@
             this.tabPageAdv1.Location = new System.Drawing.Point(1, 22);
             this.tabPageAdv1.Name = "tabPageAdv1";
             this.tabPageAdv1.ShowCloseButton = true;
-            this.tabPageAdv1.Size = new System.Drawing.Size(869, 475);
+            this.tabPageAdv1.Size = new System.Drawing.Size(959, 475);
             this.tabPageAdv1.TabIndex = 1;
             this.tabPageAdv1.Text = "HOMETAB";
             this.tabPageAdv1.ThemesEnabled = false;
@@ -1070,8 +926,152 @@
             this.gpMain.IgnoreThemeBackground = true;
             this.gpMain.Location = new System.Drawing.Point(0, 0);
             this.gpMain.Name = "gpMain";
-            this.gpMain.Size = new System.Drawing.Size(869, 475);
+            this.gpMain.Size = new System.Drawing.Size(959, 475);
             this.gpMain.TabIndex = 2;
+            // 
+            // toolStripTabItem1
+            // 
+            this.toolStripTabItem1.Name = "toolStripTabItem1";
+            // 
+            // 
+            // 
+            this.toolStripTabItem1.Panel.Controls.Add(this.toolStripEx2);
+            this.toolStripTabItem1.Panel.Controls.Add(this.toolStripEx3);
+            this.toolStripTabItem1.Panel.Name = "ribbonPanel8";
+            this.toolStripTabItem1.Panel.ScrollPosition = 0;
+            this.toolStripTabItem1.Panel.TabIndex = 2;
+            this.toolStripTabItem1.Panel.Text = "Home";
+            this.toolStripTabItem1.Position = -1;
+            this.toolStripTabItem1.Size = new System.Drawing.Size(43, 19);
+            this.toolStripTabItem1.Text = "Home";
+            this.toolStripTabItem1.Visible = false;
+            // 
+            // toolStripEx2
+            // 
+            this.toolStripEx2.AutoSize = false;
+            this.toolStripEx2.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStripEx2.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.toolStripEx2.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.toolStripEx2.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStripEx2.Image = null;
+            this.toolStripEx2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsbHome});
+            this.toolStripEx2.Location = new System.Drawing.Point(0, 1);
+            this.toolStripEx2.Name = "toolStripEx2";
+            this.toolStripEx2.Size = new System.Drawing.Size(97, 64);
+            this.toolStripEx2.TabIndex = 0;
+            // 
+            // tsbHome
+            // 
+            this.tsbHome.Image = global::DEHRIS.Properties.Resources.home1;
+            this.tsbHome.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsbHome.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbHome.Name = "tsbHome";
+            this.tsbHome.Size = new System.Drawing.Size(73, 61);
+            this.tsbHome.Text = "Home";
+            this.tsbHome.Click += new System.EventHandler(this.toolStripButton2_Click);
+            // 
+            // toolStripEx3
+            // 
+            this.toolStripEx3.AutoSize = false;
+            this.toolStripEx3.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStripEx3.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.toolStripEx3.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.toolStripEx3.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStripEx3.Image = null;
+            this.toolStripEx3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsbReport,
+            this.tsbMessages,
+            this.tsbAnnouncements,
+            this.tsbNotifications,
+            this.tsbBookmarks});
+            this.toolStripEx3.Location = new System.Drawing.Point(99, 1);
+            this.toolStripEx3.Name = "toolStripEx3";
+            this.toolStripEx3.Size = new System.Drawing.Size(562, 64);
+            this.toolStripEx3.TabIndex = 1;
+            // 
+            // tsbReport
+            // 
+            this.tsbReport.Image = global::DEHRIS.Properties.Resources.dashboard;
+            this.tsbReport.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsbReport.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbReport.Name = "tsbReport";
+            this.tsbReport.Size = new System.Drawing.Size(100, 61);
+            this.tsbReport.Text = "Dashboard";
+            this.tsbReport.Click += new System.EventHandler(this.tsbReport_Click);
+            // 
+            // tsbMessages
+            // 
+            this.tsbMessages.Image = ((System.Drawing.Image)(resources.GetObject("tsbMessages.Image")));
+            this.tsbMessages.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsbMessages.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbMessages.Name = "tsbMessages";
+            this.tsbMessages.Size = new System.Drawing.Size(93, 61);
+            this.tsbMessages.Text = "Messages";
+            this.tsbMessages.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // tsbAnnouncements
+            // 
+            this.tsbAnnouncements.Image = global::DEHRIS.Properties.Resources.announcement;
+            this.tsbAnnouncements.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsbAnnouncements.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbAnnouncements.Name = "tsbAnnouncements";
+            this.tsbAnnouncements.Size = new System.Drawing.Size(127, 61);
+            this.tsbAnnouncements.Text = "Announcements";
+            this.tsbAnnouncements.Visible = false;
+            // 
+            // tsbNotifications
+            // 
+            this.tsbNotifications.Image = global::DEHRIS.Properties.Resources.notification;
+            this.tsbNotifications.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsbNotifications.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbNotifications.Name = "tsbNotifications";
+            this.tsbNotifications.Size = new System.Drawing.Size(109, 61);
+            this.tsbNotifications.Text = "Notifications";
+            // 
+            // tsbBookmarks
+            // 
+            this.tsbBookmarks.Image = global::DEHRIS.Properties.Resources.bookmark;
+            this.tsbBookmarks.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsbBookmarks.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbBookmarks.Name = "tsbBookmarks";
+            this.tsbBookmarks.Size = new System.Drawing.Size(100, 61);
+            this.tsbBookmarks.Text = "Bookmarks";
+            // 
+            // toolStripEx9
+            // 
+            this.toolStripEx9.AutoSize = false;
+            this.toolStripEx9.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStripEx9.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.toolStripEx9.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.toolStripEx9.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStripEx9.Image = null;
+            this.toolStripEx9.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton4,
+            this.toolStripButton1});
+            this.toolStripEx9.Location = new System.Drawing.Point(0, 1);
+            this.toolStripEx9.Name = "toolStripEx9";
+            this.toolStripEx9.Size = new System.Drawing.Size(219, 64);
+            this.toolStripEx9.TabIndex = 0;
+            // 
+            // toolStripButton4
+            // 
+            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
+            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton4.Name = "toolStripButton4";
+            this.toolStripButton4.Size = new System.Drawing.Size(104, 61);
+            this.toolStripButton4.Text = "STAFFING PLAN";
+            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 61);
+            this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click_1);
             // 
             // toolStripEx8
             // 
@@ -1095,7 +1095,7 @@
             this.toolStripButton9.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton9.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton9.Name = "toolStripButton9";
-            this.toolStripButton9.Size = new System.Drawing.Size(73, 47);
+            this.toolStripButton9.Size = new System.Drawing.Size(73, 61);
             this.toolStripButton9.Text = "LEAVE";
             // 
             // tsbIPCR
@@ -1104,7 +1104,7 @@
             this.tsbIPCR.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsbIPCR.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbIPCR.Name = "tsbIPCR";
-            this.tsbIPCR.Size = new System.Drawing.Size(66, 47);
+            this.tsbIPCR.Size = new System.Drawing.Size(66, 61);
             this.tsbIPCR.Text = "IPCR";
             this.tsbIPCR.Click += new System.EventHandler(this.tsbIPCR_Click);
             // 
@@ -1208,11 +1208,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControlAdv1)).EndInit();
             this.ribbonControlAdv1.ResumeLayout(false);
             this.ribbonControlAdv1.PerformLayout();
-            this.toolStripTabItem1.Panel.ResumeLayout(false);
-            this.toolStripEx2.ResumeLayout(false);
-            this.toolStripEx2.PerformLayout();
-            this.toolStripEx3.ResumeLayout(false);
-            this.toolStripEx3.PerformLayout();
             this.toolStripTabItem2.Panel.ResumeLayout(false);
             this.tseVMG.ResumeLayout(false);
             this.tseVMG.PerformLayout();
@@ -1229,9 +1224,6 @@
             this.toolStripTabItem3.Panel.ResumeLayout(false);
             this.toolStripEx5.ResumeLayout(false);
             this.toolStripEx5.PerformLayout();
-            this.toolStripTabItem8.Panel.ResumeLayout(false);
-            this.toolStripEx9.ResumeLayout(false);
-            this.toolStripEx9.PerformLayout();
             this.tsTabTools.Panel.ResumeLayout(false);
             this.toolStripEx4.ResumeLayout(false);
             this.toolStripEx4.PerformLayout();
@@ -1244,6 +1236,13 @@
             this.tabControlAdv1.PerformLayout();
             this.tabPageAdv1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gpMain)).EndInit();
+            this.toolStripTabItem1.Panel.ResumeLayout(false);
+            this.toolStripEx2.ResumeLayout(false);
+            this.toolStripEx2.PerformLayout();
+            this.toolStripEx3.ResumeLayout(false);
+            this.toolStripEx3.PerformLayout();
+            this.toolStripEx9.ResumeLayout(false);
+            this.toolStripEx9.PerformLayout();
             this.toolStripEx8.ResumeLayout(false);
             this.toolStripEx8.PerformLayout();
             this.ResumeLayout(false);

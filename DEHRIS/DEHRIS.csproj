@@ -104,14 +104,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CONTROLLER\frmRSPMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CONTROLLER\frmRSPMain.Designer.cs">
+      <DependentUpon>frmRSPMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CONTROLLER\ImportController.cs" />
     <Compile Include="CONTROLLER\Structure\EnumModule.cs" />
     <Compile Include="CONTROLLER\Helper\PromotionHelper.cs" />
     <Compile Include="CONTROLLER\Helper\PromotionNavigation.cs" />
     <Compile Include="CONTROLLER\PersonnelController.cs" />
     <Compile Include="CONTROLLER\Helper\ToolsNavigation.cs" />
     <Compile Include="CONTROLLER\ToolController.cs" />
+    <Compile Include="CONTROLLER\ApplicantController.cs" />
     <Compile Include="CONTROLLER\TrainingController.cs" />
     <Compile Include="MODEL\Data\Address.cs" />
+    <Compile Include="MODEL\Data\Applicants.cs" />
     <Compile Include="MODEL\Data\CivilService.cs" />
     <Compile Include="MODEL\Data\Contact.cs" />
     <Compile Include="MODEL\Data\EducationalBackground.cs" />
@@ -120,8 +129,12 @@
     <Compile Include="MODEL\Data\ProfilePicture.cs" />
     <Compile Include="MODEL\Data\Seminar.cs" />
     <Compile Include="MODEL\Data\SpecialSkills.cs" />
+    <Compile Include="MODEL\Data\TemplateImport.cs" />
+    <Compile Include="MODEL\Data\TemplateImportDetails.cs" />
     <Compile Include="MODEL\Data\ToolTemplateCategory.cs" />
     <Compile Include="MODEL\Data\Training.cs" />
+    <Compile Include="MODEL\Data\TransImport.cs" />
+    <Compile Include="MODEL\Data\TransImportDetails.cs" />
     <Compile Include="MODEL\Data\WorkExperience.cs" />
     <Compile Include="MODEL\Enum\AddressType.cs" />
     <Compile Include="MODEL\Enum\ContactType.cs" />
@@ -131,6 +144,12 @@
     </Compile>
     <Compile Include="VIEW\Personnel\ucPersonnelListView.Designer.cs">
       <DependentUpon>ucPersonnelListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\Promotion\ucApplicants.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VIEW\Promotion\ucApplicants.Designer.cs">
+      <DependentUpon>ucApplicants.cs</DependentUpon>
     </Compile>
     <Compile Include="VIEW\Structure\EnumTypes.cs" />
     <Compile Include="VIEW\Structure\ICRUDDefinition.cs" />
@@ -338,6 +357,9 @@
     <Compile Include="Tool\ucSpreadsheet.Designer.cs">
       <DependentUpon>ucSpreadsheet.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CONTROLLER\frmRSPMain.resx">
+      <DependentUpon>frmRSPMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VIEW\Dashboard\Reports\ucDashboard.resx">
       <DependentUpon>ucDashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -380,6 +402,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VIEW\Personnel\ucPersonnelListView.resx">
       <DependentUpon>ucPersonnelListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\Promotion\ucApplicants.resx">
+      <DependentUpon>ucApplicants.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VIEW\Promotion\ucTraining.resx">
       <DependentUpon>ucTraining.cs</DependentUpon>

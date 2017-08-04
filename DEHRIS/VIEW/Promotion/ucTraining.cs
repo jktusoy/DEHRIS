@@ -113,22 +113,25 @@ namespace DEHRIS.VIEW.Promotion
         }
 
 
-        public void EditItem(Object obj)
+        public bool EditItem(Object obj)
         {
             try
             {
 
                 ViewItem(obj,true);
-
+                return true;
             }
             catch (InvalidCastException ex)
             {
                 MessageBox.Show(ex.Message);
-                throw;
+                return false;
             }
         }
 
-
+        public bool DeleteItem(Object obj)
+        {
+            return false;
+        }
 
 
         public void ClearItem()
@@ -158,7 +161,7 @@ namespace DEHRIS.VIEW.Promotion
         }
 
 
-        public void AddItem()
+        public bool AddItem()
         {
             int valint = 0;
             long trainingID = 0;
@@ -181,8 +184,9 @@ namespace DEHRIS.VIEW.Promotion
             };
             mItem = trn;
             mController.Add(trn);
+            return true;
         }
-        public void UpdateItem(Object obj)
+        public bool UpdateItem(Object obj)
         {
 
             int valint = 0;
@@ -206,6 +210,7 @@ namespace DEHRIS.VIEW.Promotion
             };
             mItem = trn;
             mController.Update(trn);
+            return true;
         }
 
 

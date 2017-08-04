@@ -48,6 +48,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="applicant.cs">
+      <DependentUpon>DEHRISDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="civilservice.cs">
       <DependentUpon>DEHRISDB.tt</DependentUpon>
     </Compile>
@@ -82,10 +85,22 @@
     <Compile Include="specialSkill.cs">
       <DependentUpon>DEHRISDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="templateImport.cs">
+      <DependentUpon>DEHRISDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="templateImportDetail.cs">
+      <DependentUpon>DEHRISDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="training.cs">
       <DependentUpon>DEHRISDB.tt</DependentUpon>
     </Compile>
     <Compile Include="trainingAssignment.cs">
+      <DependentUpon>DEHRISDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="transImport.cs">
+      <DependentUpon>DEHRISDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="transImportDetail.cs">
       <DependentUpon>DEHRISDB.tt</DependentUpon>
     </Compile>
     <Compile Include="type_ImportTemplateCategory.cs">
