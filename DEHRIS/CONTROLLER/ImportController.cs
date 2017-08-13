@@ -20,7 +20,7 @@ namespace DEHRIS.CONTROLLER
                 List<TemplateImportDetails> details = (from itemdet in dbcontext.templateImportDetails.Where(a=>a.templateImportID == tempateID)
                                          select new TemplateImportDetails()
                                          {
-                                             Address = itemdet.Address,
+                                             Address = itemdet.address,
                                              Columnname = itemdet.columnname,
                                              TemplateImportDetailsID = itemdet.templateImportDetailsID,
                                              TemplateImportID = itemdet.templateImportID

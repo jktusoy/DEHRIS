@@ -21,19 +21,79 @@ namespace DEHRIS.Tool
             InitializeComponent();
         }
 
-        public void LoadSpreadsheet(string filepath)
+        public ucSpreadsheet(string filepath)
         {
-
+            InitializeComponent();
+       
             spreadsheet1.Open(filepath);
             spreadsheet1.Show();
-
-            //Access the first worksheet from the workbook instance.
-            IWorksheet worksheet = spreadsheet1.Workbook.Worksheets[0];
-
-            //Read/access the value of the cell (B3)
-            MessageBox.Show(worksheet["A1"].Text);
-         
+ 
+            MessageBox.Show(spreadsheet1.Workbook.Worksheets.Count.ToString());
+            MessageBox.Show(spreadsheet1.Workbook.Worksheets.Count.ToString());
         }
+
+ 
+        public void FillUpForms(List<MODEL.Data.Applicants> applist, int templateID)
+        {
+
+            MessageBox.Show("");
+
+            DEHRIS.Others.CustomPopUpNotifier customnotif = new Others.CustomPopUpNotifier();
+            customnotif.SetNotification(Others.CustomPopUpNotifier.NotificationType.Successful, "Record successfully updated.");
+
+            IWorksheet worksheet = spreadsheet1.Workbook.Worksheets[1];//int)item.WorksheetNo+1
+         
+
+
+           CONTROLLER.ImportController impCont = new CONTROLLER.ImportController();
+           List<MODEL.Data.TemplateImportDetails> imporDet = impCont.GetTemplateImport(templateID).TemplateImportDetails;
+            
+            foreach (var item in imporDet)
+	        {
+                for (int i = 1; i < applist.Count; i++)
+			    {
+                    int p = 10 + i;
+                   
+                    int counnnnt = spreadsheet1.Workbook.Worksheets.Count;
+                    string name = spreadsheet1.FileName;
+                    switch (item.Columnname)
+                    {
+                        case "fullname":
+                            worksheet[item.Address + p.ToString()].Text = applist[i].Fullname;
+                            break;
+                        case "telephoneNo":
+                            worksheet[item.Address + p.ToString()].Text = applist[i].TelephoneNo;
+                            break;
+                        case "cellphoneNo":
+                            worksheet[item.Address + p.ToString()].Text = applist[i].CellphoneNo;
+                            break;
+                        case "emailAddress":
+                            worksheet[item.Address + p.ToString()].Text = applist[i].EmailAddress;
+                            break;
+                        case "eligibility":
+                            worksheet[item.Address + p.ToString()].Text = applist[i].Eligibility;
+                            break;
+                        case "remarks":
+                            worksheet[item.Address + p.ToString()].Text = applist[i].PresentAddress;
+                            break;
+
+                        default:
+                            break;
+                    }
+                
+			    }
+                //IWorksheet worksheets = spreadsheet1.Workbook.Worksheets[(int)item.WorksheetNo];
+                //worksheets = spreadsheet1.Workbook.Worksheets[1];
+                //worksheets["C12"].Text = "FASDFASFSDF";
+
+
+	        }
+         
+          
+                
+        }
+
+
 
         private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
         {

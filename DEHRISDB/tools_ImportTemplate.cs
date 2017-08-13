@@ -12,12 +12,11 @@ namespace DEHRISDB
     using System;
     using System.Collections.Generic;
     
-    public partial class templateImport
+    public partial class tools_ImportTemplate
     {
-        public long templateImportID { get; set; }
-        public string title { get; set; }
+        public Nullable<long> tools_ImportTemplateID { get; set; }
+        public string templateTitle { get; set; }
         public string description { get; set; }
         public bool isActive { get; set; }
-        public bool fromExcel { get; set; }
     }
 }

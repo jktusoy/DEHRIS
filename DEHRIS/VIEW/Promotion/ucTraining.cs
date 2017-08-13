@@ -17,6 +17,7 @@ namespace DEHRIS.VIEW.Promotion
 {
     public partial class ucTraining : UserControl, ICRUDDefinition
     {
+        SimpleDelegate item;
         public IController<Training> mController;
         public Training mItem = new Training();
         private String mTitle ="Training";
@@ -111,6 +112,14 @@ namespace DEHRIS.VIEW.Promotion
                 throw;
             }
         }
+
+        public void DelegateAssign(SimpleDelegate basicc)
+        {
+
+            item = basicc;
+
+        }
+
 
 
         public bool EditItem(Object obj)

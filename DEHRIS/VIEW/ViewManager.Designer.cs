@@ -43,6 +43,7 @@
             this.briDelete = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
             this.briSave = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
             this.briCancel = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
+            this.briRefresh = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
             this.brtxtSearch = new Syncfusion.Windows.Forms.Tools.XPMenus.TextBoxBarItem();
             this.briSearchEnter = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
             this.tbsViewMgr.SuspendLayout();
@@ -168,6 +169,7 @@
             this.briDelete,
             this.briSave,
             this.briCancel,
+            this.briRefresh,
             this.brtxtSearch,
             this.briSearchEnter});
             this.xpToolBar1.Bar.Manager = null;
@@ -180,6 +182,7 @@
             this.xpToolBar1.Style = Syncfusion.Windows.Forms.VisualStyle.Office2007;
             this.xpToolBar1.TabIndex = 2;
             this.xpToolBar1.Text = "xpToolBar1";
+            this.xpToolBar1.Click += new System.EventHandler(this.xpToolBar1_Click);
             // 
             // briTitle
             // 
@@ -237,11 +240,19 @@
             this.briCancel.SizeToFit = true;
             this.briCancel.Click += new System.EventHandler(this.briCancel_Click);
             // 
+            // briRefresh
+            // 
+            this.briRefresh.BarName = "briRefresh";
+            this.briRefresh.ImageIndex = 3;
+            this.briRefresh.ImageList = this.imgControls;
+            this.briRefresh.ShowToolTipInPopUp = false;
+            this.briRefresh.SizeToFit = true;
+            this.briRefresh.Click += new System.EventHandler(this.briRefresh_Click_1);
+            // 
             // brtxtSearch
             // 
             this.brtxtSearch.BarName = "brtxtSearch";
             this.brtxtSearch.ImageIndex = 11;
-            this.brtxtSearch.ImageList = this.imgControls;
             this.brtxtSearch.MinWidth = 180;
             this.brtxtSearch.PaintStyle = Syncfusion.Windows.Forms.Tools.XPMenus.PaintStyle.ImageAndText;
             this.brtxtSearch.PressedImageIndex = 11;
@@ -295,6 +306,7 @@
         private Syncfusion.Windows.Forms.Tools.XPMenus.BarItem briTitle;
         private Syncfusion.Windows.Forms.Tools.XPMenus.BarItem briSearchEnter;
         private Syncfusion.Windows.Forms.Tools.XPMenus.TextBoxBarItem brtxtSearch;
+        private Syncfusion.Windows.Forms.Tools.XPMenus.BarItem briRefresh;
      
 
 

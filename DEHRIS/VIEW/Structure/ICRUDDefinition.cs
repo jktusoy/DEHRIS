@@ -28,6 +28,9 @@ namespace DEHRIS.VIEW.Structure
            get;
            set;
        }
+
+       void DelegateAssign(SimpleDelegate basicdel);
+       
      
 
     }

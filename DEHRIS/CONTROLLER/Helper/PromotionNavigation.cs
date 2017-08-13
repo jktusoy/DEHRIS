@@ -9,11 +9,13 @@ using System.Windows.Forms;
 
 namespace DEHRIS.CONTROLLER.Helper
 {
+    
+
     public static class PromotionNavigation
-    { 
-
-
-
+    {
+        
+        public static List<object> DataObjectList;
+        public static ViewManager currentViewManager;
         public static void TrainingView(Panel gpMain)
         {
             TrainingController perf = new TrainingController();      
@@ -31,16 +33,28 @@ namespace DEHRIS.CONTROLLER.Helper
         public static void ApplicantsView(Panel gpMain)
         {
             ApplicantController perf = new ApplicantController();
+           
             VIEW.Promotion.ucApplicants uctrn = new VIEW.Promotion.ucApplicants(perf);
-            ViewManager vmTrn = new ViewManager(uctrn, "DEHRIS.MODEL.Data.Applicants", "Applicants");
-            vmTrn.LayoutOrientation = VIEW.Structure.EnumTypes.LayoutType.ManageMainVertical;
-            vmTrn.UpdateLayout();
+            currentViewManager = new ViewManager(uctrn, "DEHRIS.MODEL.Data.Applicants", "Applicants");
+
+            
+            
+
+            currentViewManager.LayoutOrientation = VIEW.Structure.EnumTypes.LayoutType.ManageMainVertical;
+            currentViewManager.UpdateLayout();
 
             gpMain.Controls.Clear();
-            gpMain.Controls.Add(vmTrn);
-            vmTrn.Dock = DockStyle.Fill;
+            gpMain.Controls.Add(currentViewManager);
+            currentViewManager.Dock = DockStyle.Fill;
         }
 
+        public static void UpdateDataList()
+        {
+            if (currentViewManager != null)
+            {
+                DataObjectList = currentViewManager.GetDataList().ToList();
+            }
+        }
         public static void TrainingView2(Panel gpMain)
         {
             //TrainingController perf = new TrainingController();

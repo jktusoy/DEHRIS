@@ -16,13 +16,15 @@ using DEHRIS.VIEW.Structure;
 
 namespace DEHRIS.VIEW
 {
+
+    public delegate void SimpleDelegate();
     public partial class ViewManager : UserControl
     {
         private ICRUDDefinition mUsercontrol;
         private EnumTypes.ViewType viewType = EnumTypes.ViewType.ViewOnly;
         private EnumTypes.TransactionType transType = EnumTypes.TransactionType.Refresh;
         private EnumTypes.LayoutType layoutType = EnumTypes.LayoutType.FullLoad;
-
+        public object CurrentSelected;
 
         public string Title { get; set; }
 
@@ -32,7 +34,12 @@ namespace DEHRIS.VIEW
             set { layoutType = value; }
         }
 
+        public IList<object> GetDataList()
+        {
+          
 
+            return this.objlViewMgr.SelectedObjects.OfType<object>().ToList();
+        }
         public ViewManager()
         {
             InitializeComponent();
@@ -48,12 +55,23 @@ namespace DEHRIS.VIEW
             pnlViewMgrContent.Dock = DockStyle.Fill;
         }
 
-
+        public void TriggerAddButton()
+        {
+            briAdd.PerformClick();
+        }
+        public void TriggerEditButton()
+        {
+            briEdit.PerformClick();
+        }
+     
 
         public ViewManager(ICRUDDefinition uccont, string classType, string stitle)
         {
             InitializeComponent();
             DefaultControl();
+
+            SimpleDelegate simpleDelegate = new SimpleDelegate(TriggerEditButton);
+            uccont.DelegateAssign(simpleDelegate);
             Title = stitle;
             briTitle.Text = Title;
             Generator.GenerateColumns(this.objlViewMgr, Type.GetType(classType), true);
@@ -232,18 +250,31 @@ namespace DEHRIS.VIEW
         #region EVENTS
         private void briAdd_Click(object sender, EventArgs e)
         {
-            if (Add())
-            {
-                DEHRIS.Others.CustomPopUpNotifier customnotif = new Others.CustomPopUpNotifier();
-                customnotif.SetNotification(Others.CustomPopUpNotifier.NotificationType.Successful, "Record successfully added.");
-            }
+            Add();       
         }
 
         private void objlViewMgr_SelectedIndexChanged(object sender, EventArgs e)
         {
-            mUsercontrol.TransactionType = transType = EnumTypes.TransactionType.Refresh;
-            mUsercontrol.UpdateTitle(transType);
+           
+           
+            if (briEdit.Enabled == false)
+            {
+                switch (MessageBox.Show("Do you want to save changes?", "Confirmation", MessageBoxButtons.YesNoCancel))
+                { 
+                    case DialogResult.Yes:
+                        briSave.PerformClick();
+                        break;
+                    case DialogResult.No:
+                        briCancel.PerformClick();
+                        break;
+                    case DialogResult.Cancel:
+                        break;
+                }
+            
+            }
 
+            mUsercontrol.UpdateTitle(transType);
+            mUsercontrol.TransactionType = transType = EnumTypes.TransactionType.Refresh;
             Edit(false);
             DefaultControl();
         }
@@ -258,15 +289,17 @@ namespace DEHRIS.VIEW
                     {
                         DEHRIS.Others.CustomPopUpNotifier customnotif = new Others.CustomPopUpNotifier();
                         customnotif.SetNotification(Others.CustomPopUpNotifier.NotificationType.Successful, "Record successfully updated.");
+                        Refresh();
                     }
 
                     break;
                 case EnumTypes.TransactionType.Update:
-                    object objectv = objlViewMgr.SelectedObject;
+                    object objectv = CurrentSelected;
                     if (mUsercontrol.UpdateItem(objectv))
                     {
                         DEHRIS.Others.CustomPopUpNotifier customnotif = new Others.CustomPopUpNotifier();
                         customnotif.SetNotification(Others.CustomPopUpNotifier.NotificationType.Successful, "Record successfully updated.");
+                        this.Refresh();
                     }
                     break;
             }
@@ -284,21 +317,26 @@ namespace DEHRIS.VIEW
         {
 
             transType = EnumTypes.TransactionType.Refresh;
-            DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this record?", "Delete Record", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this record/s?", "Delete Record", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                object objectv = objlViewMgr.SelectedObject;
-                mUsercontrol.DeleteItem(objectv);
+             
+                foreach (var item in objlViewMgr.SelectedObjects)
+                {
+                    object objectv = item;
+                    mUsercontrol.DeleteItem(objectv);
+                }
+
+                DEHRIS.Others.CustomPopUpNotifier customnotif = new Others.CustomPopUpNotifier();
+                customnotif.SetNotification(Others.CustomPopUpNotifier.NotificationType.Successful, "Record/s successfully deleted.");
+                Refresh();
             }
            
         }
 
         private void briRefresh_Click(object sender, EventArgs e)
         {
-            DefaultControl();
-
-            transType = EnumTypes.TransactionType.Refresh;
-            objlViewMgr.SetObjects(mUsercontrol.ListItem());
+           
         }
 
 
@@ -321,12 +359,13 @@ namespace DEHRIS.VIEW
             mUsercontrol.EditItem(objectv);
 
             Edit(true);
-
+            CurrentSelected = objectv;
         }
 
         private void briCancel_Click(object sender, EventArgs e)
         {
             DefaultControl();
+            briRefresh.PerformClick();
         }
 
         #endregion
@@ -345,6 +384,23 @@ namespace DEHRIS.VIEW
         private void brtxtSearch_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void xpToolBar1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void briRefresh_Click_1(object sender, EventArgs e)
+        {
+            Refresh();
+        }
+
+        public void Refresh()
+        {
+            DefaultControl();
+            transType = EnumTypes.TransactionType.Refresh;
+            objlViewMgr.SetObjects(mUsercontrol.ListItem());
         }
 
     }

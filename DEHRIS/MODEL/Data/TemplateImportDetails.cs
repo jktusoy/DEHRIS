@@ -13,5 +13,10 @@ namespace DEHRIS.MODEL.Data
         public string Columnname { get; set; }
         public string Address { get; set; }
         public Nullable<bool> IsActive { get; set; }
+        public int WorksheetNo { get; set; }
+
+
+
+
     }
 }

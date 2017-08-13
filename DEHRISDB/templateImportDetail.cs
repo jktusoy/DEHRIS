@@ -17,7 +17,8 @@ namespace DEHRISDB
         public long templateImportDetailsID { get; set; }
         public Nullable<long> templateImportID { get; set; }
         public string columnname { get; set; }
-        public string Address { get; set; }
-        public Nullable<bool> isActive { get; set; }
+        public bool isActive { get; set; }
+        public int worksheetNo { get; set; }
+        public string address { get; set; }
     }
 }

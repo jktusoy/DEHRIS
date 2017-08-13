@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.layoutGroup1 = new Syncfusion.Windows.Forms.Tools.LayoutGroup();
             this.imageStreamer4 = new Syncfusion.Windows.Forms.Tools.ImageStreamer();
             this.layoutGroup2 = new Syncfusion.Windows.Forms.Tools.LayoutGroup();
             this.imageStreamer1 = new Syncfusion.Windows.Forms.Tools.ImageStreamer();
             this.imageStreamer2 = new Syncfusion.Windows.Forms.Tools.ImageStreamer();
             this.imageStreamer3 = new Syncfusion.Windows.Forms.Tools.ImageStreamer();
+            this.btnApplication = new Syncfusion.Windows.Forms.ButtonAdv();
             ((System.ComponentModel.ISupportInitialize)(this.layoutGroup1)).BeginInit();
             this.layoutGroup1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutGroup2)).BeginInit();
@@ -112,10 +114,24 @@
             this.imageStreamer3.Text = "imageStreamer3";
             this.imageStreamer3.TextAnimationDirection = Syncfusion.Windows.Forms.Tools.ImageStreamer.TextStreamDirection.RightToLeft;
             // 
+            // btnApplication
+            // 
+            this.btnApplication.Appearance = Syncfusion.Windows.Forms.ButtonAppearance.Office2010;
+            this.btnApplication.BeforeTouchSize = new System.Drawing.Size(83, 56);
+            this.btnApplication.IsBackStageButton = false;
+            this.btnApplication.Location = new System.Drawing.Point(3, 366);
+            this.btnApplication.Name = "btnApplication";
+            this.btnApplication.Size = new System.Drawing.Size(83, 56);
+            this.btnApplication.TabIndex = 0;
+            this.btnApplication.Text = "buttonAdv1";
+            this.btnApplication.UseVisualStyle = true;
+            this.btnApplication.Click += new System.EventHandler(this.btnApplication_Click);
+            // 
             // ucNavigation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnApplication);
             this.Name = "ucNavigation";
             this.Size = new System.Drawing.Size(262, 438);
             ((System.ComponentModel.ISupportInitialize)(this.layoutGroup1)).EndInit();
@@ -134,6 +150,7 @@
         private Syncfusion.Windows.Forms.Tools.ImageStreamer imageStreamer1;
         private Syncfusion.Windows.Forms.Tools.ImageStreamer imageStreamer2;
         private Syncfusion.Windows.Forms.Tools.ImageStreamer imageStreamer3;
+        private Syncfusion.Windows.Forms.ButtonAdv btnApplication;
 
 
     }

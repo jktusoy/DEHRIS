@@ -189,7 +189,8 @@
           <Property Name="templateImportID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="title" Type="nvarchar" MaxLength="150" />
           <Property Name="description" Type="nvarchar" MaxLength="550" />
-          <Property Name="isActive" Type="bit" />
+          <Property Name="isActive" Type="bit" Nullable="false" />
+          <Property Name="fromExcel" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="templateImportDetails">
           <Key>
@@ -198,8 +199,30 @@
           <Property Name="templateImportDetailsID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="templateImportID" Type="bigint" />
           <Property Name="columnname" Type="nvarchar" MaxLength="150" />
-          <Property Name="Address" Type="nvarchar" MaxLength="250" />
-          <Property Name="isActive" Type="bit" />
+          <Property Name="address" Type="nvarchar" MaxLength="250" />
+          <Property Name="isActive" Type="bit" Nullable="false" />
+          <Property Name="worksheetNo" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'DEHRMIS.dbo.tools_ImportTemplate' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="tools_ImportTemplate">
+          <Key>
+            <PropertyRef Name="isActive" />
+          </Key>
+          <Property Name="tools_ImportTemplateID" Type="bigint" />
+          <Property Name="templateTitle" Type="nvarchar" MaxLength="50" />
+          <Property Name="description" Type="nvarchar" MaxLength="50" />
+          <Property Name="isActive" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tools_ImportTemplateDetails">
+          <Key>
+            <PropertyRef Name="tools_ImportTemplateDetailsID" />
+          </Key>
+          <Property Name="tools_ImportTemplateDetailsID" Type="bigint" Nullable="false" />
+          <Property Name="tools_ImportTemplateID" Type="bigint" />
+          <Property Name="worksheetAddress" Type="nchar" MaxLength="10" />
+          <Property Name="CellAddress" Type="nchar" MaxLength="10" />
+          <Property Name="CellRange" Type="nchar" MaxLength="10" />
         </EntityType>
         <EntityType Name="training">
           <Key>
@@ -297,12 +320,21 @@
           <EntitySet Name="specialSkills" EntityType="Self.specialSkills" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="templateImport" EntityType="Self.templateImport" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="templateImportDetails" EntityType="Self.templateImportDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tools_ImportTemplateDetails" EntityType="Self.tools_ImportTemplateDetails" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="training" EntityType="Self.training" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="trainingAssignment" EntityType="Self.trainingAssignment" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="transImport" EntityType="Self.transImport" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="transImportDetails" EntityType="Self.transImportDetails" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="type_ImportTemplateCategory" EntityType="Self.type_ImportTemplateCategory" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="workExperience" EntityType="Self.workExperience" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tools_ImportTemplate" EntityType="Self.tools_ImportTemplate" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [tools_ImportTemplate].[tools_ImportTemplateID] AS [tools_ImportTemplateID], 
+    [tools_ImportTemplate].[templateTitle] AS [templateTitle], 
+    [tools_ImportTemplate].[description] AS [description], 
+    [tools_ImportTemplate].[isActive] AS [isActive]
+    FROM [dbo].[tools_ImportTemplate] AS [tools_ImportTemplate]</DefiningQuery>
+          </EntitySet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -324,6 +356,8 @@
           <EntitySet Name="templateImportDetails" EntityType="DEHRISModel.templateImportDetail" />
           <EntitySet Name="transImports" EntityType="DEHRISModel.transImport" />
           <EntitySet Name="transImportDetails" EntityType="DEHRISModel.transImportDetail" />
+          <EntitySet Name="tools_ImportTemplateDetails" EntityType="DEHRISModel.tools_ImportTemplateDetails" />
+          <EntitySet Name="tools_ImportTemplate" EntityType="DEHRISModel.tools_ImportTemplate" />
         </EntityContainer>
         <EntityType Name="civilservice">
           <Key>
@@ -575,7 +609,8 @@
           <Property Name="templateImportID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="title" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
           <Property Name="description" Type="String" MaxLength="550" FixedLength="false" Unicode="true" />
-          <Property Name="isActive" Type="Boolean" />
+          <Property Name="isActive" Type="Boolean" Nullable="false" />
+          <Property Name="fromExcel" Type="Boolean" Nullable="false" />
         </EntityType>
         <EntityType Name="templateImportDetail">
           <Key>
@@ -584,8 +619,9 @@
           <Property Name="templateImportDetailsID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="templateImportID" Type="Int64" />
           <Property Name="columnname" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
-          <Property Name="Address" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
-          <Property Name="isActive" Type="Boolean" />
+          <Property Name="isActive" Type="Boolean" Nullable="false" />
+          <Property Name="worksheetNo" Type="Int32" Nullable="false" />
+          <Property Name="address" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="transImport">
           <Key>
@@ -606,6 +642,25 @@
           <Property Name="templateImportDetailsID" Type="Int64" />
           <Property Name="columnAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="value" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tools_ImportTemplateDetails">
+          <Key>
+            <PropertyRef Name="tools_ImportTemplateDetailsID" />
+          </Key>
+          <Property Name="tools_ImportTemplateDetailsID" Type="Int64" Nullable="false" />
+          <Property Name="tools_ImportTemplateID" Type="Int64" />
+          <Property Name="worksheetAddress" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="CellAddress" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="CellRange" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tools_ImportTemplate">
+          <Key>
+            <PropertyRef Name="isActive" />
+          </Key>
+          <Property Name="tools_ImportTemplateID" Type="Int64" />
+          <Property Name="templateTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="isActive" Type="Boolean" Nullable="false" />
         </EntityType>
         </Schema>
     </edmx:ConceptualModels>
@@ -870,6 +925,7 @@
           <EntitySetMapping Name="templateImports">
             <EntityTypeMapping TypeName="DEHRISModel.templateImport">
               <MappingFragment StoreEntitySet="templateImport">
+                <ScalarProperty Name="fromExcel" ColumnName="fromExcel" />
                 <ScalarProperty Name="isActive" ColumnName="isActive" />
                 <ScalarProperty Name="description" ColumnName="description" />
                 <ScalarProperty Name="title" ColumnName="title" />
@@ -880,8 +936,9 @@
           <EntitySetMapping Name="templateImportDetails">
             <EntityTypeMapping TypeName="DEHRISModel.templateImportDetail">
               <MappingFragment StoreEntitySet="templateImportDetails">
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="worksheetNo" ColumnName="worksheetNo" />
                 <ScalarProperty Name="isActive" ColumnName="isActive" />
-                <ScalarProperty Name="Address" ColumnName="Address" />
                 <ScalarProperty Name="columnname" ColumnName="columnname" />
                 <ScalarProperty Name="templateImportID" ColumnName="templateImportID" />
                 <ScalarProperty Name="templateImportDetailsID" ColumnName="templateImportDetailsID" />
@@ -907,6 +964,27 @@
                 <ScalarProperty Name="templateImportID" ColumnName="templateImportID" />
                 <ScalarProperty Name="transImportID" ColumnName="transImportID" />
                 <ScalarProperty Name="transImportDetailsID" ColumnName="transImportDetailsID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tools_ImportTemplateDetails">
+            <EntityTypeMapping TypeName="DEHRISModel.tools_ImportTemplateDetails">
+              <MappingFragment StoreEntitySet="tools_ImportTemplateDetails">
+                <ScalarProperty Name="CellRange" ColumnName="CellRange" />
+                <ScalarProperty Name="CellAddress" ColumnName="CellAddress" />
+                <ScalarProperty Name="worksheetAddress" ColumnName="worksheetAddress" />
+                <ScalarProperty Name="tools_ImportTemplateID" ColumnName="tools_ImportTemplateID" />
+                <ScalarProperty Name="tools_ImportTemplateDetailsID" ColumnName="tools_ImportTemplateDetailsID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tools_ImportTemplate">
+            <EntityTypeMapping TypeName="DEHRISModel.tools_ImportTemplate">
+              <MappingFragment StoreEntitySet="tools_ImportTemplate">
+                <ScalarProperty Name="isActive" ColumnName="isActive" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="templateTitle" ColumnName="templateTitle" />
+                <ScalarProperty Name="tools_ImportTemplateID" ColumnName="tools_ImportTemplateID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

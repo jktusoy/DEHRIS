@@ -91,6 +91,12 @@
     <Compile Include="templateImportDetail.cs">
       <DependentUpon>DEHRISDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="tools_ImportTemplate.cs">
+      <DependentUpon>DEHRISDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tools_ImportTemplateDetails.cs">
+      <DependentUpon>DEHRISDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="training.cs">
       <DependentUpon>DEHRISDB.tt</DependentUpon>
     </Compile>
@@ -117,7 +123,9 @@
     </EntityDeploy>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.Config" />
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="DEHRISDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>DEHRISDB.edmx</DependentUpon>

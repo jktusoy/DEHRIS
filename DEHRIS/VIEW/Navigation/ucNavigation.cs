@@ -16,5 +16,10 @@ namespace DEHRIS.Navigation
         {
             InitializeComponent();
         }
+
+        private void btnApplication_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

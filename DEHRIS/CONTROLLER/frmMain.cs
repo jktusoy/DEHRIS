@@ -96,8 +96,7 @@ namespace DEHRIS
 
         private void tsbIPCR_Click(object sender, EventArgs e)
         {
-            Tool.ucSpreadsheet ucspreadsheet = new Tool.ucSpreadsheet();
-            ucspreadsheet.LoadSpreadsheet(@"C:\Users\Cocoypower\Source\Repo\DEHRIS\ExternalFiles\OPCR.xls");
+            Tool.ucSpreadsheet ucspreadsheet = new Tool.ucSpreadsheet(@"C:\Users\Cocoypower\Source\Repo\DEHRIS\ExternalFiles\OPCR.xls");
             gpMain.Controls.Clear();
             gpMain.Controls.Add(ucspreadsheet);
             ucspreadsheet.Dock = DockStyle.Fill;

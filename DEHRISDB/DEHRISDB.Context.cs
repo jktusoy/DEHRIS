@@ -40,5 +40,7 @@ namespace DEHRISDB
         public virtual DbSet<templateImportDetail> templateImportDetails { get; set; }
         public virtual DbSet<transImport> transImports { get; set; }
         public virtual DbSet<transImportDetail> transImportDetails { get; set; }
+        public virtual DbSet<tools_ImportTemplateDetails> tools_ImportTemplateDetails { get; set; }
+        public virtual DbSet<tools_ImportTemplate> tools_ImportTemplate { get; set; }
     }
 }
